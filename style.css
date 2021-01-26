@@ -52,6 +52,7 @@ hr{
   text-align: left;
   }
   
+  
   #tableA { 
   border-collapse: collapse;
   width: 84%;
@@ -171,6 +172,24 @@ text-align: center;
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
+.short-text { display: none; }
+@media only screen and (max-width:800px) {
+	#main-text{
+	font-size: 3vw;	
+		
+	}
+	
+	a{
+	
+		font-size: 3vw;
+}
+	
+	   .nav-link {
 
-
+ font-size: 3vw;
+	   }
+	   
+	.short-text { display: inline-block; }
+    .full-text { display: none; }
+}
 

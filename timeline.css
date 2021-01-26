@@ -141,3 +141,17 @@ video::-webkit-media-controls {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background:  #828282;
 }
+
+@media only screen and (max-width:800px) {
+	label {
+  
+  font-size: 3vw;
+
+}
+
+
+.date{
+	  font-size: 3vw;
+}
+	
+}
