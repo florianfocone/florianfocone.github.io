@@ -12,20 +12,21 @@ section {
 }
 aside {
     background-color: #1E2026;
-    width: 15%;
-    margin-right: -15%;
+    width: 18vw;
+    margin-right: -18vw;
      position: fixed;
     z-index: 1;
 }
 section {
     background-color: #1B1B1E;
-    padding-left: 15%;
+    padding-left: 18vw;
     position: relative;
 }
 
 a{
 		text-decoration-line: none;
 		color: #55C1FF;
+		font-size: 1vw;
 		
 }
 
@@ -41,12 +42,12 @@ hr{
 
 #main-text {
   font-family :  "Courier New";
-  line-height : 2rem;
-  margin-top : 5rem;
-  margin-bottom : 5rem;
-  margin-left : 20rem;
-  margin-right : 20rem;
-  font-size: 1.0rem;
+  line-height : 3vw;
+  margin-top : 5%;
+  margin-bottom : 5%;
+  margin-left : 10%;
+  margin-right : 5%;
+  font-size: 1.5vw;
   color: #828282;
   text-align: left;
   }
@@ -79,10 +80,10 @@ hr{
   #columnC { 
   font-weight:normal;
   width: 80%;
-  padding :20px;
+  padding :5%;
   font-family :  "Courier New";
-  line-height : 2rem;
-  font-size: 1.0rem;
+  line-height : 2vw;
+  font-size: 1.5vw;
   color: #828282;
   text-align: left;
   }
@@ -95,15 +96,14 @@ hr{
     }
 
   .menu{
-	  margin-top : 5rem;
-	  margin-left:-2rem;
+	  margin-top : 15%;
+	
   }
     .nav-item {	
-	margin-bottom : 5rem;
+	
+	margin-bottom : 30%;
 	list-style:none;
-	margin-left: auto;
-    margin-right: auto;
-	text-align: center;
+	text-align: left;
 	}
 	  .nav-item:hover {
       -ms-transform: scale(1.1);
@@ -117,9 +117,8 @@ hr{
     .nav-link {
  font-family :  "Courier New";
  font-weight: bold;
- font-size: 20px;
+ font-size: 1.5vw;
   text-decoration-line: none;
-  letter-spacing: 1px;
   color: #828282;
   }
   
@@ -129,7 +128,7 @@ hr{
   
   .contact{
 	font-family :  "Courier New";
-	 margin-top : 1rem;
+	 margin : 1%;
 text-align: center;
 	font-size: 95%;
     color: #828282;

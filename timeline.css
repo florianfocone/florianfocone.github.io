@@ -10,33 +10,33 @@ body {
 }
 
 h2 {
-  margin: 3em 0 0 0;
-  font-size: 1.5em;
+  margin: 1vw 0 0 0;
+  font-size: 1.5vw;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 #timeline {
   list-style: none;
-  margin: 10px 0 10px 10px;
-  padding-left: 30px;
+  margin: 1vw 1vw 1vw 1vw;
+  padding-left: 0vw;
   border-left: 3px solid #828282;
 }
 #timeline li {
-  margin: 40px 0;
+  margin: 3vw 0 0 2vw;
   position: relative;
 }
 #timeline p {
-  margin: 0 0 15px;
+  margin: 1vw 0 0 0vw;
 }
 
 .date {
 	  font-family :  "Courier New";
-  margin-top: -10px;
+  margin-top: -1vw;
   top: 50%;
-  left: -158px;
-  font-size: 2.95em;
-  line-height: 20px;
+  left: -9vw;
+  font-size: 2vw;
+  line-height: 2vw;
   position: absolute;
 }
 
@@ -66,10 +66,10 @@ h2 {
 
 label {
   font-family :  "Courier New";
-  font-size: 1.3em;
+  font-size: 1.5vw;
   position: absolute;
   z-index: 100;
-  top: 20px;
+  top: 1vw;
   -webkit-transition: -webkit-transform 0.2s linear;
 }
 
@@ -93,18 +93,18 @@ label:hover {
 .radio:checked ~ .content {
   max-height: 1000px;
   border-color: #828282;
-  margin-right: 20px;
+  margin-right: 2vw;
   -webkit-transform: translateX(20px);
   -webkit-transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
 }
 .radio:checked ~ .content p {
-  max-height: 600px;
+  max-height: 100%;
   color: #828282;
   -webkit-transition: color 0.3s linear 0.3s;
 }
 
 .radio:checked ~ .content video {
- height: 400px;
+ height: 100%;
 filter:grayscale(100%);
 }
 
