@@ -27,11 +27,12 @@ h2 {
   position: relative;
 }
 #timeline p {
-  margin: 1vw 0 0 0vw;
+  margin: 1vw 1vw 1vw 1vw;
 }
 
+
 .date {
-	  font-family :  "Courier New";
+  font-family :  "Courier New";
   margin-top: -1vw;
   top: 50%;
   left: -9vw;
@@ -42,8 +43,9 @@ h2 {
 
 .content {
   font-family :  "Courier New";
-  max-height: 1500px;
+  max-height: 3500px;
   padding: 50px 20px 20px 20px;
+  margin: 50px 20px 20px 20px;
   border-color: transparent;
   border-width: 0px;
   border-style: solid;
@@ -91,7 +93,7 @@ label:hover {
   background: #55C1FF;
 }
 .radio:checked ~ .content {
-  max-height: 1000px;
+  max-height: 2000px;
   border-color: #828282;
   margin-right: 2vw;
   -webkit-transform: translateX(20px);

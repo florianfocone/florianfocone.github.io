@@ -61,7 +61,26 @@
   <div id="main-text">
   
 <ul id='timeline'>
-
+  <li class='work'>
+    <input class='radio' id='work16' name='works' type='radio' >
+    <div class="relative">
+      <label for='work16'><b>Construction</b> Objet Glissant Non Identifié</label>
+      <span class='date'></span>
+    </div>
+    <div class='content'>
+      <p>
+<br><b>Resumé :</b> Conception d'un snowskate. Les remontées étaient fermées, coranus oblige, alors on monte en raquette et on descend sur cet objet fou. Après 1 descente on l'apprivoise (si on a un peu fait de skate ou de snow). Fait avec un snowblade de 88cm acheté sur leboncoin 8€ et un deck de petit cruiser en bambou de 60cm. 8 inserts, quelques vis, une planche à découper ikea en bambou et un peu de wax sur le deck plus tard c'est parti...la vidéo montre les essais de la 1ère journée, on gagne assez vite en stabilité et en maitrise. Ne pas oublier un leash car c'est strapless !
+<br><b>Techno :</b> travail bambou, scie, perceuse.
+<br><b>mots clés :</b>Low Tech, récup, glisse, liberty.
+<br><b>Money - Time :</b> 10€ - 1 apres-midi<br>
+ <br><video id="myVid14">
+        <source src="vid/snowskate.mp4" type="video/mp4">
+    </video>  
+      </p>
+    </div>
+  </li>
+  
+  
   <li class='work'>
     <input class='radio' id='work1' name='works' type='radio' >
     <div class="relative">
@@ -74,7 +93,7 @@
 		Ce projet à par ailleurs accueilli : Mélissa, Arthur et Pierre, des étudiants de 5a de Polytech-Angers en 2020.
 <br><b>Techno :</b> Arduino, Découpeuse laser, fraiseuse numérique, C, CAO.
 <br><b>mots clés :</b> Skateboard, DIY, Tout terrain, Frugale, low-cost, low tech.
-   
+   <br>
 	  <video id="myVid1">
         <source src="vid/arashi.mp4" type="video/mp4">
     </video>  
@@ -96,7 +115,7 @@ Leurs travaux se sont portés sur l'emergence d'une problématique à la consomm
 L'idée principale est d'utiliser l'image de la machine a café traditionnelle pour améliorer l'image des boissons à l'algue (spiruline-cyanobactérie) et favoriser la consommation de ce super aliment dans son format le plus frais.
 <br><b>Techno :</b> Arduino, travail bois, impression 3D, CAO, User expérience.
 <br><b>mots clés :</b> Spiruline, innovation, UX, Ergonomie, Démocratisation, Low Tech.
-<video id="myVid13">
+ <br><video id="myVid13">
         <source src="vid/spirulftiere.mp4" type="video/mp4">
     </video>  
       </p>
@@ -357,7 +376,7 @@ L'idée principale est d'utiliser l'image de la machine a café traditionnelle p
 </ul>
 </div>
   <script>
-for (let pas = 1; pas < 15; pas++) {
+for (let pas = 1; pas < 16; pas++) {
 document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
 	this.play();
 });
