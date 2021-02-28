@@ -23,7 +23,7 @@ h2 {
   border-left: 3px solid #828282;
 }
 #timeline li {
-  margin: 3vw 0 0 2vw;
+  margin: 3vw 1vw 1vw 2vw;
   position: relative;
 }
 #timeline p {
@@ -42,8 +42,8 @@ h2 {
 
 .content {
   font-family :  "Courier New";
-  max-height: 1000px;
-  padding: 50px 20px 0;
+  max-height: 1500px;
+  padding: 50px 20px 20px 20px;
   border-color: transparent;
   border-width: 0px;
   border-style: solid;
