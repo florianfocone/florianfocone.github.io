@@ -42,12 +42,12 @@ hr{
 
 #main-text {
   font-family :  "Courier New";
-  line-height : 3vw;
+  line-height : 2vw;
   margin-top : 5%;
   margin-bottom : 5%;
   margin-left : 10%;
   margin-right : 5%;
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: #828282;
   text-align: left;
   }
@@ -174,10 +174,10 @@ text-align: center;
     }
 .short-text { display: none; }
 @media only screen and (max-width:800px) {
-	#main-text{
-	font-size: 3vw;	
-		
-	}
+	#main-text {
+  line-height : 3vw;
+  font-size: 3vw;
+  }
 	
 	a{
 	
