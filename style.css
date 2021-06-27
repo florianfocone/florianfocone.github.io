@@ -158,6 +158,16 @@ text-align: center;
   avatar:hover > a {
     border-color: #fff;
   }
+  
+    #tete {
+    display: block;
+	 margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 0%;
+    overflow: hidden;
+  }
 
   img {
     width: 100%;
