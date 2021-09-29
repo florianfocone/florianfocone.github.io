@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="timeline.css">
+ </head>
+
+  <body>
+  <aside>
+  <br>
+  <H1>
+  Rattachement </H1>
+<img class ="titeimg"; src="contenu/logo_ua.png"> </img>
+<img class ="titeimg"; src="contenu/logo_confluences.png"> </img>
+
+ <br> <br> <br> <br>
+ <H1>
+  Soutiens </H1>
+<img class ="titeimg"; src="contenu/Logo-OIC.svg"> </img>
+<img class ="titeimg"; src="contenu/logo_region.png"> </img>
+<img class ="titeimg"; src="contenu/Logo_france.svg"> </img>
+
+ <br> <br> <br> <br>
+<h3>
+florian.focone
+<br><b>@</b>
+<br>univ-angers.fr
+</h3>
+  
+  </aside>
+  
+
+  <section>
+<div id="main-text">
+
+  <ul id='timeline'>
+ <!-- Présentation P2AC + labos associés -->
+   <li class='work'>
+    <input class='radio' id='work1' name='works' type='radio' >
+    <div class="relative">
+	<label for='work1'> P2AC </label>
+    </div>
+    <div class='content'>
+ <p>
+
+<br>
+
+<br> Spécialisée en <b>Sciences Humaines et Sociales</b> (psychologie, marketing, économie,...)
+<br><br> Compétences et outils (imformatiques, électroniques et numériques) pour analyse des <b>comportements humains</b>
+<br><br> <b> Conçoit</b> des environnements contrôlés (réels, virtuels et mixtes)
+<br><br> <b>Mesure</b> la réaction des utilisateurs (Prise de décisions, sensations, etc.)
+
+
+</p>
+</div>
+</li>
+  
+  
+
+<!-- Soutient technologique à la R&D-->
+   <li class='work'>
+    <input class='radio' id='work2' name='works' type='radio' >
+    <div class="relative">
+      <label for='work2'>Soutien R&D en SHS</label>
+    </div>
+    <div class='content'>
+
+<!-- interet de l'apport  --> <br> <p> Apports technologies dans une démarche R&D  </p>
+
+<!-- application dans le monde éco, social de la santé (SEP, Cerema (ecran vers RV), marketing, etc..  -->
+ <div class="container">
+	<div class="table">
+		<div class="table-content">	
+			<div class="table-row">	
+				<div class="table-data">   <video class="vidL"; id="myVid1"><source src="contenu/sep.mp4" type="video/mp4"></video> Enregistrer des données comportementales <br>(suivi du regard) </div>			
+				<div class="table-data"><video class="vidL"; id="myVid2"><source src="contenu/greta.mp4" type="video/mp4"></video> Standardiser des environnements </div>
+			</div>
+			<div class="table-row">
+				<div class="table-data"></div>			
+				<div class="table-data"></div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">   <video class="vidL"; id="myVid3"><source src="contenu/granem.mp4" type="video/mp4"></video> </div>			
+				<div class="table-data"><video class="vidL"; id="myVid4"><source src="contenu/supermarket.mp4" type="video/mp4"></video></div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Enregistrer des données physiologiques <br>(FC, Conductance cutanée) </div>			
+				<div class="table-data">Augmenter le réalisme </div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+  
+
+  
+ 
+  
+
+
+  
+
+</div>
+</li>
+ 
+ <!-- mutualisation des compétences sur le tangible (équipements) et l'intengible (code, utilisation logiciel, etc.)-->
+ <li class='work'>
+    <input class='radio' id='work3' name='works' type='radio' >
+    <div class="relative">
+      <label for='work3'>Mutualisation des compétences </label>
+    </div>
+    <div class='content'>
+	<p>
+	
+	<br> 
+	<br>  </p>
+	
+	 <div class="container">
+	<div class="table">
+		<div class="table-content">	
+			<div class="table-row">	
+				<div class="table-data">   <video class="vidL"; id="myVid5"><source src="contenu/tutoeye.mp4" type="video/mp4"></video> </div>			
+				<div class="table-data"><video class="vidL"; id="myVid6"><source src="contenu/tutoreseau.mp4" type="video/mp4"></video> </div>
+			</div>
+			<div class="table-row">
+				<div class="table-data"> Conception de tutoriels sur l'utilisation des technologies</div>			
+
+			</div>
+			<div class="table-row">
+				<div class="table-data">   <video class="vidL"; id="myVid7"><source src="contenu/tutophysio.mp4" type="video/mp4"></video> </div>			
+				<div class="table-data"><video class="vidL"; id="myVid8"><source src="contenu/tutooculus.mp4" type="video/mp4"></video></div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Animation d'atelier & accompagnements des chercheurs (masters, doctorants, MCF) <br><img class ="titeimg"; src="contenu/atelier.jpg"> </img> </div>
+			</div>
+		</div>	
+	</div>
+</div>
+ </div> 
+  </li>
+ </ul>
+ </div>
+  <!-- questions ou dispos pour en parler-->
+ 
+
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- Javascript  -->
+<script>
+for (let pas = 1; pas < 16; pas++) {
+document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid"+pas).addEventListener("mouseleave", function() {
+	this.pause();
+});
+}
+
+function myFunction() {
+for (let pas = 1; pas < 100; pas++) {
+  var x = document.getElementById("myDIV"+pas);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+}
+
+
+</script>
+</body>
+</html>
