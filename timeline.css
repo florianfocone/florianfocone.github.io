@@ -63,7 +63,7 @@ h2 {
 }
 
 .content video {
-   height: 0;
+   width: 0;
   overflow: hidden;  }
 
 label {
@@ -106,7 +106,7 @@ label:hover {
 }
 
 .radio:checked ~ .content video {
- height: 100%;
+ width: 60%;
 filter:grayscale(100%);
 }
 

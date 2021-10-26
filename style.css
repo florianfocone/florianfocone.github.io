@@ -11,11 +11,12 @@ section {
     min-height: 100%;
 }
 aside {
-    background-color: #1E2026;
+    background-color: #1B1B1E;
     width: 18vw;
     margin-right: -18vw;
      position: fixed;
     z-index: 1;
+	  min-height: 50%;
 }
 section {
     background-color: #1B1B1E;
@@ -39,6 +40,17 @@ hr{
 	  color: #828282;
 	  width: 10%;
 }
+
+h6{
+	  font-family :  "Courier New";
+  line-height : 1vw;
+  font-size: 0.8vw;
+  color: #828282;
+  text-align: left;
+  margin-block-start: 0.1em;
+  margin-block-end: 1em;
+}
+
 
 #main-text {
   font-family :  "Courier New";
