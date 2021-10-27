@@ -16,6 +16,8 @@ aside {
     margin-right: -11vw;
      position: fixed;
     z-index: 1;
+	min-height: 70%;
+	margin-top : 150px;
 }
 section {
     background-color: #1B1B1E;
@@ -46,7 +48,19 @@ H1{
 
 h3{
   font-family :  "Verdana";
-  line-height : 2vw;
+  line-height : 1vw;
+  margin-top : 1%;
+  margin-bottom : 1%;
+  margin-left : 5%;
+  margin-right : 5%;
+  font-size: 1vw;
+  color: #828282;
+  text-align: center;
+}
+
+h4{
+  font-family :  "Verdana";
+  line-height : 1vw;
   margin-top : 5%;
   margin-bottom : 5%;
   margin-left : 10%;
@@ -98,9 +112,21 @@ hr{
   line-height : 2vw;
   margin-top : 5%;
   margin-bottom : 5%;
-  margin-left : 0%;
-  margin-right : 0%;
+  margin-left : 5%;
+  margin-right : 5%;
   font-size: 1.1vw;
+  color: #828282;
+  text-align: left;
+  }
+  
+  #second-text {
+  font-family :  "Verdana";
+  line-height : 0.8vw;
+  margin-top : 0;
+  margin-bottom : 0;
+  margin-left : 1%;
+  margin-right : 1%;
+  font-size: 0.8vw;
   color: #828282;
   text-align: left;
   }
@@ -153,10 +179,9 @@ hr{
     .vidL { 
 	width : 600px;
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
-    margin-bottom: 100px;
-	margin-top: 100px;
+ text-align: left;
+    margin-bottom: 50px;
+	margin-top: 50px;
   }
   
     .column5 { 
@@ -217,7 +242,21 @@ hr{
       transform: scale(1.1);
     }
     
+#tete    {
+	width: 20%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+  transition: transform 0.5s;}
 
+    #tete:hover {
+      -ms-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
 
   img {
     width: 50%;
@@ -259,7 +298,7 @@ hr{
 	
 
 .container {
-	width: 80%;
+	width: 100%;
 	margin-right:auto;
 	margin-left:auto;
 	display:flex;
@@ -270,7 +309,7 @@ hr{
   line-height : 2vw;
   margin-top : 0%;
   margin-bottom : 5%;
-  margin-left : 10%;
+  margin-left : 0%;
   margin-right : 5%;
   font-size: 1vw;
   color: #828282;
@@ -300,8 +339,10 @@ hr{
 }
 
 .table-data, .header__item {
-	flex: 1 1 20%;
-	text-align:center;
+	flex: 1 1 1;
+	text-align:left;
+	margin-left : 5%;
+	margin-right : 5%;
 }
 
 .header__item {
