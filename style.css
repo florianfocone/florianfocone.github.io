@@ -42,9 +42,11 @@ hr{
 }
 
 h6{
-	  font-family :  "Courier New";
+  font-family :  "Courier New";
+  font-style: italic;
+  font-weight: normal;
   line-height : 1vw;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   color: #828282;
   text-align: left;
   margin-block-start: 0.1em;
@@ -59,7 +61,7 @@ h6{
   margin-bottom : 5%;
   margin-left : 10%;
   margin-right : 5%;
-  font-size: 1vw;
+  font-size: 1.2vw;
   color: #828282;
   text-align: left;
   }
@@ -175,8 +177,7 @@ text-align: center;
     display: block;
 	 margin-left: auto;
     margin-right: auto;
-    width: 40%;
-    height: 40%;
+    width: 100%;
     border-radius: 0%;
     overflow: hidden;
   }
@@ -197,13 +198,16 @@ text-align: center;
     height: 110%;
     -webkit-transition: transform 0.5s;
     -moz-transition: transform 0.5s;
-  transition: transform 0.5s;}
+  transition: transform 0.5s;
+  filter:grayscale(100%);}
+
 
     img:hover {
-      -ms-transform: scale(1.1);
-      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.0);
+      -moz-transform: scale(1.0);
       -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+      transform: scale(1.05);
+	   filter:grayscale(0%);
     }
 .short-text { display: none; }
 @media only screen and (max-width:800px) {

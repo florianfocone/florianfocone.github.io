@@ -54,9 +54,10 @@ h2 {
 }
 
 .content p {
+  font-size: 1vw;
   max-height: 0;
   color: transparent;
-  text-align: justify;
+  text-align: left;
   word-break: break-word;
   hyphens: auto;
   overflow: hidden;
@@ -68,7 +69,7 @@ h2 {
 
 label {
   font-family :  "Courier New";
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   position: absolute;
   z-index: 100;
   top: 1vw;
