@@ -32,10 +32,12 @@ h2 {
 
 
 .date {
+	writing-mode: vertical-rl;
+    text-orientation: upright;
   font-family :  "Courier New";
   margin-top: -1vw;
   top: 50%;
-  left: -9vw;
+  left: -5vw;
   font-size: 2vw;
   line-height: 2vw;
   position: absolute;

@@ -11,12 +11,13 @@ section {
     min-height: 100%;
 }
 aside {
-	    background-color : #000000;
+	background-color : #000000;
     width: 18vw;
     margin-right: -18vw;
-     position: fixed;
+     /* Setup */
+  position: fixed;
     z-index: 1;
-	  min-height: 100%;
+	min-height: 100%; 
 	
 
 }
@@ -72,8 +73,20 @@ h7{
   line-height : 2vw;
   margin-top : 5%;
   margin-bottom : 5%;
-  margin-left : 10%;
+  margin-left : 5%;
   margin-right : 5%;
+  font-size: 1.2vw;
+  color: #828282;
+  text-align: left;
+  }
+  
+  #main-textaside {
+  font-family :  "Courier New";
+  line-height : 2vw;
+  margin-top : 15%;
+  margin-bottom : 15%;
+  margin-left : 1%;
+  margin-right : 1%;
   font-size: 1.2vw;
   color: #828282;
   text-align: left;
@@ -81,7 +94,7 @@ h7{
   
   #profil {
   width: 100%;
-  margin: 1px;
+  margin-top: 5vw;
   text-align: center;
   }
   
@@ -131,9 +144,11 @@ h7{
 
   .menu{
 	  margin-top : 15%;
-	
-	
   }
+  
+ .menuaside{
+
+}
     .nav-item {	
 	
 	margin-bottom : 30%;
