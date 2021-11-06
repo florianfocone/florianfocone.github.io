@@ -11,12 +11,14 @@ section {
     min-height: 100%;
 }
 aside {
-    background-color: #1B1B1E;
+	    background-color : #000000;
     width: 18vw;
     margin-right: -18vw;
      position: fixed;
     z-index: 1;
-	  min-height: 50%;
+	  min-height: 100%;
+	
+
 }
 section {
     background-color: #1B1B1E;
@@ -45,14 +47,25 @@ h6{
   font-family :  "Courier New";
   font-style: italic;
   font-weight: normal;
-  line-height : 1vw;
+  line-height : 1.3vw;
+  font-size: 0.9vw;
+  color: #828282;
+  text-align: center;
+  margin-block-start: 0.1em;
+  margin-block-end: 1em;
+}
+
+h7{
+  font-family :  "Courier New";
+  font-style: italic;
+  font-weight: normal;
+  line-height : 1.3vw;
   font-size: 0.9vw;
   color: #828282;
   text-align: left;
   margin-block-start: 0.1em;
   margin-block-end: 1em;
 }
-
 
 #main-text {
   font-family :  "Courier New";
@@ -64,6 +77,12 @@ h6{
   font-size: 1.2vw;
   color: #828282;
   text-align: left;
+  }
+  
+  #profil {
+  width: 100%;
+  margin: 1px;
+  text-align: center;
   }
   
   
@@ -112,6 +131,7 @@ h6{
 
   .menu{
 	  margin-top : 15%;
+	
 	
   }
     .nav-item {	
