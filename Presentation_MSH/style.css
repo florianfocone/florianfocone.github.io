@@ -20,7 +20,7 @@ aside {
 	margin-top : 150px;
 }
 section {
-    background-color: #1B1B1E;
+    background-color: #000000;
     padding-left: 11vw;
     position: relative;
 	min-width: 100%;
@@ -42,7 +42,7 @@ H1{
   margin-left : 10%;
   margin-right : 5%;
   font-size: 0.9vw;
-  color: #1B1B1E;
+  color: #000000;
   text-align: center;
 }
 
@@ -78,7 +78,7 @@ h4{
   margin-left : 10%;
   margin-right : 5%;
   font-size: 0.8vw;
-  color: #1B1B1E;
+  color: #000000;
   text-align: center;
 }
 
