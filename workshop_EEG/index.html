@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="timeline.css">
+ </head>
+
+  <body>
+  <aside>
+  <br>
+  <H1> </H1>
+<img class ="titeimg"; src="contenu/logo_ua.png"> </img>
+<img class ="titeimg"; src="contenu/logo_confluences.png"> </img>
+
+ <br> <br> <br> <br>
+ <H1></H1>
+<img class ="titeimg"; src="contenu/Logo-OIC.svg"> </img>
+<img class ="titeimg"; src="contenu/logo_region.png"> </img>
+<img class ="titeimg"; src="contenu/Logo_france.svg"> </img>
+
+ <br> <br> <br> <br>
+<h4>
+florian.focone
+<br><b>@</b>
+<br>univ-angers.fr
+</h4>
+  
+  </aside>
+  
+
+  <section>
+<div id="main-text">
+
+<br><br><br><br><br><br>
+
+<H2> Hardware </H2>
+<br><br>
+<img src="contenu/hardware.jpg"> </img>
+<br><br><br><br>
+
+Caractéristiques des capteurs
+<br><center><embed src="contenu/datasheet.pdf" width=80%; height=600px; type='application/pdf'/></center>
+
+<H2> EEG  </H2>
+Que souhaitez vous analyser ?
+<img src="contenu/lobes.png"> </img>
+1 Herculano-Houzel, Suzana. "The human brain in numbers: a linearly scaled-up primate brain." Frontiers in human neuroscience 3 (2009): 31.
+2 Farnsworth, B. "EEG (Electroencephalography): The Complete Pocket Guide." (2019).
+3 Bansal, Dipali, and Rashima Mahajan. EEG-Based Brain-Computer Interfaces: Cognitive Analysis and Control Applications. Academic Press, 2019
+
+Placement des electrodes ("internationnal 10-20 system")
+<img src="contenu/placement.png"> </img>
+<img src="contenu/placement2.png"> </img>
+4 Abhang, Priyanka A., Bharti W. Gawali, and Suresh C. Mehrotra.” Chapter 2 - Technological Basics of EEG Recording and Operation of Apparatus”, Introduction to EEG-and speech-based emotion recognition. Academic Press, p.19-50, 2016.
+
+1 mesure = 2 electrodes + 1 electrodes reférence
+mesure différence de potentiel electrique entre 2 electrodes
+
+
+les 5 fréquences d'ondes
+<img src="contenu/waves.png"> </img>
+
+
+
+aspects pratiques
+
+EEG sensor:
+• The measured signal is the amplified difference between the two measuring signals which is bandpass filtered by 0.8-48Hz to eliminate the common unwanted signals (see EEG datasheet).
+• The high amplification (gain=40000) makes it very sensitive to surrounding artefacts such as light, movements and power supplies (50/60 Hz line noise).
+• It is important to establish an appropriate environment to ensure optimal performance of the sensor.
+• The test subject should suppress any muscular activation while the acquisition is performed especially in the facial area (eye movements and eye blinking) as well as neck and jaw movements (clenching/ chewing).
+• This can be done by placing a big cross in front of the subject to focus their eyes on while performing the task (if the task is not visually displayed).
+• To record some artefacts, it is recommended to acquire such data using EOG (Electrooculography), EMG (Electromyography), and ECG (Electrocardiography) if available.
+• Movement artefacts can also be recorded with a video camera or written down for each time segment.
+• The skin should be properly prepared before sticking the electrodes onto it.
+• Disinfection of the skin to remove old skin particles and if needed removal of hair should be considered.
+
+
+<H2> Software  </H2>
+ <!--<br> <img src="contenu/HMI.png"> </img>
+
+
+
+  mutualisation des compétences sur le tangible (équipements) et l'intengible (code, utilisation logiciel, etc.)
+	<div class="table">
+		<div class="table-content">	
+			<div class="table-row">	
+				<div class="table-data">   <video class="vidL"; id="myVid5"><source src="contenu/tutoeye.mp4" type="video/mp4"></video> </div>			
+				<div class="table-data"><video class="vidL"; id="myVid6"><source src="contenu/tutoreseau.mp4" type="video/mp4"></video> </div>
+			</div>
+			<div class="table-row">
+				<div class="table-data"> Création de tutoriels sur l'utilisation des technologies et méthodes</div>			
+
+			</div>
+			<div class="table-row">
+				<div class="table-data">   <video class="vidL"; id="myVid7"><source src="contenu/tutophysio.mp4" type="video/mp4"></video> </div>			
+				<div class="table-data"><video class="vidL"; id="myVid8"><source src="contenu/tutooculus.mp4" type="video/mp4"></video></div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Animation d'ateliers - accompagnement de chercheurs (masters, doctorants, MCF) et d'acteurs économiques <br><img class ="titeimg"; src="contenu/atelier.jpg"> </img> </div>
+			</div>
+		</div>	
+	</div>
+</div>
+ </div>
+-->
+ 
+
+ 
+ 
+
+
+
+<H2> Applications EEG  </H2>
+ 
+ In medical applications, EEG is typically used for the diagnosis of disorders or diseases in the brain that cause
+abnormalities which can be seen in the EEG signal such as in the case of epilepsy or sleep disorder. EEG can also be
+helpful when used with a brain-computer interface (BCI) for example for patients with a spinal cord injury, brainstem
+stroke, or amyotrophic lateral sclerosis (ALS) which are “locked in” their bodies without being able to communicate.
+Such patients with severe motor disabilities need alternative communication methods. The BCI extracts “features” from
+the brain signals and can trigger external device such as a switch, prostheses, or computers
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- Javascript  -->
+<script>
+for (let pas = 1; pas < 16; pas++) {
+document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid"+pas).addEventListener("mouseleave", function() {
+	this.pause();
+});
+}
+
+function myFunction() {
+for (let pas = 1; pas < 100; pas++) {
+  var x = document.getElementById("myDIV"+pas);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+}
+
+
+</script>
+</body>
+</html>
