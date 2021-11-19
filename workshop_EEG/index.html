@@ -3,6 +3,10 @@
   <head>
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="timeline.css">
+	<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
  </head>
 
   <body>
@@ -28,128 +32,205 @@ florian.focone
   </aside>
   
 
-  <section>
+<section>
 <div id="main-text">
 
-<br><br><br><br><br><br>
-
-<H2> Hardware </H2>
-<br><br>
+<H2> Capteurs </H2>
 <img src="contenu/hardware.jpg"> </img>
-<br><br><br><br>
+<center><embed src="contenu/datasheet.pdf" width=80%; height=1000px; type='application/pdf'/></center>
+<center><br><embed src="contenu/OpenSignals Manual.pdf" width=80%; height=1000px; type='application/pdf'/></center>
 
-Caractéristiques des capteurs
-<br><center><embed src="contenu/datasheet.pdf" width=100%; height=1000px; type='application/pdf'/></center>
-
-<H2> EEG  </H2>
-Que souhaitez vous analyser ?
-<img src="contenu/lobes.png"> </img> <br>
- <br>1 Herculano-Houzel, Suzana. "The human brain in numbers: a linearly scaled-up primate brain." Frontiers in human neuroscience 3 (2009): 31.
+<H2> Variables étudiées en fonction des lobes  </H2>
+<img src="contenu/lobes.png">  </img>
+ <div class="citation"> <br>1 Herculano-Houzel, Suzana. "The human brain in numbers: a linearly scaled-up primate brain." Frontiers in human neuroscience 3 (2009): 31.
  <br>2 Farnsworth, B. "EEG (Electroencephalography): The Complete Pocket Guide." (2019).
  <br>3 Bansal, Dipali, and Rashima Mahajan. EEG-Based Brain-Computer Interfaces: Cognitive Analysis and Control Applications. Academic Press, 2019
+</div>
 
-Placement des electrodes ("internationnal 10-20 system")
+<H2>Placement des electrodes "internationnal 10-20 system"</H2>
 <img src="contenu/placement.png"> </img>
 <img src="contenu/placement2.png"> </img>
-4 Abhang, Priyanka A., Bharti W. Gawali, and Suresh C. Mehrotra.” Chapter 2 - Technological Basics of EEG Recording and Operation of Apparatus”, Introduction to EEG-and speech-based emotion recognition. Academic Press, p.19-50, 2016.
- <br>
-1 mesure = 2 electrodes + 1 electrodes reférence
-mesure différence de potentiel electrique entre 2 electrodes
+<div class="citation">
+<br> 4 Abhang, Priyanka A., Bharti W. Gawali, and Suresh C. Mehrotra.” Chapter 2 - Technological Basics of EEG Recording and Operation of Apparatus”, Introduction to EEG-and speech-based emotion recognition. Academic Press, p.19-50, 2016.
+</div>
 
+<H2>La mesure EEG</H2>
+<div id="second-text">
+1 mesure = 2 electrodes + 1 electrode reférence
+1 mesure = Différence de potentiel electrique entre 2 electrodes
+</div>
 
-les 5 fréquences d'ondes
+<H2>5 ondes & fréquences associées</H2>
 <img src="contenu/waves.png"> </img>
 
-
- <br> <br>
-aspects pratiques
- <br> <br>
-EEG sensor:
-• The measured signal is the amplified difference between the two measuring signals which is bandpass filtered by 0.8-48Hz to eliminate the common unwanted signals (see EEG datasheet).
-• The high amplification (gain=40000) makes it very sensitive to surrounding artefacts such as light, movements and power supplies (50/60 Hz line noise).
-• It is important to establish an appropriate environment to ensure optimal performance of the sensor.
-• The test subject should suppress any muscular activation while the acquisition is performed especially in the facial area (eye movements and eye blinking) as well as neck and jaw movements (clenching/ chewing).
-• This can be done by placing a big cross in front of the subject to focus their eyes on while performing the task (if the task is not visually displayed).
-• To record some artefacts, it is recommended to acquire such data using EOG (Electrooculography), EMG (Electromyography), and ECG (Electrocardiography) if available.
-• Movement artefacts can also be recorded with a video camera or written down for each time segment.
-• The skin should be properly prepared before sticking the electrodes onto it.
-• Disinfection of the skin to remove old skin particles and if needed removal of hair should be considered.
- <br> <br>
-
-<H2> Software  </H2>
- <!--<br> <img src="contenu/HMI.png"> </img>
-
-
-
-  mutualisation des compétences sur le tangible (équipements) et l'intengible (code, utilisation logiciel, etc.)
-	<div class="table">
-		<div class="table-content">	
-			<div class="table-row">	
-				<div class="table-data">   <video class="vidL"; id="myVid5"><source src="contenu/tutoeye.mp4" type="video/mp4"></video> </div>			
-				<div class="table-data"><video class="vidL"; id="myVid6"><source src="contenu/tutoreseau.mp4" type="video/mp4"></video> </div>
-			</div>
-			<div class="table-row">
-				<div class="table-data"> Création de tutoriels sur l'utilisation des technologies et méthodes</div>			
-
-			</div>
-			<div class="table-row">
-				<div class="table-data">   <video class="vidL"; id="myVid7"><source src="contenu/tutophysio.mp4" type="video/mp4"></video> </div>			
-				<div class="table-data"><video class="vidL"; id="myVid8"><source src="contenu/tutooculus.mp4" type="video/mp4"></video></div>
-			</div>
-			<div class="table-row">
-				<div class="table-data">Animation d'ateliers - accompagnement de chercheurs (masters, doctorants, MCF) et d'acteurs économiques <br><img class ="titeimg"; src="contenu/atelier.jpg"> </img> </div>
-			</div>
-		</div>	
-	</div>
+<H2>Considérations pratiques & recommandations</H2>
+<div id="second-text">
+<br>• Filtre passe bande 0.8-48Hz éliminant la plupart des signaux non voulus.
+<br>• Le gain(40000) fait que le capteur est sensible aux artefacts (lumière, mouvement, réseau electrique, magnétiques, etc.).
+<br>• Attention aux mouvements (tête, oeil, clignements, machoire).
+<br>• Intéret de combiner les capteurs pour enregistrer les artefacts (EOG, EMG, and ECG, vidéo annotées).
+<br>• Toujours mieux de préparer la peau, enlever les poils
 </div>
- </div>
--->
- 
+<img class ="tititeimg"; src="contenu/placement1.jpg"> </img>
+<img class ="tititeimg";  src="contenu/placement2.jpg"> </img>
 
- 
- 
+<H2> Logiciel d'acquisition (OpenSignal)  </H2>
 
 
+<H2> Logiciel traitement (Spyder-Python)  </H2>
 
-<H2> Applications EEG  </H2>
- 
- In medical applications, EEG is typically used for the diagnosis of disorders or diseases in the brain that cause
-abnormalities which can be seen in the EEG signal such as in the case of epilepsy or sleep disorder. EEG can also be
-helpful when used with a brain-computer interface (BCI) for example for patients with a spinal cord injury, brainstem
-stroke, or amyotrophic lateral sclerosis (ALS) which are “locked in” their bodies without being able to communicate.
-Such patients with severe motor disabilities need alternative communication methods. The BCI extracts “features” from
-the brain signals and can trigger external device such as a switch, prostheses, or computers
-  <br> <br> <br>
-<br> E. Costa, K. Baptista, J. Cavalho, J. Costa, Influence of thermal environment on occipital EEG signal amplitude in sedentary activities, in International Journal of Occupational and Environmental Safety, vol.3, vol.1, 2019
+<pre><code class="python">
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 17 11:04:32 2021
 
-<br>J. Heinisch, I. Hübener, K. David, The Impact of Physical Activities on the Physiological Response to Emotions, in Proc. of the International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), 2018
+@author: f.foc
+"""
 
-<br>L. Shu, J. Xie, M. Yang, Z. Li, D. Liao, X. Xu, X. Yang, A review of Emotion Recognition Using Phyisological Signals, in Sensors, vol. 18, no. 2074, pp. 1-41, 2018
+################################################## Modules (ne pas modifier...) ###############################
 
-<br>E. Sürer, Physical and Cognitive Training of Children with Down Syndrome Using Video Games, in Smart Objects and Technologies for Social Good, pp. 362-365, 2017
+from tkinter.filedialog import askopenfilename #input dialog (fenetre interaction)
+from pathlib import Path #travailler avec des chemins de fichiers/repertoires
+import numpy # Travailler avec des "array" (matrices dans matlab)
+from numpy import loadtxt, array, mean 
+import csv # Gestion des fichiers (lire, ouvrir, ecrire)
+import os # Interface d'OS (fenetres, etc)
+import matplotlib.pyplot as plt # Graphiques
+from scipy.signal import spectrogram, welch # signal processing
+import biosignalsnotebooks as bsnb # biosignalsnotebooks Python package 
+#import math # Fonctions mathématiques (si vous souhaitez) https://docs.python.org/3/library/math.html
 
-<br>A. Hariharan, M. Thomas, P. Adam, K. Fuong, Towards Understanding the Interplay of Cognitive Demand and Arousal in Auction Bidding, in Proc. of the European Conf. On Information Systems (ECIS), 2014
+################################################## FONCTIONS (ne pas modifier...) #############################
 
-<br>https://link.springer.com/chapter/10.1007%2F978-3-319-07230-2_69
+# Fonction ouvre une interface graphique et permet de selectionner un fichier, renvoie le nom et le chemin
+def getfile(): 
+    filename = askopenfilename(initialdir = "",title = "Select file",filetypes = (("txt files","*.txt"),("all files","*.*")))
+    nomfichier = os.path.split(filename)[1]
+    return nomfichier, filename
 
-<br>https://www.jstage.jst.go.jp/article/jsaeijae/11/3/11_20204478/_article/-char/ja/
-  <br>https://arxiv.org/abs/2102.00414
-  <br>https://www.researchgate.net/publication/331432633_The_Mindfulness_Meditation_Effect_on_Brain_Electrical_Activity_Stress_Assessment_Concentration_State_and_Quality_of_Life
-  <br>https://link.springer.com/chapter/10.1007/978-3-030-58285-2_32
+# Fonction lit et parse un fichier csv et retourne les données formatées ainsi que la taille des colonnes et lignes
+def lecturecsv(nomfichier,ligne):
+   datalist = []
+   dataarray = [] 
+   with open(nomfichier, 'r') as csvfile:
+       reader = csv.reader(csvfile, delimiter=';')
+       for rows in reader:
+           datalist.append(rows) #list de str
+   
+   dataarray=numpy.array(datalist[ligne:]) #convert list en array        
+   L_rows = len(dataarray) # calcul de longueur de vecteur
+   L_columns = len(dataarray[0])
+   return dataarray, L_rows, L_columns
+
+############################################# SCRIPT (à modifier gentillement) ###################################
+
+nomfichier, chemin=getfile() # Obtient chemin et nom du fichier grace à une fenetre graphique
+path = Path(chemin) # formatte un str en chemin
+os.chdir(path.parent.absolute()) # Met l'espace de travail dans le repertoire indiqué
+data = loadtxt(nomfichier) # Récupère les données brutes
+channel_column = 2
+dataEEG = data[:,channel_column] # Récupère les données EEG (3ème colonne) 
+sampling_rate = 1000 # Défini la fréquence d'acquisition (ici 1000hz)
+time = bsnb.generate_time(dataEEG, sampling_rate) # Génère un vecteur de temps (à utiliser en abscisse)
+
+
+# Transforme le signal en microvolt (fonction de conversion donnée par PLUX)
+# https://biosignalsplux.com/learn/notebooks/Categories/Pre-Process/unit_conversion_eeg_rev.php)
+vcc = 3e6 
+gain = 40000
+resolution = 16 # Resolution (number of available bits)
+signal_uv = (((array(dataEEG) / 2**resolution) - 0.5) * vcc) / gain
+
+# Trace un graphique (plot) le signal EEG (sans post-processing) en fonction du temps
+plt.figure(1) # défini une figure
+plt.plot(time, signal_uv, label='Uv') # trace le graphique
+plt.xlabel('temps (s)') # défini un label en abcisse
+plt.ylabel('raw data (uV)') # défini un label en ordonnée
+plt.legend() # défini une légende
+plt.title("Raw data EEG en microvolt") # défini un titre
+plt.savefig('graph_raw_uV',dpi=500) # Sauvegarde la figure avec un nom de fichier et une résolution donnée
+
+# Spectrogramme du signal EEG : info sur la dynamique du signal (puissance) au cours du temps pour chaque fréquence
+#https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.spectrogram.html
+f, t, Sxx = spectrogram(signal_uv, fs = 1000) 
+
+# Trace le spectrogramme graphique
+plt.figure(2)
+plt.pcolormesh(t, f, Sxx, shading='gouraud') # Tracé
+plt.ylabel('Frequences [Hz]')
+plt.xlabel('Temps [s]')
+plt.ylim([0, 30]) #limiter l'ordonnée
+plt.colorbar().set_label("Power (dB)") # Légende
+plt.title("Spectrogram") 
+plt.savefig('spectrogram',dpi=500)
+
+
+# Analyse temporelle
+# Calcul d'une baseline et normalisation avec celle-ci sur une fenetre temporelle particulière
+sample_start = 1000; # Choix du début
+sample_end = 3000; # Choix de la fin
+signal_analysed = array(signal_uv[sample_start:sample_end]) - mean(array(signal_uv[sample_start:sample_end])) # retrait et normalisation par la baseline
+
+# Filtrer en appliquant un filtre Butterworth passe-bande  (Exemple de la "alpha band")
+freq_low = 8 # limite basse de alpha band
+freq_high = 12 #limite haute de alpha band 
+filtered_signal_8_12 = bsnb.bandpass(signal_analysed, freq_low, freq_high, order = 2, fs = 1000) # Application du filtre d'ordre 2
+
+# Tracé de deux graphiques superposés 
+plt.figure(3)
+plt.plot(time[sample_start:sample_end], filtered_signal_8_12, label='signal filtré') 
+plt.xlabel('temps (s)') 
+plt.ylabel('signal(uV)')  
+plt.title("alpha band") 
+plt.plot(time[sample_start:sample_end], signal_analysed, label='signal brut')  
+plt.legend() 
+plt.savefig('filtered signal',dpi=500)
+
+# Calcul de la variable temporelle : l'aire sous la courbe (intégrale)
+PowerTemp_value = sum(abs(filtered_signal_8_12[sample_start:sample_end])); #Somme des valeurs absolues 
+
+
+# Analyse fréquentielle --> fast fourier transform using scipy.signal.welch & power spectrum density computing
+# Calcul densité spectrale de puissance https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.welch.html
+freq_axis, power_spect = welch(filtered_signal_8_12, sampling_rate)
+
+# Tracé du graphique de densité spectrale de puissance
+plt.figure(4)
+plt.plot(freq_axis, power_spect) # seulement les fréquences en dessous de 30
+plt.xlim([0, 30])
+plt.xlabel('frequency [Hz]')
+plt.ylabel('PSD')
+plt.savefig('FFT',dpi=500)
+
+# Calcul de la variable fréquentielle : l'aire sous la courbe
+psd_value = sum(power_spect[freq_low:freq_high]);
+
+</code></pre>
+
+
   
- <br><center><embed src="contenu/OpenSignals Manual.pdf" width=100%; height=1000px; type='application/pdf'/></center>
 
 
- <H2> API - pour aller plus loin  </H2>
+ <H2> Pour aller plus loin  </H2>
+ <div id="second-text">
+ <br>• EEG  <a href="https://biosignalsplux.com/products/sensors/electroencephalography.html">https://biosignalsplux.com/products/sensors/electroencephalography.html</a>
+ <br>• Notebooks <a href="https://biosignalsplux.com/learn/notebooks.html">https://biosignalsplux.com/learn/notebooks.html</a>
+ <br>• APIs <a href="https://biosignalsplux.com/products/software/apis.html">https://biosignalsplux.com/products/software/apis.html</a>
+ </div>
  
- https://biosignalsplux.com/products/sensors/electroencephalography.html
- 
- https://biosignalsplux.com/learn/notebooks.html
- 
- https://biosignalsplux.com/products/software/apis.html
- 
+ <H2> Workshop - 2 groupes </H2>
+  <div id="second-text">
+   <br>• Définir un protocole simple (2 conditions, 1 participant, 1 placement d'electrode, 1 onde)
+   <br>• Récupérer les signaux avec OpenSignal 
+   <br>• Proposer un traitement et une visualisation graphique
+   <br>• Présenter son XP (protocole, résultats) à l'autre groupe
+  
+   </div>
+ </div>
+ </section>
  
 <!-- Javascript  -->
+
 <script>
 for (let pas = 1; pas < 16; pas++) {
 document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
