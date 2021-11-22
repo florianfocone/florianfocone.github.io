@@ -17,7 +17,7 @@ aside {
      position: fixed;
     z-index: 1;
 	min-height: 70%;
-	margin-top : 150px;
+	margin-top : 0px;
 }
 section {
     background-color: #1B1B1E;
