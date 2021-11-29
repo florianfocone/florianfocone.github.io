@@ -73,12 +73,11 @@ h2 {
 }
 
 .content video {
-  max-height: 0;
   color: transparent;
   text-align: justify;
   word-break: break-word;
   hyphens: auto;
-  overflow: hidden;  }
+ }
 
 label {
   font-family :  "Verdana";
@@ -138,7 +137,6 @@ filter:grayscale(100%);
 
 /* Hide Play button + controls on iOS */
 video::-webkit-media-controls {
-    display:none !important;
 }
 
 

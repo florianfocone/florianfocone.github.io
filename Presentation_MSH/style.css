@@ -16,8 +16,9 @@ aside {
     margin-right: -11vw;
      position: fixed;
     z-index: 1;
-	min-height: 70%;
-	margin-top : 150px;
+	min-height: 100%;
+	margin-top : 0px;
+	padding-top:50px;
 }
 section {
     background-color: #000000;
@@ -55,7 +56,7 @@ H2{
   margin-right : 5%;
   font-size: 0.8vw;
   color: #828282;
-  text-align: center;
+  text-align: left;
 }
 
 h3{
@@ -155,6 +156,19 @@ hr{
   text-align: left;
 
 }	
+    .vidXL { 
+	width : 80%;
+	display: block;
+ text-align: center;
+  padding:5px;
+    margin-bottom: 50px;
+	margin-top: 50px;
+	margin-left:auto;
+	margin-right:auto;
+	 background-color: #ffff;
+  }
+  
+  
   
   #tableA { 
   border-collapse: collapse;
@@ -255,10 +269,11 @@ hr{
     }
     
 #tete    {
-	width: 20%;
+	width : 400px;
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
+ text-align: left;
+    margin-bottom: 50px;
+	margin-top: 50px;
     -webkit-transition: transform 0.5s;
     -moz-transition: transform 0.5s;
   transition: transform 0.5s;}

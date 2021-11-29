@@ -17,7 +17,7 @@ aside {
     position: fixed;
     z-index: 1;
 	min-height: 100%;
-	margin-top :100px;
+	margin-top :50px;
 }
 section {
     background-color: #ffff;
@@ -47,6 +47,10 @@ H1{
 }
 
 H2{
+  margin: 100px 0 50px 0px;
+  font-size: 1vw;
+  letter-spacing: 2px;
+  text-transform: uppercase; 
   color:  #0ABBEF;
 }
 
@@ -59,7 +63,7 @@ h3{
   margin-right : 5%;
   font-size: 1vw;
   color: #1B1B1E;
-  text-align: center;
+  text-align: left;
 }
 
 h4{
@@ -114,7 +118,7 @@ hr{
 #main-text {
   font-family :  "Verdana";
   line-height : 2vw;
-  margin-top : 5%;
+  margin-top : 10px;
   margin-bottom : 5%;
   margin-left : 5%;
   margin-right : 5%;
@@ -189,7 +193,7 @@ hr{
   }
   
   .vidXL { 
-	width : 1000px;
+	width : 80%;
 	display: block;
  text-align: center;
     margin-bottom: 50px;
@@ -268,19 +272,18 @@ hr{
   transition: transform 0.5s;}
 
     img:hover {
-      -ms-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+      -ms-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
     }
 	
 	  .titeimg {
-
 	display: block;
 	text-align:center;
-	  margin-left: auto;
-  margin-right: auto;
-  margin-top:20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:20px;
     width: 70%;
 
     -webkit-transition: transform 0.5s;
@@ -288,13 +291,27 @@ hr{
   transition: transform 0.5s;}
 
     .titeimg:hover {
-      -ms-transform: scale(1.05);
-      -moz-transform: scale(1.05);
-      -webkit-transform: scale(1.05);
-      transform: scale(1.05);
+      -ms-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
     }
 	
-	
+		  .titeimgtable {
+	display: block;
+	margin-top:0px;
+    width: 100%;
+
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+  transition: transform 0.5s;}
+
+    .titeimgtable:hover {
+      -ms-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
+    }
 	
 
 .container {
