@@ -1,0 +1,8 @@
+pip install libmagic
+pip uninstall python-magic
+pip install python-magic-bin==0.4.14
+pip install biosignalsnotebooks
+
+Right-click on iPython console tab.
+Choose "Restart kernel"
+
