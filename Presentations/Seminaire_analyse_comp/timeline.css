@@ -131,7 +131,7 @@ filter:grayscale(100%);
 
 /* Hide Play button + controls on iOS */
 video::-webkit-media-controls {
-    display:none !important;
+
 }
 
 

@@ -18,7 +18,12 @@ aside {
     z-index: 1;
 	min-height: 100%;
 	margin-top :50px;
+	    opacity: 0.3;
 }
+aside:hover{
+    opacity: 1;
+}
+
 section {
     background-color: #ffff;
     padding-left: 11vw;
@@ -35,7 +40,7 @@ a{
 }
 
 H1{
-	 font-family :  "Verdana";
+  font-family :  "Verdana";
   line-height : 1vw;
   margin-top : 5%;
   margin-bottom : 5%;
@@ -47,11 +52,12 @@ H1{
 }
 
 H2{
-  margin: 100px 0 50px 0px;
+  font-family :  "Verdana";
+  margin: 100px 50px 50px 50px;
   font-size: 1vw;
   letter-spacing: 2px;
   text-transform: uppercase; 
-  color:  #0ABBEF;
+  color:  #1B1B1E;
 }
 
 h3{
@@ -61,7 +67,7 @@ h3{
   margin-bottom : 1%;
   margin-left : 5%;
   margin-right : 5%;
-  font-size: 1vw;
+  font-size: 0.9vw;
   color: #1B1B1E;
   text-align: left;
 }
@@ -78,6 +84,17 @@ h4{
   text-align: center;
 }
 
+p{
+  font-family :  "Verdana";
+  line-height : 1.5vw;
+  margin-top : 1%;
+  margin-bottom : 1%;
+  margin-left : 5%;
+  margin-right : 5%;
+  font-size: 0.9vw;
+  color: #1B1B1E;
+  text-align: left;	
+}
 .divhide{
 	
 	display: none;
@@ -193,7 +210,7 @@ hr{
   }
   
   .vidXL { 
-	width : 80%;
+	width : 100%;
 	display: block;
  text-align: center;
     margin-bottom: 50px;
@@ -315,18 +332,15 @@ hr{
 	
 
 .container {
-	width: 100%;
+	width: 90%;
 	margin-right:auto;
 	margin-left:auto;
-	display:flex;
 	justify-content:center;
 	align-items:center;
 	min-height:0vh;
 	font-family :  "Courier New";
   line-height : 2vw;
-  margin-top : 0%;
   margin-bottom : 5%;
-  margin-left : 0%;
   margin-right : 5%;
   font-size: 1vw;
   color: #828282;
@@ -335,6 +349,7 @@ hr{
 
 .table {
 	width:100%;
+	text-align: center;
 	border:1px solid $color-form-highlight;
 }
 
@@ -364,4 +379,22 @@ hr{
 
 .header__item {
 	text-transform:uppercase;
+}
+
+.table-data3 {
+	flex: 1 1 1;
+	text-align:left;
+	width : 60%
+}
+
+.table-data2 {
+	flex: 1 1 1;
+	text-align:left;
+	width : 40%
+}
+
+.table-data1 {
+	flex: 1 1 1;
+	text-align:left;
+	width : 20%
 }

@@ -34,17 +34,26 @@ florian.focone
  <div class="container">
 	<div class="table">
 		<div class="table-content">	
-			<div class="table-row">	
-				<div class="table-data"> 1 </div>			
-				<div class="table-data"> 2 </div>
-				<div class="table-data"> 3 </div>			
-				<div class="table-data"> 4 </div>
+					<div class="table-row">
+				<div class="table-data1"> <b><br> Possibilité n°</b><br><br></div>
+				<div class="table-data1"> <br><b> 1</b><br><br> </div>			
+				<div class="table-data1"> <br><b>2 </b><br><br> </div>
+				<div class="table-data1"> <br> <b>3</b><br><br> </div>			
+				<div class="table-data1"> <br> <b>4</b><br><br> </div>
 			</div>
+			
+			<div class="table-row">	
+				<div class="table-data1"> <b>Applications</b> </div>
+				<div class="table-data1"> Internet  <br> Navigateur </div>			
+				<div class="table-data1"> Local  <br> App 2D/3D</div>
+				<div class="table-data1"> Hybride<br>Internet <br>+ App 2D/3D  </div>			
+				<div class="table-data1"> Local <br> Réalité virtuelle </div>
+			</div>
+
 			<div class="table-row">
-				<div class="table-data"> 1 </div>			
-				<div class="table-data"> 2 </div>
-				<div class="table-data"> 3 </div>			
-				<div class="table-data"> 4 </div>
+				<div class="table-data1"> <br><b>Environnement <br> passation</b> </div>		
+				<div class="table-data3" style="text-align: center;"><br> Bureautique et/ou Smartphone</div>					
+				<div class="table-data1"><br> Casques </div>	
 			</div>
 		</div>	
 	</div>
@@ -53,6 +62,33 @@ florian.focone
 
 <H2>Exemples détaillés</H2>
 
+<H3>Possibilité n°1 : Passation d'une expérience via Internet (sur navigateur) sur bureau ou smartphone</H3>
+
+<video controls class="vidXL"; id="myVid1"><source src="contenu/1.mp4" type="video/mp4"></video>
+
+<p><b> Résumé : </b> 
+<br> 
+<br> - accès depuis internet peut importe l'outil (pc, tablette, smartphone)
+<br> - accès administrateur pour observer la passation
+<br> - nombre de passations simultanées très nombreuses, possibilité de maitriser les participants
+<br> - possible expérimentation en éco expérimentale (interaction entre participant)
+<br> - plusieurs types de données récoltées (choix subjectifs et données comportementales)
+<br> - enregistrement données dans base de données et export CSV
+</p>
+<br><br><br><br><br>
+
+<H3>Possibilité n°2 : Passation d'une expérience en local </H3>
+
+<video controls class="vidXL"; id="myVid1"><source src="contenu/2.mp4" type="video/mp4"></video>
+
+<p><b> Résumé : </b> 
+<br> 
+<br> - En local (sans internet) 
+<br> - Variété d'interaction et de possibilités de captation (UserLab)
+<br> - 1 personne par capteur
+<br> - possible expérimentation a plusieurs sur réseau local dans une même application
+<br> - enregistrement données automatique images, CSV, etc
+</p>
 
 
 <H2>Points technologiques et implications</H2>
@@ -63,7 +99,6 @@ florian.focone
 
 
 
-<video class="vidXL"; id="myVid1"><source src="contenu/video_promo_p2ac.mp4" type="video/mp4"></video>
 
 
 
@@ -71,26 +106,7 @@ florian.focone
   </div> 
 <!-- Javascript  -->
 <script>
-for (let pas = 1; pas < 16; pas++) {
-document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
-	this.play();
-});
 
-document.getElementById("myVid"+pas).addEventListener("mouseleave", function() {
-	this.pause();
-});
-}
-
-function myFunction() {
-for (let pas = 1; pas < 100; pas++) {
-  var x = document.getElementById("myDIV"+pas);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-}
 
 
 </script>
