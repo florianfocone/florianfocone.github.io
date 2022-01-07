@@ -348,7 +348,6 @@ hr{
 }
 
 .table {
-	 font-family :  "Verdana";
 	 color: #1B1B1E;
 	width:100%;
 	text-align: center;

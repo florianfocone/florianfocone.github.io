@@ -218,8 +218,8 @@ florian.focone
 			</div>
 			<div class="table-row">
 			<div class="table-data1"> <br><b></b><br><br> </div>
-				<div class="table-data3"> <b><br>*Interaction :</b> boutons, champ texte, ascenseur, survol d'une image avec souris, cliquer sur un objet, interagir avec un personnage, etc.
-				<br><b>*Evenements :</b> temps sur une page, dans un espace, nombre de clic, temps de réponse, n'importe quel feedback de l'application...<br><br></div>
+				<div class="table-data3"> <b><br>Interaction :</b> boutons, champ texte, ascenseur, survol d'une image avec souris, cliquer sur un objet, interagir avec un personnage, etc.
+				<br><b>Evenements :</b> temps sur une page, dans un espace, nombre de clic, temps de réponse, n'importe quel feedback de l'application...<br><br></div>
 						<div class="table-data1"> <br><b></b><br><br> </div>
 			</div>
 		</div>	
