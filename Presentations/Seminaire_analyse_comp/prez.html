@@ -232,8 +232,13 @@ florian.focone
 <H2>Représentation des données</H2>
 
 <H3>Brutes</H3>
-<p> Fichier CSV </p>
-<img class ="titeimg"; src="contenu/csv.png"> </img>
+<p> Fichier txt/csv </p>
+<br><br><br>
+<input type="file" id="myFile">
+<br><br>
+<textarea style="width:90%;height: 1000px" id="output"></textarea>
+
+<br><br>
 
 <H3>"Post traitement"</H3>
 <p> Graphiques </p>
@@ -241,17 +246,51 @@ florian.focone
 <img class ="titeimg"; src="contenu/magasin2.png"> </img> - proxémie (2D vecteur sur un axe au cours du temps)
 
 <p> Images </p>
+<p> Peuvent représenter des dynamiques au cours du temps </p>
+<p> Carte chaleur (eyetracking) </p>
 <img class ="titeimg"; src="contenu/chaleur.png"> </img>
-
-<img class ="titeimg"; src="contenu/magasin.png"> </img> [Exemple en image] Paul déplacement ville
+<p> Chemin déplacement dans un monde </p>
+<img class ="titeimg"; src="contenu/magasin.png"> </img> 
 
 <p> Vidéo </p>
-<video controls class="vidXL"; id="myVid1"><source src="contenu/eyetracking.mp4" type="video/mp4"></video>
-<video controls class="vidXL"; id="myVid1"><source src="contenu/eyetracking.mp4" type="video/mp4"></video> 3D Timeline sur Python
+<p>Position du regard (barre)</p>
+<video controls class="vidXL"; id="myVid1"><source src="contenu/eyetracker_dyna.mp4" type="video/mp4"></video>
+<p>Position du regard (VR)</p>
+<video controls class="vidXL"; id="myVid1"><source src="contenu/eyetracker_vr.mp4" type="video/mp4"></video>
 
 
+<p>3D Timeline sur Python 3D</p>
+<video controls class="vidXL"; id="myVid1"><source src="contenu/3dpython.mp4" type="video/mp4"></video> 
 
+
+<H3>"Inférées"</H3>
+<p>A vous de voir !</p>
+<video controls class="vidXL"; id="myVid1"><source src="contenu/emotion.mp4" type="video/mp4"></video> 
 
   </div> 
 </body>
 </html>
+
+<script>
+
+
+var input = document.getElementById("myFile");
+var output = document.getElementById("output");
+
+
+input.addEventListener("change", function () {
+  if (this.files && this.files[0]) {
+    var myFile = this.files[0];
+    var reader = new FileReader();
+    
+    reader.addEventListener('load', function (e) {
+      output.textContent = e.target.result;
+    });
+    
+    reader.readAsBinaryString(myFile);
+  }   
+});
+
+	
+
+</script>
