@@ -7,7 +7,7 @@ html {
 aside,
 section {
     box-sizing: border-box;
-    float: left;
+    float: center;
     min-height: 100%;
 }
 aside {
@@ -17,7 +17,7 @@ aside {
     position: fixed;
     z-index: 1;
 	min-height: 100%;
-	margin-top :50px;
+	margin-top :10px;
 	    opacity: 0.3;
 }
 aside:hover{
@@ -28,8 +28,10 @@ section {
     background-color: #ffff;
     padding-left: 11vw;
     position: relative;
-	min-width: 100%;
+	width: 95%;
 	min-height : 100%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 a{
@@ -210,7 +212,7 @@ hr{
   }
   
   .vidXL { 
-	width : 100%;
+	width : 80%;
 	display: block;
  text-align: center;
     margin-bottom: 50px;
@@ -280,7 +282,7 @@ hr{
 
 
   img {
-    width: 50%;
+    width: 80%;
 	display: block;
   margin-left: auto;
   margin-right: auto;
@@ -308,6 +310,26 @@ hr{
   transition: transform 0.5s;}
 
     .titeimg:hover {
+      -ms-transform: scale(1.01);
+      -moz-transform: scale(1.01);
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
+    }
+	
+		  .htmlbal {
+	display: block;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:20px;
+    width: 80%;
+	min-height: 1000px;
+
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+  transition: transform 0.5s;}
+
+    .htmlbal:hover {
       -ms-transform: scale(1.01);
       -moz-transform: scale(1.01);
       -webkit-transform: scale(1.01);
