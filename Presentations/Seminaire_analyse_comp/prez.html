@@ -29,13 +29,13 @@ florian.focone
   
 
   <section>
- <H2>Différentes applications possibles en accord avec votre protocole</H2>
+ <H2>Différents environnements de passation en accord avec votre protocole</H2>
 
  <div class="container">
 	<div class="table">
 		<div class="table-content">	
 			<div class="table-row">
-				<div class="table-data1"> <br><b>Environnement <br> passation</b> </div>		
+				<div class="table-data1"> <br><b>Environnement</b> </div>		
 				<div class="table-data3" style="text-align: center;"><br> Bureautique et/ou Smartphone</div>					
 				<div class="table-data1"><br> Casques </div>	
 			</div>
@@ -49,10 +49,10 @@ florian.focone
 			
 			<div class="table-row">	
 				<div class="table-data1"> <b>Applications</b> </div>
-				<div class="table-data1"> Internet  <br> Navigateur </div>			
-				<div class="table-data1"> Local  <br> App 2D/3D</div>
-				<div class="table-data1"> Hybride<br>Internet <br>+ App 2D/3D  </div>			
-				<div class="table-data1"> Local <br> Réalité virtuelle </div>
+				<div class="table-data1"> Internet  <br> Navigateur - capteurs</div>			
+				<div class="table-data1"> Local   <br> + Capteurs + 2D/3D</div>
+				<div class="table-data1"> Hybride<br>Internet <br>+ ajout 2D/3D  - capteurs</div>			
+				<div class="table-data1"> Local <br> + Réalité virtuelle </div>
 			</div>
 
 		
@@ -69,12 +69,12 @@ florian.focone
 
 <p><b> Résumé : </b> 
 <br> 
-<br> - accès depuis internet peut importe l'outil (pc, tablette, smartphone)
-<br> - accès administrateur pour observer la passation
-<br> - nombre de passations simultanées très nombreuses, possibilité de maitriser les participants
-<br> - possible expérimentation en éco expérimentale (interaction entre participant)
-<br> - plusieurs types de données récoltées (choix subjectifs et données comportementales)
-<br> - enregistrement données dans base de données et export CSV
+<br> - Depuis internet peut importe l'outil (pc, tablette, smartphone)
+<br> - Administration / observervation de la passation
+<br> - Passations simultanées ++, maitrise des participants
+<br> - Expérimentation éco expérimentale (interaction entre participants)
+<br> - Types de données récoltées : choix subjectifs et données comportementales (sans capteurs)
+<br> - Enregistrement base de données et export CSV
 </p>
 <br><br><br><br><br>
 
@@ -84,24 +84,24 @@ florian.focone
 
 <p><b> Résumé : </b> 
 <br> 
-<br> - En local (sans internet) 
-<br> - Variété d'interaction et de possibilités de captation (UserLab)
+<br> - Local (sans internet) 
+<br> - Interactions et de possibilités de captation (UserLab)
 <br> - 1 personne par capteur
-<br> - possible expérimentation a plusieurs sur réseau local dans une même application
-<br> - enregistrement données automatique images, CSV, etc
+<br> - Expérimentation a plusieurs sur réseau local dans une même application
+<br> - Enregistrement automatique des données (images/vidéo/texte, etc)
 </p>
 
 <br><br><br><br><br>
 
-<H3>Possibilité n°3 : Hybride (Internet + App 2D/3D) </H3>
+<H3>Possibilité n°3 : Hybride (Internet + App 2D/3D - capteurs) </H3>
 
 <video controls class="vidXL"; id="myVid1"><source src="contenu/3.mp4" type="video/mp4"></video>
 
 <p><b> Résumé : </b> 
 <br> 
-<br> - internet
-<br> - combine interêt passation distance avec des contenus plus graphique (possibilités)
-<br> - enregistrement données automatique images, CSV sur serveur avec nommage fichiers
+<br> - Internet
+<br> - Interêt passation distance avec des contenus plus graphiques
+<br> - Enregistrement automatique (images,texte) sur serveur
 </p>
 
 <br><br><br><br><br>
@@ -112,19 +112,18 @@ florian.focone
 
 <p><b> Résumé : </b> 
 <br> 
-<br> - local !
+<br> - Local
 <br> - Plusieurs casques/possibilités (données physios, eyetracker, données comportementales)
-<br> - enregistrement données automatique images, vidéos, CSV sur le casque ou sur PC (cas filaire)
+<br> - Enregistrement automatique images, vidéos, CSV sur le casque ou sur PC (cas filaire)
 </p>
 
 
 <H2>Points technologiques et implications</H2>
 
 <H3>Les expériences en lignes necessitent :</H3><p>
-<br> - le developpement de votre application par le UserLab 
-<br> - la programmation utilisée : python, et web (html, css, javascript, php)
-<br> - sa containarisation et son deploiement dans le serveur du UserLab (bientôt disponible) 
-<br> - option (éco expérimentale): pour expérimentations à participantS et/ou si vous souhaitez surveiller les sessions cela necessite la mise en place d'Otree.
+<br> - Le developpement (programmation) de votre application : python, et web (html, css, javascript, php)
+<br> - Sa "containarisation" et son deploiement sur un serveur (UserLab bientôt disponible...) 
+<br> - Option (éco expérimentale): pour expérimentations participantS et/ou si vous souhaitez surveiller les sessions cela necessite la mise en place d'Otree.
 </p>
 
 <br><br><br>
@@ -133,10 +132,9 @@ florian.focone
 <img class ="img"; src="contenu/otree.png"> </img>
 <br><br><br>
 <H3>Les expériences en 2D/3D et réalité virtuelle necessitent :</H3><p>
-<br> - le developpement de votre application par le UserLab
-<br> - la programmation utilisée : C#, et web en option (php)
-<br> - la conception d'objet 3D avec Blender
-<br> - l'implémentation dans Unity3D (un moteur de rendu 3D) et son déploiement sur une plateforme (web, bureau, casque de RV)
+<br> - Le developpement (programmation) de votre application : C#, et web en option (php recueil données)
+<br> - La conception d'objet 3D avec Blender (ou pas)
+<br> - Implémenter dans Unity3D (un moteur de rendu 3D) et déployer sur une plateforme (web, bureau, casque de RV)
 </p>
 <br><br><br>
 <img class ="img"; src="contenu/unity2.png"> </img>
@@ -163,22 +161,22 @@ florian.focone
 			
 			<div class="table-row">
 				<div class="table-data1"> <b><br> Enregistrement écran</b><br><br></div>
-				<div class="table-data1"> <br><b>V </b><br>sauf internet<br> </div>			
-				<div class="table-data1"> <br><b>V</b><br>sauf internet<br> </div>
-				<div class="table-data1"> <br> <b>V</b><br><br> </div>			
+				<div class="table-data1"> <br><b>X </b><br><br> </div>			
+				<div class="table-data1"> <br><b>V</b><br><br> </div>
+				<div class="table-data1"> <br><b>V</b><br>sauf internet<br> </div>			
 				<div class="table-data1"> <br> <b>V</b><br><br> </div>
 			</div>
 
 			<div class="table-row">
-				<div class="table-data1"> <b><br>Cinétique membres</b><br><br></div>
-				<div class="table-data1"> <br><b>X </b><br>sans capteurs<br> </div>			
-				<div class="table-data1"> <br><b>X</b><br>sans capteurs<br> </div>
-				<div class="table-data1"> <br> <b>X</b><br>sans capteurs<br> </div>			
+				<div class="table-data1"> <b><br>Cinématique segments corporels</b><br><br></div>
+				<div class="table-data1"> <br><b>X </b><br><br> </div>			
+				<div class="table-data1"> <br><b>V</b><br>Avec capteurs<br> </div>
+				<div class="table-data1"> <br> <b>X</b><br><br> </div>			
 				<div class="table-data1"> <br> <b>V</b><br><br> </div>
 			</div>
 			
 				<div class="table-row">
-				<div class="table-data1"> <b><br>Cinétique curser</b><br><br></div>
+				<div class="table-data1"> <b><br>Cinématique curser</b><br><br></div>
 				<div class="table-data1"> <br><b>V </b><br><br> </div>			
 				<div class="table-data1"> <br><b>V</b><br><br> </div>
 				<div class="table-data1"> <br> <b>V</b><br><br> </div>			
@@ -187,17 +185,17 @@ florian.focone
 			
 			<div class="table-row">
 				<div class="table-data1"> <b><br>Position Regard</b><br><br></div>
-				<div class="table-data1"> <br><b>X </b><br>sauf internet<br>  </div>			
-				<div class="table-data1"> <br><b>X</b><br>sauf internet<br> </div>
-				<div class="table-data1"> <br> <b>V</b><br><br> </div>			
+				<div class="table-data1"> <br><b>X </b>  </div>			
+				<div class="table-data1"> <br><b>V</b> </div>
+				<div class="table-data1"> <br><b>X</b><br><br> </div>			
 				<div class="table-data1"> <br> <b>V</b><br><br> </div>
 			</div>
 			
 			<div class="table-row">
-				<div class="table-data1"> <b><br>Regard Objet regardé</b><br><br></div>
+				<div class="table-data1"> <b><br>Objet regardé</b><br><br></div>
 				<div class="table-data1"> <br><b>X </b><br><br>  </div>			
-				<div class="table-data1"> <br><b>X</b><br><br> </div>
-				<div class="table-data1"> <br> <b>V</b><br><br> </div>			
+				<div class="table-data1"> <br><b>V</b><br><br> </div>
+				<div class="table-data1"> <br><b>X</b><br><br></div>			
 				<div class="table-data1"> <br> <b>V</b><br><br> </div>
 			</div>
 			
@@ -218,7 +216,7 @@ florian.focone
 			</div>
 			<div class="table-row">
 			<div class="table-data1"> <br><b></b><br><br> </div>
-				<div class="table-data3"> <b><br>*Interaction :</b> boutons, champ texte, ascenseur, survol d'une image avec souris, cliquer sur un objet, interagir avec un personnage, etc.
+				<div class="table-data3"> <b><br>*Interactions :</b> boutons, champ texte, ascenseur, survol d'une image avec souris, cliquer sur un objet, interagir avec un personnage, etc.
 				<br><b>*Evenements :</b> temps sur une page, dans un espace, nombre de clic, temps de réponse, n'importe quel feedback de l'application...<br><br></div>
 						<div class="table-data1"> <br><b></b><br><br> </div>
 			</div>
