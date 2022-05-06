@@ -33,14 +33,14 @@ florian.focone
 
 <br>
 <H1>
-P2AC <br> - <br> Sciences du numériques et SHS
+P2AC <br> - <br> Sciences du numérique et SHS
 </H1>
 
 
 <br><br>
 <h2> Déroulement  </h2>
 <br>P2AC
-<br>Interet outils numériques/SHS pour la médiation - l'histoire
+<br>Interets des outils numériques et des SHS pour la médiation - l'histoire
 <br>Concevoir (du contenu numérique) et mesurer (démarche centrée utilisateur)
 <br>Essai d'un outil numérique et un outil de mesure
  
@@ -52,22 +52,21 @@ Spécialisée en <b>Sciences Humaines et Sociales</b> (psychologie, marketing, �
  
  
 <br><br>
-<h3>Concevoir </h3>
+<h3>Concevoir (exemple de la RV) </h3>
 <br> 
 <img class ="titeimg"; src="contenu/atelier1.jpg"> </img>
 <br><br> 
-<h3>Mesurer</h3>
+<h3>Mesurer (exemple du tracking regard)</h3>
 <br>
 <img class ="titeimg"; src="contenu/atelier3.jpg"> </img>
 
 
 <br><br>
 <h3> Quelques projets hébergés par la P2AC </h3>
-<br> La plateforme s'interesse aux comportements humain. 
-<br><br> Mesurer pour concevoir (Numérique) <br> Utiliser la réponse d'un humain pour developper (un produit, un service, un algo, etc.).
+<br><br> Mesurer pour concevoir (Numérique) <br> Utiliser la réponse d'un utilisateur pour developper (un produit, un service, un algo, etc.).
 <br> <video controls class="vidXL"><source src="contenu/granem.mp4" type="video/mp4"></video>
 <br> <video controls class="vidXL"><source src="contenu/bu.mp4" type="video/mp4"></video>
-<br>  Concevoir pour mesurer (SHS) <br> Utiliser la technologie pour comprendre l'humain dans sa grande diversité et dans un contexte donné. 
+<br>  Concevoir pour mesurer (SHS) <br> Utiliser la technologie pour comprendre l'utilisateur dans sa grande diversité et dans un contexte donné. 
 <br> <br> <video controls class="vidXL"><source src="contenu/exp2.mp4" type="video/mp4"></video>
 <br> <video controls class="vidXL"><source src="contenu/supermarket3.mp4" type="video/mp4"></video>
 
@@ -75,28 +74,33 @@ Spécialisée en <b>Sciences Humaines et Sociales</b> (psychologie, marketing, �
 
 
 <br><br><br><br>
-<h2> Interet outils numériques/SHS pour la médiation - l'histoire </h2>
+<h2> Interets des outils numériques et des SHS pour la médiation - l'histoire </h2>
 <br><a href=" https://formations.univ-angers.fr/fr/offre-de-formation/licence-professionnelle-LICP/sciences-humaines-et-sociales-SHS/licence-professionnelle-metiers-de-l-information-archives-mediation-et-patrimoine-KV23XXOY.html?search-keywords=mediation"> Information - archives - médiation et patrimoire</a>
 <br><br>Qu'apporte le numérique dans votre futur métier ?
 <br>Qu'apporte la mesure de l'utilisateur dans votre futur métier ?
+<br> j'ai pris la mission suivante : valoriser la collection. Médiateur ? 
 
-<br><br><br> 1 Valorisation un contenu (patrimoine, histoire) en offrant de l'interaction, de la gamification.
-<br>- Accessibilité : économique (format qui favorise la démocratisation et l'acces), population particulière (personne agée, jeune, personnes présentant des handicaps), etc.
+<br><br><br><br><br><br><br> [conception] Valorisation un contenu (patrimoine, histoire) en offrant de l'interaction, de la gamification.
+<br> - Augmenter une oeuvre : proposer un contenu original en support
+<iframe class="vidXL"; width="1000" height="600"  src="https://www.youtube.com/embed/Au_UpzhzHwk?start=198" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br> <br>- Interactivité, manipuler pour mieux s'impregner - Comprendre --> technique ; concepts, prise de decision ; contexte historique, etc...
+<iframe class="vidXL"; width="1000" height="600" src="https://www.youtube.com/embed/cHue1qcBpCQ?start=396" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br><br>- Accessibilité : économique (format qui favorise la démocratisation et l'acces), population particulière (personne agée, jeune, personne avec handicap), etc.
 <br> <a href="https://petitegalerie.louvre.fr/visite-virtuelle/saison6/"> Petite galerie Louvre </a>
 <br><video class="vidXL"; id="myVid13"controls><source src="contenu/rv_withoutvision.mp4" type="video/mp4"></video>  
-<br> - Augmenter une oeuvre : proposer un contenu original en support
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Au_UpzhzHwk?start=198" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br> - Interactivité, manipuler pour mieux s'impregner - Comprendre --> technique de construction - courant artistique, des concepts, prise de decision humaines - contexte historique, etc...
-<video class="vidXL"; id="myVid17"; controls mutedcontrols><source src="contenu/comprendre-mettre une autre vidéo.mp4" type="video/mp4"></video>  
 
-<br><br> 2 Analyses des visiteurs & amélioration du parcours et de l'expérience (indications, intérêt...)
+<br><br> [mesure] Analyses des visiteurs permet d'amélioration le parcours - l'expérience
 <br> - Evaluer un contenu, une oeuvre, un parcours par l'analyse comportementale en vue de l'améliorer (visite, consommation, pédagogique, etc.)
-<br><iframe width="560" height="315" src="https://www.youtube.com/embed/GVvY8KfXXgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-<br><iframe width="560" height="315" src="https://www.youtube.com/embed/t74qYXj_vg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br><iframe width="1000" height="600" src="https://www.youtube.com/embed/GVvY8KfXXgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<br><iframe width="1000" height="600" src="https://www.youtube.com/embed/t74qYXj_vg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br><br>
-Processus cyclique : mise en valeur d'une oeuvre, d'une archive, etc. --> analyse des utilisateurs / visiteurs --> amélioration de l'oeuvre, etc, etc. 
-<br> Importance de définir les besoins ; de penser la mise en valeur ; et d'évaluer les implémentations, puis de recommencer ou pas si ça atteint satisfaction.
-<br> <br> Attention a ne pas avoir l'effet inverse : le numérique n'est pas forcement pertinent, peut provoquer un rejet, etc. 
+Processus cyclique : mise en valeur d'une oeuvre, d'une archive, etc. 
+<br>--> analyse des utilisateurs - visiteurs 
+<br>--> amélioration de l'oeuvre, etc, etc. 
+<br><br> Importance de définir les besoins ; de penser la mise en valeur - d'évaluer les implémentations - puis de recommencer ou pas si attentes ok.
+<br> <br> Attention à ne pas avoir l'effet inverse : le numérique n'est pas forcement pertinent, peut provoquer un rejet, etc. 
 
 
 
@@ -106,17 +110,18 @@ Processus cyclique : mise en valeur d'une oeuvre, d'une archive, etc. --> analys
 
 <br>Conception centrée utilisateur : méthodologie de conception d'une interface, d'un produit, d'un contenu en prennant en compte les besoins et retours des utilisateurs
 <br><br><br> <img src="contenu/ucd.png"> </img>
-<br>
-- 1 définition des besoins (quel public, handicap, accessibilité...)
+<br>- 1 définition des besoins (quel public, handicap, accessibilité...)
 <video class="vidXL"; id="myVid25"controls><source src="contenu/lean.mp4" type="video/mp4"></video>  
+Entretiens, focus group, questionnaires, etc.
 
-
-<br>- 2 conception ou coconception - technologie numérique : quelles technos, pour faire quoi, qu'est-ce que ça implique.
+<br><br>- 2 conception ou coconception - technologie numérique : quelles technos, pour faire quoi, qu'est-ce que ça implique.
+<br> en amont : maquettes, story telling, etc.
+<br> utiliser la techno que si necessaire pour atteindre un besoin
 <br><br><embed src="contenu/OculusFrench_surbrillance.pdf" width=100% height=500px type='application/pdf'/>
-<br>
 
 
-<br>- 3 évaluation (ergo physique, cognitive, utilisabilité...)
+
+<br><br>- 3 évaluation (ergo physique, cognitive, utilisabilité...)
 <div id="second-text"><br> - Comportementale : performance, eyetracker, EMG, expression faciale, capture du mouvement, etc.
 <br>- Physiologique : respiration, conductance cutanée, ECG, EEG, etc.
 <br>- Psychologique/cognitive (subjective) : personnalité, utilisabilité, émotions, charge de travail, etc.  -</div>
@@ -139,14 +144,10 @@ Focus evaluation
 <img src="contenu/sus2.jpg"> </img>
  
  
-<br> autre exemple : analyse comportementale avec eyetracker, vidéo...
+<br><br> autres exemples : analyse comportementale avec eyetracker, vidéo...
  
 <p>Position du regard (fixe)</p>
 <video controls class="vidXL"; id="myVid1"><source src="contenu/eyetracker_dyna.mp4" type="video/mp4"></video>
-<p>Position du regard (mobile)</p>
-<video controls class="vidXL"; id="myVid1"><source src="contenu/mettre exemple musee.mp4" type="video/mp4"></video>
-<p>Position du regard (VR)</p>
-<video controls class="vidXL"; id="myVid1"><source src="contenu/mettrechips.mp4" type="video/mp4"></video>
 <p>Analyse des expressions faciales</p>
 <video controls class="vidXL"; id="myVid1"><source src="contenu/emotion.mp4" type="video/mp4"></video> 
 
@@ -154,7 +155,7 @@ Focus evaluation
 
  
 <br><br><br><br> 
- <h2> Essai d'un outil numérique et un outil de mesure </h2>
+ <h2> Essai d'un outil numérique et d'un outil de mesure </h2>
   
 <br><br><br><br> 
    
