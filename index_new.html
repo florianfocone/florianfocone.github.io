@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Florian Focone</title>
+
+<meta name="Keywords" content="Florian Focone">
+<meta name="Subject" content="florian focone">
+<meta name="Author" content="florian focone">
+<meta name="Robots" content="all">
+<meta name="Rating" content="general">
+<meta name="Distribution" content="global">
+<meta name="Geography" content="juigné-sur-loire, france, 49610">
+<meta name="Category" content="engineering">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="timeline.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gallery.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+  </head>
+
+  <body>
+ <H1>Florian Focone</H1>
+  <aside>
+  
+  
+  <video id="profil" autoplay muted loop> <source  src="vid/full.mp4" type="video/mp4"> </video> 
+<br><br>
+   <div id="main-textaside" style= "text-align:center;">
+
+    <div class="contact"> <a class="full-text" href="mailto:focone.florian@gmail.com">focone.florian@gmail.com</a>
+	<a class="short-text" href="mailto:focone.florian@gmail.com">ff.com</a></div>
+   
+   <br><br>
+   
+   
+   <h6>   -  à propos du site  - <br>Quelques projets<br><br><br> 
+-  à propos de vous  - <br> <I>Merci d'être curieux</I> <br><br><br>
+  -  à propos de moi  - <br> Expérimentateur<br><br><br></h6>
+
+  </div>
+
+  
+  </aside>
+  
+  <section>
+ 
+
+ <div id="main-text">
+
+Au service des Sciences Humaines (R) et (&) developpements associées (D). <br>
+Utilise la conception centrée utilisateur et la technologie (si necessaire).	<br>
+
+<br><br><h7><b>Exemple de developpement : </b>Nouveaux véhicules électriques individuels - Environnements virtuels et augmentés - Ojets connectés - Applications mobiles - Objets non identifiés. </h7>
+<br><h7><b>Exemple de technologie :</b> Unity3D - Solidworks - Arduino - CNC.</h7>
+ </div>
+ 
+ 
+ <div class="video-gallery">
+    
+    <div class="gallery-item ">
+     <img src="https://assets.codepen.io/156905/rainier.jpg" alt="Mount Rainier"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>Mount Rainier</h2>
+          <p>14410 feet of adventure</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="vid/e_handpan.mp4"></a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://assets.codepen.io/156905/olympicnationalpark.jpg" alt="Olympic National Park"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>Olympic National Park</h2>
+          <p>Mountains, rain forests, wild coastlines</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="https://vimeo.com/108785446"></a>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+     <img src="https://assets.codepen.io/156905/northcascadespark.jpg" class="north-cascades-img" alt="North Cascades National Park"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>North Cascades</h2>
+          <p>The mountains are calling</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="https://vimeo.com/3653567"></a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://assets.codepen.io/156905/mountsthelens.jpg" alt="Mount St Helens"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>Mount St. Helens</h2>
+          <p>The one and only</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="https://vimeo.com/171540296"></a>
+      </div>
+    </div>
+    
+ 
+
+  </div>
+  
+</section>
+
+  </body>
+  
+</html>
+
+	  <script>
+
+$(document).ready(function () {
+  $(".video-gallery").magnificPopup({
+    delegate: "a",
+    type: "iframe",
+    gallery: {
+      enabled: true
+    }
+  });
+});
+
+</script>

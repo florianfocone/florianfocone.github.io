@@ -19,6 +19,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gallery.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 
   </head>
@@ -58,7 +62,59 @@ Utilise la conception centrée utilisateur et la technologie (si necessaire).	<b
 <br><br><h7><b>Exemple de developpement : </b>Nouveaux véhicules électriques individuels - Environnements virtuels et augmentés - Ojets connectés - Applications mobiles - Objets non identifiés. </h7>
 <br><h7><b>Exemple de technologie :</b> Unity3D - Solidworks - Arduino - CNC.</h7>
  </div>
-	  
+ 
+ 
+ <div class="video-gallery">
+    
+    <div class="gallery-item ">
+     <img src="https://assets.codepen.io/156905/rainier.jpg" alt="Mount Rainier"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>Mount Rainier</h2>
+          <p>14410 feet of adventure</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="vid/e_handpan.mp4"></a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://assets.codepen.io/156905/olympicnationalpark.jpg" alt="Olympic National Park"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>Olympic National Park</h2>
+          <p>Mountains, rain forests, wild coastlines</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="https://vimeo.com/108785446"></a>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+     <img src="https://assets.codepen.io/156905/northcascadespark.jpg" class="north-cascades-img" alt="North Cascades National Park"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>North Cascades</h2>
+          <p>The mountains are calling</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="https://vimeo.com/3653567"></a>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://assets.codepen.io/156905/mountsthelens.jpg" alt="Mount St Helens"/>
+      <div class="gallery-item-caption">
+        <!--<div>-->
+          <h2>Mount St. Helens</h2>
+          <p>The one and only</p>
+        <!--</div>-->
+        <a class="vimeo-popup" href="https://vimeo.com/171540296"></a>
+      </div>
+    </div>
+    
+ 
+
+  </div>
+  
+  
 <div id="main-text">
 
 <ul id='timeline'>
@@ -78,9 +134,7 @@ Go to ---> <a href="https://fabmanager.csc49.fr/#!/projects/e_handpan">  https:/
 
 <br><b>mots clés :</b>Low Tech, Unity3D, lasercut, arduino, bluetooth.
 <br><b>Money - Time :</b> 10€ - too much<br>
- <br><video controls id="myVid10">
-        <source src="vid/e_handpan.mp4" type="video/mp4">
-    </video>  
+ <br>  
       </p>
     </div>
   </li>
@@ -262,18 +316,7 @@ Thèse 2012-2015 : Interaction avec des personnages virtuels.
   
 </ul>
 </div>
-  <script>
-for (let pas = 1; pas < 16; pas++) {
-document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
-	this.play();
-});
 
-document.getElementById("myVid"+pas).addEventListener("mouseleave", function() {
-	this.pause();
-});
-}
-
-</script>
 
 
 
@@ -284,4 +327,16 @@ document.getElementById("myVid"+pas).addEventListener("mouseleave", function() {
   
 </html>
 
-	
+	  <script>
+
+$(document).ready(function () {
+  $(".video-gallery").magnificPopup({
+    delegate: "a",
+    type: "iframe",
+    gallery: {
+      enabled: true
+    }
+  });
+});
+
+</script>
