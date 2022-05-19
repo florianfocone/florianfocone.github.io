@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Florian Focone</title>
+
+<meta name="Keywords" content="Florian Focone">
+<meta name="Subject" content="florian focone">
+<meta name="Author" content="florian focone">
+<meta name="Robots" content="all">
+<meta name="Rating" content="general">
+<meta name="Distribution" content="global">
+<meta name="Geography" content="juigné-sur-loire, france, 49610">
+<meta name="Category" content="engineering">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="timeline.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+ <H1>Florian Focone</H1>
+  <aside>
+  
+  
+  <video id="profil" autoplay muted loop> <source  src="vid/full.mp4" type="video/mp4"> </video> 
+<br><br>
+   <div id="main-textaside" style= "text-align:center;">
+
+    <div class="contact"> <a class="full-text" href="mailto:focone.florian@gmail.com">focone.florian@gmail.com</a>
+	<a class="short-text" href="mailto:focone.florian@gmail.com">ff.com</a></div>
+   
+   <br><br>
+   
+   
+   <h6>   -  à propos du site  - <br>Quelques projets<br><br><br> 
+-  à propos de vous  - <br> <I>Merci d'être curieux</I> <br><br><br>
+  -  à propos de moi  - <br> Expérimentateur<br><br><br></h6>
+
+  </div>
+
+  
+  </aside>
+  
+  <section>
+ 
+
+ <div id="main-text">
+
+Au service des Sciences Humaines (R) et (&) developpements associées (D). <br>
+Utilise la conception centrée utilisateur et la technologie (si necessaire).	<br>
+
+<br><br><h7><b>Exemple de developpement : </b>Nouveaux véhicules électriques individuels - Environnements virtuels et augmentés - Ojets connectés - Applications mobiles - Objets non identifiés. </h7>
+<br><h7><b>Exemple de technologie :</b> Unity3D - Solidworks - Arduino - CNC.</h7>
+ </div>
+	  
+<div id="main-text">
+
+<ul id='timeline'>
+  <li class='work'>
+    <input class='radio' id='work10' name='works' type='radio' >
+    <div class="relative">
+      <label for='work10'>E_handpan</label>
+      <span class='date'></span>
+    </div>
+    <div class='content'>
+      <p>
+ An Electronic & physical handpan with bluetooth capabilities. a first android-unity based app avaible on play store (0.5 €).
+<br>
+ 
+Go to ---> <a href="https://fabmanager.csc49.fr/#!/projects/e_handpan">  https://fabmanager.csc49.fr/#!/projects/e_handpan</a> for the project details. <br><br>
+	   Get the app here ---> <a href="https://play.google.com/store/apps/details?id=com.untamed.e_handpan&gl=FR">   https://play.google.com/store/apps/details?id=com.untamed.e_handpan&gl=FR </a>
+
+<br><b>mots clés :</b>Low Tech, Unity3D, lasercut, arduino, bluetooth.
+<br><b>Money - Time :</b> 10€ - too much<br>
+ <br><video controls id="myVid10">
+        <source src="vid/e_handpan.mp4" type="video/mp4">
+    </video>  
+      </p>
+    </div>
+  </li>
+  
+  
+  <li class='work'>
+    <input class='radio' id='work9' name='works' type='radio' >
+    <div class="relative">
+      <label for='work9'>Arashi</label>
+      <span class='date'>2021</span>
+    </div>
+    <div class='content'>
+	<p>
+     Conception d'un NVEI tout terrain, ultra-réparable et abordable, favorisant l'appropriation des technologies.
+	 <br> Un projet abordé avec une vision très long terme et sous le paradigme de <a href="https://theconversation.com/effectuation-une-logique-entrepreneuriale-devenue-incontournable-en-20-ans-141323" target="_blank">l'effectuation</a> 
+	<br> Difficultés techniques pour rendre la conception ultra-réparable
+	<br> Business model novateur (le consommateur devient concepteur de son produit). Je positionne ce travail comme un projet social visant à redistribuer les cartes de la consommation.
+	<br> Ce projet à accueilli : Mélissa, Arthur et Pierre, des étudiants de 5a de Polytech-Angers en 2020.
+<br><b>mots clés :</b> Skateboard, DIY, Tout terrain, Arduino, Découpeuse laser, fraiseuse numérique, C, CAO, low-cost, low tech.
+<br><b>Money - Time :</b> unknown - unknown<br>
+	  <video controls muted id="myVid9">
+        <source src="vid/arashi.mp4" type="video/mp4">
+    </video>  
+  </p>	
+    </div>
+  </li>
+  
+  <li class='work'>
+    <input class='radio' id='work8' name='works' type='radio' >
+    <div class="relative">
+      <label for='work8'> Spirulftière</label>
+      <span class='date'></span>
+    </div>
+    <div class='content'>
+      <p>
+Conception d'un distributeur de spiruline pour boisson énergisante. En collaboration avec Siti, Simon et Clément, élèves en 5a de Polytech Angers 2020. J'ai eu la chance d'encadrer ces étudiants ingénieurs qui ont maturé ce side-project de l'idée jusqu'à la preuve de concept.
+Leurs travaux se sont portés sur l'emergence d'une problématique à la consommation de l'algue par le consommateur au moyen de séances de créativité jusqu'à la réalisation from scratch d'un prototype de distributeur et incubateur autonome de spiruline. 
+L'idée principale est d'utiliser l'image de la machine a café traditionnelle pour améliorer l'image des boissons à l'algue (spiruline-cyanobactérie) et favoriser la consommation de ce super aliment dans son format le plus frais.
+
+<br><b>mots clés :</b> Spiruline, innovation, UX, Ergonomie, Démocratisation, Low Tech ,  Arduino, travail bois, impression 3D, CAO, User expérience.
+<br><b>Money - Time :</b> unknown - unknown<br>
+
+ <br><video controls muted id="myVid8">
+        <source src="vid/spirulftiere.mp4" type="video/mp4">
+    </video>  
+      </p>
+    </div>
+  </li>
+  
+
+<li class='work'>
+    <input class='radio' id='work7' name='works' type='radio' >
+    <div class="relative">
+      <label for='work7'> Contemplative loneliness</label>
+      <span class='date'>2019</span>
+    </div>
+    <div class='content'>
+      <p>
+Biofeedback et interface cerveaux-ordinateur : application à la RV : Scalian, 2019
+<br><b>mots clés :</b> biofeedback, HCI, electro-encephalogramme, immersion,  Réalité virtuelle, Unity, EEG low cost.
+<br><a href="https://www.scalian.com/rd_innovation/" target="_blank">Le lab</a> / <a href="doc/hfesec.pdf" target="_blank">Article</a> / <a href="http://www.thomashuraux.com/" target="_blank">Thomas Huraux</a><br>
+    <video id="myVid7">
+        <source src="vid/contemplativeloneliness.mp4" type="video/mp4">
+    </video>       
+</p>
+    </div>
+  </li>
+
+  <li class='work'>
+    <input class='radio' id='work6' name='works' type='radio' >
+    <div class="relative">
+      <label for='work6'>Technology acceptance</label>
+      <span class='date'></span>
+    </div>
+    <div class='content'>
+      <p>
+Conception monde virtuel pour évaluation de l'acceptabilité d'outils technologiques au travail : Scalian, 2019
+<br><b>mots clés :</b> Interaction, objet connecté, acceptabilité,  Réalité virtuelle, Unity, ergonomie cognitive.
+<br><a href="https://www.scalian.com/rd_innovation/" target="_blank">Le lab</a> / <a href="http://www.thomashuraux.com/" target="_blank">Thomas Huraux</a>  <br>
+ <video id="myVid6">
+        <source src="vid/acceptance.mp4" type="video/mp4">
+    </video>  
+</p>
+    </div>
+  </li>
+  
+    <li class='work'>
+    <input class='radio' id='work5' name='works' type='radio' >
+    <div class="relative">
+      <label for='work5'>Augmented workspace</label>
+      <span class='date'></span>
+    </div>
+    <div class='content'>
+      <p>
+Augmentation du poste de travail par la réalité virtuel et l'exploration de paramètres : Scalian, 2018
+<br><b>mots clés :</b> Interaction, Embodiement, Emotion, Mouvement, Réalité virtuelle, Unity, HTC vive, ergonomie cognitive
+<br><a href="https://www.scalian.com/rd_innovation/" target="_blank">Le lab</a> / <a href="doc/ihm.pdf" target="_blank">Article</a> /  <a href="http://www.thomashuraux.com/" target="_blank">Thomas Huraux</a><br>
+    <video id="myVid5">
+        <source src="vid/augmentedworkspace.mp4" type="video/mp4">
+    </video>
+</p>
+    </div>
+  </li>
+
+
+<li class='work'>
+    <input class='radio' id='work4' name='works' type='radio' >
+    <div class="relative">
+      <label for='work4'> 2LEAP</label>
+      <span class='date'>2015</span>
+    </div>
+    <div class='content'>
+      <p>
+ Low-cost Light and Energy Production -->
+ Création d'une dynamo sur la base d'un ventilateur de PC - AAP Prematuration Etudiant PEIPS 2015.
+<br><b>mots clés :</b>  Low-tech, frugale, recyclé, Impression 3D, CAO
+<br><b>Money - Time :</b>  1500€ - 1 mois<br>
+    <video id="myVid4">
+        <source src="vid/2Leap.mp4" type="video/mp4">
+    </video>    
+</p>
+    </div>
+  </li>
+  
+  <li class='work'>
+    <input class='radio' id='work3' name='works' type='radio' >
+    <div class="relative">
+      <label for='work3'> Sphaera</label>
+      <span class='date'></span>
+    </div>
+    <div class='content'>
+      <p>
+ Oeuvre interactive en partenariat avec un designer pour le festival Arts/Sciences Curiositas édition 2015.
+<br><b>mots clés :</b> Light, Interaction, DeepCamera, IOT, Blackhole,  Kinect, C++, irrlicht, Arduino, Blender
+<br><a href="doc/sphaera.pdf" target="_blank">En savoir plus</a> / <a href="https://www.instagram.com/volmarmanuel/?hl=en" target="_blank">Artiste</a><br>
+    <video id="myVid3">
+        <source src="vid/sphaera.mp4" type="video/mp4">
+    </video>     
+</p>
+    </div>
+  </li>
+  
+  
+ <li class='work'>
+    <input class='radio' id='work2' name='works' type='radio' >
+    <div class="relative">
+      <label for='work2'>Tout passe</label>
+      <span class='date'>2014</span>
+    </div>
+    <div class='content'>
+      <p>
+Oeuvre interactive en partenariat avec une troupe d'artistes-scénographes et sous la direction du e-sas pour le festival Arts/Sciences Curiositas édition 2014.
+<br><b>mots clés :</b> Scénography, Heart, Interaction, DeepCamera, protheusEffect, Kinect, C++, faceReader, Blender
+<br><a href="doc/toutpasse.pdf" target="_blank">En savoir plus</a> / <a href="https://cirquek.com/" target="_blank">Artistes-Scénographes</a> / <a href="http://www.e-sas.org/?lng=fr&page=30" target="_blank">e-sas</a><br>
+    <video id="myVid2">
+        <source src="vid/toutpasse.mp4" type="video/mp4">
+    </video>       
+</p>
+    </div>
+  </li>
+
+
+  <li class='work'>
+    <input class='radio' id='work1' name='works' type='radio'>
+    <div class="relative">
+      <label for='work1'>Avatar Coach</label>
+    </div>
+    <div class='content'>
+      <p>
+Thèse 2012-2015 : Interaction avec des personnages virtuels.
+<br><b>mots clés :</b> Interaction, Embodiement, Emotion, Mouvement, Capture du mouvement, irrlicht, Blender, C++, et tellement d'autres...
+<br> <a href="doc/these.pdf" target="_blank">Thèse</a> / <a href="https://www.limsi.fr/fr/recherche/cpu" target="_blank">Laboratoire</a><br>
+    <video id="myVid1">
+        <source src="vid/these.mp4" type="video/mp4">
+    </video>        
+</p>
+    </div>
+  </li>
+  
+</ul>
+</div>
+  <script>
+for (let pas = 1; pas < 16; pas++) {
+document.getElementById("myVid"+pas).addEventListener("mouseover", function() {
+	this.play();
+});
+
+document.getElementById("myVid"+pas).addEventListener("mouseleave", function() {
+	this.pause();
+});
+}
+
+</script>
+
+
+
+
+</section>
+
+  </body>
+  
+</html>
+
+	
