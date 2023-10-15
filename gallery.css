@@ -19,9 +19,9 @@ body {
 
 .video-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
   grid-gap: 15px;
-  max-width: 1100px;
+  max-width: 700px;
   padding: 15px; 
   margin: 0 auto;
   box-sizing: border-box;
@@ -74,6 +74,12 @@ body {
   overflow: hidden;
   padding: 12px 0;
 }
+.video-gallery .gallery-item h3 {
+  font-weight: 50;
+  overflow: hidden;
+  font-size:1.0vw;
+}
+
 
 .video-gallery .gallery-item h2,
 .video-gallery .gallery-item p {
