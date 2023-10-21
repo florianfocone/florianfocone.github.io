@@ -79,12 +79,21 @@ body {
   padding-bottom:5px;
   font-weight: 50;
   overflow: hidden;
+  font-size:1vw;
+}
+.video-gallery .gallery-item h4 {
+  font-style: italic;
+  padding-top:5px;
+  padding-bottom:5px;
+  font-weight: 30;
+  overflow: hidden;
   font-size:0.8vw;
 }
 
 
 .video-gallery .gallery-item h2,
 .video-gallery .gallery-item h3,
+.video-gallery .gallery-item h4,
 .video-gallery .gallery-item p {
   position: relative;
   margin: 0;

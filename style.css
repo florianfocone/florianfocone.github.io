@@ -265,3 +265,10 @@ text-align: center;
     .full-text { display: none; }
 }
 
+.vidcenter {
+	text-align:center;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:50px;
+	font-size: 3vw;
+}
