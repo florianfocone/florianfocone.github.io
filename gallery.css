@@ -19,9 +19,9 @@ body {
 
 .video-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60%, 1fr));
   grid-gap: 15px;
-  max-width: 700px;
+  width:60%;
   padding: 15px; 
   margin: 0 auto;
   box-sizing: border-box;
@@ -30,17 +30,19 @@ body {
 .video-gallery .gallery-item {
   position: relative;
   width: 100%;
-  height: 300px;
+  min-width: 500px;
+  min-height: 500px;
   background: #000;
   cursor: pointer;
   overflow: hidden;
 }
 
+
 .video-gallery .gallery-item img {
   position: relative;
   display: block;
   width: 115%;
-  height: 300px;
+  height: 500px;
   object-fit: cover;
   opacity: .5;
   /*transition: opacity .35s, transform .35s;*/
@@ -73,13 +75,14 @@ body {
   font-weight: 300;
   overflow: hidden;
   padding: 12px 0;
+  font-size: 4vw;
 }
 .video-gallery .gallery-item h3 {
   padding-top:5px;
   padding-bottom:5px;
   font-weight: 50;
   overflow: hidden;
-  font-size:1vw;
+  font-size: 3vw;
 }
 .video-gallery .gallery-item h4 {
   font-style: italic;
@@ -87,7 +90,7 @@ body {
   padding-bottom:5px;
   font-weight: 30;
   overflow: hidden;
-  font-size:0.8vw;
+  font-size: 2vw;
 }
 
 
@@ -108,6 +111,7 @@ body {
   opacity: 0;
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(10%, 0, 0);
+  font-size: 1.8vw;
 }
 
 .video-gallery .gallery-item:hover img {
@@ -214,3 +218,79 @@ body {
 .test:hover ~ .test2 {
   display: none;
 }
+
+
+
+
+@media only screen and (min-width:2000px) {
+	.video-gallery {
+  grid-template-columns: repeat(auto-fit, minmax(1500px, 1fr));
+  width:1500px;
+}
+
+
+.video-gallery .gallery-item {
+  height: 800px;
+}
+	
+	.video-gallery .gallery-item img {
+  height: 800px; 
+}
+
+
+.video-gallery .gallery-item h2 {
+  font-size: 2vw;
+}
+.video-gallery .gallery-item h3 {
+  font-size: 1.5vw;
+}
+.video-gallery .gallery-item h4 {
+  font-size: 1.2vw;
+}
+
+.video-gallery .gallery-item p {
+  font-size: 1vw;
+}
+
+
+
+
+}
+
+
+@media screen and (max-width: 2000px) and (min-width: 1500px)
+{
+	.video-gallery {
+  grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+  width:1000px;
+}
+
+
+.video-gallery .gallery-item {
+  height: 600px;
+}
+	
+	.video-gallery .gallery-item img {
+  height: 600px; 
+}
+
+
+.video-gallery .gallery-item h2 {
+  font-size: 2.5vw;
+}
+.video-gallery .gallery-item h3 {
+  font-size: 2vw;
+}
+.video-gallery .gallery-item h4 {
+  font-size: 1.5vw;
+}
+
+.video-gallery .gallery-item p {
+  font-size: 1.2vw;
+}
+
+
+
+
+}
+

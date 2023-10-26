@@ -2,6 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
+	width:100%;
     height: 100%;
 }
 aside,
@@ -10,27 +11,16 @@ section {
     float: left;
     min-height: 100%;
 }
-aside {
-	background-color : #000000;
-    width: 18vw;
-    margin-right: -18vw;
-     /* Setup */
-  position: fixed;
-    z-index: 1;
-	min-height: 100%; 
-	
 
-}
 section {
     background-color: #000000;
-    padding-left: 18vw;
-    position: relative;
+   width:80%;
 }
 
 a{
 		text-decoration-line: none;
 		color: #55C1FF;
-		font-size: 1vw;
+		font-size: 3vw;
 		
 }
 
@@ -48,8 +38,8 @@ h6{
   font-family :  "Courier New";
   font-style: italic;
   font-weight: normal;
-  line-height : 1.3vw;
-  font-size: 1vw;
+  line-height : 2.5vw;
+  font-size: 2vw;
   color: #828282;
   text-align: center;
   margin-block-start: 0.1em;
@@ -93,7 +83,10 @@ h7{
   }
   
   #profil {
-  width: 100%;
+  margin-left:auto;
+  margin-right:auto;	  
+  width: 60%;
+    max-width:600px;
   margin-top: 5vw;
   text-align: center;
   }
@@ -245,25 +238,38 @@ text-align: center;
 	   filter:grayscale(0%);
     }
 .short-text { display: none; }
+
+
 @media only screen and (max-width:800px) {
-	#main-text {
-  line-height : 3vw;
-  font-size: 3vw;
-  }
+		#main-text {
+			line-height : 3vw;
+			font-size: 3vw;
+		}
 	
-	a{
-	
+		a{
 		font-size: 3vw;
-}
+		}
 	
 	   .nav-link {
-
- font-size: 3vw;
-	   }
+		font-size: 3vw;
+		}
 	   
-	.short-text { display: inline-block; }
-    .full-text { display: none; }
+		.short-text { 
+			display: inline-block; 
+		}
+		
+		.full-text { 
+		display: none; 
+		}
+		
+		#profil {
+  width: 500px;
+  }
 }
+
+
+
+
 
 .vidcenter {
 	text-align:center;
@@ -271,4 +277,23 @@ text-align: center;
 	margin-left:auto;
 	margin-bottom:50px;
 	font-size: 3vw;
+}
+
+
+
+
+@media only screen and (min-width:2000px) {
+
+	#profil { 
+    max-width: 1500px;
+  }
+
+}
+
+
+@media screen and (max-width: 2000px) and (min-width: 1500px)
+{
+	#profil {  
+  max-width:  1000px;
+  }
 }
