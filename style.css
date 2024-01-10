@@ -21,7 +21,7 @@ section {
 a{
 		text-decoration-line: none;
 		color: #55C1FF;
-		font-size: 3vw;
+		font-size: 2vw;
 		
 }
 
@@ -86,9 +86,9 @@ h7{
   #profil {
   margin-left:auto;
   margin-right:auto;	  
-  width: 40%;
-    max-width:400px;
-  margin-top: 5vw;
+  width: 30%;
+    max-width:300px;
+  margin-top: 1vw;
   text-align: center;
   }
   
@@ -172,9 +172,9 @@ h7{
   
   .contact{
 	font-family :  "Courier New";
-	 margin : 1%;
-text-align: center;
-	font-size: 95%;
+	 margin : 1vw;
+    text-align: center;
+	font-size: 2vw;
     color: #828282;
     word-spacing: 1px;
   }

@@ -131,8 +131,11 @@ li{
     }
 
 #avatar{
-	width:50%;
-	margin-top : 20px;
+	max-width: 40%;
+    height: auto;
+	display: block; /* Removes extra space below inline images */
+    margin: 0 auto;
+	margin-top:20px;
 }
 
 video{
