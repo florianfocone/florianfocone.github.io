@@ -131,7 +131,7 @@ li{
     }
 
 #avatar{
-	max-width: 40%;
+	max-width: 30%;
     height: auto;
 	display: block; /* Removes extra space below inline images */
     margin: 0 auto;
