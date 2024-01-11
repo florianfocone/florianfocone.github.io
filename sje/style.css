@@ -31,8 +31,9 @@ section {
 a{
 		text-decoration-line: none;
 		color: #55C1FF;
-		font-size: 1.5vw;
-		
+		font-size: 4vw;
+		margin-top:20px;
+		margin-bottom:20px;
 }
 
 H1{
