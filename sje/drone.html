@@ -60,7 +60,7 @@
 		
 		<h2> Appel à candidature</h2>
 		
-		<iframe style="width:100%; height:600px;" src="APPEL TELEPILOTE DRONE.pdf"></iframe>
+		<iframe style="width:100%; height:600px;" src="contenu/APPEL TELEPILOTE DRONE.pdf"></iframe>
 		
 		<h2>GDO</h2>
 		
@@ -70,53 +70,31 @@
         <h2>Drones quadricoptères</h2>
 
 		<p>Aéronef sans pilote qui est propulsé par quatre moteurs électriques</p>
-		<p>Possède un chassis, des moteurs (sans balais/brushless), Controleur de vol, Batterie/ESC</p>
-		<p>Controleur de vol : GPS, capteurs intertiels (gyroscope/accéléromètre), algorithme/controleur PID</p>
-		<p>PID (proportionnel, integral, derivatif) : controle altitude, maintient horizontal, orientation (angle du drone) </p>
-		<p>DDL 6 : avant-arrière, gauche-droite, haut-bas, roulis, tangage (avant-arrière), lacet </p>
-		<p>Telecommande de transmission radiofréquence (2.4ghz-5.8ghz ou 900mhz), portée jusqu'à plusieurs km. Obstacles attenuent les signaux (qualité et portée). Interférences radio peuvent également perturber. </p>
-		<p>Technologie : RTH, Evitement obstacles, Follow-me, atterissage batterie faible, maintient position, itinéraire prédéfini, stabilisation multi-axes, (+ toute la partie vidéo : algo de detection, etc.), atterrissage precis sans gps, mode sport/maniabilité</p>
-		<p>Alimentation et autonomie : batterie LiPo, poids du drone, vitesse, vents </p>
-		<p>Réglementation et sécurité : DGAC --> enregistrement drone, différentes classes en fonction du poids, formations suivant scénarios de vol (à vue, hors, vu, transport, agglomération, etc), limitation altitude, respect vie privé, respect régles de l'air</p>
 		
-
-
-		<img class="drone";  src="mode2.jpg"></img>
-		
-		<br>
-		
-		<h2>Applications Pompiers</h2>
-		<p>Utilisation pertinente seulement</p>
-		<p>
-		<br>Surveillance aérienne (cam normale) 
-		<br>Recherche et sauvetage 
-		<br>Carthographie / modélisation 3D (lidar)
-		<br>Identification point chaud (cam infrarouge) 
-		<br>Communication
-		<br>Apport matériel d'urgence / extraction matériel
-		<br>Surveillance qualité d'air
-		<br>Marketing
-		
-		</p>
-		
-		
-		<h2>Quelques conseils généraux / bonnes pratiques</h2>
-		
-		<p>Formations simulateurs avec manettes</p>
-		<p>Verification état drone et batterie</p>
-		<p>Etalonnage et calibration : vérifier</p>
-		<p>Vérifier options et possibilités de l'application (et mettre à jour)</p>
-		<p>prévoir ce qu'on va faire (plan de vol) pour économiser batterie (prévoir temps de retour) et palier au probleme, faire les réglages en amont (sensibilité, carte mémoire, etc)</p>
-		<p>Définir hauteur RTH en fct du lieu, vérifier météo, y'a t'il un risque de perdre le drone de vue ?</p>
-		<p>Abriter du soleil pour voir le retour, attention interference lors du vol</p>
-		<p>Vérifier souvent charge batterie et force signal</p>
-		<p>Définir un endroit et une orientation du drone pour décoler et plusieurs endroits pour attérir</p>
-		<p>En vol, survoler les obstacles avant prendre un cap, Molo sur la vitesse, voler plutot en orientant le drone vers l'avant</p>
-		<p>ne plus rien toucher lors d'une erreur, le drone va se stabiliser</p>
-	
-		
-		<br>
-		
+		<h2>Drone</h2>
+		<ul>
+			<li>Aérostat : poussée archimède = poids air déplacé. Gaz chauffé ou inerte (argon, etc.)</li>
+			<li>Aérodyne : forces aérodynamiques, voilure fixe ou multirotor</li>
+			<li>Système drone : télécommande, batterie, capteurs, autopilote et actionneurs controllant gouverne et moteurs</li>
+			<li>Intensité (1 A) = 1 Coulomb par seconde </li>
+			<li>P (W)=U(V)*I(A), (loi d'ohm) U=R(Ohm)*I. une tension aux bornes d'une resistance génère une certaine intensité.</li>
+			<li> Batterie en // : capacité s'additionnent, tension = ; Batterie en série : tensions s'additionnent , capacité reste celle d'1 batterie</li>
+			<li>Altimètre barométrique compare pression de calage (au décolage) en f(altitude) selon la loi d'réquilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27pied,8m) dans une atmosphère type (1013hPa au niveau mer pour 15°C). Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif</li>
+			<li>Vecteur champ magnétique : horizontal vers le N magnétique à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
+			<li>Déclinaison magnétique : angle entre le nord vrai et nord magnétique, Est ou positive quand NM est à l'est du NV. Déclinaisons varient en lieu et temps. Isogones : les lignes d'= déclinaison sur une carte.</li>
+			<li>Magnétomètre : système mesure des composantes du champ magnétique ds les 3 axes. Magnétomètre + gyromètre = attitude précise. Compas magnétique + carte isogones = déduction du cap vrai.</li>
+			<li>Gyromètre : mesure vitesse rotation ; gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique</li>
+			<li>Accéléromètre : 3 ensemble masse-ressort sur les 3 axes de l'UAS</li>
+			<li>GNSS (GPS, Galileo, etc) : mesure temps entre sattelites (4 minimums) et cible pour déterminer x,y,z. latitude, longitude, altitude et calage horloge du recepteur. Attention relfexions ondes, obstacles, etc. intégrité système : capacité a informer en situation dégradée.</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			</ul>
+			
 		
 
     </section>
