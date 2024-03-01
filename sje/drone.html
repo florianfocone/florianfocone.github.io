@@ -49,6 +49,10 @@
             height: auto;
 			float: none;
 		}
+		
+		li{
+		margin-bottom: 10px;
+		}
 	
     </style>
 </head>
@@ -65,20 +69,17 @@
 		<h2>GDO</h2>
 		
 		<iframe style="width:100%; height:600px;" src="contenu/GDO_drones.pdf"></iframe>
-		
-
-        <h2>Drones quadricoptères</h2>
-
-		<p>Aéronef sans pilote qui est propulsé par quatre moteurs électriques</p>
+	
 		
 		<h2>Drone</h2>
+		<p>
 		<ul>
 			<li>Aérostat : poussée archimède = poids air déplacé. Gaz chauffé ou inerte (argon, etc.)</li>
 			<li>Aérodyne : forces aérodynamiques, voilure fixe ou multirotor</li>
 			<li>Système drone : télécommande, batterie, capteurs, autopilote et actionneurs controllant gouverne et moteurs</li>
 			<li>Intensité (1 A) = 1 Coulomb par seconde </li>
 			<li>P (W)=U(V)*I(A), (loi d'ohm) U=R(Ohm)*I. une tension aux bornes d'une resistance génère une certaine intensité.</li>
-			<li> Batterie en // : capacité s'additionnent, tension = ; Batterie en série : tensions s'additionnent , capacité reste celle d'1 batterie</li>
+			<li>Batterie en // : capacité s'additionnent, tension = ; Batterie en série : tensions s'additionnent , capacité reste celle d'1 batterie</li>
 			<li>Altimètre barométrique compare pression de calage (au décolage) en f(altitude) selon la loi d'réquilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27pied,8m) dans une atmosphère type (1013hPa au niveau mer pour 15°C). Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif</li>
 			<li>Vecteur champ magnétique : horizontal vers le N magnétique à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
 			<li>Déclinaison magnétique : angle entre le nord vrai et nord magnétique, Est ou positive quand NM est à l'est du NV. Déclinaisons varient en lieu et temps. Isogones : les lignes d'= déclinaison sur une carte.</li>
@@ -86,16 +87,162 @@
 			<li>Gyromètre : mesure vitesse rotation ; gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique</li>
 			<li>Accéléromètre : 3 ensemble masse-ressort sur les 3 axes de l'UAS</li>
 			<li>GNSS (GPS, Galileo, etc) : mesure temps entre sattelites (4 minimums) et cible pour déterminer x,y,z. latitude, longitude, altitude et calage horloge du recepteur. Attention relfexions ondes, obstacles, etc. intégrité système : capacité a informer en situation dégradée.</li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			</ul>
+			<li>Limitation espace; obligatoire en hauteur UAS. Obligatoire horizontal S2.</li>
+			<li>Drone voilure fixe : hélice agit sur vitesse-air ; gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal... ; gouverne direction sur symétrie vol</li>
+			<li>Asservissement : automatisme d'attitude (maintient attitude, assiette, inclimaison, cap..) en fct des consignes données par le télépilote pour obtenir une vitesse et trajectoire conformes (boucle rétroaction entre capteurs et consignes)</li>
+			<li>Dispositif protection tiers : obligatoire en S3 avec m>2kg. limite a 69j l'E à l'impact</li>
+			<li>Retour vidéo : analogique ou numérique</li>
+			<li>Hélice : 1 diamètre, 1 pas géométrique (D parcourue si vissée dans l'air). Pas = 2pi*tan(Angle calage). Angle calage = angle entre corde du profil et plan d'entrainement.</li>
+			<li>Moteur sans balais, rotor aimant permanent, stator electroaimants. ESC synchronise l'alimentation des electroaimants en f(azimuth moteur)</li>
+			<li>Transmission donnée : puissance reçue baisse avec la distance, baisse lorsque la fréquence augmente. Fréquences et puissances définies dans le Tableau National Repartition Bandes Fréquences de l'ANFR</li>
+			<li>Brouillage : superposition emissions mm fréquences dans un mm zones : inexploitable</li>
+			<li>...</li>
 			
+			</ul>
+		</p>
 		
+		<h2>Principes de vol</h2>
+		<p>
+		<ul>
+			<li>Ecoulement : fluide en mvt autours d'un obstacle, laminaire Ok, turbulent NOk. Gradient de vent, force augmente en s'éloigant de la surface.</li>
+			<li>Vitesse-air : vit de déplacement de l'objet par rapport masse d'air non perturbé loin devant (infini amont)</li>
+			<li>Vent relatif : vitesse ecoulement infini amont par rapport à l'objet. Vit air et vent relatif sont 2 vecteurs égaux et opposés</li>
+			<li>Force de pression : exercée par un fluide L à une surface. P=F/S</li>
+			<li>Force de viscosité : excercée parrallement à la surface</li>
+			<li>Loi de bernouilli = Pt (pression L à l'écoulement) - Ps (P // écoulement) = 1/2*masse volumique*V². Section tube diminue -> V augmente, effet venturi</li>
+			<li>Portance : F résultante exercée par un écoulement autours d'un objet, L au vent relatif/vitesse-air. </li>
+			<li>Trainée : // ; due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  portance = 1/2p(masse vol)*V²Cz ; trainée = 1/2p*V²Cx  </li>
+			<li>Décrochage : diminution brutale portance en f(incidence de décrochage)</li>
+			<li>Théorie de Froude : modèle entre portance du rotor et puissance a fournir en f(surface disque rotor & masse volumique air) ; + surface importante et/ou + masse volumique air grande --> + puissance fournir est faible.</li>
+			<li>Equilibre du vol rectiligne : équilibre portance et trainée avec la puissance à fournir et l'incidence, et ce pour une masse du drone et une vitesse air données.</li>
+			<li>Position drone : coordonée en f(surface terre) --> lattitude, longitude et altitude</li>
+			<li>Attitude : angles en f(surface terre) --> assiete (angle entre axe longitudinal et plan horizontal), inclinaison (angle entre axe latéral et plan horizontal), cap (angle entre projection horizontal de l'axe longitudinal et nord). cap est cap vrai si nord est nord vrai, magnétique si nord est magnétique.</li>
+			<li>Densité de l'air impacte la puissance a fournir : vol montagne en été = danger.</li>
+			<li>Stabilité : capacité a revenir à l'équilibre après en avoir été écarté</li>
+			<li>Maniabilité : capacité à s'écarté facilement d'une position d'équilibre</li>
+			<li> Masse maximale structurale : masse max défini par constructeur. au dela risque de dépasser limite elastique :interdiction - dommage irémédiable</li>
+		</ul>	
+		</p>
+		
+		<h2>Météorologie</h2>
+		<p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		</p>
+		
+		<h2>Réglementation</h2>
+		<p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		</p>
+		
+		<h2>Navigation</h2>
+		<p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		</p>
+		
+		<h2>Procédure opérationnelle</h2>
+		<p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		</p>
+		
+		<h2>Performance humaine</h2>
+		<p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		</p>
+		
+		<h2>Préparation et suivi de vol</h2>
+		<p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		</p>
 
     </section>
 
