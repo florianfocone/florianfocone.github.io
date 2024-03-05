@@ -71,6 +71,45 @@
 		<iframe style="width:100%; height:600px;" src="contenu/GDO_drones.pdf"></iframe>
 	
 		
+		<h2>Acronyme</h2>
+		<li>Agence Nationale des FRéquences (ANFR)  </li>
+		<li>Aeronautical Information Publication (AIP) </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li>Global Navigation Satellite System (GNSS) </li>
+		<li>Global Positioning System (GPS)</li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li>Nuages : nimbostratus (Ns) - altostratus (As) -  Cumulus (Cu) - altocumulus (Ac) - cumulonimbus (Cb)   </li>
+		<li> </li>
+		<li>Phénomène méto : bruine (BR) - neige en grain (SG) - Pluie (RA) - neige (SN) - averse pluie (RASH) - averse neige (RASN) </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li>Tableau National Repartition Bandes Fréquences (TNRBF) </li>
+		
+		<li>Unmanned Aircraft Systems (UAS)</li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		
+		
+		
+		
+		
 		<h2>Drone</h2>
 		<p>
 		<ul>
@@ -80,23 +119,24 @@
 			<li>Intensité (I) : quantité charge electrique en mvt. Mesurée en Ampère (A) 1A = 1 Coulomb par seconde </li>
 			<li>Puissance (P) en watts (W)= tension (U) en volt (V) * I. </li>
 			<li>Loi d'Ohm U=Resistance (R) en Ohm * I. La tension aux bornes d'une resistance génère une certaine intensité.</li>
-			<li>Batterie en // --> capacité s'additionnent, la tension reste celle d'1 batterie ; Batterie en série --> tensions s'additionnent , capacité reste celle d'1 batterie</li>
-			<li>Altimètre barométrique compare pression de calage (au décolage) en f(altitude) selon la loi d'réquilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013hPa au niveau mer à une température de 15°C). Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif</li>
-			<li>Vecteur champ magnétique : horizontal dirigé le N magnétique à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
-			<li>Déclinaison magnétique : angle entre le nord vrai et nord magnétique, Est ou positive quand NM est à l'est du NV. Déclinaisons varient en lieu et temps. Isogones : les lignes d'= déclinaison sur une carte.</li>
-			<li>Magnétomètre : système mesure des composantes du champ magnétique ds les 3 axes. Magnétomètre + gyromètre = attitude précise. Compas magnétique + carte isogones = déduction du cap vrai.</li>
+			<li>Batterie en // --> capacités s'additionnent, la tension reste celle d'1 batterie ; Batterie en série --> tensions s'additionnent , capacité reste celle d'1 batterie</li>
+			<li>Altimètre barométrique compare pression de calage (au décolage) en f(altitude) selon la loi d'équilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013hPa au niveau mer à une température de 15°C). Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif</li>
+			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
+			<li>Déclinaison magnétique (DM) : angle entre le nord vrai (NV) et NM. DM est Est ou positive quand NM est à l'est du NV. Les DM varient en lieu et temps. Les isogones sont des tracés / lignes d'égales déclinaisons sur une carte.</li>
+			<li>Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. Magnétomètre + gyromètre permettent la mesure d'une attitude précise. Le compas magnétique + carte isogones permet la déduction du cap vrai.</li>
 			<li>Gyromètre : mesure vitesse rotation ; gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique</li>
-			<li>Accéléromètre : 3 ensemble masse-ressort sur les 3 axes de l'UAS</li>
-			<li>GNSS (GPS, Galileo, etc) : mesure temps entre sattelites (4 minimums) et cible pour déterminer x,y,z. latitude, longitude, altitude et calage horloge du recepteur. Attention relfexions ondes, obstacles, etc. intégrité système : capacité a informer en situation dégradée.</li>
-			<li>Limitation espace; obligatoire en hauteur UAS. Obligatoire horizontal S2.</li>
-			<li>Drone voilure fixe : hélice agit sur vitesse-air ; gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal... ; gouverne direction sur symétrie vol</li>
-			<li>Asservissement : automatisme d'attitude (maintient attitude, assiette, inclimaison, cap..) en fct des consignes données par le télépilote pour obtenir une vitesse et trajectoire conformes (boucle rétroaction entre capteurs et consignes)</li>
-			<li>Dispositif protection tiers : obligatoire en S3 avec m>2kg. limite a 69j l'E à l'impact</li>
-			<li>Retour vidéo : analogique ou numérique</li>
-			<li>Hélice : 1 diamètre, 1 pas géométrique (D parcourue si vissée dans l'air). Pas = 2pi*tan(Angle calage). Angle calage = angle entre corde du profil et plan d'entrainement.</li>
-			<li>Moteur sans balais, rotor aimant permanent, stator electroaimants. ESC synchronise l'alimentation des electroaimants en f(azimuth moteur)</li>
-			<li>Transmission donnée : puissance reçue baisse avec la distance, baisse lorsque la fréquence augmente. Fréquences et puissances définies dans le Tableau National Repartition Bandes Fréquences de l'ANFR</li>
-			<li>Brouillage : superposition emissions mm fréquences dans un mm zones : inexploitable</li>
+			<li>Accéléromètre : composé de 3 ensembles masse-ressort. Permet la mesure sur chacun des 3 axes de l'UAS</li>
+			<li>Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 minimums) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. </li>
+			<li>Intégrité système : capacité a informer en situation dégradée.</li>
+			<li>Limitation espace est obligatoire en hauteur pour les UAS. Obligatoire en horizontal en scénario S2.</li>
+			<li>Drone voilure fixe : hélice agit sur vitesse-air ; Gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal ; gouverne direction sur symétrie vol</li>
+			<li>Asservissement : automatisme d'attitude (maintient attitude, assiette, inclimaison, cap..) en fct des consignes données par le télépilote. Vise à obtenir une vitesse et trajectoire conformes (boucle rétroaction entre capteurs et consignes).</li>
+			<li>Dispositif protection tiers : obligatoire en S3 avec m>2kg. Il limite a 69j l'E lors d'un impact potentiel</li>
+			<li>Retour vidéo est analogique ou numérique</li>
+			<li>Hélice comprend 1 diamètre, 1 pas géométrique qui correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). Angle calage est l'angle entre corde du profil et plan d'entrainement.</li>
+			<li>Moteur sans balais (brushless) composé d'un rotor avec aimants permanents et d'un stator electroaimants. ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
+			<li>Transmission donnée : la puissance reçue baisse avec la distance et baisse lorsque la fréquence augmente. Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)</li>
+			<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables </li>
 			<li>...</li>
 			
 			</ul>
@@ -105,50 +145,50 @@
 		<h2>Principes de vol</h2>
 		<p>
 		<ul>
-			<li>Ecoulement : fluide en mvt autours d'un obstacle, laminaire Ok, turbulent NOk. Gradient de vent, force augmente en s'éloigant de la surface.</li>
-			<li>Vitesse-air : vit de déplacement de l'objet par rapport masse d'air non perturbé loin devant (infini amont)</li>
-			<li>Vent relatif : vitesse ecoulement infini amont par rapport à l'objet. Vit air et vent relatif sont 2 vecteurs égaux et opposés</li>
-			<li>Force de pression : exercée par un fluide L à une surface. P=F/S</li>
-			<li>Force de viscosité : excercée parrallement à la surface</li>
-			<li>Loi de bernouilli = Pt (pression L à l'écoulement) - Ps (P // écoulement) = 1/2*masse volumique*V². Section tube diminue -> V augmente, effet venturi</li>
-			<li>Portance : F résultante exercée par un écoulement autours d'un objet, L au vent relatif/vitesse-air. </li>
-			<li>Trainée : // ; due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  portance = 1/2p(masse vol)*V²Cz ; trainée = 1/2p*V²Cx  </li>
-			<li>Décrochage : diminution brutale portance en f(incidence de décrochage)</li>
-			<li>Théorie de Froude : modèle entre portance du rotor et puissance a fournir en f(surface disque rotor & masse volumique air) ; + surface importante et/ou + masse volumique air grande --> + puissance fournir est faible.</li>
+			<li>Ecoulement : fluide en mouvement autours d'un obstacle, laminaire Ok, turbulent NOk.</li>
+			<li>Gradient de vent --> force augmente en s'éloigant de la surface.</li>
+			<li>Vitesse-air : vitesse de déplacement de l'objet par rapport à la masse d'air non perturbé loin devant (appellée infini amont)</li>
+			<li>Vent relatif : vitesse ecoulement infini amont par rapport à l'objet. Vitesse-air et vent relatif sont 2 vecteurs égaux et opposés</li>
+			<li>Force de pression (P) --> force (F) exercée par un fluide perpendiculairement à une surface (S). P=F/S</li>
+			<li>Force de viscosité : force excercée parrallement à la surface</li>
+			<li>Loi de bernouilli : Pt (pression perdiculaire à l'écoulement) - Ps (P parrallèle à l'écoulement) = 1/2*masse volumique*V². Effet venturi --> la réduction de section d'un tube augmente la vitesse d'écoulement </li>
+			<li>Portance : force résultante exercée par un écoulement autours d'un objet qui est perpendiculaire au vent relatif/vitesse-air. </li>
+			<li>Trainée : force .... perpendiculaire au vent relatif. Due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  Portance = 1/2p(masse vol)*V²Cz ; trainée = 1/2p*V²Cx  </li>
+			<li>Décrochage : diminution brutale portance. Celui-ci est fonction de l'incidence de décrochage</li>
+			<li>Théorie de Froude : modèle entre portance du rotor et puissance a fournir en f(surface disque rotor & masse volumique air). De cette loi si +++ de surface et/ou air à une masse volumique +++ --> --- besoin de fournir de puissance.</li>
 			<li>Equilibre du vol rectiligne : équilibre portance et trainée avec la puissance à fournir et l'incidence, et ce pour une masse du drone et une vitesse air données.</li>
-			<li>Position drone : coordonée en f(surface terre) --> lattitude, longitude et altitude</li>
-			<li>Attitude : angles en f(surface terre) --> assiete (angle entre axe longitudinal et plan horizontal), inclinaison (angle entre axe latéral et plan horizontal), cap (angle entre projection horizontal de l'axe longitudinal et nord). cap est cap vrai si nord est nord vrai, magnétique si nord est magnétique.</li>
+			<li>Position drone : coordonée en fonction de la surface de la terre --> lattitude, longitude et altitude</li>
+			<li>Attitude : angles en en fonction de la surface de la terre --> assiete (angle entre axe longitudinal et plan horizontal), inclinaison (angle entre axe latéral et plan horizontal), cap (angle entre projection horizontal de l'axe longitudinal et nord). <br>Le cap est cap vrai si nord est nord vrai, il est magnétique si nord est magnétique.</li>
 			<li>Densité de l'air impacte la puissance a fournir : vol montagne en été = danger.</li>
 			<li>Stabilité : capacité a revenir à l'équilibre après en avoir été écarté</li>
 			<li>Maniabilité : capacité à s'écarté facilement d'une position d'équilibre</li>
-			<li> Masse maximale structurale : masse max défini par constructeur. au dela risque de dépasser limite elastique :interdiction - dommage irémédiable</li>
+			<li>Masse maximale structurale : masse max définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable et donc interdiction</li>
 		</ul>	
 		</p>
 		
 		<h2>Météorologie</h2>
 		<p>
 		<ul>
-			<li>Atmosphère : enveloppe gaz (air sec + vapeur eau) --> azote 78%, oxygène 21%, CO2+argon 1%, gaz carbonique et gaze rare traces. Vapeur eau : phénomène météo majeurs</li>
-			<li>Rayonnement : transport chaleur via spectre (infrarouge<->ultraviolet) jusqu'à atmosphère. Partie absorbée, partie réfléchie. Variation en fct des couches et des zones géographiques. ces contrastes déclenchent des mécanismes compensatoires (phénomènes météo)</li>
+			<li>Atmosphère : enveloppe gaz composée d'air sec + vapeur eau. <br> Air sec --> azote 78%, oxygène 21%, CO2+argon 1%, gaz carbonique et gaze rare traces. <br> Vapeur eau : à l'origine phénomènes météo majeurs</li>
+			<li>Rayonnement : transport chaleur via spectre (infrarouge<->ultraviolet) jusqu'à atmosphère. Partie absorbée, partie réfléchie. Variation en fonction des couches et des zones géographiques. Ces contrastes déclenchent des mécanismes compensatoires (phénomènes météo)</li>
 			<li>Convection : transport E thermique par brassage vertical (pousée archimède)</li>
 			<li>Conduction : transport E corps plus chaud vers corps plus froid</li>
-			<li>Température air. Situation idéale --> min 1/2h après levé soleil - max 2h après soleil passage au méridien. </li>
-			<li>Troposphère : parti inf atmosphère, t° dimininue gradient moyen 6.5°C par 1000m. Plus haut couche inversion, t° augmente avec altitude</li>
-			<li>Pression atmosphérique : poids de la colonne d'air par unité de surface. pression décroit avec altitude, poids de la colonne diminue. Dépend condition météo, meme pression ligne isobares. Centre haute pression anticyclone, basse depression. axe haute pression une dorsale, axe basse thalweg. ZOne faible variation : marais barométrique.</li>
-			<li>Equation gaz parfaits : relation entre température, pression et masse volumique. p = p0(P/P0)(T0/T). T en kelvin °C+273.15 ; p0 masse vol niveau mer 1.225kg/m3 ; P0 pression niveau mer 1013Hpa. T0 temperature type niveau mer 273.15K</li>
+			<li>Température de l'air --> En situation idéale le min est atteint 1/2h après levé soleil ; le max 2h après passage soleil au méridien. </li>
+			<li>Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m. Plus haut la couche d'inversion où t° augmente avec altitude</li>
+			<li>Pression atmosphérique : poids de la colonne d'air par unité de surface. Pression décroit avec altitude et poids de la colonne diminue.  La pression dépend condition météo. <br>Les lignes de memes pressions sont les isobares. Centre haute pression est un anticyclone ; centre basse pression une depression. Axe hautes pressions est une dorsale, axe basse pressions un thalweg. Zone faible variation est un marais barométrique.</li>
+			<li>Equation gaz parfaits : relation entre température, pression et masse volumique. p = p0(P/P0)(T0/T). T en kelvin °C+273.15 ; p0 masse volumique niveau mer 1.225kg/m3 ; P0 pression niveau mer 1013Hpa. T0 temperature type niveau mer 273.15K</li>
 			<li>Pression atmosphère diminue de 1hPa pour 8.32m (27.31ft) dans une atmospère type.</li>
 			<li>Calage altimétrique : sur altimétre barométrique. GFE calage pour que l'altimétre indique 0 au niveau aérodrome. QNH calage pour que altimetre indique altitude de l'aérodrome. Calage 1013.25 altimetre indique altitude pression Zp (atmosphére type pression ambiante)</li>
 			<li>Vent : composante horizontale vecteur-vitesse air horizontal par rapport sol. Exprimé en ° par rapport au nord vrai, en m/s ou noeud (kt).</li>
-			<li>Vent/isobare : en altitude vent // isobare, sens horaire hemisphère nord. + isobares resserés + vent fort.Le frottement a basse altitude (+ sur terre que sur mer) provoque convergence du vent vers depression, divergence anticyclone. </li>
-			<li>Brise : vent local de contrast thermique. De jour de la cote vers la terre, inverse la nuit. brise ascendante vers les vallées et cols le jour, inverse (descendante) la nuit.</li>
-			<li>Turbulence de frottement ou relief : couche (turbulente/limite atmosphérique) limite vent avec le sol --> tourbillon, ascendances, rabattants et cisaillement de vent, effet venturi (vallée, col, battiment). Extension vertical augmente avec rugosité sol ou force vent</li>
-			<li>Turbulence convective : généré par convection, saturation air (selon degré humidité et amplitude verticale). Instabilité, formation de cumulus et cumulonimbus</li>
-			<li>Nuage : condensation vapeur d'eau. Stratiforme (stable) vs cumuliforme (instable). Etage inférieur (inf 2km) stratus et stratocumulus. Etage moyen (2-7km) nimbostratus, altostratus cumus et altocumulus. Etage supérieur cirrus. Cumulonimbus grande extension de l'étage inférieur à supérieur. </li>
+			<li>Vent/isobare : en altitude le vent est // aux isobares, tourne dans le sens horaire hemisphère nord. +++ isobares resserés +++ vent fort. <br> Le frottement à basse altitude (+ important sur terre que sur mer) provoque convergence du vent au centre de la depression, et la divergence au centre de l'anticyclone. </li>
+			<li>Brise : vent local de contrast thermique. De jour de la cote vers la terre, inverse la nuit. Brise ascendante vers les vallées et cols le jour, inverse (descendante) la nuit.</li>
+			<li>Turbulence de frottement ou relief : couche (turbulente/limite atmosphérique) limite vent avec le sol qui va créer des tourbillons, ascendances, rabattants et cisaillement de vent, potentiellement des effets venturi (vallée, col, battiment). Extension verticale augmente lorsque rugosité sol augmente ou force du vent augmenteli>
+			<li>Turbulence convective : généré par convection, saturation air (selon degré humidité et amplitude verticale). Instabilités dues à la formation de cumulus et cumulonimbus</li>
+			<li>Nuage : condensation vapeur d'eau. Stratiforme (stable) vs cumuliforme (instable). <br>Etage inférieur (inf 2km) stratus et stratocumulus. Etage moyen (2-7km) nimbostratus, altostratus cumulus et altocumulus. Etage supérieur cirrus. Cumulonimbus grande extension de l'étage inférieur à supérieur. </li>
 			<li>Précipitations : stratus --> bruine (BR), neige en grain (SG). nimbostratus (Ns) & altostratus (As) --> Pluie (RA) et neige (SN). Cumulus (Cu) - altocumulus (Ac) - cumulonimbus (Cb) --> averse pluie (RASH) et neige (RASN). Cumulonimbus --> grêle (Gr) </li>
-			<li>Orage associés au comulonimbus. brassage convectif air génére turbulence, rafales, cisaillement, phénomène electrique dans un rayon 10-20 NM. Danger dans rayon 5-10NM. Report vol obligatoire.</li>
-			<li>Brume : visibilité horizontale 1 à 5km. Brouillard visibilité -1km. Brouillard rayonnement (+ courant) forte humidité faible vent (marais barométrique), brouillard d'advection (masse humide sur surface froide), bruillard pente (refroidissement masse humide)</li>
-			<li>Perturbation : interaction conflictuelle 2 masses d'air, front froid ou chaud, vent négligeable front stationnaire. Masse d'air se souleve, si instable formation cumulonimbus</li>
-			
+			<li>Orages associés au comulonimbus. Brassage convectif important de l'air génère turbulences, rafales, cisaillement, phénomènes electriques dans un rayon 10-20 NM. Danger dans rayon 5-10NM. Report du vol obligatoire.</li>
+			<li>Brume : visibilité horizontale 1 à 5km. Brouillard visibilité -1km. <br>Brouillard rayonnement (+ courant) se forme avec forte humidité et faible vent (marais barométrique), brouillard d'advection lorsque qu'une masse humide recontre une surface froide, bruillard pente lors d'un refroidissement d'une masse humide</li>
+			<li>Perturbation : interaction conflictuelle de 2 masses d'air (front froid ou chaud). Si vent négligeable --> front stationnaire. Si masse d'air se souleve --> instable, formation cumulonimbus</li>
 		</ul>	
 		</p>
 		
