@@ -218,7 +218,8 @@
 		</p>
 		
 		<h2>Acronymes / abréviations</h2>
-		
+		<p>
+		<ul>	
 		<li>Agence Nationale des FRéquences (ANFR)  </li>
 		<li>Aeronautical Information Publication (AIP) </li>
 		<li>Agence de l'Union européenne pour la sécurité aérienne (AESA) </li>
@@ -252,25 +253,34 @@
 		<li>Temporary Segregated Area (TSA) </li>
 		<li>Visual Line Of Sight (VLOS)  </li>
 		<li>VOL TACtique (VOLTAC) </li>
-
+		</ul>
+</p>		
 		
 		<h2>Navigation</h2>
 		<p>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>Ellipsoïde de référence (WGS84) : forme géométrique conventionnelle ou la surface de la terre est projettée, définie par son applatissement f = (a - b) /a. <br> a = 6378km. f = 1/298. Ce "faible" applatissement permet de considérer la terre comme sphérique pour les calculs de navigation. </li>
+			<li>Pôles : extrémités de l'axe de symétrie de l'ellipsoide de référence</li>
+			<li>Equateur : intersection entre ellipsoide et plan de symétrie perpendiculaire à l'ellipsoide</li>
+			<li>Méridiens : lignes d'intersections entre ellipsoide et demi-plan issu de l'axe des pôles <br> graduées de 0 à 180 vers l'est ou vers l'ouest à partir du méridien de Greenwich (origine).</li>
+			<li>Parallèles : intersections entre ellipsoide et plans parallèles à l'équateur</li>
+			<li>Coordonnées géographiques : permet de repérer un point sur l'ellispoïde avec ses coordonées. <br> lattitude est l'angle en fonction du plan equatorial --> N ou S selon l'hémisphère ; longitude est un angle en fonction du plan meridien origine --> W ou E (positive ou négative) ; altitude en fonction du niveau de la mer. </li>
+			<li>Temps (UTC) 12 UTC soleil moyen passe au méridien de greenwich. <br> Le temps civil local LMT ou Tcg est UTC + décalage constant, tel qu'à 12h LMT le soleil moyen passe au méridien du lieu. Le temps légal défini par rapport au temps UTC en ajoutant/retranchant une valeur d'heure(s)</li>
+			<li>Nord : origine pour mesurer une orientation. <br>Nv tangeant au méridien d'origine, Nm direction boussolle si horizontal, Nc (compas) compas de l'aéronef subissant les perturbartions magnétiques et imperfections instrumentales. </li>
+			<li>Déviation magnétique (voir 1ere partie) / déviation compas : angle entre Nm et Nc / variation compas : angle entre Nc et Nv </li>
+			<li>Cap : angle entre direction et axe aéronef (aussi appellé ligne de foi).  </li>
+			<li>Route : angle direction origine vers trajectoire aéronef. De 0 à 360° dans le sens horaire. Si direction origine est Nv ou Nm la route et route vraie ou route magnétique.</li>
+			<li>Dérive : angle entre axe aéronef et route. Positive si route est à droite, negative si route à gauche de l'axe.</li>
+			<li>Orthodrome : ligne physique tel un fil tendu à la surface reliant deux points. </li>
+			<li>Loxodromie : trajectoire à angle de route constant la plus courte reliant deux points. un arc de parallèle ou de méridien sont des lowodromies particulières.</li>
+			<li>Projection representation surface terrestre sur plan. Si échelle quasi constante dans une zone donnée on dit que la projection est équidistante. Une projection conforme conserve les angles. <br>Les cartes de navigations sont conformes et equidistantes</li>
+			<li>Carte Lambert : projection conforme ou les méridiens sont sécants au pôle et parallèles sont concentriques au pôle.</li>
+			<li>Pour mesurer des routes et des distances il faut une carte conforme.<br> La route vraie est égale à l'angle entre la trajectoire de l'appareil et le méridien sécant à la trajectoire. Un rapporteur permet de mesurer cette route. <br>Pour mesurer la distance on rapportela distance entre 2 points sur le méridien autour de la meme latitude moyenne. Une regle, ou un compas pointe seche permet de reporter cette mesure et de lire le resultats en minutes de latitude soit en mille nautique. </li>
+			<li>Cheminement : technique de reconaissance naturelle et facile pour naviguer en suivant une particularité géographique naturelle ou artificielle (fleuve, chemin de fer, etc.) A faire sur tout ou une partie du trajet</li>
+			<li>Estime : technique base navigation peut importe sophistication moyen technique. En partant d'un point donné, avec une trajectoire et vitesse-sol donnée on determine sa position. Faire l'inverse pour conaitre le temps en f(vitesse). <br>Avec un chronomètre déclenché au depart, le temps arrivé prévue se rapprochant, trouver/reconnaitre le point au sol correspondant</li>
+			<li>Le vent impacte cap et vitesse propore (projection vitesse-air sur plan horizontal) par rapport à la route et à la vitesse sol. <br>Le triangle des vitesses "vitesse sol = vitesse propre + vent" permet de calculer le cap à prendre pour suivre la route prévue et donne la vitesse-sol correspondante.</li>
+			<li>La fonction traceur permet de calculer par echantillonage la position d'un UAS au cours du temps.<br>La dérivée 1 et 2 permet d'obtenir vitesse et accélération qui sont sensibles aux données initiales de positionnement du GNSS. <br>En saisissant les points de reports successifs le calculateur donne la distance orthodromique et la route sur chaque segment de naviation et résou le triangle des vitesse selon vent prévu et donc indique un temps de vol et une durée de trajet.</li>
+			
 		</ul>	
 		</p>
 		
