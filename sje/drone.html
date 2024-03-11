@@ -82,6 +82,7 @@
 		<li>Beyond Visual Line Of Sight (BVLOS)</li>
 		<li>Centre d'Enregistrement et de Révision des Formulaires Administratifs (CERFA) </li>
 		<li>Circulation Aérienne Militaire (CAM) </li>
+		<li>Clock wise (CW) vs Counter Clock Wise (CCW)</li>
 		<li>Control Traffic Region (CTR) </li>
 		<li>deciBel (dB)</li>
 		<li>DIRection de la Circulation Aérienne Militaire (DIRCAM)</li>
@@ -121,30 +122,35 @@
 		<ul>
 			<li>Aérostat : poussée archimède = soulève UAS de masse à l'air déplacé. Gaz chauffé ou inerte (argon, etc.)</li>
 			<li>Aérodyne : forces aérodynamiques, voilure fixe ou multirotor</li>
-			<li>Système drone : télécommande - batterie - capteurs - autopilote - actionneurs - gouverne - moteurs</li>
+			<li>Système drone : télécommande - batterie - capteurs (gyroscopes, accéléromètres, baromètre, magnétomètre, GNSS, Sonar...) - autopilote - actionneurs - gouverne - moteurs</li>
 			<li>Intensité (I) : quantité charge electrique en mvt. Mesurée en Ampère (A) 1A = 1 Coulomb par seconde </li>
 			<li>Puissance (P) en watts (W)= tension (U) en volt (V) * I. </li>
 			<li>Loi d'Ohm U=Resistance (R) en Ohm * I. La tension aux bornes d'une resistance génère une certaine intensité.</li>
-			<li>Batterie en // --> capacités s'additionnent, la tension reste celle d'1 batterie ; Batterie en série --> tensions s'additionnent , capacité reste celle d'1 batterie</li>
-			<li>Altimètre barométrique compare pression de calage (au décolage) en f(altitude) selon la loi d'équilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013hPa au niveau mer à une température de 15°C). Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif</li>
+			<li>Batterie en // P (ou en dérivation) --> capacités s'additionnent, la tension reste celle d'1 batterie ; Batterie en série S --> tensions s'additionnent , capacité reste celle d'1 batterie
+			<br>: tension nominale 3.7v, chargée 4.2v. </li>
+			<li>Altimètre barométrique compare pression de calage (au décolage) appellé QFE en f(altitude) selon la loi d'équilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013.25hPa au niveau mer à une température de 15°C) appellé QNE. C'est avec ce niveau qu'on calcule le niveau de vol (calage standard). Le même niveau (mer) en fonction du jour est appellé QNH. Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif. AMSL (altitude) ; ASFC/AAL/AGL (hauteur). 1 ft = 0,305m, 1HpA = 28pied ou 8,54m.</li>
 			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
 			<li>Déclinaison magnétique (DM) : angle entre le nord vrai (NV) et NM. DM est Est ou positive quand NM est à l'est du NV. Les DM varient en lieu et temps. Les isogones sont des tracés / lignes d'égales déclinaisons sur une carte.</li>
 			<li>Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. Magnétomètre + gyromètre permettent la mesure d'une attitude précise. Le compas magnétique + carte isogones permet la déduction du cap vrai.</li>
 			<li>Gyromètre : mesure vitesse rotation ; gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique</li>
 			<li>Accéléromètre : composé de 3 ensembles masse-ressort. Permet la mesure sur chacun des 3 axes de l'UAS</li>
-			<li>Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 minimums) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. </li>
+			<li>Navstar / GPS, 24 sattelites, 6 orbites. Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
+			<br>Attention tempète solaire. Indice KP = activité solaire (space weather life NASA donne l'indication) 1 à 4 ok. </li>
+			<br>Real Time Kinematic (RTK) : ajout base sol qui connait sa position pour en déduire l'erreur et la difuser au drone : utile pour topographie...</li>
 			<li>Intégrité système : capacité a informer en situation dégradée.</li>
 			<li>Limitation espace est obligatoire en hauteur pour les UAS. Obligatoire en horizontal en scénario S2.</li>
 			<li>Drone voilure fixe : hélice agit sur vitesse-air ; Gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal ; gouverne direction sur symétrie vol</li>
 			<li>Asservissement : automatisme d'attitude (maintient attitude, assiette, inclimaison, cap..) en fct des consignes données par le télépilote. Vise à obtenir une vitesse et trajectoire conformes (boucle rétroaction entre capteurs et consignes).</li>
 			<li>Dispositif protection tiers : obligatoire en S3 avec m>2kg. Il limite a 69j l'E lors d'un impact potentiel</li>
 			<li>Retour vidéo est analogique ou numérique</li>
-			<li>Hélice comprend 1 diamètre, 1 pas géométrique qui correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). Angle calage est l'angle entre corde du profil et plan d'entrainement.</li>
+			<li>Hélice comprend 1 diamètre, 1 pas géométrique qui correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). 
+			<br>Angle calage est l'angle entre corde du profil et plan d'entrainement. Extrados / Intrados</li>
 			<li>Moteur sans balais (brushless) composé d'un rotor avec aimants permanents et d'un stator electroaimants. ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
-			<li>Transmission donnée : la puissance reçue baisse avec la distance et baisse lorsque la fréquence augmente. Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)</li>
-			<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables </li>
+			<li>Transmission donnée : la puissance reçue baisse avec la distance et baisse lorsque la fréquence augmente. Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)
+			<li>2.4Ghz--> 100mW puissance max autorisé France, 5.8Ghz --> 25 mW pareil</li>
+			<li>Failsafe : ce qui se passe quand on perd le signal : RTH, attérissage... Hold : maintient dernier ordre </li>
+			<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables. </li>
 			<li>...</li>
-			
 			</ul>
 		</p>
 		
@@ -157,24 +163,30 @@
 			<li>Vent relatif : vitesse ecoulement infini amont par rapport à l'objet. Vitesse-air et vent relatif sont 2 vecteurs égaux et opposés</li>
 			<li>Force de pression (P) --> force (F) exercée par un fluide perpendiculairement à une surface (S). P=F/S</li>
 			<li>Force de viscosité : force excercée parrallement à la surface</li>
+			<li> finesse : portance. Allongement (aspect ratio) = envergure / corde. Finesse = distance parcourue / hauteur perdue.</li>
+			<li> Diedre : angle bout d'aile, quand vers le haut amène stabilité, vers le bas : maniabilité accrue. </li>			
 			<li>Loi de bernouilli : Pt (pression perdiculaire à l'écoulement) - Ps (P parrallèle à l'écoulement) = 1/2*masse volumique*V². Effet venturi --> la réduction de section d'un tube augmente la vitesse d'écoulement </li>
 			<li>Portance : force résultante exercée par un écoulement autours d'un objet qui est perpendiculaire au vent relatif/vitesse-air. </li>
-			<li>Trainée : force .... perpendiculaire au vent relatif. Due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  Portance = 1/2p(masse vol)*V²Cz ; trainée = 1/2p*V²Cx  </li>
-			<li>Décrochage : diminution brutale portance. Celui-ci est fonction de l'incidence de décrochage</li>
+			<li>Trainée : force .... perpendiculaire au vent relatif. Due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  Portance = 1/2p(masse vol)*S(surface alaire) *V²Cz ; trainée = 1/2p*SV²Cx  </li>
+			<li>Décrochage : diminution brutale portance. Celui-ci est fonction de l'incidence de décrochage. On influe sur la portance avec la vitesse de deplacement dans l'air et l'incidence de vol. Les paramètre non maitrisé sont ceux vu plus haut.</li>
 			<li>Théorie de Froude : modèle entre portance du rotor et puissance a fournir en f(surface disque rotor & masse volumique air). De cette loi si +++ de surface et/ou air à une masse volumique +++ --> --- besoin de fournir de puissance.</li>
 			<li>Equilibre du vol rectiligne : équilibre portance et trainée avec la puissance à fournir et l'incidence, et ce pour une masse du drone et une vitesse air données.</li>
+			<li> Angle entre horizontal et trajectoire (ou vent relatif) c'est la pente, l'angle entre trajectoire et axe longitudinal (ou corde de profil) c'est l'incidence. La combiné est l'assiete</li> 
 			<li>Position drone : coordonée en fonction de la surface de la terre --> lattitude, longitude et altitude</li>
 			<li>Attitude : angles en en fonction de la surface de la terre --> assiete (angle entre axe longitudinal et plan horizontal), inclinaison (angle entre axe latéral et plan horizontal), cap (angle entre projection horizontal de l'axe longitudinal et nord). <br>Le cap est cap vrai si nord est nord vrai, il est magnétique si nord est magnétique.</li>
 			<li>Densité de l'air impacte la puissance a fournir : vol montagne en été = danger.</li>
 			<li>Stabilité : capacité a revenir à l'équilibre après en avoir été écarté</li>
 			<li>Maniabilité : capacité à s'écarté facilement d'une position d'équilibre</li>
 			<li>Masse maximale structurale : masse max définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable et donc interdiction</li>
+			<li> facteur de charge = portance / poids ; lors d'un virage facteur charge augmente, devient supérieur à 1, en monté et descente il est inférieur à 1.</li>
+			<li> centrage : centrage avant rend avion plus stable mais moins maniable. Inverse pour arrière. </li>
 		</ul>	
 		</p>
 		
 		<h2>Météorologie</h2>
 		<p>
 		<ul>
+			<li>UAV Forecast : app mobile ou on a tout y compris indice KP</li>
 			<li>Atmosphère : enveloppe gaz composée d'air sec + vapeur eau. <br> Air sec --> azote 78%, oxygène 21%, CO2+argon 1%, gaz carbonique et gaze rare traces. <br> Vapeur eau : à l'origine phénomènes météo majeurs</li>
 			<li>Rayonnement : transport chaleur via spectre (infrarouge<->ultraviolet) jusqu'à atmosphère. Partie absorbée, partie réfléchie. Variation en fonction des couches et des zones géographiques. Ces contrastes déclenchent des mécanismes compensatoires (phénomènes météo)</li>
 			<li>Convection : transport E thermique par brassage vertical (pousée archimède)</li>
@@ -185,7 +197,9 @@
 			<li>Equation gaz parfaits : relation entre température, pression et masse volumique. p = p0(P/P0)(T0/T). T en kelvin °C+273.15 ; p0 masse volumique niveau mer 1.225kg/m3 ; P0 pression niveau mer 1013Hpa. T0 temperature type niveau mer 273.15K</li>
 			<li>Pression atmosphère diminue de 1hPa pour 8.32m (27.31ft) dans une atmospère type.</li>
 			<li>Calage altimétrique : sur altimétre barométrique. GFE calage pour que l'altimétre indique 0 au niveau aérodrome. QNH calage pour que altimetre indique altitude de l'aérodrome. Calage 1013.25 altimetre indique altitude pression Zp (atmosphére type pression ambiante)</li>
+			<li>Capsule anéroide mesure pression statique (ou absolue), utilisée pour mesurer de faibles pressions</li>
 			<li>Vent : composante horizontale vecteur-vitesse air horizontal par rapport sol. Exprimé en ° par rapport au nord vrai, en m/s ou noeud (kt).</li>
+			<li> Anémométre : mesure vitesse vol (qui est différente vitesse sol). 1 noeud = 1 mile nautique par heure (1,852 km/h)
 			<li>Vent/isobare : en altitude le vent est // aux isobares, tourne dans le sens horaire hemisphère nord. +++ isobares resserés +++ vent fort. <br> Le frottement à basse altitude (+ important sur terre que sur mer) provoque convergence du vent au centre de la depression, et la divergence au centre de l'anticyclone. </li>
 			<li>Brise : vent local de contrast thermique. De jour de la cote vers la terre, inverse la nuit. Brise ascendante vers les vallées et cols le jour, inverse (descendante) la nuit.</li>
 			<li>Turbulence de frottement ou relief : couche (turbulente/limite atmosphérique) limite vent avec le sol qui va créer des tourbillons, ascendances, rabattants et cisaillement de vent, potentiellement des effets venturi (vallée, col, battiment). Extension verticale augmente lorsque rugosité sol augmente ou force du vent augmenteli>
