@@ -39,9 +39,9 @@
             text-align: justify;
         }
 		img {
-            max-width: 150px;
+            width: 600px;
             height: auto;
-			float: left;
+			
         }
 		
 		.drone{
@@ -83,7 +83,7 @@
 		<li>Agence de l'Union européenne pour la sécurité aérienne (AESA) </li>
 		<li>Activation des zones basses altitudes (AZBA) </li>
 		<li>Beyond Visual Line Of Sight (BVLOS)</li>
-		<li> Circulation Aerienne Générale (CAG)</li>
+		<li>Circulation Aerienne Générale (CAG)</li>
 		<li>Centre d'Enregistrement et de Révision des Formulaires Administratifs (CERFA) </li>
 		<li>Circulation Aérienne Militaire (CAM) </li>
 		<li>Clock wise (CW) vs Counter Clock Wise (CCW)</li>
@@ -132,7 +132,7 @@
 			<li>Loi d'Ohm U=Resistance (R) en Ohm * I. La tension aux bornes d'une resistance génère une certaine intensité.</li>
 			<li>Batterie en // P (ou en dérivation) --> capacités s'additionnent, la tension reste celle d'1 batterie ; Batterie en série S --> tensions s'additionnent , capacité reste celle d'1 batterie
 			<br>: tension nominale 3.7v, chargée 4.2v. </li>
-			<li>Altimètre barométrique compare pression de calage (au décolage) appellé QFE en f(altitude) selon la loi d'équilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013.25hPa au niveau mer à une température de 15°C) appellé QNE. C'est avec ce niveau qu'on calcule le niveau de vol (calage standard). Le même niveau (mer) en fonction du jour est appellé QNH. Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif. AMSL (altitude) ; ASFC/AAL/AGL (hauteur). 1 ft = 0,305m, 1HpA = 28pied ou 8,54m.</li>
+			<li>Altimètre barométrique compare pression de calage (au décolage) appellé QFE en f(altitude) selon la loi d'équilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013.25hPa au niveau mer à une température de 15°C) appellé QNE. C'est avec ce niveau qu'on calcule le niveau de vol (calage standard). Le même niveau (mer) en fonction du jour est appellé QNH. Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif. AMSL (altitude) ; ASFC/AAL/AGL (hauteur). 1 ft = 0,305m, baise de 1HpA par 28pied ou 8,54m.</li>
 			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
 			<li>Déclinaison magnétique (DM) : angle entre le nord vrai (NV) et NM. DM est Est ou positive quand NM est à l'est du NV. Les DM varient en lieu et temps. Les isogones sont des tracés / lignes d'égales déclinaisons sur une carte.</li>
 			<li>Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. Magnétomètre + gyromètre permettent la mesure d'une attitude précise. Le compas magnétique + carte isogones permet la déduction du cap vrai.</li>
@@ -190,13 +190,31 @@
 		<h2>Météorologie</h2>
 		<p>
 		<ul>
+		    <li> METAR renouvellé toutes les 30mins (observation)<br><img src="contenu/metar1.jpg"> <img src="contenu/metar2.jpg"></li>
+			<li>TAF (prevision) court : 3h valable 9h ; TAF long 6h valable 24h, 30h</li>
+			<li>Le Mistral est associé à une dépression sur l’Italie et un anticyclone sur l’Espagne. Le vent tourne dans le sens anti-horaire autour de la dépression et en sens horaire autour de l’anticyclone, la vallée du Rhône étant entre les deux systèmes, le vent y sera souvent très fort.</li>
+			<li>Durée de vie d'une perturbation océanique : 3 à 6jours</li>
+			<li>Brise de mer : due à une diminution de pression au-dessus de la terre.</li>
+			<li>En été, le temps associé à un anticyclone est caractérisé par : des nuits claires et des journées sans nuages ou avec des petits cumulus.</li>
+			<li>En altitude on a une grande quantité d'ozonne</li>
+			<li>Un orage orographique se développe en zone montagneuse ou sur un relief.</li>
+			<li>Foehn (effet de) : refroidissement d’une masse d’air par ascendance forcée avec précipitations au vent du relief, puis phénomène de réchauffement et d’assèchement sous le vent.</li>
+			<li>Les ascendances thermiques se produisent par réchauffement du sol.</li>
+			<li>Un vent soufflant perpendiculairement à un relief génèrera des courants : ascendants au vent et des rabattants sous le vent.</li>
+			<li>Nuage lenticulaire (1) ;  <br>(3) un nuage à caractère de nuage lenticulaire mais mélangé à des nuages  de types stratus ou altocumulus <br><img src="contenu/nuage.jpg"></li>
+			<li>Symboles TEMSI <br><img src="contenu/symbolestemsi.png"> <img src="contenu/temsi_symboles.jpg"></li>
+			<li>En 1, nous avons un cumulonimbus, en 2 nous avons des stratus accrochés au relief, en 3 un cirrostratus et en 4 nous trouvons un altocumulus lenticularis (un altocumulus  qu’on retrouve en aval du sommet des montagnes sous le vent).<br><img src="contenu/nuagetype.jpg">
+			</li>
+			<li>Atmosphère stable : nuage stratiforme</li>
 			<li>UAV Forecast : app mobile ou on a tout y compris indice KP</li>
+			<li>TAF : 1/10 = température 11°C, point de rosée 10°C, risque de brouillard le soir</li>
+			<li> Une brise de mer hivernale qui se lève le matin sur la côte va créer  des stratus bas et du brouillard sur les terres (masse d'eau sur terre froide).</li>
 			<li>Atmosphère : enveloppe gaz composée d'air sec + vapeur eau. <br> Air sec --> azote 78%, oxygène 21%, CO2+argon 1%, gaz carbonique et gaze rare traces. <br> Vapeur eau : à l'origine phénomènes météo majeurs</li>
 			<li>Rayonnement : transport chaleur via spectre (infrarouge<->ultraviolet) jusqu'à atmosphère. Partie absorbée, partie réfléchie. Variation en fonction des couches et des zones géographiques. Ces contrastes déclenchent des mécanismes compensatoires (phénomènes météo)</li>
 			<li>Convection : transport E thermique par brassage vertical (pousée archimède)</li>
 			<li>Conduction : transport E corps plus chaud vers corps plus froid</li>
 			<li>Température de l'air --> En situation idéale le min est atteint 1/2h après levé soleil ; le max 2h après passage soleil au méridien. </li>
-			<li>Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m. Plus haut la couche d'inversion où t° augmente avec altitude</li>
+			<li>Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m ou 2° par 1000ft. Plus haut la couche d'inversion où t° augmente avec altitude</li>
 			<li>Pression atmosphérique : poids de la colonne d'air par unité de surface. Pression décroit avec altitude et poids de la colonne diminue.  La pression dépend condition météo. <br>Les lignes de memes pressions sont les isobares. Centre haute pression est un anticyclone ; centre basse pression une depression. Axe hautes pressions est une dorsale, axe basse pressions un thalweg. Zone faible variation est un marais barométrique.</li>
 			<li>Equation gaz parfaits : relation entre température, pression et masse volumique. p = p0(P/P0)(T0/T). T en kelvin °C+273.15 ; p0 masse volumique niveau mer 1.225kg/m3 ; P0 pression niveau mer 1013Hpa. T0 temperature type niveau mer 273.15K</li>
 			<li>Pression atmosphère diminue de 1hPa pour 8.32m (27.31ft) dans une atmospère type.</li>
@@ -206,17 +224,20 @@
 			<li>Anémométre : mesure vitesse vol (qui est différente vitesse sol). 1 noeud = 1 mile nautique par heure (1,852 km/h)
 			<li>Vent/isobare : en altitude le vent est // aux isobares, tourne dans le sens horaire hemisphère nord. +++ isobares resserés +++ vent fort. <br> Le frottement à basse altitude (+ important sur terre que sur mer) provoque convergence du vent au centre de la depression, et la divergence au centre de l'anticyclone. </li>
 			<li>Brise : vent local de contrast thermique. De jour de la cote vers la terre, inverse la nuit. Brise ascendante vers les vallées et cols le jour, inverse (descendante) la nuit.</li>
+			<li>Un grain est un événement météorologique au cours duquel la vitesse du vent s’accroît de façon brusque et marquée avec un net changement de direction (45 à 90 °), et qui ne dure que quelques minutes.
+			<br>Ce phénomène est fréquemment accompagné d’averses de pluie, de neige ou d’orages.</li>
 			<li>Turbulence de frottement ou relief : couche (turbulente/limite atmosphérique) limite vent avec le sol qui va créer des tourbillons, ascendances, rabattants et cisaillement de vent, potentiellement des effets venturi (vallée, col, battiment). Extension verticale augmente lorsque rugosité sol augmente ou force du vent augmenteli>
 			<li>Turbulence convective : généré par convection, saturation air (selon degré humidité et amplitude verticale). Instabilités dues à la formation de cumulus et cumulonimbus</li>
 			<li>Nuage : condensation vapeur d'eau. Stratiforme (stable) vs cumuliforme (instable). <br>Etage inférieur (inf 2km) stratus et stratocumulus. Etage moyen (2-7km) nimbostratus, altostratus cumulus et altocumulus. Etage supérieur cirrus. Cumulonimbus grande extension de l'étage inférieur à supérieur. </li>
 			<li>Précipitations : stratus --> bruine (BR), neige en grain (SG). nimbostratus (Ns) & altostratus (As) --> Pluie (RA) et neige (SN). Cumulus (Cu) - altocumulus (Ac) - cumulonimbus (Cb) --> averse pluie (RASH) et neige (RASN). Cumulonimbus --> grêle (Gr) </li>
+			<li>La pluie continue ne se rencontre que sous des nuages stables, ce sont les nuages ayant le mot « stratus » dans leurs noms (stratus, stratocumulus, altostratus, cirrostratus, etc..), vous n’y trouverez pas de turbulence, rafales ou averses.</li>
 			<li>Orages associés au comulonimbus. Brassage convectif important de l'air génère turbulences, rafales, cisaillement, phénomènes electriques dans un rayon 10-20 NM. Danger dans rayon 5-10NM. Report du vol obligatoire.</li>
 			<li>Brume : visibilité horizontale 1 à 5km. Brouillard visibilité -1km. <br>Brouillard rayonnement (+ courant) se forme avec forte humidité et faible vent (marais barométrique), brouillard d'advection lorsque qu'une masse humide recontre une surface froide, bruillard pente lors d'un refroidissement d'une masse humide</li>
 			<li>Perturbation : interaction conflictuelle de 2 masses d'air (front froid ou chaud). Si vent négligeable --> front stationnaire. Si masse d'air se souleve --> instable, formation cumulonimbus</li>
 		</ul>	
 		</p>
 		
-		<h2>Réglementation</h2>
+		<h2>Réglementation générale</h2>
 		<p>
 		<ul>
 			<li>Au niveau international --> OACI : organisation aviation civile internationale --> publie normes et pratiques recommandées qui determine tout ce qui concerne l'aviation (livres de bord, règles de l'air, licences, navigabilité, aéronefs en detresses, accidents...</li>
@@ -234,34 +255,14 @@
 			<br>GEN --> généralités réglementation circulation aérienne, 
 			<br> ENR --> espace aérien, zones restrictions, sites aéromodélismes. 
 			<br> AD --> description des aérodromes. <br>Consultable sur le site SIA</li>
-			<li>Alpha tango : portail public des utilisateurs d'aéronefs télépilotés</li>
-			<li>Attestation de conception : document conformité UAS avec réglementation de la navigabilité. <br> Cas qui necessite une attestation de conception --> aéronef m>25kg, scénario S2, m>2kg autre que captif dans S3 </li>
-			<li>Vol automatique : vol programmé sans intervention télépilote. Possible (obligation) si le télépilote peut reprendre commandes ou déclencher atterrissage d'urgence.</li>
-			<li>Autonome : automatique, aucun télépilote ne peut intervenir sur sa trajectoire</li>
-			<li>Vol autonome : sauf captif interdit dans le cadre d'un scénario standard</li>
-			<li> Arrété 3 décembre 2020 (réglementation sur drones) ne s'applique pas au ballons libres, ballons captifs a hauteur moins 50m et charge utile -1kg, cerf volant, aéronefs dans espaces clos et couverts</li>
-			<li>Carte de restriction pour la catégorie ouvert et l'aéromodélisme est élaborée par la DGAC et l'IGN et disponible sur géoportail.gouv</li>
+		
 			<li>Control Traffic Region (CTR) : espace aérien réglementé avec zone de controle terminale</li>		
 			<li> classe A : reservée au IFR, classe G zone non controllée. SIV : zone information vol, possible contacter via telephonne le controlleur aérien, pas d'obligation de sa part de diffuser l'information.
 			<br>Les classes B, C et D nécessitent une clairance (une autorisation). Cette autorisation se demande avant de pénétrer à l’intérieur de l’espace aérien.</li>
 			<li>Espace aérien contrôlé : besoin d'un accord (obligatoire) prélables si CTR militaires - ainsi que pour les autres CTR au dessus de 50m ou lorsqu'on évolue hors vue</li>
 			<li>NOtice To AirMen (NOTAM) : message temporaire complétant les informations de l AIP consultable sur le site du SIA</li>
 			<li>Espace aérien du ciel unique européen : au dessus du territoire, autres espaces si reglement CE n° 551/2004</li>
-			<li>Hauteur max UAS 120m ou 15m au dessus si obstacle sup à 105m. <br>En catégorie spécifique il faut demander un accord du comité régional de gestion espace aérien si cette limite doit être franchie. En hors vue, m>2kg hauteur max 50m. D'autres restrictions en fonction des espaces aériens publiées sur la section ENR de l AIP.</li>
-			<li>Identification directe à distance est un systeme qui permet la diffusion locale d'information sur l'aéronef sans accès physique à celui-ci (ex marquage aéronef)</li>
-			<li>Immatriculation : obligatoire pour UAS >25kg, bureau immatriculation DGAC de forme F-DXXX</li>
-			<li>Les informations aéronautique sont publiées par DGAC (site SIA): contient AIP ainsi que les infos urgentes ou temporaire (NOTAM et SUP AIP)</li>
-			<li>LUC (Light UAS Operator Certificate) est un certificat d'exploitant qui permet de s'affranchir d'autorisation pour un vol hors scénario standard</li>
-			<li>MAnuel d'EXploitation doc de l'exploitant décrivant son activité, ses drones, ses télépilotes et les procédures de mise en oeuvre dnas le cadre d'un scénario standard européen ou une autorisation d'exploitation</li>
-			<li>Dispositif protection des tiers : sécurité type parachute, obligatoire m>2kg scénario S3.</li>
-			<li>Distributeur : personne physique ou morale, fait parti chaine d'approvisionnement, autre que le fabricant ou l'importateur, mettant un produit à disposition sur le marché</li>
-			<li>Exploitant : personne physique ou morale qui exploite ou entend exploiter un ou plusieurs UAS</li>
-			<li>Fabricant : personne physique ou morale fabrique, conçoit un produit en vue d'une commercialisation
-			<li>Importateur : personne physique ou morale qui met sur le marché de l'union un produit provenant d'un pays tiers</li>
-			<li>Enregistrement : inscription aéronef obligatoire a partir de 800g sur Alpha tango par les propriétaires. Document obligatoire a présenter lorsqu'on pilote.</li>
-			<li>La catégorie ouverte (loisir) / spécifique / certifiée sont des catégories d'explotations d'UAS définie à l'article 4,5,6 du réglement d'execution UE 2019/947</li>
-			<li>Charge utile : tout ce qui n'est pas destiné pour l'exploitation ou le control de l'aéronef.</li>
-			<li>Masse decollage (utile + aéronef) ne comprend pas le gaz porteur pour aerostats; masse moyen retenu pour captif.</li>
+			
 			<li>Manuel d'Information Aéronautique Militaire (MIAM) disponible sur le site de la DIRCAM</li>
 			<li>Niveau de puissance acoustique (LWA) affecté d'un coefficient de pondération et mesuré en dB par rapport à 1pW (norme EN ISO 3744:2010)</li>
 			<li>Notification/Declaration sur alpha-tango ou en remplissant un CERFA (developpementdurable.gouv.fr) : à effectuer 5j ouvrés préalablement à un vol au prefet qui peut refuser ou restraindre. <br>Pour vol hors vue ou vol en vue a hauteur >=50m des "zones de manoeuvres et entrainement militaires" lorsque celle ci sont actives (se reporter au ENR du MIAM ENR)</li>
@@ -270,18 +271,15 @@
 			<li>Pre-Definied Risk Assesment (PDRA) est une étude pour un type de vol effectué hors scénarios standards. réalisée par AESA qui va définir les conditions dans lesquelles est effectué le vol.</li>
 			<li>Préfet territorial compétant : police pour Paris et 13, prefet départemental dans autre cas.</li>
 			<li>Prévention abordages : en vue cède priorité, respecte règle priorité. hors vue, s'assure qu'aucun aéronefs n'utilisent l'espace</li>
-			<li>Zone d'exclusion des tiers à réaliser par l'exploitant. En S1 et S3 s'assurer qu'aucun tiers non autorisé penètre dans la zone. En S2 réduire risque d'intrusion. S1, S2, S3 distance horizontale 30m de toutes autoroutes, routes express ou voie ferrée. </li>
 			<li>Règles de l'air : régles insertion aéronefs dans l'espace aérien, définies dans réglement UE n°923/2012, SERA. <br>Aeronefs télépilotées dispositions spécifiques (arrété espace) sauf pour prévention collisions entre aéronefs télépilotés</li>
 			<li>Reseau Trés Basse Altitude (RTBA) ministere des armées, l'activation du réseau est consultable sur le site du SIA "carte AZBA".</li>
 			<li>Scénarios standards relevent de la catégorie spécifiques. Mesures d'atténuations déclarées par exploitant. 3 nationaux (S1-2-3) ; 2 européen (STS-O1-O2). Dans les autres cas remplir une déclaration ou détenir un UAS LUC.</li>
 			<li>Ségrégation spatiale d'activité permet dans certains cas de s'affranchir de certaines régles.</li>
 			<li>Sureté : mesure previent contre actes malveillants : implique la conception et mise en oeuvre de système d'information</li>
 			<li>Temporary Segregated Area (TSA) : zone de ségrégation temporaire/</li>
-			<li>Vol en immersion en S1 et S3 : un autre télépilote doit pouvoir prendre le control du drone.</li>
 			<li>Zones particulières : Dangerous,Prohibited,Restricted</li>
 			<li>Petits obstacles : supérieur ou égal à 300, grand obstacle : supérieur à 500</li>
 			<li>Zones VOLTAC : entrainement helicopteres à trés basse altitude (mentionés dans le MIAM). Notification préalable pour les vols d'UAS</li>
-			<li>Zone controlée au sol : UAS est exploité dans cette zone et l'exploitant garanti que seul les participants sont présents.</li>
 			<li>Zone dangereuse : espace aux dimensions définies dans lequel des activités dangeureuses pour les UAS peuvent avoir lieu pendant certaines periodes. Interdit sauf publication contraire ou accord gestionaire. Zones consultables sur le site du SIA AIP France ENR 5.1</li>
 			<li>Il existe des Zones geographique UAS, des Zones interdite, des Zones de manoeuvres et d'entraiment tactique trés basse altitude, Zone réglementée, Zone peuplée (50m horizontal aglo, 150m horizontal concert...), etc. <br>Se reporter aux parties de l'ENR correspondantes pour connaitre les conditions, notifications préalables etc.</li>
 			<li>Cartes VAC (aérodrome) : approche et atterissage : vol à vue</li>
@@ -293,7 +291,7 @@
 			<br>Proximité : distance suffisante pour limiter l'abordage, à l'appréciation du pilote</li>
 			<li>2 types de circulations : CAG (générale), CAM (militaire). </li>
 			<li>Depassement par la droite à bonne distance, aéronef en vol prioritaire, aéronef le plus bas pour atterir</li>
-			<li> Atterir et décoller face au vent, sauf si la sécu, la config de la piste ou necessité circulation aérienne imporsent une autre direction</li>
+			<li>Atterir et décoller face au vent, sauf si la sécu, la config de la piste ou necessité circulation aérienne imporsent une autre direction</li>
 			<li>Pour les zone de control régionale et aérodrome --> controleur aérien - CTA :  empécher abordages, collision, régulariser, renseignement, alerter organisme</li>
 			<li>AFIC - ne fournit pas le service de séparation (à la différence de l'ATC): pression QNH, température, point de rosée, visibilité, information sur le trafic, alerte</li>
 			<li>Airprox : compte rendu permettant de déclarier qu'une collision aurait pu se produire, obligation légale de reporter cela au autorités de l'aviation civile</li>
@@ -303,7 +301,65 @@
 			<li>INCERFA : phase dite d'incertitude ; ALERFA : phase alerte ; DETRESFA : détresse --> situation ou laéronef est identifié comme necessitant le soutient des secours</li>
 		</ul>	
 		</p>
-		
+			<h2>Réglementation spécifique drone</h2>
+		<p>
+		<ul>
+			<li>L'utilisation en extérieur d'aéronef circulant sans équipage à bord :st considérée comme une activité aérienne et relève de la réglementation applicable à l'aviation civile.</li>
+			<li>Alpha tango : portail public des utilisateurs d'aéronefs télépilotés</li>
+			<li> Machine : enregistrement par propriétaire (800g), déclaration exploitant, balise signalement automatique (800g), attestation de conception type et de conformité au type, mue, etiquette de marquage (15cm²)</li>
+			<li>Certificat théorique de télépilote de drone civil est sans date limite</li>
+			<li>Les aéronefs sans équipage à bord utilisés dans le cadre de missions de recherche et de sauvetage, de lutte contre l’incendie, de douane, de police ou de sécurité civile ou activités analogues sous le contrôle et la responsabilité de l’Etat peuvent évoluer en dérogation aux dispositions du présent arrêté lorsque les circonstances de la mission le justifient.</li>
+			<li>Attestation de conception pour : – masse supérieure à 25 kg ; – scénario S-2 ; – si masse supérieure à 2 kg en scénario S-3</li>
+			<li>La demande de dérogation doit être adressée au Préfet territorialement compétent 30 jours avant la date des opérations avec copie suivant le/les cas, à la DSAC/IR (IR pour « interrégionale ») territorialement compétente ou à la DSAC Echelon central.</li>
+			<li>Balisage de nuit : De nuit, un aérostat et son moyen de retenue sont rendus visibles par des feux BI de type A :<br> a) D’un feu au sommet de l’enveloppe de l’aérostat et d’un feu sous son enveloppe
+			b) D’un feu sur le câble à 50 mètres maximum du sol ou de l’eau, et des feux espacés au-dessus jusqu’à l’aérostat, à des intervalles n’excédant pas 45 mètres.</li>
+			<li>Si l’opérateur caméra est le seul à avoir une visibilité sur l'aéronef télépiloté, on dit qu'il évolue hors vue du télépilote.</li> 
+			<li>Télépilote : detenir CATD/CATT, 16ans révolu, formation par scénario, livret de progresion, enregistrement h de vol</li>
+			<li>Télépilote d'un aérostat captif pas soumis à l'exigence d'un niveau théorique mais doit etre apte à lire l'info aéronautique</li>
+			<li>Scénarios S1 et S3 : vol en vue</li>
+			<li>Les vols « hors vue » doivent être préalablement notifié via le portail AlphaTango</li>
+			<li>Vol en immersion en S1 et S3 : un autre télépilote doit pouvoir prendre le control du drone.</li>
+			<li>S-1 : vol en vue, distance horizontale maximale de 200 m.</li>
+			<li>S-2,  Vol hors hors zone peuplée, sans tiers au sol dans toute la zone d’évolution, à une distance horizontale maximale d’un kilomètre du télépilote ; la hauteur peut être de 120 mètres si le drone pèse moins de 2 kg, sinon la hauteur est limitée à 50 mètres.
+			Le télépilote reste hors des nuages</li>
+			<li>S-3 : utilisation en zone peuplée, sans survol de tiers, en exploitation en vue directe et à une distance horizontale maximale de 100 mètres du télépilote.
+			<br> Zone peuplée : – au sein ou à une distance horizontale inférieure à 50 mètres d’une agglomération figurant sur les cartes aéronautiques en vigueur diffusées par le service d’information aéronautique à l’échelle 1/500 000 ou, à défaut, à l’échelle 1/250 000 ou à l’échelle 1/100 000 ou de toute agglomération lorsque de telles cartes n’existent pas ; ou
+			<br>– à une distance horizontale inférieure à 150 mètres d’un rassemblement de personnes.</li>
+			<li>Les hauteurs de vol mentionnées dans l’Arrêté du 3 décembre 2020 relatif à l’utilisation de l’espace aérien par les aéronefs sans équipage à bord, sont à considérer par rapport à l’altitude de référence de l’infrastructure concernée.</li>
+			<li>DA : C’est la distance de l’aéronef à la droite support de l’axe de piste ; DC : C’est la distance de l’aéronef au centre de l’aire d’approche finale et de décollage (le centre de l’hélistation).</li>
+			<li>Zone controlée au sol : UAS est exploité dans cette zone et l'exploitant garanti que seul les participants sont présents.</li>
+			<li>Zone d'exclusion des tiers à réaliser par l'exploitant. En S1 et S3 s'assurer qu'aucun tiers non autorisé penètre dans la zone. En S2 réduire risque d'intrusion. S1, S2, S3 distance horizontale 30m de toutes autoroutes, routes express ou voie ferrée. </li>
+			<li>Identification directe à distance est un systeme qui permet la diffusion locale d'information sur l'aéronef sans accès physique à celui-ci (ex marquage aéronef)</li>
+			<li>Immatriculation : obligatoire pour UAS >25kg, bureau immatriculation DGAC de forme F-DXXX</li>
+			<li>Les informations aéronautique sont publiées par DGAC (site SIA): contient AIP ainsi que les infos urgentes ou temporaire (NOTAM et SUP AIP)</li>
+			<li>LUC (Light UAS Operator Certificate) est un certificat d'exploitant qui permet de s'affranchir d'autorisation pour un vol hors scénario standard</li>
+			<li>MAnuel d'EXploitation doc de l'exploitant décrivant son activité, ses drones, ses télépilotes et les procédures de mise en oeuvre dnas le cadre d'un scénario standard européen ou une autorisation d'exploitation</li>
+			<li>Autorisation d'exploitation (a demander DSAC centrale) : autorisation d’exploitation est requise si les opérations prévues sont réalisées en déviation des scénarios standards nationaux ou européens, ou en déviation aux règles applicables à ces scénarios</li>
+			<li>Les DSAC sont les représentations interrégionales de la DGAC</li>
+			<li>Dispositif protection des tiers : sécurité type parachute, obligatoire m>2kg scénario S3.</li>
+			<li>Distributeur : personne physique ou morale, fait parti chaine d'approvisionnement, autre que le fabricant ou l'importateur, mettant un produit à disposition sur le marché</li>
+			<li>Exploitant : personne physique ou morale qui exploite ou entend exploiter un ou plusieurs UAS <br>appose plaquette marquage, redaction manex, s'assure niveau télépilote et plan formation, enregistrement heure de vol, bilan annuel activité, entretien des machines, déclarer les UAS, déclarer son activité (2ans), déclaration d'exploitant (5ans)</li>
+			<li>l’exploitant doit déclarer à la DSAC le nombre d’heures de vol réalisées par domaine d’activité et par scénario opérationnel et faire une synthèse des problèmes rencontrés dans le cadre du suivi de la sécurité durant l’année civile précédente, et des mesures prises pour y remédier.</li>
+			<li>Fabricant : personne physique ou morale fabrique, conçoit un produit en vue d'une commercialisation
+			<li>Importateur : personne physique ou morale qui met sur le marché de l'union un produit provenant d'un pays tiers</li>
+			<li>Enregistrement : inscription aéronef obligatoire a partir de 800g sur Alpha tango par les propriétaires/exploitant. Document obligatoire a présenter lorsqu'on pilote.</li>
+			<li>La catégorie ouverte (loisir) / spécifique / certifiée sont des catégories d'explotations d'UAS définie à l'article 4,5,6 du réglement d'execution UE 2019/947</li>
+			<li>Charge utile : tout ce qui n'est pas destiné pour l'exploitation ou le control de l'aéronef.</li>
+			<li>Masse decollage (utile + aéronef) ne comprend pas le gaz porteur pour aerostats; masse moyen retenu pour captif.</li>
+			<li>Hauteur max UAS 120m ou 15m au dessus si obstacle sup à 105m. <br>En catégorie spécifique il faut demander un accord du comité régional de gestion espace aérien si cette limite doit être franchie. En hors vue, m>2kg hauteur max 50m. D'autres restrictions en fonction des espaces aériens publiées sur la section ENR de l AIP.</li>
+			<li>Attestation de conception : document conformité UAS avec réglementation de la navigabilité. <br> Cas qui necessite une attestation de conception --> aéronef m>25kg, scénario S2, m>2kg autre que captif dans S3 </li>
+			<li>Vol automatique : vol programmé sans intervention télépilote. Possible (obligation) si le télépilote peut reprendre commandes ou déclencher atterrissage d'urgence.</li>
+			<li>Autonome : automatique, aucun télépilote ne peut intervenir sur sa trajectoire</li>
+			<li>Vol autonome : sauf captif interdit dans le cadre d'un scénario standard</li>
+			<li> Arrété 3 décembre 2020 (réglementation sur drones) ne s'applique pas au ballons libres, ballons captifs a hauteur moins 50m et charge utile -1kg, cerf volant, aéronefs dans espaces clos et couverts</li>
+			<li>Carte de restriction pour la catégorie ouvert et l'aéromodélisme est élaborée par la DGAC et l'IGN et disponible sur géoportail.gouv</li>
+		    <li>En cas de contrôle, le certificat d’aptitude théorique de télépilote et l’attestation de suivi de formation, et/ou la preuve de l'enregistrement de l'aéronef, vous expose à : une amende prévue pour les contraventions de la première classe.</li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		<li> </li>
+		</ul>
+		</p>
 		<h2>Cartes</h2>
 				<iframe style="width:100%; height:600px;" src="contenu/oaci.pdf"></iframe>
 
