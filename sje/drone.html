@@ -76,7 +76,9 @@
 	
 			<h2>Acronymes / abréviations</h2>
 		<p>
-		<ul>	
+		<ul>
+
+	
 		<li>Above Mean Sea Level (AMSL)</li>
 		<li>Agence Nationale des FRéquences (ANFR)  </li>
 		<li>Aeronautical Information Publication (AIP) </li>
@@ -85,9 +87,12 @@
 		<li>Beyond Visual Line Of Sight (BVLOS)</li>
 		<li>Circulation Aerienne Générale (CAG)</li>
 		<li>Centre d'Enregistrement et de Révision des Formulaires Administratifs (CERFA) </li>
+		<li>Centre d'Information de Vol : CIV</li>
 		<li>Circulation Aérienne Militaire (CAM) </li>
 		<li>Clock wise (CW) vs Counter Clock Wise (CCW)</li>
-		<li>Control Traffic Region (CTR) </li>
+		<li>CTA (Control Traffic area) </li>
+		<li>Control Traffic Region (CTR) (ConTRol zone) </li>
+		<li>Contrôle du trafic aérien : ATC (Air Traffic Control)</li>
 		<li>deciBel (dB)</li>
 		<li>DIRection de la Circulation Aérienne Militaire (DIRCAM)</li>
 		<li>Direction Générale Aviation Civile (DGAC) </li>
@@ -107,6 +112,8 @@
 		<li>Phénomène méto : brume / Mist (BR) - Bruine (DZ) - neige en grain / Snow Grain (SG) - Pluie / RAin (RA) - neige / SNow (SN) - averse pluie / RAin SHower(RASH) - averse neige / (RASN) - orage / Thumder Storm (TS) </li>
 		<li>Pre-Definied Risk Assesment (PDRA) </li>
 		<li>Unmanned Aircraft Systems (UAS)</li>
+		<li>Région de contrôle terminale : TMA (Terminal Area)</li>
+		<li>Région d'information de vol : FIR (Flight Information Region)</li>
 		<li>Reseau Trés Basse Altitude (RTBA)</li>
 		<li>Standardised European Rules of the Air (SERA)</li>
 		<li>Service de l'Information Aéronautique (SIA) </li>
@@ -115,6 +122,7 @@
 		<li>Temporary Segregated Area (TSA) </li>
 		<li>Visual Line Of Sight (VLOS)  </li>
 		<li>VOL TACtique (VOLTAC) </li>
+		<li>Voie aérienne : AWY (Airway)</li>
 		</ul>
 </p>		
 		
@@ -123,48 +131,121 @@
 		
 		<h2>Drone</h2>
 		<p>
+		<h3></h3>
 		<ul>
-			<li>Aérostat : poussée archimède = soulève UAS de masse à l'air déplacé. Gaz chauffé ou inerte (argon, etc.)</li>
+			<li></li>
+		</ul>
+		
+		<h3>Généralités</h3>
+		<ul>
+			<li>Aérostat : poussée archimède = soulève UAS de masse à l'air déplacé (UAS plus léger que l'air). Gaz chauffé ou inerte (argon, etc.)</li>
 			<li>Aérodyne : forces aérodynamiques, voilure fixe ou multirotor</li>
 			<li>Système drone : télécommande - batterie - capteurs (gyroscopes, accéléromètres, baromètre, magnétomètre, GNSS, Sonar...) - autopilote - actionneurs - gouverne - moteurs</li>
-			<li>Intensité (I) : quantité charge electrique en mvt. Mesurée en Ampère (A) 1A = 1 Coulomb par seconde </li>
+			<li>Masse maximale structurale : masse max définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable et donc interdiction</li>
+			<li>Alimentation de la charge utile peut etre la même que celle des moteurs</li>
+			<li>a formule h=1/2.g.t² correspond à la loi de : Galilée. </li>
+		</ul>
+		
+		<h3>Electricité</h3>
+		<ul>
 			<li>Puissance (P) en watts (W)= tension (U) en volt (V) * I. </li>
-			<li>Loi d'Ohm U=Resistance (R) en Ohm * I. La tension aux bornes d'une resistance génère une certaine intensité.</li>
-			<li>Batterie en // P (ou en dérivation) --> capacités s'additionnent, la tension reste celle d'1 batterie ; Batterie en série S --> tensions s'additionnent , capacité reste celle d'1 batterie
-			<br>: tension nominale 3.7v, chargée 4.2v. </li>
-			<li>Altimètre barométrique compare pression de calage (au décolage) appellé QFE en f(altitude) selon la loi d'équilibre verticale de l'atmosphère. Cette loi défini la perte de pression (1hPa par 27 pieds ou 8m) dans une atmosphère type (égal à 1013.25hPa au niveau mer à une température de 15°C) appellé QNE. C'est avec ce niveau qu'on calcule le niveau de vol (calage standard). Le même niveau (mer) en fonction du jour est appellé QNH. Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif. AMSL (altitude) ; ASFC/AAL/AGL (hauteur). 1 ft = 0,305m, baise de 1HpA par 28pied ou 8,54m.</li>
+			<li>Intensité (I) : quantité charge electrique en mvt. Mesurée en Ampère (A) 1A = 1 Coulomb par seconde </li>
+			<li>Loi d'Ohm U=Resistance (R) en Ohm * I. La tension aux bornes d'une resistance génère une certaine intensité.
+			<br>L'inverse de la résistenca est la conductivité</li>
+			<li>Batterie en parrallèle ou en dérivation (le P dans 3S2P par exemple) --> capacités s'additionnent, la tension reste celle d'1 batterie
+			<br>Batterie en série (le S dans 3S2P par exemple) --> tensions s'additionnent , capacité reste celle d'1 batterie
+			<br>La tension nominale est de 3.7v (celle qu'on utilisera dans les questions), chargée = 4.2v. 
+			<br>Autres indication sur batterie : Capacité (C) en mAh et capacité de décharge (ex 35C). 
+			<br>Batterie lithium ont une forte capacité à chauffé voir a prendre feu si endommagée</li>
+			<li>Moteur sans balais (brushless) composé d'un rotor avec aimants permanents et d'un stator electroaimants. 
+			<br>KV = tour par minute par V. KV élevé = accrobatie et vitesse. KV faible = stabilité et autonomie.
+			<br>Le rendement d'un moteur = Poussée (thrust) / Puissance.
+			<br>ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
+			<li>Lors de la vérification de l'état d'une batterie avec un voltmètre une charge devrait être connectée à la batterie pour une obtenir une information plus précise de son état.</li>
+			<li> Lorsqu'une batterie est presque complètement déchargée, on observe que : la tension décroît sous l'effet de la charge.</li>
+		</ul>
+		
+		
+		<h3>Instrumentation / Actuateurs</h3>
+		<ul>
+			<li>Le controleur des commandes de vol se situe entre l'émetteur/recepteur principal et le controleur moteur</li>
+		</ul>
+		
+		<h3>Instrumentation / Capteurs</h3>
+		<ul>
+			<li>Altimètre barométrique (avec capsule anéroïde) : il compare la pression de calage (pression au décolage, appellée calage QFE) avec la pression en altitude selon la loi d'équilibre verticale de l'atmosphère. 
+			<br>Cette loi défini une perte de pression de 1hPa par 28 pieds ou 8m (1 ft = 0,305m) dans une atmosphère type qui est égal à 1013.25hPa au niveau mer à une température de 15°C.
+			<br>QNE est une altitude (et non un calage) correspondant au niveau de vol en partant du niveau de la mer dans l'atmosphère type vu plus haut.
+			<br>Le même niveau (mer) en fonction du jour (atmosphère non type) est appellé QNH. Hydro mnémotechnique. 
+			<br>Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif. Un système de maintient d'altitude est composé d'un altimètre et d'un capteur ultrason.
+			<br>Above Mean Sea Level (AMSL) --> altitude avec un altimetre calé sur le QNH.
+			<br>Above SurFaCe (ASFC) / Above Aerodrome Level (AAL) / Above Ground Level (AGL) --> hauteur avec un altimetre calé sur le QFE. </li>
+			<li>Le baromètre piézoélectrique installé dans un aéronef sans équipage à bord indique : La hauteur de vol (en fonction d'une pression mesurée au décollage)</li>
+			<li>Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. 
+			<br>Magnétomètre + gyromètre (mesure vitesse rotation) permettent la mesure d'une attitude précise. 
+			<br>Le compas magnétique + carte isogones permet la déduction du cap vrai.</li>
+			<li>Compas magnétique : donne une reference de direction vis à vis du nord magnétique (+/- déviation compas), attention aux sources d'erreurs lors des accélérations, virage, et masse ferreuse à proximité, courants continus . 
+			<br>Calibration necessaire avant chaque mission pour tenir compte de l'environneelnt magnétique et du lieu</li>
+			<li>Compas gyromagnétique (présent sur de très gros drones) comporte un gyroscope à axes horizontal (doté d'un système érecteur pour maintenir son axe horizontal), d'un détecteur de champ magnétique terrestre, d'un moteur couple de recalage en azimut.</li>
+			<li>Gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique.
+			<br>Sa caractéristique principale est sa fixité dans l'espace</li>
+			<li>Accéléromètre : composé de 3 ensembles masse-ressort. Permet la mesure sur chacun des 3 axes de l'UAS</li>
+			<li>Le système de positionnement et de navigation utilisera principalement un système GNSS et un magnétomètre</li>
+			<li>Intégrité système : capacité a informer en situation dégradée.</li>
+			<li>Dispositif limitateur de hauteur et de zone : software couplé baromètre et GPS.</li>
+			<li> Pour obtenir la position instantanée à partir des accélérations: Il faut intégrer deux fois l'accélération par rapport au temps, et connaitre la position initiale et la vitesse initiale.</li>
+			<li> Dans un système de navigation inertiel, l'intégration simple de la vitesse permet d'obtenir:  La distance parcourue.</li>
+		</ul>
+		
+		<h3>Transmission données</h3>
+		<ul>
+			<li>Transmission donnée : la puissance reçue baisse avec la distance. Baisse aussi lorsque la fréquence augmente. 
+			<br>Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)
+			<li>Puissance max autorisé France : 2.4Ghz--> 100mW ; 5.8Ghz --> 25 mW </li>
+			<li>Failsafe : ce qui se passe quand on perd le signal : RTH, attérissage... Hold : maintient dernier ordre </li>
+			<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables. </li>
+			<li>Ondes radioelectriques ou hertziennes : onde electromatique dont fréquence est inférieur à 300ghz (convention), propage à la vitesse de la lumière. 
+			<br>Attention obstacles : atténuation, absorbption, reflexion, diffraction, réfraction.</li>
+			<li>Perte de liaison de commande entraine une procédure d'attente ou la procédure d'atterrisage</li>
+		</ul>
+		
+		
+
+		</p>
+		
+		
+					
 			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
 			<li>Déclinaison magnétique (DM) : angle entre le nord vrai (NV) et NM. DM est Est ou positive quand NM est à l'est du NV. Les DM varient en lieu et temps. Les isogones sont des tracés / lignes d'égales déclinaisons sur une carte.</li>
-			<li>Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. Magnétomètre + gyromètre permettent la mesure d'une attitude précise. Le compas magnétique + carte isogones permet la déduction du cap vrai.</li>
 			<li>BRG (bearing) : route GPS à suivre pour rejoinrdre un point tournant ; TRK (Track) : route GPS suivie ; ETE : temps pour arriver au prochain point tournant</li>
-			<li>Gyromètre : mesure vitesse rotation ; gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique</li>
-			<li>Accéléromètre : composé de 3 ensembles masse-ressort. Permet la mesure sur chacun des 3 axes de l'UAS</li>
+			
+			
 			<li>Navstar / GPS, au moins 24 sattelites, 6 orbites ; 20200 km d'altitude. Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
-			<br> lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale.
+			<br>lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale.
 			<br>Attention tempète solaire. Indice KP = activité solaire (space weather life NASA donne l'indication) 1 à 4 ok. </li>
 			<br>Real Time Kinematic (RTK) : ajout base sol qui connait sa position pour en déduire l'erreur et la difuser au drone : utile pour topographie...</li>
 			
-			<li>Intégrité système : capacité a informer en situation dégradée.</li>
+			
 			<li>Limitation espace est obligatoire en hauteur pour les UAS. Obligatoire en horizontal en scénario S2.</li>
 			<li>Drone voilure fixe : hélice agit sur vitesse-air ; Gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal ; gouverne direction sur symétrie vol</li>
 			<li>Asservissement : automatisme d'attitude (maintient attitude, assiette, inclimaison, cap..) en fct des consignes données par le télépilote. Vise à obtenir une vitesse et trajectoire conformes (boucle rétroaction entre capteurs et consignes).</li>
 			<li>Dispositif protection tiers : obligatoire en S3 avec m>2kg. Il limite a 69j l'E lors d'un impact potentiel</li>
 			<li>Retour vidéo est analogique ou numérique</li>
-			<li>Hélice comprend 1 diamètre, 1 pas géométrique qui correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). 
-			<br>Angle calage est l'angle entre corde du profil et plan d'entrainement. Extrados / Intrados</li>
-			<li>Moteur sans balais (brushless) composé d'un rotor avec aimants permanents et d'un stator electroaimants. ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
-			<li>Transmission donnée : la puissance reçue baisse avec la distance et baisse lorsque la fréquence augmente. Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)
-			<li>2.4Ghz--> 100mW puissance max autorisé France, 5.8Ghz --> 25 mW pareil</li>
-			<li>Failsafe : ce qui se passe quand on perd le signal : RTH, attérissage... Hold : maintient dernier ordre </li>
-			<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables. </li>
-			<li>Ondes radioelectriques ou hertziennes : onde electromatique dont fréquence est inférieur à 300ghz (convention), propage a la vitesse de la lumière. Attention obstacles : atténuation, absorbption, reflexion, diffraction, réfraction.</li>
+			
+			
 			<li>Certains batiments utilisent des brouilleurs : hopitaux, centre pénitenciers...)--> perturbe ou coupe liaison radio</li>
 			
-			</ul>
-		</p>
-		
+			
 		<h2>Principes de vol</h2>
 		<p>
+		<h3>Hélices</h3>
+		<ul>
+		<li>Hélice : information présent sur l'hélice --> diamètre (en pouces) et pas géométrique.
+		<br>Le pas correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). 
+		<br>Angle calage est l'angle entre corde du profil et plan d'entrainement. Il diminue du moyeu à l'extrémité de l'hélice. Extrados / Intrados
+		<br>Utiliser une hélice Clock wise (CW) ou Counter Clock Wise (CCW) en accord avec le sens de rotation du moteur</li>
+		</ul>
+		
 		<ul>
 			<li>Ecoulement : fluide en mouvement autours d'un obstacle, laminaire Ok, turbulent NOk.</li>
 			<li>Gradient de vent --> force augmente en s'éloigant de la surface.</li>
@@ -186,7 +267,6 @@
 			<li>Densité de l'air impacte la puissance a fournir : vol montagne en été = danger.</li>
 			<li>Stabilité : capacité a revenir à l'équilibre après en avoir été écarté</li>
 			<li>Maniabilité : capacité à s'écarté facilement d'une position d'équilibre</li>
-			<li>Masse maximale structurale : masse max définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable et donc interdiction</li>
 			<li>Facteur de charge = portance / poids ; lors d'un virage facteur charge augmente, devient supérieur à 1, en monté et descente il est inférieur à 1.</li>
 			<li>Centrage : centrage avant rend avion plus stable mais moins maniable. Inverse pour arrière. </li>
 		</ul>	
@@ -223,7 +303,7 @@
 			<li>Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m ou 2° par 1000ft. Plus haut la couche d'inversion où t° augmente avec altitude</li>
 			<li>Pression atmosphérique : poids de la colonne d'air par unité de surface. Pression décroit avec altitude et poids de la colonne diminue.  La pression dépend condition météo. <br>Les lignes de memes pressions sont les isobares. Centre haute pression est un anticyclone ; centre basse pression une depression. Axe hautes pressions est une dorsale, axe basse pressions un thalweg. Zone faible variation est un marais barométrique.</li>
 			<li>Equation gaz parfaits : relation entre température, pression et masse volumique. p = p0(P/P0)(T0/T). T en kelvin °C+273.15 ; p0 masse volumique niveau mer 1.225kg/m3 ; P0 pression niveau mer 1013Hpa. T0 temperature type niveau mer 273.15K</li>
-			<li>Pression atmosphère diminue de 1hPa pour 8.32m (27.31ft) dans une atmospère type.</li>
+			
 			<li>Calage altimétrique : sur altimétre barométrique. GFE calage pour que l'altimétre indique 0 au niveau aérodrome. QNH calage pour que altimetre indique altitude de l'aérodrome. Calage 1013.25 altimetre indique altitude pression Zp (atmosphére type pression ambiante)</li>
 			<li>Capsule anéroide mesure pression statique (ou absolue), utilisée pour mesurer de faibles pressions</li>
 			<li>Vent : composante horizontale vecteur-vitesse air horizontal par rapport sol. Exprimé en ° par rapport au nord vrai, en m/s ou noeud (kt).</li>
@@ -244,58 +324,126 @@
 		</p>
 		
 		<h2>Réglementation générale</h2>
+		<h3>Alphabet aéronautique</h3>
+		<img src="contenu/metar1.jpg"> <img src="contenu/alphabet.jpg"></li>
+		
 		<p>
+		<h3>Réglementation générale</h3>
 		<ul>
-			<li>Au niveau international --> OACI : organisation aviation civile internationale --> publie normes et pratiques recommandées qui determine tout ce qui concerne l'aviation (livres de bord, règles de l'air, licences, navigabilité, aéronefs en detresses, accidents...</li>
+			<li>La nationalité d'un aéronef télépiloté soumis à enregistrement électronique est déterminée par :  Le pays où il est enregistré.</li>
+			<li> L'arrêté du 2 janvier 2023 (ancien article D.133-10 du code de l'aviation civile)  : liste des zones interdites à la prise de vue aérienne par appareil photographique, cinématographique ou tout autre capteur</li>
+			<li>Visual Flight Rules : règles de vol à vue dans les conditions météo Visual Meteorological Condition "voir et éviter".</li>
+			<li>Instrument Flight Rules : règles de vol aux instruments dès que VMC ne sont plus respectées</li>
+			<li>La hauteur minimale de vol en aviation habitée, hormis dans le cadre d'opérations spécifiques, est de : 150m au dessus du sol et de l'eau</li>
+			<li> Aeronefs ont la nationalité dans lequel ils sont immatriculés</li>
+			<li> Reconnaissance des certificats et licences : certificats de navigabilité, brevets, licences etc seront reconnus valables par les autres états contractants</li>
+			<li> Appareils photographiques (Article 36 de la Convention de Chicago) : interdire ou réglementer l'usage des appareils phtoro à bord des aéronefs survolant son territoire, ZICAD (sur geoportail, sur google maps la zone est floutée) zones interdites de prises de vue dans l'arrêté 1 mars 2009</li>
+			<li>2 types de circulations : CAG (générale), CAM (militaire). </li>
+		</ul>
+		
+		<h3>Priorités / abordages</h3>
+		<ul>
+			<li>En vol, pour éviter un aéronef (habité ou non) se rapprochant de face, vous devez : Infléchir votre trajectoire vers la droite.</li>
+			<li>Doubler par la droite</li>
+			<li>Prévention abordages : en vue cède priorité, respecte règle priorité. hors vue, s'assure qu'aucun aéronefs n'utilisent l'espace</li>
+			<li>Surveiller circulation pour éviter collisions 
+			<br>Proximité : distance suffisante pour limiter l'abordage, à l'appréciation du pilote</li>
+			<li>Règles de l'air : régles insertion aéronefs dans l'espace aérien, définies dans réglement UE n°923/2012, SERA. <br>Aeronefs télépilotées dispositions spécifiques (arrété espace) sauf pour prévention collisions entre aéronefs télépilotés</li>
+
+		</ul>
+		
+		<h3>Zones</h3>
+		<ul>
+		<li>Il existe des Zones geographique UAS, des Zones interdite (P), Dangeureuse (D), Réglementées (R), ZRT, ZIT (Zone Interdite Temporaire), des Zones de manoeuvres et d'entraiment tactique trés basse altitude, Zone peuplée (50m horizontal aglo, 150m horizontal concert...), etc. 
+		<br>Se reporter aux parties de l'ENR correspondantes pour connaitre les conditions, notifications préalables etc.</li>
+		<li>Une zone temporaire, à pénétration restreinte</li>
+		<li>Dans la réglementation, on dispose de 7 espaces différents, dont 5 sont contrôlés (A, B, C, D et E). G et F sont des espaces non contrôlés.</li>
+		<li>Espaces aérien classe A : reservée au IFR, classe G zone non controllée. SIV : zone information vol, possible contacter via telephonne le controlleur aérien, pas d'obligation de sa part de diffuser l'information.
+		<br>Les classes B, C et D nécessitent une clairance (une autorisation), E pas necessaire mais on peut faire une demande. Cette autorisation se demande avant de pénétrer à l’intérieur de l’espace aérien.</li>
+		<li>Control Traffic Region (CTR) : espace aérien réglementé avec zone de controle terminale conçu pour rendre le service du contrôle aux aéronefs controlés.</li>
+		<li>Espace aérien contrôlé : besoin d'un accord (obligatoire) prélables si CTR militaires - ainsi que pour les autres CTR au dessus de 50m ou lorsqu'on évolue hors vue</li>
+		<li>Reseau Trés Basse Altitude (RTBA) ministere des armées, l'activation du réseau est consultable sur le site du SIA "carte AZBA", les limites de ces zones sont définies dnas les AIP.
+		<br>En dehors des créneaux d'activité du réseau RTBA, des appareils : Civils ou militaires peuvent y voler en basse altitude. La règle 'voir et éviter' s'applique alors à tous.</li>
+		<li>Zones VOLTAC et SETBA : entrainement helicopteres à trés basse altitude (mentionés dans le MIAM, DIRCAM). Notification préalable pour les vols d'UAS mais pas besoin d'autorisation</li>
+		<li>Zone dangereuse : espace aux dimensions définies dans lequel des activités dangeureuses pour les UAS peuvent avoir lieu pendant certaines periodes. Interdit sauf publication contraire ou accord gestionaire. Zones consultables sur le site du SIA AIP France ENR 5.1</li>
+		</ul>
+		
+		<h3>Sanctions</h3>
+		<ul>
+		<li>Toute infraction constatée (comme p.ex. la prénétration d'une zone réglementée sans l'accord du gestionaire), aux règles de la circulation aérienne, fait l'objet : De la rédaction d'un procès-verbal.</li>
+		<li> Amendes ou santion pénale. 1 an 75k€ utiliser un drone dans des conditions d'utilisation non conformes, 1 an 45k€ si non respect vie privée, 6 mois 15k€ survole d'une zone interdite
+			<br>DGAC peut ajouter une sanction administrative : modif manex, interdire temporairement ou définitivement...</li>
+		<li>La commission de discipline statuant sur les infractions aéronautiques propose une sanction : administrative </li>
+		<li>L'objectif de l'enquête sur un accident ou un incident doit être : la prévention des accidents ou des incidents.</li>
+		</ul>
+		
+		<h3>Instances (OACI - DGAC - SIA)</h3>
+		<ul>
+		<li>Au niveau international --> OACI : organisation aviation civile internationale --> publie normes et pratiques recommandées qui determine tout ce qui concerne l'aviation (livres de bord, règles de l'air, licences, navigabilité, aéronefs en detresses, accidents...</li>
 			<li>Au niveau européen --> European union Aviation Safety Agency (EASA) : publie réglementation européene</li>
 			<li>DGAC : attachée au ministère des transports. 
 			<br>Regroupe DSAC, SIA, BEA, Service Navigation Aerienne (SNA), DSAE (partie militaire), DIRCAM . DSAC organisme de la DGAC en lien avec usagers</li>
 			<li>Convention Chicago (7 decembre 1944) --> 96 article portant sur la navigation aérienne et l'OACI. Les pays contractants s'engagent a uniformiser les réglementations en f(des recommandations)
 			<br> qq principes : état conserve souveraineté au dessus de son territoire (jusqu'à 12NM à partir des côtes)</li>
-			<br> Etat responsable de la réglementation et application convention Chicago
-			<br> Etat ont le droit de visite à l'atterissage et au depart les aéronefs des autres états, vérifier leurs papiers, etc.</li>
-			<li> Aeronefs ont la nationalité dans lequel ils sont immatriculés</li>
-			<li> Reconnaissance des certificats et licences : certificats de navigabilité, brevets, licences etc seront reconnus valables par les autres états contractants</li>
-			<li> Appareils photographiques (Article 36 de la Convention de Chicago) : interdire ou réglementer l'usage des appareils phtoro à bord des aéronefs survolant son territoire, ZICAD (sur geoportail, sur google maps la zone est floutée) zones interdites de prises de vue dans l'arrêté 1 mars 2009</li>
-			<li>Aeronautical Information Publication (AIP) contient 3 parties 
+		<li>Le Service de l'Information Aéronautique (SIA) établit et diffuse : les publications aéronautiques françaises (AIP)- les informations à caractère urgent ou temporaire (NOtice To AirMen (NOTAM) et SUPpléments à l'AIP)- les circulaires d'information aéronautique (AIC)</li>
+		<li>NOTAM : vous permet de savoir s'il y a une activité particulière en cours sur un aérodrome situé à proximité de votre zone de vol </li>
+		<li>Aeronautical Information Publication (AIP) contient 3 parties 
 			<br>GEN --> généralités réglementation circulation aérienne, 
 			<br> ENR --> espace aérien, zones restrictions, sites aéromodélismes. 
 			<br> AD --> description des aérodromes. <br>Consultable sur le site SIA</li>
+		</ul>	
 		
-			<li>Control Traffic Region (CTR) : espace aérien réglementé avec zone de controle terminale</li>		
-			<li> classe A : reservée au IFR, classe G zone non controllée. SIV : zone information vol, possible contacter via telephonne le controlleur aérien, pas d'obligation de sa part de diffuser l'information.
-			<br>Les classes B, C et D nécessitent une clairance (une autorisation). Cette autorisation se demande avant de pénétrer à l’intérieur de l’espace aérien.</li>
-			<li>Espace aérien contrôlé : besoin d'un accord (obligatoire) prélables si CTR militaires - ainsi que pour les autres CTR au dessus de 50m ou lorsqu'on évolue hors vue</li>
-			<li>NOtice To AirMen (NOTAM) : message temporaire complétant les informations de l AIP consultable sur le site du SIA</li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<ul>
+			
+			
+		
+					
+			
+			
+			
 			<li>Espace aérien du ciel unique européen : au dessus du territoire, autres espaces si reglement CE n° 551/2004</li>
 			
-			<li>Manuel d'Information Aéronautique Militaire (MIAM) disponible sur le site de la DIRCAM</li>
+			
+			
+			
+			
 			<li>Niveau de puissance acoustique (LWA) affecté d'un coefficient de pondération et mesuré en dB par rapport à 1pW (norme EN ISO 3744:2010)</li>
 			<li>Notification/Declaration sur alpha-tango ou en remplissant un CERFA (developpementdurable.gouv.fr) : à effectuer 5j ouvrés préalablement à un vol au prefet qui peut refuser ou restraindre. <br>Pour vol hors vue ou vol en vue a hauteur >=50m des "zones de manoeuvres et entrainement militaires" lorsque celle ci sont actives (se reporter au ENR du MIAM ENR)</li>
 			<li>En hors vue interdit de voler dans les nuages, sauf espace aérien particulier et assurant ségrégation entre l'aéronef et les autres usagers de cet espace.</li>
 			<li>Nuit : crépuscule civil (disque solaire 6° en dessous horizon) et aube civile (inverse). Pour lattitude 30-60° nuit commence 30mins après coucher soleil et se termine 30min après lever. 15mins si lattitude inf 30°.  <br>Ballon captif autorisé de nuit avec lumiére. Pour les autre UAS seulement si hauteur de vol inf 50m, masse inf 8kg, scénario S1 ou S3, lumiere sur UAS et balisage lumineux de la zone.</li>
 			<li>Pre-Definied Risk Assesment (PDRA) est une étude pour un type de vol effectué hors scénarios standards. réalisée par AESA qui va définir les conditions dans lesquelles est effectué le vol.</li>
 			<li>Préfet territorial compétant : police pour Paris et 13, prefet départemental dans autre cas.</li>
-			<li>Prévention abordages : en vue cède priorité, respecte règle priorité. hors vue, s'assure qu'aucun aéronefs n'utilisent l'espace</li>
-			<li>Règles de l'air : régles insertion aéronefs dans l'espace aérien, définies dans réglement UE n°923/2012, SERA. <br>Aeronefs télépilotées dispositions spécifiques (arrété espace) sauf pour prévention collisions entre aéronefs télépilotés</li>
-			<li>Reseau Trés Basse Altitude (RTBA) ministere des armées, l'activation du réseau est consultable sur le site du SIA "carte AZBA".</li>
+			
+		
 			<li>Scénarios standards relevent de la catégorie spécifiques. Mesures d'atténuations déclarées par exploitant. 3 nationaux (S1-2-3) ; 2 européen (STS-O1-O2). Dans les autres cas remplir une déclaration ou détenir un UAS LUC.</li>
 			<li>Ségrégation spatiale d'activité permet dans certains cas de s'affranchir de certaines régles.</li>
 			<li>Sureté : mesure previent contre actes malveillants : implique la conception et mise en oeuvre de système d'information</li>
 			<li>Temporary Segregated Area (TSA) : zone de ségrégation temporaire/</li>
 			<li>Zones particulières : Dangerous,Prohibited,Restricted</li>
 			<li>Petits obstacles : supérieur ou égal à 300, grand obstacle : supérieur à 500</li>
-			<li>Zones VOLTAC : entrainement helicopteres à trés basse altitude (mentionés dans le MIAM). Notification préalable pour les vols d'UAS</li>
-			<li>Zone dangereuse : espace aux dimensions définies dans lequel des activités dangeureuses pour les UAS peuvent avoir lieu pendant certaines periodes. Interdit sauf publication contraire ou accord gestionaire. Zones consultables sur le site du SIA AIP France ENR 5.1</li>
-			<li>Il existe des Zones geographique UAS, des Zones interdite, des Zones de manoeuvres et d'entraiment tactique trés basse altitude, Zone réglementée, Zone peuplée (50m horizontal aglo, 150m horizontal concert...), etc. <br>Se reporter aux parties de l'ENR correspondantes pour connaitre les conditions, notifications préalables etc.</li>
+			
 			<li>Cartes VAC (aérodrome) : approche et atterissage : vol à vue</li>
 			<li>Numéro de piste : arrondi du NM </li>
-			<li>Sanctions : amendes ou santion pénale. 1 an 75k€ utiliser un drone dans des conditions d'utilisation non conformes, 1 an 45k€ si non respect vie privée, 6 mois 15k€ survole d'une zone interdite
-			<br>DGAC peut ajouter une sanction administrative : modif manex, interdire temporairement ou définitivement...</li>
+			
 			<li>Commandant : télépilote drone peut décide de l'utilisation ou non de l'aéronef tant qu'il en a le commandement</li>
-			<li>Surveiller circulation pour éviter collisions 
-			<br>Proximité : distance suffisante pour limiter l'abordage, à l'appréciation du pilote</li>
-			<li>2 types de circulations : CAG (générale), CAM (militaire). </li>
+			
+			
 			<li>Depassement par la droite à bonne distance, aéronef en vol prioritaire, aéronef le plus bas pour atterir</li>
 			<li>Atterir et décoller face au vent, sauf si la sécu, la config de la piste ou necessité circulation aérienne imporsent une autre direction</li>
 			<li>Pour les zone de control régionale et aérodrome --> controleur aérien - CTA :  empécher abordages, collision, régulariser, renseignement, alerter organisme</li>
@@ -307,9 +455,35 @@
 			<li>INCERFA : phase dite d'incertitude ; ALERFA : phase alerte ; DETRESFA : détresse --> situation ou laéronef est identifié comme necessitant le soutient des secours</li>
 		</ul>	
 		</p>
+			
+			
+		<h3>Les Scénarios (drones)</h3>
+		
+		<ul>
+			<li>Scénarios S1 et S3 : vol en vue</li>
+			<li>Les vols « hors vue » doivent être préalablement notifié via le portail AlphaTango</li>
+			<li>Vol en immersion en S1 et S3 : un autre télépilote doit pouvoir prendre le control du drone.</li>
+			<li>S-1 : vol en vue, distance horizontale maximale de 200 m.</li>
+			<li>S-2,  Vol hors hors zone peuplée, sans tiers au sol dans toute la zone d’évolution, à une distance horizontale maximale d’un kilomètre du télépilote ; la hauteur peut être de 120 mètres si le drone pèse moins de 2 kg, sinon la hauteur est limitée à 50 mètres.
+			Le télépilote reste hors des nuages</li>
+			<li>S-3 : utilisation en zone peuplée, sans survol de tiers, en exploitation en vue directe et à une distance horizontale maximale de 100 mètres du télépilote.
+			<br> Zone peuplée : – au sein ou à une distance horizontale inférieure à 50 mètres d’une agglomération figurant sur les cartes aéronautiques en vigueur diffusées par le service d’information aéronautique à l’échelle 1/500 000 ou, à défaut, à l’échelle 1/250 000 ou à l’échelle 1/100 000 ou de toute agglomération lorsque de telles cartes n’existent pas ; ou
+			<br>– à une distance horizontale inférieure à 150 mètres d’un rassemblement de personnes.</li>
+		</ul>
+	
+		
+			
+			
+			
 			<h2>Réglementation spécifique drone</h2>
 		<p>
 		<ul>
+		
+		Un dispositif de limitation de l'espace est obligatoire pour tous les aéronefs non captifs en scénario S2.
+<br>		il est installé à bord de l'aéronef enregistre les paramètres essentiels du vol des 20 dernières minutes, dont au minimum la localisation, l'attitude de l'aéronef, et la qualité du signal de commande et de contrôle, permettant une analyse des 20 dernières minutes de vo
+		<li> Pour un aérodyne non captifs de masse supérieure à 4kg dans le cadre du scénario S-3, si le dispositif de protection des tiers est constitué d'un parachute : Il doit comprendre un système d'éjection ou d'extraction actif non basé uniquement sur la gravité et signale par une alarme sonore la chute de l'aéronef.</li>
+		
+		
 			<li>L'utilisation en extérieur d'aéronef circulant sans équipage à bord :st considérée comme une activité aérienne et relève de la réglementation applicable à l'aviation civile.</li>
 			<li>Alpha tango : portail public des utilisateurs d'aéronefs télépilotés</li>
 			<li> Machine : enregistrement par propriétaire (800g), déclaration exploitant, balise signalement automatique (800g), attestation de conception type et de conformité au type, mue, etiquette de marquage (15cm²)</li>
@@ -322,22 +496,13 @@
 			<li>Si l’opérateur caméra est le seul à avoir une visibilité sur l'aéronef télépiloté, on dit qu'il évolue hors vue du télépilote.</li> 
 			<li>Télépilote : detenir CATD/CATT, 16ans révolu, formation par scénario, livret de progresion, enregistrement h de vol</li>
 			<li>Télépilote d'un aérostat captif pas soumis à l'exigence d'un niveau théorique mais doit etre apte à lire l'info aéronautique</li>
-			<li>Scénarios S1 et S3 : vol en vue</li>
-			<li>Les vols « hors vue » doivent être préalablement notifié via le portail AlphaTango</li>
-			<li>Vol en immersion en S1 et S3 : un autre télépilote doit pouvoir prendre le control du drone.</li>
-			<li>S-1 : vol en vue, distance horizontale maximale de 200 m.</li>
-			<li>S-2,  Vol hors hors zone peuplée, sans tiers au sol dans toute la zone d’évolution, à une distance horizontale maximale d’un kilomètre du télépilote ; la hauteur peut être de 120 mètres si le drone pèse moins de 2 kg, sinon la hauteur est limitée à 50 mètres.
-			Le télépilote reste hors des nuages</li>
-			<li>S-3 : utilisation en zone peuplée, sans survol de tiers, en exploitation en vue directe et à une distance horizontale maximale de 100 mètres du télépilote.
-			<br> Zone peuplée : – au sein ou à une distance horizontale inférieure à 50 mètres d’une agglomération figurant sur les cartes aéronautiques en vigueur diffusées par le service d’information aéronautique à l’échelle 1/500 000 ou, à défaut, à l’échelle 1/250 000 ou à l’échelle 1/100 000 ou de toute agglomération lorsque de telles cartes n’existent pas ; ou
-			<br>– à une distance horizontale inférieure à 150 mètres d’un rassemblement de personnes.</li>
+			
 			<li>Les hauteurs de vol mentionnées dans l’Arrêté du 3 décembre 2020 relatif à l’utilisation de l’espace aérien par les aéronefs sans équipage à bord, sont à considérer par rapport à l’altitude de référence de l’infrastructure concernée.</li>
 			<li>DA : C’est la distance de l’aéronef à la droite support de l’axe de piste ; DC : C’est la distance de l’aéronef au centre de l’aire d’approche finale et de décollage (le centre de l’hélistation).</li>
 			<li>Zone controlée au sol : UAS est exploité dans cette zone et l'exploitant garanti que seul les participants sont présents.</li>
 			<li>Zone d'exclusion des tiers à réaliser par l'exploitant. En S1 et S3 s'assurer qu'aucun tiers non autorisé penètre dans la zone. En S2 réduire risque d'intrusion. S1, S2, S3 distance horizontale 30m de toutes autoroutes, routes express ou voie ferrée. </li>
 			<li>Identification directe à distance est un systeme qui permet la diffusion locale d'information sur l'aéronef sans accès physique à celui-ci (ex marquage aéronef)</li>
 			<li>Immatriculation : obligatoire pour UAS >25kg, bureau immatriculation DGAC de forme F-DXXX</li>
-			<li>Les informations aéronautique sont publiées par DGAC (site SIA): contient AIP ainsi que les infos urgentes ou temporaire (NOTAM et SUP AIP)</li>
 			<li>LUC (Light UAS Operator Certificate) est un certificat d'exploitant qui permet de s'affranchir d'autorisation pour un vol hors scénario standard</li>
 			<li>MAnuel d'EXploitation doc de l'exploitant décrivant son activité, ses drones, ses télépilotes et les procédures de mise en oeuvre dnas le cadre d'un scénario standard européen ou une autorisation d'exploitation</li>
 			<li>Autorisation d'exploitation (a demander DSAC centrale) : autorisation d’exploitation est requise si les opérations prévues sont réalisées en déviation des scénarios standards nationaux ou européens, ou en déviation aux règles applicables à ces scénarios</li>
@@ -366,6 +531,17 @@
 		<li> </li>
 		</ul>
 		</p>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<h2>Cartes</h2>
 				<iframe style="width:100%; height:600px;" src="contenu/oaci.pdf"></iframe>
 				<iframe style="width:100%; height:600px;" src="contenu/vac.pdf"></iframe>
@@ -423,12 +599,12 @@
 			<li>Dossier météo : recueil d'information pour définir si mission peut etre assurée. Attention convection qui peut etre matérialiée par des nuages cumulus ou cumulonimbus, un ciel clair en été l'aprés-midi et a la turbulance de reliefs (ascendants, rabattans, tourbillons, cisaillement de vent).<br> Vent compatible avec l'appareil ? Brouillard absent de la zone d'évolution. Orages ! ; pluies si drone pas étanche. </li>
 			<li>Restrictions liées à l'espace aérien : analyse de la carte aéronautique (1/500000 ou 1/250000) et carte aérodrome pour confirmer vol compatible avec réglementation UAS.
 			<br>Site du SIA --> AIP ENR 2 et AD2 où sont décrit les espaces aériens contrôles et AIP ENR 5 dévrivants les établissements portant des marques d'interdiction de survol, les zones et activités de nature dangereuse, les obstacles, les activités aériennes sportives, les parcs nationaux et reserves naturelles. 
-			<br>Egalement consulter carte AZBA d'activation reseau trés basse altitude defense (RTBA) ainsi que les SUP AIP et les NOTAM. 
 			<br>Il faut aussi consulter dans la rubrique MIL AIP les parties ENR5.2.6 à ENR 5.2.10 et ENR 5.2.13 du MIAM.</li>
 			<li>Performance et limitations : actions et vérification si vol compativle avec les performances et limitation UAS : masse max structurale, centrage, atltitude, température zone d'évolution, compatibilité energie embarquée pour temps de vol mission</li>
 			<li>Protection tiers au sol : mesures préventives autour zone évolution = rayon minimal sécurité autour UAS, bande sécurité autour zone d'évolution.</li>
 			<li>Procédures d'urgence doivent etre connues et tenues en cas de situation dégragée</li>
 			<li>Vol en immersion (plusieurs télépilotes) : télépilote en vue de l'UAS est esponsable sécurité du vol.</li>
+			<li> En mode de pilotage GPS stabilisé (stabilisé en position GPS), votre drone s'écarte de la trajectoire désirée. Votre action est :  Reprise du pilotage en mode manuel stabilisé en attitude.</li>
 		</ul>	
 		</p>
 		
