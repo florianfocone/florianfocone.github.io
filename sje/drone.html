@@ -563,32 +563,11 @@
 		
 		<h2>Navigation</h2>
 		
-			<h3>Carte OACI</h3>
-			<iframe style="width:100%; height:600px;" src="contenu/oaci.pdf"></iframe>
-			
-			<h3>Carte VAC</h3>			
-			<iframe style="width:100%; height:600px;" src="contenu/vac.pdf"></iframe>
-				
-			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
-			<li>Déclinaison magnétique (DM) : angle entre le nord vrai (NV) et NM. DM est Est ou positive quand NM est à l'est du NV. Les DM varient en lieu et temps. Les isogones sont des tracés / lignes d'égales déclinaisons sur une carte.</li>
-			<li>BRG (bearing) : route GPS à suivre pour rejoinrdre un point tournant ; TRK (Track) : route GPS suivie ; ETE : temps pour arriver au prochain point tournant</li>
-			
-			<li>Navstar / GPS, au moins 24 sattelites, 6 orbites ; 20200 km d'altitude. Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
-			<br>lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale.</li>
-			<br>Real Time Kinematic (RTK) : ajout base sol qui connait sa position pour en déduire l'erreur et la difuser au drone : utile pour topographie...</li>
-
-		<li>DA : C’est la distance de l’aéronef à la droite support de l’axe de piste ; DC : C’est la distance de l’aéronef au centre de l’aire d’approche finale et de décollage (le centre de l’hélistation).</li>
-		<li>Zone controlée au sol : UAS est exploité dans cette zone et l'exploitant garanti que seul les participants sont présents.</li>			
-		<li>Carte de restriction pour la catégorie ouvert et l'aéromodélisme est élaborée par la DGAC et l'IGN et disponible sur géoportail.gouv</li>
-
-		<ul>
-		<li> OACI IGN au 1/500 000, un point rouge entouré d'un cercle (rouge) représente Un parc ou une réserve naturelle de petite taille.</li>
-		<li>Longeur des pistes revetues sur les cartes VAC en m</li>
-
-			<li>Ellipsoïde de référence (WGS84) : forme géométrique conventionnelle où la surface de la terre est projettée. <br> définie par son applatissement f = (a - b) /a. a = 6378km. f = 1/298. Ce "faible" applatissement permet de considérer la terre comme sphérique pour les calculs de navigation. </li>
+			<h3>Terre, latitude, méridens</li>
+			<li>Position drone : coordonée en fonction de la surface de la terre --> lattitude, longitude et altitude</li>
+			<li>Ellipsoïde de référence (WGS84) : forme géométrique conventionnelle où la surface de la terre est projettée. 
+			<br> définie par son applatissement f = (a - b) /a. a = 6378km. f = 1/298. Ce "faible" applatissement permet de considérer la terre comme sphérique pour les calculs de navigation. </li>
 			<li>Pôles : extrémités de l'axe de symétrie de l'ellipsoide de référence</li>
-			<li> 1/10000000 --> courbes convergentes, 1/500000 --> droite convergentes, 1/250000 --> droites parrallèle</li>
-			<li>QDM : radial (angle) moi vers la station ; QDR : radial navigation Station vers moi</li>
 			<li>Equateur : intersection entre ellipsoide et plan de symétrie perpendiculaire à l'ellipsoide</li>
 			<li>Méridiens : lignes d'intersections entre ellipsoide et demi-plan issu de l'axe des pôles <br> graduées de 0 à 180 vers l'est ou vers l'ouest à partir du méridien de Greenwich (origine).</li>
 			<li>Parallèles : intersections entre ellipsoide et plans parallèles à l'équateur</li>
@@ -596,34 +575,71 @@
 			<li> Sur un méridien (360°) chaque ° équivaut à 60NM équivaut à 60minutes,  Entre 43°30N et 44°N, nous avons 0,5°, soit 30 minutes d'angle, c'est à dire 30 NM.</li>
 			<li>Temps (UTC) : 12h UTC --> soleil moyen passe au méridien de greenwich. 
 			<br> Le temps civil local LMT ou Tcg est UTC + décalage constant, tel qu'à 12h LMT le soleil moyen passe au méridien du lieu. Le temps légal est défini par rapport au temps UTC en ajoutant/retranchant une valeur d'heure(s)</li>
-			<li>Nord : origine pour mesurer une orientation. 
-			<br>Nv tangeant au méridien d'origine, Nm direction boussolle si horizontal, Nc (compas) compas de l'aéronef subissant les perturbartions magnétiques et imperfections instrumentales. </li>
-			<li>Déviation magnétique (voir 1ere partie) / déviation compas : angle entre Nm et Nc / variation compas : angle entre Nc et Nv </li>
-			<li>Cap : angle entre direction et axe aéronef (aussi appellé ligne de foi).  </li>
-			<li>Route : angle direction origine vers trajectoire aéronef. De 0 à 360° dans le sens horaire. Si direction origine est Nv ou Nm la route et route vraie ou route magnétique.</li>
-			<li>Dérive : angle entre axe aéronef et route. Positive si route est à droite, negative si route à gauche de l'axe.</li>
+			
+			
+			<h3>Cartes</h3>
+			<li> 1/10000000 --> courbes convergentes, 1/500000 --> droite convergentes, 1/250000 --> droites parrallèle</li>
 			<li>Orthodrome : ligne physique tel un fil tendu à la surface reliant deux points. </li>
 			<li>Loxodromie : trajectoire à angle de route constant la plus courte reliant deux points. un arc de parallèle ou de méridien sont des lowodromies particulières.</li>
 			<li>Projection representation surface terrestre sur plan. Si échelle quasi constante dans une zone donnée on dit que la projection est équidistante. Une projection conforme conserve les angles. 
 			<br>Les cartes de navigations sont conformes et equidistantes</li>
-			<li>Pour connaître les heures d'activité de la zone réglementée voir le complément aux cartes aéronautiques de vol à vue.
-			<li>Carte Lambert (souvent utilisé à nos lattitude car bonne approximitation) : projection conforme ou les méridiens sont sécants au pôle et parallèles sont concentriques au pôle.</li>
-			<li>carte aéronautique 1/500000 lambert donne jusqu'au niveau fl115 les détails</li>
+			<li>Carte Lambert (souvent utilisé à nos lattitude car bonne approximitation) : projection conforme ou les méridiens sont sécants au pôle et parallèles sont concentriques au pôle.
+			<br>Carte aéronautique 1/500000 lambert donne jusqu'au niveau fl115 les détails</li>
 			<li>Pour mesurer des routes et des distances il faut une carte conforme.
 			<br> La route vraie est égale à l'angle entre la trajectoire de l'appareil et le méridien sécant à la trajectoire. Un rapporteur permet de mesurer cette route. 
-			<br>Pour mesurer la distance on rapportera distance entre 2 points sur le méridien autour de la meme latitude moyenne. Une regle, ou un compas pointe seche permet de reporter cette mesure et de lire le resultats en minutes de latitude soit en mille nautique. </li>
+			<br>Pour mesurer la distance on rapportera distance entre 2 points sur le méridien autour de la meme latitude moyenne. 
+			Une regle, ou un compas pointe seche permet de reporter cette mesure et de lire le resultats en minutes de latitude soit en mille nautique. </li>
+			
+		
+			<h3>Carte OACI</h3>
+			<iframe style="width:100%; height:600px;" src="contenu/oaci.pdf"></iframe>
+			<li> OACI IGN au 1/500 000, un point rouge entouré d'un cercle (rouge) représente un parc ou une réserve naturelle de petite taille.</li>
+			<li>Carte de restriction pour la catégorie ouvert et l'aéromodélisme est élaborée par la DGAC et l'IGN et disponible sur géoportail.gouv</li>
+			<li>Pour connaître les heures d'activité de la zone réglementée voir le complément aux cartes aéronautiques de vol à vue.</li>
+
+			
+			<h3>Carte VAC</h3>			
+			<iframe style="width:100%; height:600px;" src="contenu/vac.pdf"></iframe>
+			<li>DA : C’est la distance de l’aéronef à la droite support de l’axe de piste ; DC : C’est la distance de l’aéronef au centre de l’aire d’approche finale et de décollage (le centre de l’hélistation).</li>
+			<li>Zone controlée au sol : UAS est exploité dans cette zone et l'exploitant garanti que seul les participants sont présents.</li>	
+			<li>Longeur des pistes revetues sur les cartes VAC en m</li>
+				
+			
+			<h3>GNSS</h3>
+			<li>Navstar / GPS, au moins 24 sattelites, 6 orbites ; 20200 km d'altitude. Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
+			<br>lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale.</li>
+			<br>Real Time Kinematic (RTK) : ajout base sol qui connait sa position pour en déduire l'erreur et la difuser au drone : utile pour topographie...</li>
+			<li>BRG (bearing) : route GPS à suivre pour rejoindre un point tournant ; TRK (Track) : route GPS suivie ; ETE : temps pour arriver au prochain point tournant
+			<br>QDM : radial (angle) moi vers la station ; QDR : radial navigation Station vers moi</li>
+			
+			<h3>Magnétisme / Nord / Cap </h3>	
+			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
+			<li>Nord : origine pour mesurer une orientation. 
+			<br>NV (vrai) tangeant au méridien d'origine, NM direction boussolle si horizontal, NC (compas) compas de l'aéronef subissant les perturbartions magnétiques et imperfections instrumentales. </li>
+			<li>Déclinaison magnétique (DM) : angle entre le nord vrai (NV) et NM. DM est Est ou positive quand NM est à l'est du NV. Les DM varient en lieu et temps. 
+			<br>Les isogones sont des tracés / lignes d'égales déclinaisons sur une carte.</li>
+			<li>Déviation compas : angle entre Nm et Nc</li>
+			<li>Variation compas : angle entre Nc et Nv </li>
+			<li>Cap : angle entre direction et axe aéronef (aussi appellé ligne de foi).  </li>
+			<li>Route : angle direction origine vers trajectoire aéronef. De 0 à 360° dans le sens horaire. Si direction origine est Nv ou Nm la route et route vraie ou route magnétique.</li>
+			<li>Dérive : angle entre axe aéronef et route. Positive si route est à droite, negative si route à gauche de l'axe.</li>
+			<li>Attitude : angles en en fonction de la surface de la terre --> assiete (angle entre axe longitudinal et plan horizontal), inclinaison (angle entre axe latéral et plan horizontal), cap (angle entre projection horizontal de l'axe longitudinal et nord). 
+			<br>Le cap est cap vrai si nord est nord vrai, il est magnétique si nord est magnétique.</li>
+			
+			<h3>Se repérer</h3>
+			
+			
 			<li>Cheminement : technique de reconaissance naturelle et facile pour naviguer en suivant une particularité géographique naturelle ou artificielle (fleuve, chemin de fer, etc.) à faire sur tout ou une partie du trajet.</li>
 			<li>Estime : technique base navigation peut importe sophistication moyen technique. En partant d'un point donné, avec une trajectoire et vitesse-sol donnée on determine sa position. Faire l'inverse pour conaitre le temps en f(vitesse). 
 			<br>Avec un chronomètre déclenché au depart, le temps arrivée prévue se rapprochant--> trouver/reconnaitre le point au sol correspondant.</li>
 			<li>Le vent impacte le cap et vitesse propre (projection vitesse-air sur plan horizontal) par rapport à la route et à la vitesse sol. 
 			<br>Le triangle des vitesses "vitesse sol = vitesse propre + vent" permet de calculer le cap à prendre pour suivre la route prévue et donne la vitesse-sol correspondante.</li>
 			<li>La fonction traceur permet de calculer par echantillonage la position d'un UAS au cours du temps.
-			<br>La dérivée 1 et 2 permet d'obtenir vitesse et accélération qui sont sensibles aux données initiales de positionnement du GNSS. 
+			<br>La dérivée 1 et 2 de cette position permet d'obtenir vitesse et accélération qui sont sensibles aux données initiales de positionnement du GNSS. 
 			<br>En saisissant les points de reports successifs le calculateur donne la distance orthodromique, la route sur chaque segment de naviation et résou le triangle des vitesse selon vent prévu et donc indique un temps de vol et une durée de trajet.</li>
 			
-			<li>Position drone : coordonée en fonction de la surface de la terre --> lattitude, longitude et altitude</li>
-			<li>Attitude : angles en en fonction de la surface de la terre --> assiete (angle entre axe longitudinal et plan horizontal), inclinaison (angle entre axe latéral et plan horizontal), cap (angle entre projection horizontal de l'axe longitudinal et nord). 
-			<br>Le cap est cap vrai si nord est nord vrai, il est magnétique si nord est magnétique.</li>
+			
+			
 		
 		
 		
