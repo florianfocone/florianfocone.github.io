@@ -236,7 +236,7 @@
 				<li>A mesure qu'un aéronef de type 'multirotor' ou 'hélicoptère' accélère, son attitude devient:  à piquer.</li>
 				<li>Pour un aéronef à voilure fixe (type 'avion' ou 'planeur'), pour passer de la ligne droite au virage en restant en palier, la portance doit : Augmenter.</li>
 
-			<h3>Portance / trainée<h3>
+			<h3>Portance / trainée</h3>
 				<li>Equilibre du vol rectiligne : équilibre portance et trainée avec la puissance à fournir et l'incidence, et ce pour une masse du drone et une vitesse air données.</li>
 				<li>Portance : force résultante exercée par un écoulement autours d'un objet qui est perpendiculaire au vent relatif/vitesse-air. </li>
 				<li>Trainée : force résultante perpendiculaire au vent relatif. Due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  
@@ -251,7 +251,7 @@
 				<li>Finesse & portance. Finesse = distance parcourue / hauteur perdue. Finesse = portance/trainée. Allongement (aspect ratio) = envergure / corde. </li>
 				<li>Décrochage dissymétrique, dérapage (entraine une autorotation) est du à un mauvais controle de la symétrie du vol associé à une forte incidence</li>
 
-			<h3>Pression / ecoulement fluides<h3>
+			<h3>Pression / ecoulement fluides</h3>
 				<li>Loi de bernouilli : Pt (pression perdiculaire à l'écoulement) - Ps (P parrallèle à l'écoulement) = 1/2*masse volumique*V². 
 				<br>Effet venturi --> la réduction de section d'un tube augmente la vitesse d'écoulement </li>
 				<li>Force de pression (P) --> force (F) exercée par un fluide perpendiculairement à une surface (S). P=F/S</li>
@@ -327,13 +327,14 @@
 					<li>Gradient de vent --> force augmente en s'éloigant de la surface.</li>
 					<li>Turbulence de frottement ou relief : couche (turbulente/limite atmosphérique) limite vent avec le sol qui va créer des tourbillons, ascendances, rabattants et cisaillement de vent, potentiellement des effets venturi (vallée, col, battiment). Extension verticale augmente lorsque rugosité sol augmente ou force du vent augmente</li>
 					<li>Turbulence convective : généré par convection, saturation air (selon degré humidité et amplitude verticale). Instabilités dues à la formation de cumulus et cumulonimbus</li>
+					<li> La turbulence thermique dépend :- de l'environnement - des contrastes du sol - du degré d'instabilité de l'air</li>
 					<li>Rayonnement : transport chaleur via spectre (infrarouge<->ultraviolet) jusqu'à atmosphère. Partie absorbée, partie réfléchie. Variation en fonction des couches et des zones géographiques. Ces contrastes déclenchent des mécanismes compensatoires (phénomènes météo)</li>
 					<li>Convection : transport E thermique par brassage vertical (pousée archimède)</li>
+					<li>Convection qui peut etre matérialisée par des nuages cumulus ou cumulonimbus, un ciel clair en été l'aprés-midi et a la turbulance de reliefs (ascendants, rabattans, tourbillons, cisaillement de vent).</li>
 					<li>Conduction : transport E corps plus chaud vers corps plus froid</li>
 					<li>Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m (jusqu'à 11000m) ou 2° par 1000ft. Plus haut la couche d'inversion où t° augmente avec altitude
 					<br>la diminution de la pression est plus importante dans les basses couches qu'en altitude (autours de 1hPa/28ft)</li>
 					
-				
 				
 				<h4>Climats</h4>
 				
@@ -563,7 +564,7 @@
 		
 		<h2>Navigation</h2>
 		
-			<h3>Terre, latitude, méridens</li>
+			<h3>Terre, latitude, méridens</h3>
 			<li>Position drone : coordonée en fonction de la surface de la terre --> lattitude, longitude et altitude</li>
 			<li>Ellipsoïde de référence (WGS84) : forme géométrique conventionnelle où la surface de la terre est projettée. 
 			<br> définie par son applatissement f = (a - b) /a. a = 6378km. f = 1/298. Ce "faible" applatissement permet de considérer la terre comme sphérique pour les calculs de navigation. </li>
@@ -572,9 +573,12 @@
 			<li>Méridiens : lignes d'intersections entre ellipsoide et demi-plan issu de l'axe des pôles <br> graduées de 0 à 180 vers l'est ou vers l'ouest à partir du méridien de Greenwich (origine).</li>
 			<li>Parallèles : intersections entre ellipsoide et plans parallèles à l'équateur</li>
 			<li>Coordonnées géographiques : permet de repérer un point sur l'ellispoïde avec ses coordonées. <br>La lattitude est l'angle en fonction du plan equatorial --> N ou S selon l'hémisphère ; la longitude est un angle en fonction du plan meridien origine --> E ou W (positive ou négative) ; altitude en fonction du niveau de la mer. </li>
-			<li> Sur un méridien (360°) chaque ° équivaut à 60NM équivaut à 60minutes,  Entre 43°30N et 44°N, nous avons 0,5°, soit 30 minutes d'angle, c'est à dire 30 NM.</li>
+			<li> Sur un méridien (360°) chaque ° équivaut à 60NM équivaut à 60minutes,  Entre 43°30N et 44°N, nous avons 0,5°, soit 30 minutes d'angle, c'est à dire 30 NM.
+			<br> une minute d'arc de méridien correspond à 1.852km</li>
 			<li>Temps (UTC) : 12h UTC --> soleil moyen passe au méridien de greenwich. 
-			<br> Le temps civil local LMT ou Tcg est UTC + décalage constant, tel qu'à 12h LMT le soleil moyen passe au méridien du lieu. Le temps légal est défini par rapport au temps UTC en ajoutant/retranchant une valeur d'heure(s)</li>
+			<br> Le temps civil local LMT ou Tcg est UTC + décalage constant, tel qu'à 12h LMT le soleil moyen passe au méridien du lieu. Le temps légal est défini par rapport au temps UTC en ajoutant/retranchant une valeur d'heure(s)
+			<br>En été, en France métropolitaine, on est en UTC +2h. En hiver, on est en UTC +1h.</li>
+			<li>1 mille nautique (nautical mile) = 1.852km, 1 mille terrestre (stature mile) = 1.609km.</li>
 			
 			
 			<h3>Cartes</h3>
@@ -593,9 +597,10 @@
 		
 			<h3>Carte OACI</h3>
 			<iframe style="width:100%; height:600px;" src="contenu/oaci.pdf"></iframe>
-			<li> OACI IGN au 1/500 000, un point rouge entouré d'un cercle (rouge) représente un parc ou une réserve naturelle de petite taille.</li>
+			<li> OACI IGN au 1/500 000, un point rouge entouré d'un cercle (rouge) représente un parc ou une réserve naturelle de petite taille. Attention avec un carré rouge represente une installation portant une marque distinctive ou une centrale nucléaire.</li>
 			<li>Carte de restriction pour la catégorie ouvert et l'aéromodélisme est élaborée par la DGAC et l'IGN et disponible sur géoportail.gouv</li>
 			<li>Pour connaître les heures d'activité de la zone réglementée voir le complément aux cartes aéronautiques de vol à vue.</li>
+			<li>Les obstacles, chiffre entre paranthèse : hauteur en pied ASFC, chiffre en haut : alitude du sommet par rapport au niveau moyen de la mer</li>
 
 			
 			<h3>Carte VAC</h3>			
@@ -603,14 +608,17 @@
 			<li>DA : C’est la distance de l’aéronef à la droite support de l’axe de piste ; DC : C’est la distance de l’aéronef au centre de l’aire d’approche finale et de décollage (le centre de l’hélistation).</li>
 			<li>Zone controlée au sol : UAS est exploité dans cette zone et l'exploitant garanti que seul les participants sont présents.</li>	
 			<li>Longeur des pistes revetues sur les cartes VAC en m</li>
+			<li>Sur une carte d'approche à vue (VAC), les directions et les distances des aérodromes voisins sont donnée par : cap magnétique et en NM</li>
 				
 			
 			<h3>GNSS</h3>
 			<li>Navstar / GPS, au moins 24 sattelites, 6 orbites ; 20200 km d'altitude. Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
 			<br>lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale.</li>
 			<br>Real Time Kinematic (RTK) : ajout base sol qui connait sa position pour en déduire l'erreur et la difuser au drone : utile pour topographie...</li>
-			<li>BRG (bearing) : route GPS à suivre pour rejoindre un point tournant ; TRK (Track) : route GPS suivie ; ETE : temps pour arriver au prochain point tournant
+			<li>BRG (bearing) : route GPS à suivre pour rejoindre un point tournant (way-point) ; TRK (Track) : route GPS suivie ; ETE : temps pour arriver au prochain point tournant
 			<br>QDM : radial (angle) moi vers la station ; QDR : radial navigation Station vers moi</li>
+			<li>décimal sont : 43°30,5'N - 002°24,25'E. converti en sexadécimal :  43°30'30' N - 002°24'15' E.</li>
+			
 			
 			<h3>Magnétisme / Nord / Cap </h3>	
 			<li>Vecteur champ magnétique : horizontal dirigé le nord magnétique (NM) à l'équateur ; vertical au pole nord. + on monte vers le pôle et - c'est précis.</li>
@@ -640,33 +648,39 @@
 			
 			
 			
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		<h2>Procédure opérationnelle</h2>
 	
-			<li>Protection des personnes et des biens : mesures préventives (hauteur max pour ségregation, distance horizontale, survol personne, dispositif technique de protection, etc.)</li>
-			<li>Navigabilité : ensemble de règles et critères de l'aptitude au vol d'un UAS. <br>Documentation technique décrit l'appareil, ses limites, les procédures normales et d'urgences ainsi que l'entretien. L'exploitant établi les procédure en accord avec les particularités d'exploitation</li>
-			<li>Dossier d'utilisation = manuel d'utilisation + manuel d'entretien. Documentation obligatoire à l'attestation de conception</li>
+			<h3> Procédure à mettre en place</h3>
 			<li>Analyse de sécurité obligatoire pour vol hors scénario. Permet d'évaluer les risques et mesures de réductions, permet de définir si niveau sécurité est acceptable.</li>
-			<li>Dossier météo : recueil d'information pour définir si mission peut etre assurée. Attention convection qui peut etre matérialiée par des nuages cumulus ou cumulonimbus, un ciel clair en été l'aprés-midi et a la turbulance de reliefs (ascendants, rabattans, tourbillons, cisaillement de vent).<br> Vent compatible avec l'appareil ? Brouillard absent de la zone d'évolution. Orages ! ; pluies si drone pas étanche. </li>
-			<li>Restrictions liées à l'espace aérien : analyse de la carte aéronautique (1/500000 ou 1/250000) et carte aérodrome pour confirmer vol compatible avec réglementation UAS.
-			<br>Site du SIA --> AIP ENR 2 et AD2 où sont décrit les espaces aériens contrôles et AIP ENR 5 dévrivants les établissements portant des marques d'interdiction de survol, les zones et activités de nature dangereuse, les obstacles, les activités aériennes sportives, les parcs nationaux et reserves naturelles. 
-			<br>Il faut aussi consulter dans la rubrique MIL AIP les parties ENR5.2.6 à ENR 5.2.10 et ENR 5.2.13 du MIAM.</li>
-			<li>Performance et limitations : actions et vérification si vol compativle avec les performances et limitation UAS : masse max structurale, centrage, atltitude, température zone d'évolution, compatibilité energie embarquée pour temps de vol mission</li>
+			<li>Protection des personnes et des biens : mesures préventives (hauteur max pour ségregation, distance horizontale, survol personne, dispositif technique de protection, etc.)</li>
 			<li>Protection tiers au sol : mesures préventives autour zone évolution = rayon minimal sécurité autour UAS, bande sécurité autour zone d'évolution.</li>
+			<li>Performance et limitations : actions et vérification si vol compatible avec les performances et limitation UAS --> masse max structurale, centrage, atltitude, température zone d'évolution, compatibilité energie embarquée pour temps de vol mission</li>
 			<li>Procédures d'urgence doivent etre connues et tenues en cas de situation dégragée</li>
 			<li>Vol en immersion (plusieurs télépilotes) : télépilote en vue de l'UAS est esponsable sécurité du vol.</li>
-			<li> En mode de pilotage GPS stabilisé (stabilisé en position GPS), votre drone s'écarte de la trajectoire désirée. Votre action est :  Reprise du pilotage en mode manuel stabilisé en attitude.</li>
-	
-		
-		
+			<li>Procédures d'utilisation d'urgence : 
+			<br>Dans le cas d'un vol en scénario S-1, si le télépilote a préalablement tenté de retrouver une situation de vol normale, et qu'il n'arrive plus a maintenir les limites de vol prévues, il doit :  Interrompre le vol par coupure des moteurs.
+			<br>Lors d'un vol programmé le drone sort de son plan de vol sans explication, vous devez : Forcer un atterrissage d'urgence.</li>
+
+			
+			<h3>Documents à fournir</h3>
+			<li>Navigabilité : ensemble de règles et critères de l'aptitude au vol d'un UAS. </li>
+			<li>Dossier d'utilisation = manuel d'utilisation + manuel d'entretien. Documentation obligatoire à l'attestation de conception</li>
+			<br>Documentation technique décrit l'appareil, ses limites, les procédures normales et d'urgences ainsi que l'entretien. L'exploitant établi les procédure en accord avec les particularités d'exploitation</li>
+
+			<h3>Dossier de vol</h3>
+			<li>Restrictions liées à l'espace aérien : analyse de la carte OACI (1/500000 ou 1/250000) et VAC pour confirmer vol compatible avec réglementation UAS.
+			<br>Site du SIA --> AIP ENR 2 et AD2 où sont décrit les espaces aériens contrôles et AIP ENR 5 dévrivants les établissements portant des marques d'interdiction de survol, 
+			<br>les zones et activités de nature dangereuse, les obstacles, les activités aériennes sportives, les parcs nationaux et reserves naturelles. 
+			<br>Il faut aussi consulter dans la rubrique MIL AIP les parties ENR5.2.6 à ENR 5.2.10 et ENR 5.2.13 du MIAM.</li>
+			<li>Dossier météo : recueil d'information pour définir si mission peut etre assurée. 				
+			<br>Vent compatible avec l'appareil ? Brouillard absent de la zone d'évolution. Orages ! ; pluies si drone pas étanche.  </li>
+			<li>Les qualités d'un bon briefing sont: basé sur un modèle standard pour pouvoir être réutilisé lors d'autres missions - concis et précis - compréhensible pour tous les intervenants</li>
+			
+			<h3>Questions à la con</h3>
+			<li>En mode de pilotage GPS stabilisé (stabilisé en position GPS), votre drone s'écarte de la trajectoire désirée. Votre action est :  Reprise du pilotage en mode manuel stabilisé en attitude.</li>
+			<li>Vous constatez visuellement des différences entre la position de votre drone et les données affichées sur votre interface de gestion et suivi du vol : Vous interrompez le vol, la continuité et la sécurité des évolutions n'est plus assurée.</li>
+			<li>Suivi et gestion de la navigation en vol. L'interface de suivi et gestion de la navigation en vol doit, de préférence, disposer :  d'un système d'alarme pour attirer l'attention de l'opérateur en cas d'évènement imprévu.</li>
+			<li> En zone peuplée, vous faites évoluer un aéronef télépiloté dont la masse est 4 kg. La hauteur du vol ne dépassera pas 20 mètres. La vitesse horizontale maximale sera de 3m/s. Le rayon de sécurité minimal autour de l'aéronef télépiloté est : 10m</li>
 		
 		
 		
@@ -695,11 +709,7 @@
 	
 		
 		
-		
-		
-		
-		
-		
+
 		
 		<h2>Préparation et suivi de vol</h2>
 
@@ -712,10 +722,6 @@
 			<li>Pendant vol : actualisation météorologie (visibilité, vent, precipiration...), actualisation navigation (points de repère, heure passage, energie restante...), hauteur de vol (lieu, scénario), procédure d'urgence (MAP ou MANEX)</li>
 			<li>Après vol : check-list du MAP ou MANEX, debriefing, maintenance (manuel d'entretien)</li>
 
-		
-		
-		
-		
 		
 		
 		
