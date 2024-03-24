@@ -207,12 +207,19 @@
 				<li>Failsafe : ce qui se passe quand on perd le signal : RTH, attérissage... Hold : maintient dernier ordre </li>
 				<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables. </li>
 				<li>Ondes radioelectriques ou hertziennes : onde electromatique dont fréquence est inférieur à 300ghz (convention), propage à la vitesse de la lumière. 
-				<br>Attention obstacles : atténuation, absorbption, reflexion, diffraction, réfraction.</li>
+				<br>Attention obstacles : atténuation, absorbption, reflexion, diffraction, réfraction (ionosphère, Troposphère), multi-trajets.</li>
+				<li>La définition de l'amplitude d'une onde électromagnétique est : La déviation maximale d'une oscillation.</li>
 				<li>Perte de liaison de commande entraine une procédure d'attente ou la procédure d'atterrisage</li>
 				<li>Certains batiments utilisent des brouilleurs : hopitaux, centre pénitenciers...)--> perturbe ou coupe liaison radio</li>
 				<li>Retour vidéo est analogique ou numérique</li>
-
-
+				<li>Les fréquences L1 et L2 utilisées par le système de navigation par satellite NAVSTAR/GPS pour la transmission du message de navigation : UHF</li>
+				<li>Dans un GPS NAVSTAR : 
+				<br> la fonction du segment spatial est:  De transmettre un signal utilisé par un récepteur adapté à calculer le temps, la position et la vitesse.
+				<br> la fonction du segment controle est : D'assurer que les données transmises par les satellites sont contrôlées et mises à jour de temps en temps par les stations sol.<br> Une station de contrôle maître, des stations de surveillances et des antennes sol.
+				<br>La principale fonction du segment utilisateur (récepteur) du système de navigation par satellite GPS/NAVSTAR est de : Sélectionner les satellites appropriés automatiquement, suivre les signaux et mesurer le temps mis par les signaux des satellites pour atteindre le récepteur.</li>
+				<li>Les éphémérides transmises dans le message GPS de navigation, font référence : à la position et l'orbite du satellite observé.</li>
+				<li>La valeur de DOP (Dilution Of Precision) est fonction de : La géométrie et du nombre de satellites en vue.</li>
+				
 		<h2>Principes de vol</h2>
 				<li>Autour axe latéral --> tangage ; axe longitudinal --> roulis ; axe vertical --> lacet. 
 				<li>Hélice : information présent sur l'hélice --> diamètre (en pouces) et pas géométrique.
@@ -263,14 +270,6 @@
 				<li>Sur un profil d'aile, la résultante aérodynamique est générée à 75% par la dépression sur l'extrados.</li>
 
 
-
-	
-
-
-
-
-	
-	
 	
 		<h2>Météorologie</h2>
 		
@@ -368,9 +367,6 @@
 		
 		<h2>Réglementation générale</h2>
 			
-			<h3>Alphabet aéronautique</h3>
-			<img src="contenu/metar1.jpg"> <img src="contenu/alphabet.jpg"></li>
-		
 			<h3>Réglementation générale</h3>
 	
 				<li>La nationalité d'un aéronef télépiloté soumis à enregistrement électronique est déterminée par :  Le pays où il est enregistré.</li>
@@ -603,12 +599,34 @@
 				
 			
 			<h3>GNSS</h3>
-			<li>Navstar / GPS, au moins 24 sattelites, 6 orbites ; 20200 km d'altitude. Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
-			<br>lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale.</li>
+			<li>Un GPS fournit les informations suivantes : X,Y,Z + vitesse sol + un temps précis.</li>
+			<li>Les informations transmises par les satellites NAVSTAR/GPS sont : - le décalage d'horloge par rapport à l'heure UTC - les éphémérides
+			- l'état du système - le retard ionosphérique</li>
+			<li>Navstar / GPS, au moins 24 sattelites (full operationnal capability = 24), 6 orbites ; 20200 km d'altitude. 
+			<br>Global Navigation Satellite System (GNSS) --> Global Positioning System, Galileo, etc. 
+			<br>Font des mesures de temps entre sattelites (4 visibles minimums, 6 minimums, 8 recommandés) et cible pour déterminer x,y,z --> latitude, longitude, altitude et calage horloge du recepteur. 
+			<br>Attention reflexions ondes, obstacles, etc. Attention angle de masque (sattelite trop bas sur orbite). 
+			<br>la liste des erreurs affectant les performances d'un système de navigation assisté par satellite (GNSS/GPS) : Erreur d'horloge, erreur d'éphéméride, erreur de propagation atmosphérique.
+			<br>lattitude max des ellipses sont comprises entre les parallèles 55N et 55S pour assurer une couverture mondiale (plan orbital inclinée de 55° par rapport à l'équateur).</li>
+			<br>Chaque satellite transmet son signal, sur des fréquences communes, avec un code PRN ('Pseudo Random Noise' ou bruit pseudo-aléatoire) qui lui est propre.
+			<br>La distance entre un satellite NAVSTAR/GPS et un recepteur GPS est déterminée en multipliant le temps mis par le signal pour aller du satellite au récepteur, par la vitesse de la lumière.
 			<br>Real Time Kinematic (RTK) : ajout base sol qui connait sa position pour en déduire l'erreur et la difuser au drone : utile pour topographie...</li>
+			<li>Quel type d'horloge est utilisée dans les satellites NAVSTAR GPS : Atomique.</li>
+			<li>Concernant le système de localisation NAVSTAR-GPS, le mode 'Search the Sky' est : Une procédure qui débute après la mise en marche du récepteur, s'il n'y a pas de donnée relative aux satellites stockée en mémoire.</li>
+			<li>La durée de la révolution d'un satellite NAVSTAR/GPS est de : 12 heures</li>
 			<li>BRG (bearing) : route GPS à suivre pour rejoindre un point tournant (way-point) ; TRK (Track) : route GPS suivie ; ETE : temps pour arriver au prochain point tournant
 			<br>QDM : radial (angle) moi vers la station ; QDR : radial navigation Station vers moi</li>
-			<li>décimal sont : 43°30,5'N - 002°24,25'E. converti en sexadécimal :  43°30'30' N - 002°24'15' E.</li>
+			<li>Décimal sont : 43°30,5'N - 002°24,25'E. converti en sexadécimal :  43°30'30' N - 002°24'15' E.</li>
+			<li>La dénomination 'way point' sur un GPS sert à : repérer un point de report existant déjà dans la base de données créée par l'utilisateur.</li>
+			<li>En employant le GPS, l'information de position primaire est dans la forme de : Sphères, avec les satellites dans le centre des sphères.</li>
+			<li>La distance mesurée entre un satellite du système de localisation NAVSTAR-GPS et un récepteur est appelée une 'pseudo-distance' parce que: La distance calculée inclut une erreur d'horloge du récepteur.</li> 
+			<li>Les données de l'almanach stocké dans le récepteur du système de navigation NAVSTAR/GPS sont utilisées pour :  L'identification rapide des signaux reçus provenant des satellites visibles.</li>
+			<li>un récepteur du système de navigation par satellite GPS, détermine site et l'azimut d'un satellite par rapport à la position de l'antenne en exploitant les données de l'almanach émit par les satellites</li>
+			<li>Les erreurs d'orbites des satellites GPS sont dues : Au vent solaire et à la gravité du soleil, de la lune et des planètes.</li>
+			<li>Quel délai faut-il à un récepteur GPS pour obtenir la meilleure qualité de signal  : 10 minutes maximum.</li>
+			
+			<h3>question à la con</h3>
+			<li>Quels sont les effets, s'il y en a, du masquage par l'un des éléments de l'aéronef télépiloté (une caméra embarquée par exemple), de la réception des signaux des satellites NAVSTAR/GPS :  Cela peut empêcher la réception du signal</li>
 			
 			
 			<h3>Magnétisme / Nord / Cap </h3>	
@@ -636,6 +654,7 @@
 			<li>La fonction traceur permet de calculer par echantillonage la position d'un UAS au cours du temps.
 			<br>La dérivée 1 et 2 de cette position permet d'obtenir vitesse et accélération qui sont sensibles aux données initiales de positionnement du GNSS. 
 			<br>En saisissant les points de reports successifs le calculateur donne la distance orthodromique, la route sur chaque segment de naviation et résou le triangle des vitesse selon vent prévu et donc indique un temps de vol et une durée de trajet.</li>
+			
 			
 			
 			
@@ -754,11 +773,8 @@
 			<br>RETS : orages recents
 			<br>BECMG (Becoming, Devenant)  
 			<br>VC : au voisinage</li>
-			
 			<iframe style="width:100%; height:600px;" src="contenu/guide_aviation.pdf"></iframe>
 
-			
-		
 			<h3>Cartes</h3>
 			<li> liste des zones interdites photos.. défini par arrêté</li>
 			<li>L'un des seuils de piste en dur porte le numéro 20. L'autre seuil porte le numéro : 02. on indique l'orientation magnétique arrondie à la dizaine la plus proche. ne piste orientée entre 355° et 004° = piste 36.</li>
@@ -777,25 +793,48 @@
 		
 		<h2>Communication</h2>
 		
-		<li>Urgence : pan, pan, pan --> problème grave mais ne met pas immediatement la sécurité des occupants en doute</li>
-		<li>Détresse : mayday mayday mayday sécu des occupants et de l'aéronefs est immédiatement mise en jeu, chaque aéronef est équipé d'une balise personnelle de localisation (plb), 406mhz balise</li>
-		<li>INCERFA : phase dite d'incertitude ; ALERFA : phase alerte ; DETRESFA : détresse --> situation ou l aéronef est identifié comme necessitant le soutient des secours</li>
-		Transmission de l'heure : En langue française et anglaise, lors de la transmission de l'heure, s'il n'y a pas de risque de confusion, seules les minutes sont transmises.
-		<br>S'il y a risque de confusion (cas d'une liaison radio de mauvaise qualité), on énoncera « unité zéro zéro cinq (UTC facultatif) 
-		</li>
-		<li>Fréquence detresse : 121,500 ; Fréquence auto information : 123,500</li>
-		<li>la fréquence radio 119.505 s'énonce de la façon suivante : Cent dix-neuf décimale cinq cent cinq.</li>
-		<li>ATIS : Automatic Terminal Information Service. Contenu des émissions : <br>- état de la surface de la piste et de la plate-forme,
-		<br>- situation météo exceptionnelle,
-		<br>- direction et force du vent, visibilité, temps présent, nébulosité et base des nuages bas (ou mesure instrumentale), T, Td, QNH, QFE (aérodrome et seuil), renseignements météorologiques significatifs, changements prévus.</li>
-		<li> Le service de la circulation aérienne (ATS): le service d'information de vol, le service d'alerte, le service consultatif de la circulation aérienne, le service du contrôle de la circulation aérienne (contrôle régional, contrôle d'approche ou contrôle d'aérodrome)</li>
-		<li>Le point d'aboutissement sur un aérodrome, est le point :  d'intersection de la piste et de la trajectoire de descente nominale d'un aéronef.</li>
-		<li>Communication air-sol : communication bilatérale entre un aéronef et une station ou des points au sol</li>
-		<li>branche vent arrière : section du circuit d'aérodrome ou l'aéronef s'aligne parrallèlement à la piste, a droite ou gouche de celle ci et dans le sens inverse de son atterrisage</li>
-		<li>echelle lisibilité radiotéléphonique : 5 : parfaitement lisible. 4 : lisible. 3 : lisible mais difficilement. 2 : lisible par instants. 1 : illisible.</li>
-    
-	
-	
+			<h3>Radio</h3>
+			<li>Pour doubler la portée d'une transmission radio, la puissance doit être multipliée par : 4!</li>
+			<li>Transmission de l'heure : En langue française et anglaise
+			lors de la transmission de l'heure, s'il n'y a pas de risque de confusion : seules les minutes sont transmises.
+			<br>S'il y a risque de confusion (cas d'une liaison radio de mauvaise qualité), on énoncera "unité zéro zéro cinq" (UTC facultatif) 
+			</li>
+			<li>la fréquence radio 119.505 s'énonce de la façon suivante : Cent dix-neuf décimale cinq cent cinq.</li>
+			<li>Echelle lisibilité radiotéléphonique : 5 : parfaitement lisible. 4 : lisible. 3 : lisible mais difficilement. 2 : lisible par instants. 1 : illisible.</li>
+			<li>Les ondes VHF (Très Haute Fréquence) apparaissent dans le spectre de fréquence suivant: 30 MHz - 300 MHz</li>
+			<li> Qu'est-ce que le phénomène de 'fading' ? Des interférences entre l'onde de sol et l'onde de ciel.</li>
+			<li>Un opérateur doit s'assurer que les équipements radioélectriques mis en oeuvre pour l'exécution de la mission objet de l'activité particulière :  N'interfèrent pas sur le bon fonctionnement des équipements radioélectriques utilisés pour le guidage.</li>
+			
+			<img src="contenu/alphabet.jpg"></li>
+			
+			<h3>Détresse</h3>
+			<li>INCERFA : phase d'incertitude 
+			<br>ALERFA : phase alerte 
+			<br>DETRESFA : détresse --> situation ou l aéronef est identifié comme necessitant le soutient des secours</li>
+			<li>Fréquence detresse : 121,500 
+			<br>Fréquence auto information : 123,500</li>
+
+			<li>Urgence : pan, pan, pan --> problème grave mais ne met pas immediatement la sécurité des occupants en doute</li>
+			<li>Détresse : mayday mayday mayday sécurité des occupants et de l'aéronefs est immédiatement mise en jeu</li>
+			<li>Aéronef est équipé d'une balise personnelle de localisation (plb), fréquence balise : 406mhz</li>
+			
+			<h3>Services</h3>
+			<li> Le service de la circulation aérienne (ATS): 
+			le service d'information de vol
+			le service d'alerte
+			le service consultatif de la circulation aérienne
+			le service du contrôle de la circulation aérienne (contrôle régional, contrôle d'approche ou contrôle d'aérodrome)</li>
+			<li>ATIS : Automatic Terminal Information Service. 
+			<br> Contenu des émissions : 
+			<br>- état de la surface de la piste et de la plate-forme
+			<br>- situation météo exceptionnelle
+			<br>- direction et force du vent, visibilité, temps présent, nébulosité et base des nuages bas (ou mesure instrumentale), T, Td, QNH, QFE (aérodrome et seuil), renseignements météorologiques significatifs, changements prévus.</li>
+			<li>Communication air-sol : communication bilatérale entre un aéronef et une station ou des points au sol</li>
+
+			<h3>Aeroport</h3>
+			<li>Branche vent arrière : section du circuit d'aérodrome ou l'aéronef s'aligne parrallèlement à la piste, a droite ou gauche de celle ci et dans le sens inverse de son atterrisage</li>
+			<li>Le point d'aboutissement sur un aérodrome, est le point :  d'intersection de la piste et de la trajectoire de descente nominale d'un aéronef.</li>
+
 	</section>
 </body>
 </html>
