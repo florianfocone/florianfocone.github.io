@@ -148,7 +148,8 @@
 				<li>Masse maximale structurale : masse max définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable et donc interdiction</li>
 				<li>Alimentation de la charge utile peut etre la même que celle des moteurs</li>
 				<li>La formule h=1/2.g.t² correspond à la loi de : Galilée. </li>
-		
+				<li>(Q)Le contrôleur des commandes de vol (il appelle ça comme ça.. c'est l'esc) d'un aéronef circulant sans équipage à bord se situe : entre l'émetteur/récepteur principal et le contrôleur moteur.
+				</li>
 			<h3>Electricité</h3>
 	
 				<li>Puissance (P) en watts (W)= tension (U) en volt (V) * I. </li>
@@ -166,7 +167,8 @@
 				<br>(Q)ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
 				<li>(Q)Lors de la vérification de l'état d'une batterie avec un voltmètre une charge devrait être connectée à la batterie pour une obtenir une information plus précise de son état.</li>
 				<li>(Q)Lorsqu'une batterie est presque complètement déchargée, on observe que : la tension décroît sous l'effet de la charge.</li>
-
+				<li>(Q) tension entre cellule ne doit pas dépasser 0,1V !</li>
+			
 			<h3>Instrumentation / Capteurs</h3>
 		
 				<li>(Q)Altimètre barométrique composé d'une capsule anéroide qui mesure pression statique (ou absolue), utilisée pour mesurer de faibles pressions.
@@ -227,7 +229,8 @@
 				<li>Autour axe latéral --> tangage ; axe longitudinal --> roulis ; axe vertical --> lacet. 
 				<li>Hélice : information présent sur l'hélice --> diamètre (en pouces) et pas géométrique.
 				<br>Le pas correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). 
-				<br>(Q) Angle calage est l'angle entre corde du profil et plan d'entrainement (ou de rotation). Il diminue du moyeu à l'extrémité de l'hélice. Extrados / Intrados ; (Q) il uniformise la portance sur la pale.
+				<br>(Q) Angle calage est l'angle entre corde du profil et plan d'entrainement (ou de rotation). 
+				<br>Il diminue du moyeu à l'extrémité de l'hélice. Extrados / Intrados ; (Q) il uniformise la portance sur la pale.
 				<br>(Q) il est déterminé à 75% du rayon de la pale.
 				<br>Utiliser une hélice Clock wise (CW) ou Counter Clock Wise (CCW) en accord avec le sens de rotation du moteur</li>
 				<li>Drone voilure fixe : hélice agit sur vitesse-air ; Gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal ; gouverne direction sur symétrie vol</li>
@@ -848,14 +851,18 @@
 					<li>S-1 : distance horizontale maximale de 200 m.</li>
 					<li>S-2,  Vol hors zone peuplée, sans tiers au sol dans toute la zone d’évolution, à une distance horizontale maximale d’un kilomètre du télépilote ; la hauteur peut être de 120 mètres si le drone pèse moins de 2 kg, sinon la hauteur est limitée à 50 mètres.
 					<br>Le télépilote reste hors des nuages sauf espace aérien particulier et assurant ségrégation entre l'aéronef et les autres usagers de cet espace.</li>		
-					<br>Limitation espace est obligatoire en hauteur pour les UAS non captif. Obligatoire en horizontal en scénario S2.
-					<br>il est installé à bord de l'aéronef enregistre les paramètres essentiels du vol des 20 dernières minutes, dont au minimum la localisation, l'attitude de l'aéronef, et la qualité du signal de commande et de contrôle, permettant une analyse des 20 dernières minutes de volant
+					<br>(Q) Limitation espace est obligatoire en hauteur pour les UAS non captif. Obligatoire en horizontal en scénario S2.
+					<br>(Q) il est installé à bord de l'aéronef enregistre les paramètres essentiels du vol des 20 dernières minutes, dont au minimum la localisation, l'attitude de l'aéronef, et la qualité du signal de commande et de contrôle, permettant une analyse des 20 dernières minutes de volant
 					</li>
 					<li>S-3 : (Q déclaration prefecture territoriale préavis de 5j minimum) utilisation en zone peuplée, sans survol de tiers, en exploitation en vue directe et à une distance horizontale maximale de 100 mètres du télépilote.
 					<br> Zone peuplée : – au sein ou à une distance horizontale inférieure à 50 mètres d’une agglomération figurant sur les cartes aéronautiques en vigueur diffusées par le service d’information aéronautique à l’échelle 1/500 000 ou, à défaut, à l’échelle 1/250 000 ou à l’échelle 1/100 000 ou de toute agglomération lorsque de telles cartes n’existent pas ; ou
-					<br>– à une distance horizontale inférieure à 150 mètres d’un rassemblement de personnes.
-					<br>Dispositif protection des tiers : sécurité type parachute, obligatoire m>2kg scénario S3. Il limite a 69j l'E lors d'un impact potentiel</li>
-					<br>De masse supérieure à 4kg, si le dispositif de protection des tiers est constitué d'un parachute : Il doit comprendre un système d'éjection ou d'extraction actif non basé uniquement sur la gravité et signale par une alarme sonore la chute de l'aéronef.</li>
+					<br>– à une distance horizontale inférieure à 150 mètres d’un rassemblement de personnes.</li>
+				
+				<h4>Dispositif protection des tiers</h4>
+				<li>sécurité type parachute, 69j l'E lors d'un impact potentiel
+				<br>hauteur max perdue inférieur ou égale à 15m
+				<br>obligatoire m>2kg scénario S3 
+				<br>Si masse supérieure à 4kg, le dispositif de protection doit comprendre un système d'éjection ou d'extraction actif non basé uniquement sur la gravité et signale par une alarme sonore la chute de l'aéronef.</li>
 				
 				<h4>Vol à vue, hors vue, en immersion</h4>
 			
