@@ -173,14 +173,17 @@
 				<br>QNE est une altitude (et non un calage) correspondant au niveau de vol en partant du niveau de la mer dans l'atmosphère type vu plus haut (1013hpa).
 				<br>Le même niveau (mer) en fonction du jour (atmosphère non type) est appellé QNH (Hydro mnémotechnique). </li>
 				<li>Un système de maintient d'altitude est composé d'un altimètre et d'un capteur ultrason.
+				<br>mais l'altitude est mesurée via positionnement satellite et baromètre
 				<br>Above Mean Sea Level (AMSL) --> altitude avec un altimetre calé sur le QNH.
 				<br>Above SurFaCe (ASFC) / Above Aerodrome Level (AAL) / Above Ground Level (AGL) --> hauteur avec un altimetre calé sur le QFE. </li>
 				<li>Calage altimétrique : sur altimétre barométrique. QFE  pour que l'altimétre indique 0 au niveau aérodrome. 
 				QNH calage pour que altimetre indique altitude de l'aérodrome. 
 				<br>Calage 1013.25 altimetre indique altitude pression Zp (atmosphére type pression ambiante)</li>
-				<li>Dans un UAS le baromètre piézoélectrique indique la hauteur de vol (en fonction d'une pression mesurée au décollage)</li>
+				<li>Dans un UAS le baromètre piézoélectrique indique <b>la hauteur de vol</b> (en fonction d'une pression mesurée au décollage)</li>
 			    <br>
-				<li>Anémométre : mesure vitesse vol (qui est différente vitesse sol). 1 noeud = 1 mile nautique par heure (1,852 km/h), 1 mille terrestre (stature mile) = 1.609km.</li>
+				<li>Anémométre : mesure vitesse vol (qui est différente vitesse sol).
+				<br> attention question piège : au sol c'est la manche a air qui donne la vitesse du vent (et pas l'anémomètre..)
+				<br>1 noeud = 1 mile nautique par heure (1,852 km/h), 1 mille terrestre (stature mile) = 1.609km.</li>
 				<br>
 				<li> IMU = accéléromètre + gyromètre
 				<br>Pour obtenir la position instantanée à partir des accélérations: Il faut intégrer deux fois l'accélération par rapport au temps, et connaitre la position initiale et la vitesse initiale.</li>
@@ -221,12 +224,12 @@
 				
 				<li>Les fréquences L1 et L2 utilisées par le système de navigation par satellite NAVSTAR/GPS pour la transmission du message de navigation : UHF</li>
 				<li>Dans un GPS NAVSTAR : 
-				<br>(Q) la fonction du segment spatial est :  De transmettre un signal utilisé par un récepteur adapté à calculer le temps, la position et la vitesse.
-				<br>(Q) la fonction du segment controle est : D'assurer que les données transmises par les satellites sont contrôlées et mises à jour de temps en temps par les stations sol.
+				<br> fonction du segment spatial transmet un signal utilisé par un récepteur adapté à calculer le temps, la position et la vitesse.
+				<br> fonction du segment controle assure et controle que les données transmises par les satellites sont mises à jour de temps en temps par les stations sol.
 				<br> Une station de contrôle maître, des stations de surveillances et des antennes sol.
-				<br>(Q) La principale fonction du segment utilisateur (récepteur) du système de navigation par satellite GPS/NAVSTAR est de : Sélectionner les satellites appropriés automatiquement, suivre les signaux et mesurer le temps mis par les signaux des satellites pour atteindre le récepteur.</li>
-				<li>(Q) Les éphémérides transmises dans le message GPS de navigation, font référence : à la position et l'orbite du satellite observé.</li>
-				<li>(Q) La valeur de DOP (Dilution Of Precision) est fonction de : La géométrie et du nombre de satellites en vue.</li>
+				<br> segment utilisateur (récepteur) selectionne les satellites appropriés automatiquement, suit les signaux et mesure le temps mis par les signaux des satellites pour atteindre le récepteur.</li>
+				<li>Les éphémérides transmises dans le message GPS de navigation, font référence : à la position et l'orbite du satellite observé.</li>
+				<li>La valeur de DOP (Dilution Of Precision) est fonction de : La géométrie et du nombre de satellites en vue.</li>
 				
 
 				<br><br><br>
@@ -535,21 +538,23 @@
 
 			<h3>Dossier météo</h3>
 			<li>metar : « 34004KT 300V020 » qui signifie une vent du 340° pour 4 kt, variable entre 300° et 020°.</li>
-			<li>Le METAR peut parfois contenir une partie de prévision TEMPO (temporairement) qui est une tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
+			<li>Le METAR peut parfois contenir une partie de prévision <b>TEMPO</b> (temporairement) qui est une tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
 			<li>LFOT 060900Z 28008KT 9999 BKN016 19/15 Q1015= : c'est un métar et pas un taf car il observe la température et le QNH (la pression atmosphérique mesurée au terrain). Message fait à 9h UTC le 6 du mois</li>
-			<li>Rafales indiquées dans metar quand supérieur d'au moins 10kt au vent normal</li>
+			<li>Rafales indiquées dans metar quand supérieur d'au moins <b>10kt</b> au vent normal</li>
 			<li>CAVOK Ceiling and Visibility OK (Ciel et visibilité OK) mais attention possibilité de vent fort : Visibilité 10 km ou plus, pas de nuage en dessous de 5000 ft/sol.</li>
 			<li>Dans un metar ou taf :
-			<br>NSC : No Significative Cloud (pas de nuages significatifs). 
+			<li>visibilité dominante de 8000 m et minimale de 3000 m dans le Sud-Ouest avec de la brume : 8000 3000SW BR</li>
+			<b><br>NSC : No Significative Cloud (pas de nuages significatifs). 
 			<br>NSW : No Significant Weather (pas de temps significatif).
-			<br>RETS : orages recents
+			<br>RETS : orages (TS) recents (RE)
 			<br>BECMG (Becoming, Devenant)  
-			<br>VC : au voisinage</li>
+			<br>VC : au voisinage</li></b>
 			<iframe style="width:100%; height:600px;" src="contenu/guide_aviation.pdf"></iframe>
 
 			<h3>Cartes</h3>
-			<li> liste des zones interdites photos.. défini par arrêté</li>
-			<li>L'un des seuils de piste en dur porte le numéro 20. L'autre seuil porte le numéro : 02. on indique l'orientation magnétique arrondie à la dizaine la plus proche. ne piste orientée entre 355° et 004° = piste 36.</li>
+			<li> liste des zones interdites photos.. défini par <b>arrêté</b></li>
+			<li>L'un des seuils de piste en dur porte le numéro 20 (orienté entre 195 et 204 magnétique). L'autre seuil porte le numéro : 02 (car -180 soit 015 à 024 nord magnétique). 
+			<br>on indique l'orientation magnétique arrondie à la dizaine la plus proche. une piste orientée entre 355° et 004° = piste 36.</li>
 			<li>Pour utiliser votre drone à partir d'une plate-forme destinée à être utilisée par des aéronefs ultralégers motorisés (ULM) : Il faut l'accord préalable de la personne en ayant la jouissance. </li>
 			
 			<h3>MANEX</h3>
@@ -738,7 +743,7 @@
 				<li>(Q) Espace aérien contrôlé : besoin d'un accord (obligatoire) prélables si CTR militaires - ainsi que pour les autres CTR au dessus de 50m ou lorsqu'on évolue hors vue</li>
 				<li>Reseau Trés Basse Altitude (RTBA) ministere des armées, l'activation du réseau est consultable sur le site du SIA "carte AZBA", les limites de ces zones sont définies dnas les AIP.
 				<br>En dehors des créneaux d'activité du réseau RTBA, des appareils : Civils ou militaires peuvent y voler en basse altitude. La règle 'voir et éviter' s'applique alors à tous.</li>
-				<li>Zones VOLTAC et SETBA : entrainement helicopteres à trés basse altitude (mentionés dans le MIAM, DIRCAM). (Q) Notification préalable pour les vols d'UAS mais pas besoin d'autorisation <br> sans accord aucun vol dans les 1km, a vue et 50m max en S1 et S3 entre 1km et 2.5km</li>
+				<li>Zones VOLTAC et SETBA : entrainement helicopteres à trés basse altitude (mentionés dans le MIAM, DIRCAM). (Q) Notification préalable pour les vols d'UAS (supérieur à 900g, ou hors vue tous poids) mais pas besoin d'autorisation <br> sans accord aucun vol dans les 1km, a vue et 50m max en S1 et S3 entre 1km et 2.5km</li>
 				<li>(Q) Zone dangereuse (D) : espace aux dimensions définies dans lequel des activités dangeureuses pour les UAS peuvent avoir lieu pendant certaines periodes. Interdit sauf publication contraire ou accord gestionaire. Zones consultables sur le site du SIA AIP France ENR 5.1</li>
 				<li>Sans accord préalable, aucun vol ne peut être effectué à proximité d'une aire d'approche finale ou de décollage pour hélicoptère dans un rayon de : 1km</li>
 				<li>Temporary Segregated Area (TSA) : zone de ségrégation temporaire/</li>
@@ -837,6 +842,8 @@
 					
 					
 				<h4>Charge</h4>
+					<li>Charge utile = masse au décollage – masse à vide.
+					<br> la charge utile est composée de tous les appareils embarqués pour remplir la mission assignée</li>
 					<li>Charge utile : tout ce qui n'est pas destiné pour l'exploitation ou le control de l'aéronef.</li>
 					<li>Masse decollage (utile + aéronef) ne comprend pas le gaz porteur pour aerostats; masse moyen retenu pour captif.</li>
 					<li> Balisage de nuit des aéronefs captifs : 50 m pour la première partie, puis 45 m pour les suivantes.</li>
