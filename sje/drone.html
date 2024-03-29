@@ -142,81 +142,84 @@
 	
 			<h3>Généralités</h3>
 			
-				<li>Aérostat : poussée archimède = soulève UAS de masse à l'air déplacé (UAS plus léger que l'air). Gaz chauffé ou inerte (argon, etc.)</li>
-				<li>Aérodyne : forces aérodynamiques, voilure fixe ou multirotor</li>
-				<li>Système drone : télécommande - batterie - capteurs (gyroscopes, accéléromètres, baromètre, magnétomètre, GNSS, Sonar...) - autopilote - actionneurs - gouverne - moteurs</li>
-				<li>Masse maximale structurale : masse max définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable et donc interdiction</li>
-				<li>Alimentation de la charge utile peut etre la même que celle des moteurs</li>
-				<li>La formule h=1/2.g.t² correspond à la loi de : Galilée. </li>
-				<li>(Q)Le contrôleur des commandes de vol (il appelle ça comme ça.. c'est l'esc) d'un aéronef circulant sans équipage à bord se situe : entre l'émetteur/récepteur principal et le contrôleur moteur.
-				</li>
+				<li>Aérostat : UAS plus léger que l'air</li>
+				<li>Aérodyne : forces aérodynamiques</li>
+				<li>Masse maximale structurale : définie par constructeur. Au dela risque de dépasser limite élastique. Dommage irémédiable - interdiction</li>
+				<li>Alimentation charge utile peut etre la même que celle des moteurs</li>
+				<li>h=1/2.g.t² --> loi de Galilée</li>
+				
 			<h3>Electricité</h3>
 	
-				<li>Puissance (P) en watts (W)= tension (U) en volt (V) * I. </li>
-				<li>Intensité (I) : quantité charge electrique en mvt. Mesurée en Ampère (A) 1A = 1 Coulomb par seconde </li>
-				<li>Loi d'Ohm U=Resistance (R) en Ohm * I. La tension aux bornes d'une resistance génère une certaine intensité.
-				<br>L'inverse de la résistenca est la conductivité</li>
-				<li>Batterie en parrallèle ou en dérivation (le P dans 3S2P par exemple) --> capacités s'additionnent, la tension reste celle d'1 batterie
-				<br>Batterie en série (le S dans 3S2P par exemple) --> tensions s'additionnent , capacité reste celle d'1 batterie
-				<br>La tension nominale est de 3.7v (celle qu'on utilisera dans les questions), chargée = 4.2v. 
-				<br>Autres indication sur batterie : Capacité (C) en mAh et capacité de décharge (ex 35C). 
-				<br>Batterie lithium ont une forte capacité à chauffé voir a prendre feu si endommagée</li>
-				<li>Moteur sans balais (brushless) composé d'un rotor avec aimants permanents et d'un stator electroaimants. 
-				<br>KV = tour par minute par V. KV élevé = accrobatie et vitesse. KV faible = stabilité et autonomie.
-				<br>(Q)Le rendement d'un moteur = Poussée (thrust) / Puissance.
-				<br>(Q)ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
-				<li>(Q)Lors de la vérification de l'état d'une batterie avec un voltmètre une charge devrait être connectée à la batterie pour une obtenir une information plus précise de son état.</li>
-				<li>(Q)Lorsqu'une batterie est presque complètement déchargée, on observe que : la tension décroît sous l'effet de la charge.</li>
-				<li>(Q) tension entre cellule ne doit pas dépasser 0,1V !</li>
+				<li>1A = 1 Coulomb par seconde </li>
+				<br>
+				<li>La tension nominale est de 3.7v (celle qu'on utilisera dans les questions), chargée = 4.2v. 
+				<br>Batterie lithium : forte capacité à chauffé voir a prendre feu si endommagée</li>
+				<li>Vérification de l'état d'une batterie avec un voltmètre --> une charge sera connectée à la batterie pour obtenir une information plus précise de son état.</li>
+				<li>Une batterie est presque complètement déchargée --> la tension décroît sous l'effet de la charge.</li>
+				<li>Tension entre cellule ne doit pas dépasser 0,1V !</li>
+				<br>
+				<li>Brushless : un rotor avec aimants permanents et un stator electroaimants. <li>
+				<li>Le rendement d'un moteur = Poussée (thrust) / Puissance.</li>
+				<br>
+				<li>ESC synchronise l'alimentation des electroaimants en fonction de l'azimuth du moteur</li>
+				<li>Le contrôleur des commandes de vol (esc..) se situe entre l'émetteur/récepteur principal et le contrôleur moteur.</li>
+				
 			
 			<h3>Instrumentation / Capteurs</h3>
 		
-				<li>(Q)Altimètre barométrique composé d'une capsule anéroide qui mesure pression statique (ou absolue), utilisée pour mesurer de faibles pressions.
-				<br>il compare la pression de calage (pression au décolage, appellée calage QFE) avec la pression en altitude selon la loi d'équilibre verticale de l'atmosphère. 
-				<br>(Q)Cette loi défini une perte de pression de 1hPa par 28 pieds ou 8m (1 ft = 0,305m) dans une atmosphère type qui est égal à 1013.25hPa au niveau mer à une température de 15°C.
-				<br>(Q)QNE est une altitude (et non un calage) correspondant au niveau de vol en partant du niveau de la mer dans l'atmosphère type vu plus haut (1013hpa).
-				<br>Le même niveau (mer) en fonction du jour (atmosphère non type) est appellé QNH. Hydro mnémotechnique. 
-				<br>Un thermomètre doit être ajouté pour préciser la mesure, un ultrason complète le dispositif.(Q) Un système de maintient d'altitude est composé d'un altimètre et d'un capteur ultrason.
+				<li>Altimètre barométrique (capsule anéroide) mesure pression statique (ou absolue), utilisée pour mesurer de faibles pressions.
+				<br>Compare pression de calage (pression au décolage), appellée calage QFE avec la pression en altitude selon la loi d'équilibre verticale de l'atmosphère. 
+				<br>La loi défini une perte de pression de 1hPa/28ft ou 8m (1 ft = 0,305m) dans une atmosphère type qui est égal à 1013.25hPa au niveau mer à une température de 15°C.
+				<br>QNE est une altitude (et non un calage) correspondant au niveau de vol en partant du niveau de la mer dans l'atmosphère type vu plus haut (1013hpa).
+				<br>Le même niveau (mer) en fonction du jour (atmosphère non type) est appellé QNH (Hydro mnémotechnique). </li>
+				<li>Un système de maintient d'altitude est composé d'un altimètre et d'un capteur ultrason.
 				<br>Above Mean Sea Level (AMSL) --> altitude avec un altimetre calé sur le QNH.
 				<br>Above SurFaCe (ASFC) / Above Aerodrome Level (AAL) / Above Ground Level (AGL) --> hauteur avec un altimetre calé sur le QFE. </li>
 				<li>Calage altimétrique : sur altimétre barométrique. QFE  pour que l'altimétre indique 0 au niveau aérodrome. 
 				QNH calage pour que altimetre indique altitude de l'aérodrome. 
-				<br>(Q) Calage 1013.25 altimetre indique altitude pression Zp (atmosphére type pression ambiante)</li>
-			    <li>(Q) Anémométre : mesure vitesse vol (qui est différente vitesse sol). 1 noeud = 1 mile nautique par heure (1,852 km/h)</li>
-				<li>(Q) Le baromètre piézoélectrique installé dans un aéronef sans équipage à bord indique : La hauteur de vol (en fonction d'une pression mesurée au décollage)</li>
-				<li>(Q) Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. 
-				<br>(Q) Magnétomètre + gyromètre (mesure vitesse rotation) permettent la mesure d'une attitude précise. 
-				<br>(Q) Le compas magnétique + carte isogones permet la déduction du cap vrai.</li>
-				<li>Compas magnétique : donne une reference de direction vis à vis du nord magnétique (+/- déviation compas),(Q) attention aux sources d'erreurs lors des accélérations, virage, et masse ferreuse à proximité, courants continus . 
+				<br>Calage 1013.25 altimetre indique altitude pression Zp (atmosphére type pression ambiante)</li>
+				<li>Dans un UAS le baromètre piézoélectrique indique la hauteur de vol (en fonction d'une pression mesurée au décollage)</li>
+			    <br>
+				<li>Anémométre : mesure vitesse vol (qui est différente vitesse sol). 1 noeud = 1 mile nautique par heure (1,852 km/h), 1 mille terrestre (stature mile) = 1.609km.</li>
+				<br>
+				<li> IMU = accéléromètre + gyromètre
+				<br>Pour obtenir la position instantanée à partir des accélérations: Il faut intégrer deux fois l'accélération par rapport au temps, et connaitre la position initiale et la vitesse initiale.</li>
+				<li>Accéléromètre : composé de 3 ensembles masse-ressort. Permet la mesure sur chacun des 3 axes de l'UAS</li>
+				<li>Dans un système de navigation inertiel, l'intégration simple de la vitesse permet d'obtenir:  La distance parcourue.</li>
+				<br>
+				<li>Magnétomètre : système mesure des composantes du champ magnétique dans les 3 axes. 
+				<br>Magnétomètre + gyromètre (mesure vitesse rotation) permettent la mesure d'une attitude précise.</li>
+				<br>
+				<li>Le compas magnétique + carte isogones permet la déduction du cap vrai.
+				<li>Compas magnétique : donne une reference de direction vis à vis du nord magnétique (+/- déviation compas)
+				<br>attention aux sources d'erreurs lors des accélérations, virage, et masse ferreuse à proximité, courants continus . 
 				<br>Calibration necessaire avant chaque mission pour tenir compte de l'environneelnt magnétique et du lieu</li>
-				<li>(Q) Compas gyromagnétique (présent sur de très gros drones) comporte un gyroscope à axes horizontal (doté d'un système érecteur pour maintenir son axe horizontal), d'un détecteur de champ magnétique terrestre, d'un moteur couple de recalage en azimut.</li>
+				<br>
 				<li>Gyroscope : mesure référence d'orientation par rapport à la terre après calage initial et recalage périodique.
 				<br>(Q) Sa caractéristique principale est sa fixité dans l'espace
-				<br>lorsqu'un couple est appliqué à l'appareil il provoque une precession (chgt graduel d'orientation de l'axe de rotation) ou une nutation  (mvt périodique de l'axe de rotation qui s'ajoute à la precession)</li>
-				<li>Accéléromètre : composé de 3 ensembles masse-ressort. Permet la mesure sur chacun des 3 axes de l'UAS</li>
+				<br>lorsqu'un couple est appliqué à l'appareil il provoque une precession (chgt graduel d'orientation de l'axe de rotation) ou une nutation  (mvt périodique de l'axe de rotation qui s'ajoute à la precession)
+				<br>Compas gyromagnétique (présent sur de très gros drones) comporte un gyroscope à axes horizontal (doté d'un système érecteur pour maintenir son axe horizontal), d'un détecteur de champ magnétique terrestre, d'un moteur couple de recalage en azimut.</li>
+				<br>
 				<li>Le système de positionnement et de navigation utilisera principalement un système GNSS et un magnétomètre</li>
-				<li>Intégrité système : capacité a informer en situation dégradée.</li>
 				<li>Dispositif limitateur de hauteur et de zone : software couplé baromètre et GPS.</li>
-				<li>Pour obtenir la position instantanée à partir des accélérations: Il faut intégrer deux fois l'accélération par rapport au temps, et connaitre la position initiale et la vitesse initiale.</li>
-				<li>Dans un système de navigation inertiel, l'intégration simple de la vitesse permet d'obtenir:  La distance parcourue.</li>
-				<li>Asservissement : automatisme d'attitude (maintient attitude, assiette, inclimaison, cap..) en fct des consignes données par le télépilote. 
-				<br>Vise à obtenir une vitesse et trajectoire conformes (boucle rétroaction entre capteurs et consignes).</li>
-				<br> IMU = accéléromètre + gyromètre</li>
+				<br>
+				<li>Intégrité système : capacité a informer en situation dégradée.</li>		
 
 			<h3>Transmission données</h3>
-				<li>(Q) Transmission donnée : la puissance reçue baisse avec la distance. Baisse aussi lorsque la fréquence augmente. 
-				<br>Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)</li>
-				<li>Niveau de puissance acoustique (LWA) affecté d'un coefficient de pondération et mesuré en dB par rapport à 1pW (norme EN ISO 3744:2010)</li>
-				<li>Puissance max autorisé France : 2.4Ghz--> 100mW ; 5.8Ghz --> 25 mW (le fameux *4)</li>
-				<li>Failsafe : ce qui se passe quand on perd le signal : RTH, attérissage... Hold : maintient dernier ordre </li>
-				<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables. </li>
+			
 				<li>Ondes radioelectriques ou hertziennes : onde electromatique dont fréquence est inférieur à 300ghz (convention), propage à la vitesse de la lumière. 
 				<br>Attention obstacles : atténuation, absorbption, reflexion, diffraction, réfraction (ionosphère, Troposphère), multi-trajets.</li>
-				<li>(Q) La définition de l'amplitude d'une onde électromagnétique est : La déviation maximale d'une oscillation.</li>
-				<li>Perte de liaison de commande entraine une procédure d'attente ou la procédure d'atterrisage</li>
-				<li>Certains batiments utilisent des brouilleurs : hopitaux, centre pénitenciers...)--> perturbe ou coupe liaison radio</li>
-				<li>Retour vidéo est analogique ou numérique</li>
-				<li>(Q) Les fréquences L1 et L2 utilisées par le système de navigation par satellite NAVSTAR/GPS pour la transmission du message de navigation : UHF</li>
+				<li>Amplitude d'une onde électromagnétique est : La déviation maximale d'une oscillation.</li>
+				<br>
+				<li>Transmission donnée : la puissance reçue baisse avec la distance. Baisse aussi lorsque la fréquence augmente. 
+				<br>Fréquences et puissances sont définies dans le Tableau National Repartition Bandes Fréquences (TNRBF) de l'Agence Nationale des FRéquences (ANFR)</li>
+				<li>Puissance max autorisé France : 2.4Ghz--> 100mW ; 5.8Ghz --> 25 mW (le fameux *4)</li>
+				<li>Perte de liaison de commande entraine une procédure (failsage) d'attente ou la procédure d'atterrisage,maintient dernier ordre </li>
+				
+				<li>Brouillage : superposition d'emissions de mm fréquences dans une mm zone les rendant inexploitables. </li>
+	
+				
+				<li>Les fréquences L1 et L2 utilisées par le système de navigation par satellite NAVSTAR/GPS pour la transmission du message de navigation : UHF</li>
 				<li>Dans un GPS NAVSTAR : 
 				<br>(Q) la fonction du segment spatial est :  De transmettre un signal utilisé par un récepteur adapté à calculer le temps, la position et la vitesse.
 				<br>(Q) la fonction du segment controle est : D'assurer que les données transmises par les satellites sont contrôlées et mises à jour de temps en temps par les stations sol.
@@ -225,7 +228,11 @@
 				<li>(Q) Les éphémérides transmises dans le message GPS de navigation, font référence : à la position et l'orbite du satellite observé.</li>
 				<li>(Q) La valeur de DOP (Dilution Of Precision) est fonction de : La géométrie et du nombre de satellites en vue.</li>
 				
+
+				<br><br><br>
+				
 		<h2>Principes de vol</h2>
+		
 				<li>Autour axe latéral --> tangage ; axe longitudinal --> roulis ; axe vertical --> lacet. 
 				<li>Hélice : information présent sur l'hélice --> diamètre (en pouces) et pas géométrique.
 				<br>Le pas correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). 
@@ -389,7 +396,7 @@
 			<li>Temps (UTC) : 12h UTC --> soleil moyen passe au méridien de greenwich. 
 			<br> Le temps civil local LMT ou Tcg est UTC + décalage constant, tel qu'à 12h LMT le soleil moyen passe au méridien du lieu. Le temps légal est défini par rapport au temps UTC en ajoutant/retranchant une valeur d'heure(s)
 			<br>En été : UTC +2h. En hiver : UTC +1h.</li>
-			<li>(Q) 1 mille nautique (nautical mile) = 1.852km, 1 mille terrestre (stature mile) = 1.609km.</li>
+			
 			
 			
 			<h3>Cartes</h3>
