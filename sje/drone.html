@@ -137,6 +137,7 @@
 		<li>VOL TACtique (VOLTAC) </li>
 		<li>Voie aérienne : AWY (Airway)</li>
 		
+		<h1>C!8e@k6B</h1>
 		
 		<h2>Drone</h2>
 	
@@ -237,29 +238,27 @@
 		<h2>Principes de vol</h2>
 		
 				<li>Autour axe latéral --> tangage ; axe longitudinal --> roulis ; axe vertical --> lacet. 
-				<li>Hélice : information présent sur l'hélice --> diamètre (en pouces) et pas géométrique.
+				<br>
+				<li>Hélice : diamètre (en pouces) et pas géométrique.
 				<br>Le pas correspond à la distance parcourue si l'hélice est vissée dans un solide. Pas = 2pi*tan(Angle calage). 
-				<br>(Q) Angle calage est l'angle entre corde du profil et plan d'entrainement (ou de rotation). 
-				<br>Il diminue du moyeu à l'extrémité de l'hélice. Extrados / Intrados ; (Q) il uniformise la portance sur la pale.
-				<br>(Q) il est déterminé à 75% du rayon de la pale.
-				<br>Utiliser une hélice Clock wise (CW) ou Counter Clock Wise (CCW) en accord avec le sens de rotation du moteur</li>
-				<li>Drone voilure fixe : hélice agit sur vitesse-air ; Gouverne profondeur agit sur asiette (plan vertical) ; ailerons sur plan horizontal ; gouverne direction sur symétrie vol</li>
+				<br>Angle calage entre corde du profil et plan d'entrainement (ou de rotation). 
+				<br>déterminé à 75% du rayon de la pale.
+				<br>Diminue du moyeu à l'extrémité de l'hélice, il uniformise la portance sur la pale.
+				<br>Rendement d'une hélice = Puissance utile / puissance absorbée</li>
+				<br>
 				<li>Diedre : angle bout d'aile, quand vers le haut amène stabilité, vers le bas : maniabilité accrue. </li>
+				<br>
+				<img src="contenu/angles.png"></li>
 				<li>Angles :
 				<br>entre l'horizontal et trajectoire (aussi appellée vent relatif) --> pente (c'est comment monte l'avion)
-				<br>l'angle entre trajectoire et axe longitudinal (ou corde de profil) --> l'incidence. 
-				<br>ainsi l'incidence de l'aile d'un aéronef à voilure fixe est l'angle compris entre : La corde de profil de l'aile et le vent relatif.
-				<br>pente + incidence = assiete : qui est l'ange entre l'axe longitudinal de l'avion et l'horizontal</li> 
-				<img src="contenu/angles.png"></li>
-				<li>Pour un aéronef à voilure fixe (type 'avion' ou 'planeur'), lorsque la vitesse augmente, l'efficacité des gouvernes augmente</li>
-				<li>Stabilité : capacité a revenir à l'équilibre après en avoir été écarté</li>
-				<li>Maniabilité : capacité à s'écarté facilement d'une position d'équilibre. Dépend du chargement.</li>
+				<br>l'angle entre trajectoire et axe longitudinal (ou corde de profil) --> incidence. 
+				<br>pente + incidence = assiete : qui est l'ange entre l'axe longitudinal de l'avion et l'horizontal
+				<br>incidence de l'aile : angle compris entre : La corde de profil de l'aile et le vent relatif.</li>
+				<br>
+				<li>Pour un aéronef à voilure fixe lorsque la vitesse augmente --> l'efficacité des gouvernes augmente</li>
 				<li>Centrage : centre de gravité avant rend avion plus stable mais moins maniable. Inverse pour arrière. </li>		
-				<li>Rendement d'une hélice = Puissance utile / puissance absorbée</li>
-				<li>(Q) Le renversement dynamique d'un aéronef de type 'multirotor' ou 'hélicoptère' est :  Le basculement de l'aéronef provoqué par le blocage du train d'atterrissage avec un obstacle au sol. </li>
-				<li>Pour un aéronef à voilure fixe (type 'avion' ou 'planeur'), lorsque le facteur de charge augmente : La vitesse de décrochage augmente (attention c'est contre intuitif mais c'est vrai), mais l'incidence de décrochage ne change pas.</li>
+				<li>Renversement dynamique :  Le basculement provoqué par le blocage du train d'atterrissage avec un obstacle au sol. </li>
 				<li>A mesure qu'un aéronef de type 'multirotor' ou 'hélicoptère' accélère, son attitude devient :  à piquer.</li>
-				<li>(Q) Pour un aéronef à voilure fixe (type 'avion' ou 'planeur'), pour passer de la ligne droite au virage en restant en palier, la portance doit : Augmenter.</li>
 
 			<h3>Portance / trainée</h3>
 				<li>Equilibre du vol rectiligne : équilibre portance et trainée avec la puissance à fournir et l'incidence, et ce pour une masse du drone et une vitesse air données.</li>
@@ -267,117 +266,118 @@
 				<li>Trainée : force résultante perpendiculaire au vent relatif. Due à des tourbillons (trainée portance) et à la viscosité (trainée de profil).  
 				<br>Portance = 1/2p(masse vol)*S(surface alaire) *V²Cz ; trainée = 1/2p*SV²Cx  et donc La portance généré par une pale dépend de : 
 				<br>  - la masse volumique de l'air -  la vitesse du vent relatif -  la surface alaire   - l'incidence de la pale  - la forme du profil de pale</li>
-				<li>Décrochage : diminution brutale portance. Celui-ci est fonction de l'incidence de décrochage. 
 				<br>On influe sur la portance et trainée avec la vitesse de deplacement dans l'air et l'incidence de vol.
 				<br>Pour un aéronef à voilure fixe (type 'avion'), dans le domaine de vol habituel, les hautes vitesses correspondent : aux petits angles d'incidence.</li>
+				<li>pour passer de la ligne droite au virage en restant en palier, la portance doit : Augmenter.</li>
 				<li>Théorie de Froude : modèle entre portance du rotor et puissance a fournir en f(surface disque rotor & masse volumique air). 
 				<br>De cette loi si +++ de surface et/ou air à une masse volumique +++ --> --- besoin de fournir de puissance.</li>
-				<li>(Q) Facteur de charge = portance / poids ; lors d'un virage facteur charge augmente, devient supérieur à 1, en monté et descente il est inférieur à 1.</li>
-				<li>(Q) Finesse & portance. Finesse = distance parcourue / hauteur perdue. Finesse = portance/trainée. Allongement (aspect ratio) = envergure / corde. </li>
-				<li>(Q) Décrochage dissymétrique, dérapage (entraine une autorotation) est du à un mauvais controle de la symétrie du vol associé à une forte incidence</li>
-
+				<li>Facteur de charge = portance / poids ; lors d'un virage facteur charge augmente, devient supérieur à 1, en monté et descente il est inférieur à 1.</li>
+				<li>Finesse & portance. Finesse = distance parcourue / hauteur perdue. Finesse = portance/trainée. Allongement (aspect ratio) = envergure / corde. </li>
+				<br>
+				<li>Décrochage : diminution brutale portance. Celui-ci est fonction de l'incidence de décrochage. 
+				<br>Décrochage dissymétrique, dérapage (entraine une autorotation) est du à un mauvais controle de la symétrie du vol associé à une forte incidence</li>
+				<li>Pour un aéronef à voilure fixe (type 'avion' ou 'planeur'), lorsque le facteur de charge augmente : La vitesse de décrochage augmente (attention c'est contre intuitif mais c'est vrai), mais l'incidence de décrochage ne change pas.</li>
+				
+			
 			<h3>Pression / ecoulement fluides</h3>
-				<li>Loi de bernouilli : Pt (pression perdiculaire à l'écoulement) - Ps (P parrallèle à l'écoulement) = 1/2*masse volumique*V². 
+				<li>Loi de bernouilli --> 1/2*masse volumique*V². 
 				<br>Effet venturi --> la réduction de section d'un tube augmente la vitesse d'écoulement </li>
 				<li>Force de pression (P) --> force (F) exercée par un fluide perpendiculairement à une surface (S). P=F/S</li>
 				<li>Force de viscosité : force excercée parrallelement à la surface</li>
 				<li>Ecoulement : fluide en mouvement autours d'un obstacle, laminaire Ok, turbulent NOk.</li>
 				<li>Vitesse-air : vitesse de déplacement de l'objet par rapport à la masse d'air non perturbé loin devant (appellée infini amont)</li>
 				<li>Vent relatif : vitesse ecoulement infini amont par rapport à l'objet. Vitesse-air et vent relatif sont 2 vecteurs égaux et opposés</li>
-				<li>Densité de l'air impacte la puissance a fournir : vol montagne en été = danger.</li>
-				<li>(Q) Sur un profil d'aile, la résultante aérodynamique (addition vectorielle portance et trainé) est générée à 75% par la dépression sur l'extrados.</li>
+				<li>Sur un profil d'aile, la résultante aérodynamique (addition vectorielle portance et trainé) est générée à 75% par la dépression sur l'extrados.</li>
 
-
+			<br><br><br>
 	
 		<h2>Météorologie</h2>
 		
 			<h3>Prévisions, bulletins, cartes</h3>
-				<li>(Q) Le METAR est un message codé d'observation régulière pour l'aviation diffusé toutes les heures ou toutes les demi-heures pour les gros aéroports.
+				<li>METAR --> observation régulière pour l'aviation diffusé toutes les heures ou toutes les demi-heures pour les gros aéroports.
 				<br><img src="contenu/metar1.jpg"> <img src="contenu/metar2.jpg"></li>
-				<li>(Q) Les informations de vitesse moyenne du vent mesurées transmises dans les TAF, METAR et SPECI, sont effectuées depuis l'anémomètre d'un aérodrome installé : Sur un mât d'une hauteur de 8 à 10 mètres au-dessus du sol.</li>
-				<li>(Q) TAF (prevision) court : tous les 3h valable 9h ; TAF long tous les 6h valable 24h ou 30h</li>
-				<li>TAF : 11/10 = température 11°C, point de rosée 10°C, (Q) risque de brouillard le soir</li>
+				<li>Le METAR peut contenir une partie de prévision <b>TEMPO</b> (temporairement) --> tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
+				<li>Les informations de vitesse moyenne du vent mesurées transmises dans les TAF, METAR et SPECI, sont effectuées depuis l'anémomètre d'un aérodrome installé : Sur un mât d'une hauteur de 8 à 10 mètres au-dessus du sol.</li>
+				<br>
+				<li>TAF (prevision) court : tous les 3h valable 9h ; TAF long tous les 6h valable 24h ou 30h</li>
+				<li>11/10 = température 11°C, point de rosée 10°C --> risque de brouillard le soir</li>
+				<br>
 				<li>Symboles TEMSI (TEMps SIgnificatif) <br><img src="contenu/symbolestemsi.png"> <img src="contenu/temsi_symboles.jpg"></li>
 				<li> +++ Isobarres rapprochées --> +++ vent fort </li>
-				<li>Indice KP = activité solaire (space weather life NASA donne l'indication) 1 à 4 ok. UAV Forecast : app mobile ou on a tout y compris indice KP </li>
-				<li>Température de l'air --> En situation idéale le min est atteint 1/2h après levé soleil ; le max 2h après passage soleil au méridien. </li>
-
+				<li>Indice KP = activité solaire 1 à 4 ok. UAV Forecast : app mobile ou on a tout y compris indice KP </li>
 			
 			<h3>Phénomènes</h3>
 			
 				<h4> Physique </h4>
 				<li>Equation gaz parfaits : relation entre température, pression et masse volumique. p = p0(P/P0)(T0/T). T en kelvin °C+273.15 ; p0 masse volumique niveau mer 1.225kg/m3 ; P0 pression niveau mer 1013Hpa. T0 temperature type niveau mer 273.15K</li>
 				
-			
 				<h4>Nuages</h4>
 				
-					<li>Nuage : condensation vapeur d'eau. Stratiforme (stable) vs cumuliforme (instable). 
-					<br>Sous nuage stable on rencontre de la plus en continue.
+					<li>Nuage : condensation vapeur d'eau. Stratiforme (stable) vs cumuliforme (instable). 	
 					<br>Etage inférieur (inf 2km) stratus et stratocumulus. Etage moyen (2-7km) nimbostratus, altostratus cumulus et altocumulus. 
-					Etage supérieur cirrus. Cumulonimbus grande extension de l'étage inférieur à supérieur. </li>
-					<li>(Q) Présence d'une couverture nuageuse diminue l'amplitude thermique diurne</li>
-					<li>(Q) La pluie continue ne se rencontre que sous des nuages stables, ce sont les nuages ayant le mot « stratus » dans leurs noms (stratus, stratocumulus, altostratus, cirrostratus, etc..), vous n’y trouverez pas de turbulence, rafales ou averses.</li>
-					<li>Précipitations : stratus --> bruine (BR), neige en grain (SG). 
-					<br>Nimbostratus (Ns)  --> Pluie forte et continue (RA) et neige (SN). 
-					<br>Cumulus (Cu) - altocumulus (Ac) - cumulonimbus (Cb) --> averse pluie (RASH) et neige (RASN). 
-					<br>Cumulonimbus --> grêle (Gr), vent irregulier et fortes rafales, foudre, givrage </li>
+					Etage supérieur cirrus. Cumulonimbus grande extension de l'étage inférieur à supérieur.
+					<br>Sous nuage stratiforme (stratus et tous ceux qui ont strat...) on rencontre de la pluie en continue, pas de turbulence, ni de rafales ou averses.</li>					</li>
+					<li>Présence d'une couverture nuageuse diminue l'amplitude thermique diurne</li>
 					<li>Nuage lenticulaire (1) associé à une onde relief ;  <br>(3) un nuage à caractère de nuage lenticulaire mais mélangé à des nuages  de types stratus ou altocumulus <br><img src="contenu/nuage.jpg"></li>
 					<li>1 cumulonimbus -  2  stratus accrochés au relief -  3  cirrostratus - 4 altocumulus lenticularis (un altocumulus  qu’on retrouve en aval du sommet des montagnes sous le vent).<br><img src="contenu/nuagetype.jpg"></li>
-					<li>Orages associés au comulonimbus. Brassage convectif important de l'air génère turbulences, rafales, cisaillement, phénomènes electriques dans un rayon 10-20 NM. 
+					<li>Comulonimbus : brassage convectif important de l'air génère turbulences, rafales, cisaillement, phénomènes electriques dans un rayon 10-20 NM. 
 					<br>Danger dans rayon 5-10NM. Report du vol obligatoire.</li>
-					<li>Brume : visibilité horizontale 1 à 5km. Brouillard visibilité -1km. <br>Brouillard rayonnement (+ courant) se forme avec forte humidité et faible vent (marais barométrique), brouillard d'advection lorsque qu'une masse humide recontre une surface froide, bruillard pente lors d'un refroidissement d'une masse humide</li>
+					<li>Brume : visibilité horizontale 1 à 5km. 
+					<br>Brouillard visibilité -1km. 
+					<br>Brouillard rayonnement (+ courant) se forme avec forte humidité et faible vent (marais barométrique), brouillard d'advection lorsque qu'une masse humide recontre une surface froide, bruillard pente lors d'un refroidissement d'une masse humide</li>
 				
 				<h4>Vents et atmosphère</h4>
 				
-					<li>Atmosphère : enveloppe gaz composée d'air sec + vapeur eau. <br> Air sec --> azote 78%, oxygène 21%, CO2+argon 1%, gaz carbonique et gaze rare traces. 
-					<br> Vapeur eau : à l'origine phénomènes météo majeurs</li>
-					<li>Pression atmosphérique : poids de la colonne d'air par unité de surface. Pression décroit avec altitude et poids de la colonne diminue. La pression dépend condition météo. 
+					<li>Pression atmosphérique : poids de la colonne d'air par unité de surface. 
+					<br>Pression décroit avec altitude et poids de la colonne diminue.
 					<br>Les lignes de memes pressions sont les isobares. 
 					<br>Centre haute pression est un anticyclone 
 					<br>Centre basse pression une depression
 					<br>Axe hautes pressions est une dorsale
 					<br>Axe basse pressions un thalweg
 					<br>Zone faible variation est un marais barométrique.</li>
-					<li>(Q) Phénomènes caractéristiques d'une atmosphère stable : nuage stratiforme</li>
-					<li>Vent : composante horizontale vecteur-vitesse air horizontal par rapport sol. Exprimé en ° par rapport au nord vrai, en m/s ou noeud (kt). Pour passer des m/s au noeud on multiplie par 2 (5m/s --> 10kt)</li>
-					<li>(Q) Vent/isobare : en altitude le vent est // aux isobares, +++ isobares resserés +++ vent fort. 
+					<br>
+					<li>Vent : composante horizontale du vecteur-vitesse air 
+					<br>Exprimé en ° par rapport au nord vrai, en m/s ou noeud (kt). 
+					<br>Pour passer des m/s au noeud on multiplie par 2 (5m/s --> 10kt)</li>
+					<li>Vent/isobare : en altitude le vent est // aux isobares, +++ isobares resserés +++ vent fort. 
 					<br>Le frottement à basse altitude (+ important sur terre que sur mer) provoque convergence du vent au centre de la depression, et la divergence au centre de l'anticyclone. </li>
 					<li>Gradient de vent --> force augmente en s'éloigant de la surface.</li>
-					<li>Turbulence de frottement ou relief : couche (turbulente/limite atmosphérique) limite vent avec le sol qui va créer des tourbillons, ascendances, rabattants et cisaillement de vent, potentiellement des effets venturi (vallée, col, battiment). Extension verticale augmente lorsque rugosité sol augmente ou force du vent augmente</li>
-					<li>(Q) Turbulence convective : généré par convection, saturation air (selon degré humidité et amplitude verticale). Instabilités dues à la formation de cumulus et cumulonimbus</li>
+					<br>
+					<li>Turbulence convective : généré par convection, saturation air (selon degré humidité et amplitude verticale). Instabilités dues à la formation de cumulus et cumulonimbus</li>
 					<li>La turbulence thermique dépend :- de l'environnement - des contrastes du sol - du degré d'instabilité de l'air</li>
 					<li>Rayonnement : transport chaleur via spectre (infrarouge<->ultraviolet) jusqu'à atmosphère. Partie absorbée, partie réfléchie. Variation en fonction des couches et des zones géographiques. Ces contrastes déclenchent des mécanismes compensatoires (phénomènes météo)</li>
 					<li>Convection : transport E thermique par brassage vertical (pousée archimède)</li>
 					<li>Convection qui peut etre matérialisée par des nuages cumulus ou cumulonimbus, un ciel clair en été l'aprés-midi et a la turbulance de reliefs (ascendants, rabattans, tourbillons, cisaillement de vent).</li>
 					<li>Conduction : transport E corps plus chaud vers corps plus froid</li>
-					<li>(Q) Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m (jusqu'à 11000m) ou 2° par 1000ft. Plus haut la couche d'inversion où t° augmente avec altitude
-					<br>(Q) la diminution de la pression est plus importante dans les basses couches qu'en altitude (moyenne de 1hPa/28ft)</li>
+					<br>
+					<li>Troposphère : partie inf atmosphère, dans cette couche la t° dimininue d'un gradient moyen de 6.5°C par 1000m (jusqu'à 11000m) ou 2° par 1000ft. Plus haut la couche d'inversion où t° augmente avec altitude
+					<br>La diminution de la pression est plus importante dans les basses couches qu'en altitude (moyenne de 1hPa/28ft)</li>
 					
 				
 				<h4>Climats</h4>
 				
-					<li>(Q) Durée de vie d'une perturbation océanique : 3 à 6jours, déplacement à 25noeuds environ</li>
-					<li>Le Mistral est un vent nord et associé à une dépression sur l’Italie et un anticyclone sur l’Espagne. 
-					<br>(Q) Dans l'hémisphère nord le vent tourne dans le sens anti-horaire autour de la dépression et en sens horaire autour de l’anticyclone (inverse pour l'hémisphère sud)
-					<br>la vallée du Rhône étant entre les deux systèmes, le vent y sera souvent très fort.
-					<br>Tramontane est un vent nord-ouest </li>
-					<li>Brise : vent local de contrast thermique. De jour de la cote vers la terre, inverse la nuit. Brise ascendante vers les vallées et cols le jour, inverse (descendante) la nuit.</li>
-					<li>(Q) Brise de mer : due à une diminution de pression au-dessus de la terre.
-					<br>(Q) Une brise de mer hivernale qui se lève le matin sur la côte va créer des stratus bas et du brouillard sur les terres (masse d'eau sur terre froide).</li>
-					<li>(Q) Un grain est un événement météorologique au cours duquel la vitesse du vent s’accroît de façon brusque et marquée avec un net changement de direction (45 à 90 °), souvent accompagné d'averse ou d'orages et qui ne dure que quelques minutes.
-					<br>Ce phénomène est fréquemment accompagné d’averses de pluie, de neige ou d’orages.</li>
-					<li>Perturbation : interaction conflictuelle de 2 masses d'air (front froid ou chaud). Si vent négligeable --> front stationnaire. Si masse d'air se souleve --> instable, formation cumulonimbus</li>
-					<li>(Q) En été, le temps associé à un anticyclone est caractérisé par : des nuits claires et des journées sans nuages ou avec des petits cumulus.</li>
-					<li>Les ascendances thermiques se produisent par réchauffement du sol.</li>
-					<li>(Q) En altitude on a une grande quantité d'ozonne</li>
-					<li>Un orage orographique se développe en zone montagneuse ou sur un relief. Concernant les turbulences elles sont descendantes sous le vent (rabattant) et ascendant du côté du vent.</li>
-					<li>(Q) Foehn (effet de) : refroidissement d’une masse d’air par ascendance forcée avec précipitations au vent du relief, puis phénomène de réchauffement et d’assèchement sous le vent.</li>
-					<li>(Q) Dans les latitudes tempérées de l'hémisphère Nord, les vents dominants proviennent généralement : de l'ouest</li>
+					<li>Durée de vie d'une perturbation océanique : 3 à 6jours, déplacement à 25noeuds environ</li>
+					<li>Dans l'hémisphère nord le vent tourne dans le sens anti-horaire autour de la dépression et en sens horaire autour de l’anticyclone (inverse pour l'hémisphère sud)</li>
+					<li>Dans les latitudes tempérées de l'hémisphère Nord, les vents dominants proviennent généralement : de l'ouest</li>
 					<li>Les conditions météorologiques rencontrées dans une zone de hautes pressions stationnaires sont généralement : vents calmes et brume</li>
-				
-				<h3>questions à la con </h3>
-				<li>(Q) En été, en arrivant le matin sur la zone d'évolution prévue de votre aéronef télépiloté, vous observez du brouillard avec le soleil qui perce par endroit : le vol est envisageable en fin de matinée</li>
-			
+					<br>
+					<li>Tramontane est un vent nord-ouest </li>
+					<li>Brise : vent local de contrast thermique. De jour de la cote vers la terre, inverse la nuit. Brise ascendante vers les vallées et cols le jour, inverse (descendante) la nuit.
+					<br>Brise de mer : due à une diminution de pression au-dessus de la terre.
+					<br>Brise de mer hivernale qui se lève le matin sur la côte va créer des stratus bas et du brouillard sur les terres (masse d'eau sur terre froide).
+					<br> Un grain est un événement météorologique au cours duquel la vitesse du vent s’accroît de façon brusque et marquée avec un net changement de direction (45 à 90 °) qui ne dure que quelques minutes.
+					<br>Ce phénomène est fréquemment accompagné d’averses de pluie, de neige ou d’orages.</li>
+					<br>
+					<li>Perturbation : interaction conflictuelle de 2 masses d'air (front froid ou chaud). 
+					<br>Si vent négligeable --> front stationnaire. 
+					<br>Si masse d'air se souleve --> instable, formation cumulonimbus</li>
+					<li> En été, le temps associé à un anticyclone est caractérisé par : des nuits claires et des journées sans nuages ou avec des petits cumulus.</li>
+					<li>Les ascendances thermiques se produisent par réchauffement du sol.</li>
+					<li>Un orage orographique se développe en zone montagneuse ou sur un relief. 
+					<br>Foehn (effet de) : refroidissement d’une masse d’air par ascendance forcée avec précipitations au vent du relief, puis phénomène de réchauffement et d’assèchement sous le vent.</li>
+								
+	<br><br><br>
 	
 		<h2>Navigation</h2>
 		
@@ -538,7 +538,6 @@
 
 			<h3>Dossier météo</h3>
 			<li>metar : « 34004KT 300V020 » qui signifie une vent du 340° pour 4 kt, variable entre 300° et 020°.</li>
-			<li>Le METAR peut parfois contenir une partie de prévision <b>TEMPO</b> (temporairement) qui est une tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
 			<li>LFOT 060900Z 28008KT 9999 BKN016 19/15 Q1015= : c'est un métar et pas un taf car il observe la température et le QNH (la pression atmosphérique mesurée au terrain). Message fait à 9h UTC le 6 du mois</li>
 			<li>Rafales indiquées dans metar quand supérieur d'au moins <b>10kt</b> au vent normal</li>
 			<li>CAVOK Ceiling and Visibility OK (Ciel et visibilité OK) mais attention possibilité de vent fort : Visibilité 10 km ou plus, pas de nuage en dessous de 5000 ft/sol.</li>
@@ -564,14 +563,14 @@
 			<li>Masse max : recommandée par le constructeur</li>
 			<li>Vous devez effectuer une visite prévol : avant chaque vol...</li>
 				
+			<br><br><br>
 				
 		<h2>Performance humaine</h2>
 	
 			<h3>Vision</h3>
-			<li>Vision : systeme sensoriel dominant. Vision centrale perçoit details fins de l'environnement et couleurs champ restreint de 2° d'ouverture (acuité visuel max au centre ce champ).
-			<br> Vision périphérique ouverture horizontale max de 200° et verticale de 130°, Les cellules de l'oeil qui permettent la vision de nuit sont : les batonnets. 
-			<br>Les cones pour la couleur. 
-			<li>La rétine est constituée de deux types différents de cellules qui captent respectivement :  Sous faible et forte lumière.</li>
+			<li> Vision périphérique ouverture horizontale max de 200° et verticale de 130°
+			<br>Les cellules de l'oeil qui permettent la vision de nuit (vision periphérique, mouvement) sont : les batonnets. 
+			<br>Les cones pour la couleur (vision jour + vision centrale) (co=co).</li>
 			<li>Myopie : problème vision de loin, image se forme en avant de la rétine.</li>
 			<li>10s pour s'habituer à la lumière, 30mins à la nuit
 			<br>le meilleur moyen de percevoir le plus possible de couleurs --> De la lumière en quantité (rayons du soleil par exemple).</li>
@@ -583,41 +582,49 @@
 			<br> evaluation des conséquence
 			<br> choix et passage à l'acte. risque externe que les evenements ne se déroulent pas comme prévu et interne d'échec de la solution choisie.
 			<br> certains traits de perso : resigné, antiautoritaire, invulnerable, impulsif, macho sont associés à des prise de risque dangereuse</li>
+			<br>
 			<li>Un facteur de stress : un stimulus externe ou interne...</li>
 			<li>La réaction de stress est : la réponse non spécifique du corps à chaque exigence appliquée à une personne.</li>
 			<li>Gestion ressources mentales : régulation utilise 3 moyens essentiels : anticipation et planification des actions, hierarchisation des actions, expertise.</li>
-			<li>L'évaluation cognitive qui conduit au stress est basée sur : L'évaluation de la situation ainsi que des capacités pour y faire face.</li>
 			<li>Risque d'altération : état psychique et mental, mauvaise visibilité extérieure, surcharge d'actions a effectuer.</li>
 			<li>Attention : respecter un circuit visuel passant par les différents instruments et surveillance extérieure</li>
 			<li>Vigilance : état activation système nerveux central</li>
+			<br>
+			<li>L'analyse des accidents impliquant le facteur humain dans le télépilotage montre que : Il n'y a pratiquement jamais de cause unique.</li>
 			<li>Erreur : supprimer erreurs est illusoire, il faut les prévenir : drones et procédures robustes, reconnaissance de son potentiel, detections des erreurs. 
 			<br>erreur de routine --> concerne action effectuée réguliérement 
 			<br>erreur de règle --> application procédure inapropriée (mauvais diagnostic ou raisonnement, mauvaise execution de la bonne procédure. 
 			<br>erreur de modèle --> utiliser un modèle inadequate à la situation. 
 			<br>erreur de representation -->interpretation erronnée de la situation.  
-			<br>une erreur active : Produite par l'opérateur et peut être rapidement détectée par l'intermédiaire des effets et conséquences qui sont induites sur toutes les actions.</li>
+			<br>une erreur active --> Produite par l'opérateur et peut être rapidement détectée par l'intermédiaire des effets et conséquences qui sont induites sur toutes les actions.</li>
 			<li>Les symptômes de stress comprennent : Transpiration, bouche sèche, pupilles dilatées, respiration rapide. </li>
 			<li>(U inversé) Une motivation excessive conduit à un niveau de stress qui affecte négativement la performance.</li>
-			<li>Attention dispersée : diviser l'attention et faire presque 2 choses en mm temps</li>
-			<li>L'analyse des accidents impliquant le facteur humain dans le télépilotage montre que : Il n'y a pratiquement jamais de cause unique.</li>
+			<br>
+			<li>Attention dispersée : diviser l'attention et faire presque 2 choses en mm temps
+			<br>Les ressources cognitives disponibles du cerveau humain: sont limitées et rendent impossible la réalisation simultanée de deux taches qui requièrent de l'attention.</li>
+			<li>Un mécanisme d'attention sélective est nécessaire : à cause de la capacité limitée du système de décision centrale et de la mémoire de travail. </li>
 			
 			<h3>Mémoire</h3>
-			<li>Mémoire : sensorielle, court et moyen, long terme.</li>
-			<li>Mémoire court terme : 7 +/- 2 items</li>
+			<li>Mémoire court terme (ou fonctionnelle) : 7 +/- 2 items</li>
 			<li>La mémoire dite 'à long terme' est :  Quasi illimitée en capacité, mais plus lente à restituer les informations, avec souvent un besoin de stimuli.</li>
+			
+			<h3>IHM</h3>
+			<li>Homme mieux que machine : qualitatif, detection de conditions inhabituelles, creativité, adaptabilité, innovation</li>
 			
 			<h3>Mode de vie</h3>
 			<li>Hygiène de vie : ensemble précautions a prendre pour préserver capital santé. 0.3g/l alcool capacité mentales dégradées. Pratique activité physique, hygiène alimentaire.</li>
 			<li>L'alcool dégrade le sommeil paradoxale</li>
-			<li> Le décalage horaire (ou syndrome du jet-lag) se manifeste par : - Fatigue importante - Troubles de l'éveil, de l'humeur et des performances - Perturbations du sommeil.</li>
+			<li> Le décalage horaire (ou syndrome du jet-lag) se manifeste par : - Fatigue importante - Troubles de l'éveil, de l'humeur et des performances - Perturbations du sommeil.
+			<br>rythmes bio se resynchronise d'environ <b>1 - 1.5h par jour</b></li>
 			<li>La prise de médicament peut-être contre-indiquée dans l'activité de télépilotage :  à cause des effets primaires et secondaires.</li>
 			<li>5 phases de sommeil (endormissement, léger, lent, profond, paradoxal).</li>
+			<li>Signes précurseurs hypoxie : - Somnolence - Maux de tête - Augmentation du rythme cardiaque</li>
 			
 			<h3>Questions bizarres</h3>
-			<li>Les avantages du processus de prise de décision que l'homme possède, comparativement à celui de la machine, sont:La créativité, l'innovation et l'adaptation.</li>
 			<li>Notre compréhension de la fiabilité humaine change : Les erreurs humaines sont maintenant considérées comme inhérentes à la fonction cognitive humaine et sont généralement inévitables</li>
 			<li>L'analyse des accidents impliquant le facteur humain dans le télépilotage montre que : Il n'y a pratiquement jamais de cause unique.</li>
-
+			<li>Quelles sont les principales stratégies pour s'adapter aux contraintes temporelles : la préparation des actions et le classement des tâches par ordre de priorité.</li>
+			<li>Une augmentation de la charge de travail conduit généralement à : Une diminution de la durée et de la fréquence des échanges d'information.</li>
 	
 		
 		<h2>Communication</h2>
