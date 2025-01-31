@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>télépilote</title>
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Coda', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff; /* Fond blanc */
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+			margin-top: 30px;
+            font-size: 1.5em;
+            color: #333; /* Noir */
+        }
+		
+		  h3 {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+			margin-top: 20px;
+            font-size: 1.2em;
+			margin-left: 10px;
+            color: #333; /* Noir */
+        }
+		
+		 h4 {
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+			margin-top: 10px;
+            font-size: 1.0em;
+			margin-left: 20px;
+            color: #333; /* Noir */
+        }
+
+        p {
+			font-size:14px;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+		
+		.souventvu{
+		color: #00008B; /* or */
+		
+		}
+		
+		
+		img {
+    width: 400px;
+    height: auto;
+    display: block; /* Nécessaire pour appliquer margin auto */
+    margin-left: auto;
+    margin-right: auto;
+}
+		
+		.drone{
+		 max-width: 500px;
+            height: auto;
+			float: none;
+		}
+		
+		li{
+		margin-bottom: 5px;
+		margin-left: 30px;
+		}
+		
+		
+	
+    </style>
+</head>
+<body>
+
+    <section>
+	
+	   <h3>Météo CATT</h3>
+				<li><b>METAR</b> --> observation régulière pour l'aviation diffusé toutes les <b>heures ou toutes les demi-heures</b> pour les gros aéroports.
+				<br><img src="contenu/metar1.jpg"> <img src="contenu/metar2.jpg"></li>
+				<li>Le METAR peut contenir une partie de prévision <b>TEMPO</b> (temporairement) --> tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
+				<li><b>TAF (prévision) court : tous les 3h valable 9h ; TAF long tous les 6h valable 24h ou 30h</b></li>
+				<br>
+				<li>Symboles TEMSI (TEMps SIgnificatif) <br><img src="contenu/symbolestemsi.png"> <img src="contenu/temsi_symboles.jpg"></li>
+			    <li>Nuage lenticulaire (1) associé à une onde relief ;  <br>(3) un nuage à caractère de nuage lenticulaire mais mélangé à des nuages  de types stratus ou altocumulus <br><img src="contenu/nuage.jpg"></li>
+				<li>1 cumulonimbus -  2  stratus accrochés au relief -  3  cirrostratus - 4 altocumulus lenticularis (un altocumulus  qu’on retrouve en aval du sommet des montagnes sous le vent).<br><img src="contenu/nuagetype.jpg"></li>
+					
+	
+		<h3>Météorologie</h3>
+				<li>Le nuage qui indique la présence de courants verticaux importants à proximité du sol est <br> <b>Le Cumulus. </b></li><br>
+				<li>Une nébulosité de 5 à 7 octas est indiquée dans un METAR par l'abréviation : <br> <b>BKN. </b>FEW : nuages rare 1 à 2 octas.
+				SCT : nuages épars c'est 3 à 4 octas.
+				BKN : nuages fragmentés 5 à 7 octas.
+				OVC : ciel couvert 8 octas.</li><br>
+				<li>Le code NSC : <br> <b> Indique qu'il n'y a pas de nuages significatifs. </b>NSC (No Significant Clouds) : nuages non significatifs.</li><br>
+						<li>Dans un METAR, le codage suivant '8000 3000SW BR' signifie : <br> <b> Visibilité dominante de 8000 m et minimale de 3000 m dans le Sud-Ouest avec de la brume. </b></li><br>
+				<li> 'BECMG FM 1100 -SHRA' dans un METAR signifie  <br> <b> Deviendra, à partir de 11h UTC, averses de pluie faibles. </b>BECMG FM (BECOMING FROM) : devenant à partir de 11h.</li><br>
+				<li>Vous prenez connaissance du METAR de Troyes :LFQB 100900Z 31006KT 6000 NSC M00/M01 Q1035=		<li>Vous observez la présence d'un important groupe d'oiseaux dans la géographie de vol <br> <b>Vous attendez que la situation s'améliore pour débuter vos évolutions. </b></li><br>
+				<li>Le code météorologique 'FZDZ' indique : <br> <b> Bruine se congelant modérée. </b></li><br>
+				<li>Le code météorologiques '+SHRA' indique <br> <b>Forte averse de pluie. </b></li><img src="IMG_770.jpeg"><br>
+				<li>Dans un METAR, la présence de brume (BR) indique une visibilité comprise entre : <br> <b> 1 km et 5 km. </b></li><br>
+				<li>La circulation du vent sur le relief va générer de la : <br> <b> Turbulence de frottement. </b></li><br>
+				<li>Dans un message METAR, le terme 'VC' signifie : <br> <b>Au voisinage. </b>situé entre environ 8 et 16 km par rapport au point de référence d'un aérodrome</li><br>
+				<li>L'unité de mesure de la pression de l'air dans le système international est... <br> <b>Le Pascal (Pa). </b>1 Pa = 1 N/m²</li><br>
+				<li>Identifiez le type de nuage qui vous signalera une forte possibilité que l'air est instable : <br> <b>Le Cumulonimbus. </b></li><br>
+				<li>«Message spécial d'aérodrome, émis quand un changement significatif des conditions météorologiques a été observé». <br> <b>SPECI. </b></li><br>
+				<li>A une hauteur de 100 mètres vous pouvez estimer que la vitesse du vent est : <br> <b>50% plus fort qu'au sol. </b></li><br>
+				<li>Dans un METAR, la présence de brouillard (FG) indique une visibilité : <br> <b> Inférieure à 1 km. </b></li><br>
+				<li> Vous prenez connaissance du METAR de Toulouse Blagnac :LFBO 060800Z 29010KT 9999 SCT016 BKN050 19/16 Q1019 NOSIG=Les nuages qui sont l'objet du code SCT016 couvrent :   <br><b>Moins de la moitié du ciel et leur base est à 1600 ft.   </b></li><br>
+				<li>Indiquer les conditions pour lesquelles les performances d'un aéronef sans équipage à bord seront les meilleures : <br> <b> Par temps froid, à proximité du niveau de la mer et avec une pression atmosphérique élevée. </b></li><br>
+				<li>Que représente ce symbole sur une carte de temps significatif ? <br><b>Averse.   </b></li><img style="width:2%" src="IMG_20.jpg"><br>
+				<li>Vous prenez connaissance du TAF de Rodez Marcillac: LFCR 140800Z 1409/1418 25008KT 4000 RADZ OVC002 BKN025 OVC250 TEMPO 1409/1412 1500 DZRA OVC002 BKN020 BECMG 1412/1415 28006KT BKN020 SCT050 BECMG 1415/1418 SCT020 SCT050
+				Le code TEMPO indique une chute de la visibilité à 1500 m :    <br><b> Entre 9 h à 12 h UTC.   </b></li><br>
+				<li>Le givrage : <br> <b>Se forme sur les ailes et rotors, entrainant une diminution progressive des performance de l'appareil. </b></li><br>
+				<li>La turbulence thermique dépend : 1 - de l'environnement 2 - des contrastes du sol 3 - du degré d'instabilité de l'air 4 - de la compétence du pilote à distance <br> <b>1 - 2 - 3. </b></li><br>
+
+
+	
+	
+	<h2>titre</h2>
+	<div class="souventvu">
+<li>   <br> <b>  </b></li><br>
+	</div>
+	
+	
+	
+	
+	<h2>titre</h2>
+	<div class="souventvu">
+	
+	</div>
+	
+	<h2>titre</h2>
+	<div class="souventvu">
+	
+	</div>
+	
+	
+	<h2>titre</h2>
+	<div class="souventvu">
+	
+	</div>
+	
+		
+
+		</section>
+</body>
+</html>
