@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>télépilote</title>
+    <title>Météo</title>
     <link href="https://fonts.googleapis.com/css2?family=Coda:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -95,7 +95,10 @@
 
 				
 				
-				   <h3>Cours CATT (encore valable...)</h3>
+	<h3>Guide aviation</h3>
+	<iframe style="width:100%; height:600px;" src="contenu/guide_aviation.pdf"></iframe>
+			
+	<hr>	
 				
 			
 					
@@ -108,48 +111,54 @@
 	<h2>Metar</h2>
 	<div class="souventvu">
 	<li><b>METAR</b> --> observation régulière pour l'aviation diffusé toutes les <b>heures ou toutes les demi-heures</b> pour les gros aéroports.
-				<br><img src="contenu/metar1.jpg"> <img src="contenu/metar2.jpg"></li>
-				<li>Le METAR peut contenir une partie de prévision <b>TEMPO</b> (temporairement) --> tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
+				<br><img style="width:80%"  src="contenu/metar1.jpg"> </li>
 				<li><b>TAF (prévision) court : tous les 3h valable 9h ; TAF long tous les 6h valable 24h ou 30h</b></li>
-				<br>
-				<li>Symboles TEMSI (TEMps SIgnificatif) <br><img src="contenu/symbolestemsi.png"> <img src="contenu/temsi_symboles.jpg"></li>
-				<li>Dans un METAR, le codage suivant '8000 3000SW BR' signifie : <br> <b> Visibilité dominante de 8000 m et minimale de 3000 m dans le Sud-Ouest avec de la brume. </b></li><br>
-	<li> 'BECMG FM 1100 -SHRA' dans un METAR signifie  <br> <b> Deviendra, à partir de 11h UTC, averses de pluie faibles. </b>BECMG FM (BECOMING FROM) : devenant à partir de 11h.</li><br>
-	<li>Vous prenez connaissance du METAR de Troyes :LFQB 100900Z 31006KT 6000 NSC M00/M01 Q1035=		<li>Vous observez la présence d'un important groupe d'oiseaux dans la géographie de vol <br> <b>Vous attendez que la situation s'améliore pour débuter vos évolutions. </b></li><br>
+				<br><br>
+	
+		
+	
+	
+	<b>SPECI</b><br>
+	<li>«Message spécial d'aérodrome, émis quand un changement significatif des conditions météorologiques a été observé». <br> <b>SPECI. </b></li><br>
+	
+	<b>TEMPO</b><br>
+	<li>Le METAR peut contenir une partie de prévision <b>TEMPO</b> (temporairement) --> tendance de prévision d'atterrissage valable pour les deux heures qui suivent l'observation.</li>
 	<li>Vous prenez connaissance du TAF de Rodez Marcillac: LFCR 140800Z 1409/1418 25008KT 4000 RADZ OVC002 BKN025 OVC250 TEMPO 1409/1412 1500 DZRA OVC002 BKN020 BECMG 1412/1415 28006KT BKN020 SCT050 BECMG 1415/1418 SCT020 SCT050
 				Le code TEMPO indique une chute de la visibilité à 1500 m :    <br><b> Entre 9 h à 12 h UTC.   </b></li><br>
-	<li>Dans un METAR, la présence de brouillard (FG) indique une visibilité : <br> <b> Inférieure à 1 km. </b></li><br>
-	<li> Vous prenez connaissance du METAR de Toulouse Blagnac :LFBO 060800Z 29010KT 9999 SCT016 BKN050 19/16 Q1019 NOSIG=Les nuages qui sont l'objet du code SCT016 couvrent :   <br><b>Moins de la moitié du ciel et leur base est à 1600 ft.   </b></li><br>
-	<li>«Message spécial d'aérodrome, émis quand un changement significatif des conditions météorologiques a été observé». <br> <b>SPECI. </b></li><br>
-	<li>Dans un METAR, la présence de brume (BR) indique une visibilité comprise entre : <br> <b> 1 km et 5 km. </b></li><br>
+	
+	<b>CAVOK</b><br>
+		<li>Dans un message, le code 'CAVOK' indique généralement :   <br> <b>  L'absence de nuages en-dessous de 5000 ft. </b></li><br>
+		<li> Dans un message, le code 'CAVOK' indique une visibilité minimum de...  <br> <b> 10 km.  </b></li><br>
+		<li> Dans un message, le code 'CAVOK' indique l'absence (observée ou prévue) d'éléments météo défavorables. Toutefois, il n'exclut pas la présence :  <br> <b>  De vent fort. </b></li><br>
+
+	<b>BECMG</b><br>
+	<li> LFBL 140800Z 1409/1418 31004KT 7000 BKN010 TEMPO 1409/1411 29010KT 4000 SHRA SCT005 BKN010 BECMG 1411/1413 9999 SCT020= De 9 h à 11 h UTC, en dehors des variations temporaires, la base des nuages est prévue à :   <br> <b> 1000 ft AAL.  </b></li><br>
+	<li>Vous prenez connaissance du TAF d'Ajaccio Campo dell'Oro :LFKJ 051100Z 0512/0521 22006KT CAVOK BECMG 0517/0519 06006KT= La fin du message, à partir du code BECMG, indique que le vent pourrait tourner :   <br> <b> De façon régulière entre 17 h et 19 h UTC.  </b></li><br>
+	<li> 'BECMG FM 1100 -SHRA' dans un METAR signifie  <br> <b> Deviendra, à partir de 11h UTC, averses de pluie faibles. </b>BECMG FM (BECOMING FROM) : devenant à partir de 11h.</li><br>
+
+	<b>VC</b><br>
+		<li> Dans un code METAR, l'abréviation VC est un qualificatif du temps présent...  <br> <b> à une distance comprise entre approximativement entre 8 et 16 km du point de référence de l'aérodrome.  </b>VC : vicinity (au voisinage de)</li><br>
 	<li>Dans un message METAR, le terme 'VC' signifie : <br> <b>Au voisinage. </b>situé entre environ 8 et 16 km par rapport au point de référence d'un aérodrome</li><br>
+
+	<b>Vent</b><br>
+		<li> Les rafales de vent sont indiquées dans un METAR, quand :  <br> <b>  Les rafales sont supérieures au vent moyen d'au moins 10 kt. </b></li><br>
+
+	<b>Visibilité</b>
+	<li>Dans un METAR, la présence de brouillard (FG) indique une visibilité : <br> <b> Inférieure à 1 km. </b></li><br>
+	<li>Dans un METAR, la présence de brume (BR) indique une visibilité comprise entre : <br> <b> 1 km et 5 km. </b></li><br>
+	<li>Le plafond nuageux est défini par une nébulosité au moins égale à :   <br> <b> BKN.  </b> avant c'est couverture nuageuse</li><br>
 	<li>Une nébulosité de 5 à 7 octas est indiquée dans un METAR par l'abréviation : <br> <b>BKN. </b>FEW : nuages rare 1 à 2 octas.
 				SCT : nuages épars c'est 3 à 4 octas.
 				BKN : nuages fragmentés 5 à 7 octas.
 				OVC : ciel couvert 8 octas.</li><br>
 	<li>Le code NSC : <br> <b> Indique qu'il n'y a pas de nuages significatifs. </b>NSC (No Significant Clouds) : nuages non significatifs.</li><br>
-	
-	</div>
-	
-	
-	<li> Un nouveau METAR (message d'observation régulière) est rédigé :  <br> <b> Toutes les heures, ou toutes les demi-heures.  </b></li><br>
-	<li>Vous prenez connaissance du TAF d'Ajaccio Campo dell'Oro :LFKJ 051100Z 0512/0521 22006KT CAVOK BECMG 0517/0519 06006KT= La fin du message, à partir du code BECMG, indique que le vent pourrait tourner :   <br> <b> De façon régulière entre 17 h et 19 h UTC.  </b></li><br>
-	<li> Un message METAR est valable...  <br> <b> à l'heure de l'observation.  </b></li><br>
-	<li>Dans un message, le code 'CAVOK' indique généralement :   <br> <b>  L'absence de nuages en-dessous de 5000 ft. </b></li><br>
-	<li> Dans un message, le code 'CAVOK' indique une visibilité minimum de...  <br> <b> 10 km.  </b></li><br>
 	<li>Quand l'information de visibilité verticale n'est pas disponible (ciel invisible), il est indiqué dans un message METAR, SPECI ou TAF:   <br> <b> VV///  </b></li><br>
-	<li> LFBL 140800Z 1409/1418 31004KT 7000 BKN010 TEMPO 1409/1411 29010KT 4000 SHRA SCT005 BKN010 BECMG 1411/1413 9999 SCT020= De 9 h à 11 h UTC, en dehors des variations temporaires, la base des nuages est prévue à :   <br> <b> 1000 ft AAL.  </b></li><br>
-
 	<li>La base des nuages, rapportée dans le METAR, est la hauteur au-dessus...   <br> <b> Du niveau de l'aérodrome.  </b></li><br>
 	<li> Vous prenez connaissance du METAR d'Aurillac : LFLW 100900Z 08003KT 2500 -DZ BR BKN002 01/01 Q1016= La visibilité horizontale est de :   <br> <b> 2500 m.  </b></li><br>
-	<li> Dans un message, le code 'CAVOK' indique l'absence (observée ou prévue) d'éléments météo défavorables. Toutefois, il n'exclut pas la présence :  <br> <b>  De vent fort. </b></li><br>
-	<li> Les rafales de vent sont indiquées dans un METAR, quand :  <br> <b>  Les rafales sont supérieures au vent moyen d'au moins 10 kt. </b></li><br>
-	<li> Dans un code METAR, l'abréviation VC est un qualificatif du temps présent...  <br> <b> à une distance comprise entre approximativement entre 8 et 16 km du point de référence de l'aérodrome.  </b>VC : vicinity (au voisinage de)</li><br>
-	<li>LFRN 171100Z 17008KT 9999 FEW021CB SCT030 19/16 Q1009 RETS NOSIG=    <br> <b> D'orages récents.  </b>REcent TS orage</li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>	
+	<li> Vous prenez connaissance du METAR de Toulouse Blagnac :LFBO 060800Z 29010KT 9999 SCT016 BKN050 19/16 Q1019 NOSIG=Les nuages qui sont l'objet du code SCT016 couvrent :   <br><b>Moins de la moitié du ciel et leur base est à 1600 ft.   </b></li><br>
+	<li>Dans un METAR, le codage suivant '8000 3000SW BR' signifie : <br> <b> Visibilité dominante de 8000 m et minimale de 3000 m dans le Sud-Ouest avec de la brume. </b></li><br>
+
+	</div>
 	
 	
 	<h2>Nuages</h2>
@@ -157,75 +166,44 @@
 	<li>Le nuage qui indique la présence de courants verticaux importants à proximité du sol est <br> <b>Le Cumulus. </b></li><br>
 	<li>Identifiez le type de nuage qui vous signalera une forte possibilité que l'air est instable : <br> <b>Le Cumulonimbus. </b></li><br>
 	</div>
-		<li>Le plafond nuageux est défini par une nébulosité au moins égale à :   <br> <b> BKN.  </b> avant c'est couverture nuageuse</li><br>
 	<li> Les conditions de vol les moins turbulentes se rencontrent...  <br> <b> Sous un plafond de stratus.  </b></li><br>
 	<li>Un nuage considéré comme étant extrêmement dangereux peut être identifié par :   <br> <b> Son sommet qui est à environ 35000 ft au-dessus du sol.  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>	
+
 	
 	
 	
 	<h2>Codes météo</h2>
 	<div class="souventvu">
-					<li>Que représente ce symbole...  sur une carte de temps significatif ? <br><b>Il faut tout connaitre, averse, fumée étendue...   </b></li><img style="width:2%" src="IMG_20.jpg"><br>
-	<li>Le code météorologiques '+SHRA' / 'FZDZ' / etc indique <br> <b>Forte averse de pluie. / Bruine se congelant modérée. / etc </b>Il faut TOUS les connaitres !</li><img src="IMG_770.jpeg"><br>
-				
+	<li>Symboles TEMSI (TEMps SIgnificatif) <br><img  style="width:60%" src="contenu/symbolestemsi.png"> <img style="width:60%" src="contenu/temsi_symboles.jpg"></li>
+	<li>Que représente ce symbole <img style="width:2%" src="IMG_20.jpg"> sur une carte de temps significatif ? <br><b>Il faut TOUS les connaître !   </b></li><br>
+
+	<img style="width:80%" src="IMG_770.jpeg">
+	<li>Le code météorologiques '+SHRA' / 'FZDZ' / etc indique <br> <b>Forte averse de pluie. / Bruine se congelant modérée. / etc </b>Il faut TOUS les connaître !</li><br>
+	<li>LFRN 171100Z 17008KT 9999 FEW021CB SCT030 19/16 Q1009 RETS NOSIG=    <br> <b> D'orages récents.  </b>REcent TS orage</li><br>
+
 	</div>
-		<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>	
+
 	
 	
 	
-	<h2>Phénomènes</h2>
+	<h2>Physique</h2>
 	<div class="souventvu">
 		<li>Le givrage : <br> <b>Se forme sur les ailes et rotors, entrainant une diminution progressive des performance de l'appareil. </b></li><br>
 		<li>La turbulence thermique dépend : 1 - de l'environnement 2 - des contrastes du sol 3 - du degré d'instabilité de l'air 4 - de la compétence du pilote à distance <br> <b>1 - 2 - 3. </b></li><br>
+		<li>La circulation du vent sur le relief va générer de la : <br> <b> Turbulence de frottement. </b></li><br>
 		<li>Indiquer les conditions pour lesquelles les performances d'un aéronef sans équipage à bord seront les meilleures : <br> <b> Par temps froid, à proximité du niveau de la mer et avec une pression atmosphérique élevée. </b></li><br>
 		<li>A une hauteur de 100 mètres vous pouvez estimer que la vitesse du vent est : <br> <b>50% plus fort qu'au sol. </b></li><br>
-		<li>La circulation du vent sur le relief va générer de la : <br> <b> Turbulence de frottement. </b></li><br>
-		<li>L'unité de mesure de la pression de l'air dans le système international est... <br> <b>Le Pascal (Pa). </b>1 Pa = 1 N/m²</li><br>
 
 	</div>
-		<li> Près du sol, la turbulence résultante du réchauffement de la surface se produit habituellement...  <br> <b> En début d'après-midi.  </b></li><br>
-
-		<li> Un vent de 20 kt correspond à une vitesse de l'air de :  <br> <b> 10 m/s.  </b></li><br>
 	<li>Les dangers pour un aéronef sans équipage à bord causés par la présence d'un cumulonimbus ou d'un nuage d'orage peuvent être rencontrés...   <br> <b> Dans un rayon de 15 km autour du nuage.  </b></li><br>
+	<li>En atmosphère standard, la baisse de température en gagnant de l'altitude est de :  <br> <b> 2°C par 1000 ft.  </b></li><br>
+	<li>Près du sol, la turbulence résultante du réchauffement de la surface se produit habituellement...  <br> <b> En début d'après-midi.  </b></li><br>
+	<li>Un vent de 20 kt correspond à une vitesse de l'air de :  <br> <b> 10 m/s.  </b></li><br>
 	<li>L'énoncé qui décrit le risque principal associé à la contamination par le givre de votre aéronef sans équipage à bord est :   <br> <b> L'accumulation de givre diminue la portance aérodynamique et affecte les performances de vol.  </b></li><br>
-	<li>   <br>La durée de vie d'une perturbation océanique aux latitudes tempérées est d'environ... <b> 3 à 6 jours.  </b></li><br>
-	<li> En atmosphère standard, la baisse de température en gagnant de l'altitude est de :  <br> <b> 2°C par 1000 ft.  </b></li><br>
-	<li> En France métropolitaine à 12H UTC, en l'absence de vent fort, vous trouverez de préférence les ascendances thermiques sur les versants exposés :  <br> <b>  Au Sud. </b></li><br>
+	<li>La durée de vie d'une perturbation océanique aux latitudes tempérées est d'environ... <b> 3 à 6 jours.  </b></li><br>
+	<li>En France métropolitaine à 12H UTC, en l'absence de vent fort, vous trouverez de préférence les ascendances thermiques sur les versants exposés :  <br> <b>  Au Sud. </b></li><br>
 	<li>Je m'apprête à faire voler mon UAS sous une température de -10°C. Sélectionnez la bonne réponse (un choix):    <br> <b> Préchauffer la batterie avant le vol.  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>
-	<li>   <br> <b>  </b></li><br>	
+
 	
 		
 
