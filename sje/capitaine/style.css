@@ -1,0 +1,224 @@
+body,
+html {
+	background-color: #000000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+aside,
+section {
+    box-sizing: border-box;
+    float: left;
+    min-height: 100%;
+}
+
+section {
+    background-color: #000000;
+    padding-left: 1vw;
+    position: relative;
+}
+
+a{
+		text-decoration-line: none;
+		color: #55C1FF;
+		font-size: 1.2vw;
+		margin-top:10px;
+		margin-bottom:10px;
+}
+
+b{
+	color: #55C1FF;
+}
+
+H1{
+	display:none;
+}
+H2{
+	font-family :  "Courier New";
+	font-size: 4vw;
+	margin-top:50px;
+	margin-bottom:50px;
+	
+}
+	
+H3{
+	color: #55C1FF;
+	font-family :  "Courier New";
+	font-size: 2vw;
+	margin-top:50px;
+	margin-bottom:50px;
+	
+}
+H4{
+	color: #55C1FF;
+}
+
+H6{
+	font-family :  "Courier New";
+	font-size: 2vw;
+	margin-top:50px;
+	margin-bottom:50px;
+	
+}
+H7{
+	font-family :  "Courier New";
+	font-size: 3vw;
+	margin-top:50px;
+	margin-bottom:50px;
+	
+}
+
+p{
+	
+	margin-left : 5%;
+    margin-right : 5%; 
+	line-height:1.5vw;
+	text-align:left;
+	font-size: 1.5vw;
+	line-height : 1.5vw;
+}
+
+hr{
+	  border: 1px dotted;
+	  color: #f4fefe;
+	  width: 10%;
+}
+
+
+#main-text{
+  clear: both;
+}
+  
+
+  
+li{
+	
+}
+  
+
+  img {
+	  display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 90%;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+  transition: transform 0.5s;
+  filter:grayscale(100%);}
+
+
+    img:hover {
+      -ms-transform: scale(1.0);
+      -moz-transform: scale(1.0);
+      -webkit-transform: scale(1.01);
+      transform: scale(1.01);
+	   filter:grayscale(0%);
+    }
+
+#avatar{
+	max-width: 30%;
+    height: auto;
+	display: block; /* Removes extra space below inline images */
+    margin: 0 auto;
+	margin-top:20px;
+}
+
+video{
+	width:90%;
+}
+  /* Sommaire : léger décalage à droite */
+  #toc{
+    margin-left: 20px;   /* ajuste : 10px / 15px / 20px */
+    padding-left: 10px;  /* optionnel, plus doux */
+  }
+
+  /* Si tes UL collent encore trop à gauche */
+  #toc ul{
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+
+
+  /* On annule l'effet "gros titres" des h4/h5 uniquement dans le sommaire */
+  #toc h4, 
+  #toc h5 {
+    font-size: 14px !important;   /* tu peux mettre 13px si tu veux */
+    margin: 4px 0 !important;
+    font-weight: 600;
+  }
+
+
+
+  #toc li {
+    font-size: 13px !important;
+    margin: 2px 0 !important;
+  }
+
+  #toc a {
+    font-size: inherit !important;
+    text-decoration: none;
+  }
+
+  /* ===== Table "fiche" ===== */
+    /* Table fiche (dark sobre) */
+  /* ===== "Table" en 1 seule colonne (lignes empilées) ===== */
+  .fiche1c{
+	width: min(1200px, 96vw);
+	max-width: none;
+	margin: 16px auto 24px auto;    border-collapse: collapse;
+    background: #0f0f12;
+    color: #d6d6d6;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .fiche1c td {
+    padding: 12px 14px;
+    border-top: 1px solid #222;
+    vertical-align: top;
+  }
+
+  .fiche1c tr:first-child td {
+    border-top: none;
+  }
+
+  /* Titre de chaque "ligne" */
+  .fiche1c .row-title{
+    font-weight: 650;
+    color: #f0f0f0;
+    margin-bottom: 6px;
+  }
+
+  /* Sous-blocs internes */
+  .bloc{
+    margin: 10px 0 0 0;
+    padding: 10px 12px;
+    border-left: 3px solid #3a6ea5;
+    background: rgba(58,110,165,0.08);
+    border-radius: 8px;
+  }
+  .bloc.calc{
+    border-left-color: #a58a3a;
+    background: rgba(165,138,58,0.08);
+  }
+
+  .label{
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    color: #c9c9c9;
+    margin-bottom: 6px;
+  }
+
+  .fiche1c ul{ margin: 6px 0 0 18px; padding: 0; }
+  .fiche1c li{ margin: 3px 0; }
+
+  /* MathJax plus doux */
+  mjx-container{ color:#dfe7ff; }
+
+

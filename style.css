@@ -21,7 +21,7 @@ section {
 a{
 		text-decoration-line: none;
 		color: #55C1FF;
-		font-size: 2vw;
+		font-size: 0.8vw;
 		
 }
 
@@ -61,12 +61,12 @@ h7{
 
 #main-text {
   font-family :  "Courier New";
-  line-height : 2vw;
+  line-height : 1.0vw;
   margin-top : 5%;
   margin-bottom : 5%;
   margin-left : 5%;
   margin-right : 5%;
-  font-size: 1.2vw;
+  font-size: 0.8vw;
   color: #828282;
   text-align: left;
   }
@@ -269,7 +269,35 @@ h7{
 }
 
 
+  #toc { 
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif; /* ou 'Coda', si tu veux */
+    line-height: 1.2;
+  }
 
+  #toc h4, #toc h5 {
+    margin: 6px 0;
+    font-weight: 600;
+  }
+
+  #toc h4 { font-size: 16px; }
+  #toc h5 { font-size: 14px; }
+
+  #toc ul {
+    margin: 4px 0 10px 18px;
+    padding: 0;
+  }
+
+  #toc li { 
+    margin: 2px 0;
+    font-size: 13px;
+  }
+
+  #toc a {
+    font-size: inherit;
+    text-decoration: none;
+  }
 
 
 .vidcenter {

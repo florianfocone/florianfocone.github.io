@@ -1,0 +1,1227 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Capitaine</title>
+
+    <meta name="Keywords" content="Florian Focone">
+    <meta name="Subject" content="florian focone">
+    <meta name="Author" content="florian focone">
+    <meta name="Robots" content="all">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+    <meta name="Geography" content="juigné-sur-loire, france, 49610">
+    <meta name="Category" content="engineering">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+ 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+  </head>
+
+  <body>
+    <br><br>
+
+    <!-- NAV / SOMMAIRE -->
+
+    <div id="toc">
+      <h4><a href="#si">SI</a></h4>
+      <h4><a href="#note">Note</a></h4>
+
+      <h5><a href="#mecanique">1. Mécanique physique</a></h5>
+      <ul>
+        <li><a href="#meca-a">a) Généralités</a></li>
+        <li><a href="#meca-b">b) Statique</a></li>
+        <li><a href="#meca-c">c) Mouvements du point et des solides</a></li>
+        <li><a href="#meca-d">d) Mécanique des fluides</a></li>
+        <li><a href="#meca-e">e) Résistance des matériaux</a></li>
+      </ul>
+
+      <h5><a href="#thermo">2. Thermodynamique</a></h5>
+
+      <h5><a href="#matiere">3. Structure de la matière</a></h5>
+      <ul>
+        <li><a href="#matiere-a">a) Généralités</a></li>
+        <li><a href="#matiere-b">b) Changements d’état, mélanges</a></li>
+        <li><a href="#matiere-c">c) Applications</a></li>
+      </ul>
+
+      <h5><a href="#electricite">4. Électricité</a></h5>
+      <ul>
+        <li><a href="#elec-a">a) Électrocinétique</a></li>
+        <li><a href="#elec-b">b) Courants dans les divers milieux</a></li>
+        <li><a href="#elec-c">c) Magnétisme</a></li>
+        <li><a href="#elec-d">d) Courants électriques</a></li>
+        <li><a href="#elec-e">e) Ondes et télécommunications</a></li>
+      </ul>
+
+      <h5><a href="#chimie">5. Chimie</a></h5>
+      <ul>
+        <li><a href="#chim-a">a) Chimie générale</a></li>
+        <li><a href="#chim-b">b) Chimie minérale</a></li>
+        <li><a href="#chim-c">c) Chimie organique</a></li>
+      </ul>
+
+      <h5><a href="#maths">6. Mathématiques</a></h5>
+      <ul>
+        <li><a href="#maths-a">Trigonométrie</a></li>
+        <li><a href="#maths-b">Séries / suites / développements limités</a></li>
+        <li><a href="#maths-c">Étude de fonctions</a></li>
+        <li><a href="#maths-d">Dérivation / intégration</a></li>
+        <li><a href="#maths-e">Nombres complexes</a></li>
+        <li><a href="#maths-f">Calcul vectoriel</a></li>
+        <li><a href="#maths-g">Équations différentielles</a></li>
+        <li><a href="#maths-h">Séries de Fourier</a></li>
+        <li><a href="#maths-i">Probabilités</a></li>
+        <li><a href="#maths-j">Moindres carrés / régression linéaire</a></li>
+      </ul>
+    </div>
+
+
+    <br><br>
+
+		
+<!-- 1. MECANIQUE -->
+<section id="mecanique">
+  <h3>1. Mécanique physique</h3>
+
+  <section id="meca-a">
+    <h4>a) Généralités</h4>
+    <p class="subheads">
+      <a href="#meca-a-intro">Introduction</a> ·
+      <a href="#meca-a-mesures">Mesures (unités, systèmes d’unités, calcul d’erreurs)</a>
+    </p>
+
+    <!-- (ancres vides si tu veux scroller précisément) -->
+    <div id="meca-a-intro"></div>
+    <div id="meca-a-mesures"></div>
+
+    <table class="fiche1c" id="meca-a-fiche">
+      <tbody>
+			<!-- Ligne 1 -->
+			<tr>
+			  <td>
+				<div class="row-title">1) Point matériel & cinématique (définitions)</div>
+
+				<div class="bloc">
+				  <div class="label">Théorie</div><br>
+				  On modélise un mobile par un <i>point matériel</i> lorsque ses dimensions sont négligeables.
+				  Le mouvement est décrit par la position \( \vec r(t) \), puis par ses dérivées :
+				  vitesse \( \vec v(t) \) et accélération \( \vec a(t) \).
+				</div>
+
+				<div class="bloc">
+				  <div class="label">Formules à connaître</div>
+				  \[
+					\vec v(t)=\frac{d\vec r}{dt}\quad (\mathrm{m\,s^{-1}}),
+					\qquad
+					\vec a(t)=\frac{d\vec v}{dt}=\frac{d^2\vec r}{dt^2}\quad (\mathrm{m\,s^{-2}})
+				  \]
+				  En 1D : \(x(t)\) (m), \(v(t)=\dot x\) (m·s\(^{-1}\)), \(a(t)=\ddot x\) (m·s\(^{-2}\)).
+				</div>
+
+				<div class="bloc calc">
+				  <div class="label">Exercice type (énoncé)</div><br>
+				  Un engin passe de \(v_0=10\,\mathrm{m\,s^{-1}}\) à \(v=22\,\mathrm{m\,s^{-1}}\) en \(t=6\,\mathrm{s}\),
+				  accélération supposée constante.
+				  <ul>
+					<li>Calculer \(a\)</li>
+					<li>Calculer la distance parcourue</li>
+					<li>Conclure avec les unités</li>
+				  </ul>
+				</div>
+			  </td>
+			</tr>
+
+			<!-- Ligne 2 -->
+			<tr>
+			  <td>
+				<div class="row-title">2) Mouvement uniformément accéléré (MUA)</div>
+
+				<div class="bloc">
+				  <div class="label">Théorie</div><br>
+				  Si l’accélération est constante, on relie directement vitesse, temps et distance.
+				  C’est un modèle fréquent en QROC car il se traite vite (sans calculs lourds).
+				</div>
+
+				<div class="bloc">
+				  <div class="label">Formules à connaître</div>
+				  \[
+					v(t)=v_0+at
+				  \]
+				  \[
+					x(t)=x_0+v_0t+\frac12at^2
+				  \]
+				  \[
+					v^2=v_0^2+2a(x-x_0)
+				  \]
+				  Lettres : \(v,v_0\) (m·s\(^{-1}\)), \(a\) (m·s\(^{-2}\)), \(t\) (s), \(x,x_0\) (m).
+				</div>
+
+				<div class="bloc calc">
+				  <div class="label">Exercice type (énoncé)</div><br>
+				  Un engin part du repos et atteint \(72\,\mathrm{km\,h^{-1}}\) en \(8\,\mathrm{s}\).
+				  <ul>
+					<li>Convertir \(72\,\mathrm{km\,h^{-1}}\) en \(\mathrm{m\,s^{-1}}\)</li>
+					<li>Calculer \(a\)</li>
+					<li>Calculer la distance parcourue</li>
+				  </ul>
+				</div>
+			  </td>
+			</tr>
+
+			<!-- Ligne 3 -->
+			<tr>
+			  <td>
+				<div class="row-title">3) Mouvement périodique : période, fréquence, pulsation</div>
+
+				<div class="bloc">
+				  <div class="label">Théorie</div><br>
+				  Un mouvement est périodique si le système revient au même état après une durée \(T\).
+				  La fréquence \(f\) est le nombre de cycles par seconde. La pulsation \(\omega\) sert à écrire les sinusoïdes.
+				</div>
+
+				<div class="bloc">
+				  <div class="label">Formules à connaître</div>
+				  \[
+					f=\frac{1}{T}\quad (\mathrm{Hz}),
+					\qquad
+					\omega=2\pi f\quad (\mathrm{rad\,s^{-1}})
+				  \]
+				  Lettres : \(T\) (s), \(f\) (s\(^{-1}\)), \(\omega\) (rad·s\(^{-1}\)).
+				</div>
+
+				<div class="bloc calc">
+				  <div class="label">Exercice type (énoncé)</div><br>
+				  Un dispositif vibre avec une période \(T=0{,}40\,\mathrm{s}\).
+				  <ul>
+					<li>Calculer \(f\)</li>
+					<li>Calculer \(\omega\)</li>
+					<li>Donner un ordre de grandeur</li>
+				  </ul>
+				</div>
+			  </td>
+			</tr>
+
+			<!-- Ligne 4 -->
+			<tr>
+			  <td>
+				<div class="row-title">4) Sinusoïde : amplitude, phase, maxima</div>
+
+				<div class="bloc">
+				  <div class="label">Théorie</div><br>
+				  Une sinusoïde est décrite par une amplitude \(A\), une pulsation \(\omega\) et une phase \(\varphi\).
+				  En dérivant, on obtient vitesse et accélération.
+				</div>
+
+				<div class="bloc">
+				  <div class="label">Formules à connaître</div>
+				  \[
+					x(t)=A\cos(\omega t+\varphi)
+				  \]
+				  \[
+					v(t)=\frac{dx}{dt}=-A\omega\sin(\omega t+\varphi),
+					\qquad
+					a(t)=\frac{d^2x}{dt^2}=-A\omega^2\cos(\omega t+\varphi)
+				  \]
+				  Max : \(v_{\max}=A\omega\), \(a_{\max}=A\omega^2\).
+				</div>
+
+				<div class="bloc calc">
+				  <div class="label">Exercice type (énoncé)</div><br>
+				  Un capteur donne \(x(t)=0{,}02\cos(40t)\) (SI).
+				  <ul>
+					<li>Identifier \(A\), \(\omega\)</li>
+					<li>Calculer \(T\), \(f\)</li>
+					<li>Calculer \(v_{\max}\), \(a_{\max}\)</li>
+				  </ul>
+				</div>
+			  </td>
+			</tr>
+
+			<!-- Ligne 5 -->
+			<tr>
+			  <td>
+				<div class="row-title">5) Unités SI & conversions rapides</div>
+
+				<div class="bloc">
+				  <div class="label">Théorie</div><br>
+				  Réflexe concours : convertir en SI et vérifier la cohérence des unités (très rentable en points).
+				</div>
+
+				<div class="bloc">
+				  <div class="label">Formules / conversions à connaître</div>
+				  \[
+					1\,\mathrm{km\,h^{-1}}=\frac{1000}{3600}\,\mathrm{m\,s^{-1}}\approx 0{,}278\,\mathrm{m\,s^{-1}},
+					\quad
+					v(\mathrm{m\,s^{-1}})=\frac{v(\mathrm{km\,h^{-1}})}{3{,}6}
+				  \]
+				  Rappels : \(1\,\mathrm{N}=1\,\mathrm{kg\,m\,s^{-2}}\), \(1\,\mathrm{Pa}=1\,\mathrm{N\,m^{-2}}\),
+				  \(1\,\mathrm{J}=1\,\mathrm{N\,m}\), \(1\,\mathrm{W}=1\,\mathrm{J\,s^{-1}}\).
+				</div>
+
+				<div class="bloc calc">
+				  <div class="label">Exercice type (énoncé)</div><br>
+				  Sans calculatrice, vérifier par analyse dimensionnelle quelle expression peut être une accélération :
+				  \(a_1=\dfrac{v}{t}\) ou \(a_2=\dfrac{v^2}{t}\) avec \(v\) en \(\mathrm{m\,s^{-1}}\) et \(t\) en s.
+				</div>
+			  </td>
+			</tr>
+
+			<!-- Ligne 6 -->
+			<tr>
+			  <td>
+				<div class="row-title">6) Mesures & calcul d’erreurs (incertitudes)</div>
+
+				<div class="bloc">
+				  <div class="label">Théorie</div><br>
+				  Une mesure s’écrit \(x\pm \Delta x\). L’erreur relative \(\varepsilon\) donne la précision.
+				  Pour une grandeur calculée, on estime l’incertitude (majorant) par propagation.
+				</div>
+
+				<div class="bloc">
+				  <div class="label">Formules à connaître</div>
+				  \[
+					\varepsilon=\frac{\Delta x}{x}
+				  \]
+				  (sans unité), en \(\%\) : \(100\varepsilon\).
+				  \[
+					y=\frac{d}{t}\ \Rightarrow\ \frac{\Delta y}{y}\approx \frac{\Delta d}{d}+\frac{\Delta t}{t}
+				  \]
+				  \[
+					y=x^n\ \Rightarrow\ \frac{\Delta y}{y}\approx |n|\frac{\Delta x}{x}
+				  \]
+				</div>
+
+				<div class="bloc calc">
+				  <div class="label">Exercice type (énoncé)</div><br>
+				  On mesure \(d=100\pm 0{,}5\,\mathrm{m}\) et \(t=12{,}0\pm 0{,}2\,\mathrm{s}\). On calcule \(v=d/t\).
+				  <ul>
+					<li>Calculer \(v\)</li>
+					<li>Estimer \(\Delta v\) (majorant)</li>
+					<li>Donner l’erreur relative en \(\%\)</li>
+				  </ul>
+				</div>
+			  </td>
+			</tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+<section id="meca-b">
+  <h4>b) Statique</h4>
+  <p class="subheads">
+    <a href="#meca-b-forces">Forces (action / réaction, pression)</a> ·
+    <a href="#meca-b-comp">Composition des forces (couples, équilibre, réduction, moment)</a>
+  </p>
+
+  <div id="meca-b-forces"></div>
+  <table class="fiche1c" id="meca-b-fiche">
+    <tbody>
+      <tr><td>
+        <div class="row-title">Forces & pression</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \vec{F} = m\vec{a}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <tr><td>
+        <div class="row-title">Équilibre & moments</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sum \vec{F} = \vec{0}
+            \qquad\text{et}\qquad
+            \sum \vec{M}_O = \vec{0}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+    </tbody>
+  </table>
+
+  <div id="meca-b-comp"></div>
+</section>
+
+
+<section id="meca-c">
+  <h4>c) Mouvements du point et des solides</h4>
+  <p class="subheads">
+    <a href="#meca-c-dyn">PFD (dynamique)</a> ·
+    <a href="#meca-c-ener">Travail / puissance / énergies</a> ·
+    <a href="#meca-c-rot">Rotations</a> ·
+    <a href="#meca-c-frot">Frottements / chocs</a> ·
+    <a href="#meca-c-per">Mouvements périodiques</a>
+  </p>
+
+  <div id="meca-c-dyn"></div>
+  <table class="fiche1c" id="meca-c-fiche">
+    <tbody>
+      <tr><td>
+        <div class="row-title">Principe fondamental de la dynamique</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sum \vec{F}_{ext} = m\vec{a}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-c-ener"></div>
+      <tr><td>
+        <div class="row-title">Travail, puissance, énergies</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            E_c=\frac12 mv^2
+            \qquad ; \qquad
+            P = \frac{dW}{dt}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-c-rot"></div>
+      <tr><td>
+        <div class="row-title">Rotations (solides)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            E_{c,rot}=\frac12 I\omega^2
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-c-frot"></div>
+      <tr><td>
+        <div class="row-title">Frottements & chocs</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            F_f = \mu N
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-c-per"></div>
+      <tr><td>
+        <div class="row-title">Mouvements périodiques</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            f=\frac{1}{T}
+            \qquad ; \qquad
+            \omega = 2\pi f
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section id="meca-d">
+  <h4>d) Mécanique des fluides</h4>
+  <p class="subheads">
+    <a href="#meca-d-hydro">Hydrostatique</a> ·
+    <a href="#meca-d-surf">Tension superficielle / capillarité</a> ·
+    <a href="#meca-d-gaz">Gaz / compressibilité</a> ·
+    <a href="#meca-d-bern">Bernoulli / Venturi</a> ·
+    <a href="#meca-d-visq">Viscosité / pertes de charge</a> ·
+    <a href="#meca-d-pompes">Pompes</a>
+  </p>
+
+  <table class="fiche1c" id="meca-d-fiche">
+    <tbody>
+      <div id="meca-d-hydro"></div>
+      <tr><td>
+        <div class="row-title">Hydrostatique</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            p = p_0 + \rho g h
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-d-surf"></div>
+      <tr><td>
+        <div class="row-title">Tension superficielle / capillarité</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \Delta p = \frac{2\gamma}{R}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-d-gaz"></div>
+      <tr><td>
+        <div class="row-title">Gaz parfait / compressibilité (rappel)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            pV = nRT
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-d-bern"></div>
+      <tr><td>
+        <div class="row-title">Fluide parfait : Bernoulli / Venturi</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            p + \frac12\rho v^2 + \rho g z = \text{cste}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-d-visq"></div>
+      <tr><td>
+        <div class="row-title">Fluide visqueux : pertes de charge</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \Delta p = \lambda \frac{L}{D}\,\frac{\rho v^2}{2}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-d-pompes"></div>
+      <tr><td>
+        <div class="row-title">Pompes (principe)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            P = \Delta p \, Q
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section id="meca-e">
+  <h4>e) Résistance des matériaux</h4>
+  <p class="subheads">
+    <a href="#meca-e-appuis">Appuis</a> ·
+    <a href="#meca-e-reduc">Réduction (N, T, M)</a> ·
+    <a href="#meca-e-hooke">Elasticité / Hooke</a> ·
+    <a href="#meca-e-sol">Sollicitations</a> ·
+    <a href="#meca-e-sec">Coefficient de sécurité</a>
+  </p>
+
+  <table class="fiche1c" id="meca-e-fiche">
+    <tbody>
+      <div id="meca-e-appuis"></div>
+      <tr><td>
+        <div class="row-title">Appuis (rappel)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sum \vec{F} = \vec{0}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-e-reduc"></div>
+      <tr><td>
+        <div class="row-title">Efforts internes (N, T, M)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sigma = \frac{N}{S}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-e-hooke"></div>
+      <tr><td>
+        <div class="row-title">Loi de Hooke (élasticité)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sigma = E\,\varepsilon
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-e-sol"></div>
+      <tr><td>
+        <div class="row-title">Flexion (rappel)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sigma_{\max} = \frac{M_f\,y}{I}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+
+      <div id="meca-e-sec"></div>
+      <tr><td>
+        <div class="row-title">Coefficient de sécurité</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>
+          \[
+            \sigma_{\text{adm}} = \frac{\sigma_e}{s}
+          \]
+        </div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ===================== 2. THERMO ===================== -->
+<section id="thermo">
+  <h3>2. Thermodynamique</h3>
+  <p class="subheads">
+    <a href="#thermo-transfo">Transformations</a> ·
+    <a href="#thermo-dil">Dilatations</a> ·
+    <a href="#thermo-thermo">Thermométrie</a> ·
+    <a href="#thermo-cal">Calorimétrie</a> ·
+    <a href="#thermo-1">1er principe</a> ·
+    <a href="#thermo-2">2e principe</a> ·
+    <a href="#thermo-div">Systèmes divariants</a>
+  </p>
+
+  <table class="fiche1c" id="thermo-fiche">
+    <tbody>
+      <tr id="thermo-transfo"><td>
+        <div class="row-title">Transformations (rappel)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\Delta U = Q - W\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+
+      <tr id="thermo-dil"><td>
+        <div class="row-title">Dilatation (linéaire)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\Delta L = \alpha L_0 \Delta T\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+
+      <tr id="thermo-thermo"><td>
+        <div class="row-title">Thermométrie</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[T(\mathrm{K}) = \theta(^{\circ}\mathrm{C}) + 273{,}15\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+
+      <tr id="thermo-cal"><td>
+        <div class="row-title">Calorimétrie</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[Q = mc\Delta T\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+
+      <tr id="thermo-1"><td>
+        <div class="row-title">Premier principe</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\Delta U = Q - W\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+
+      <tr id="thermo-2"><td>
+        <div class="row-title">Deuxième principe (rappel)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\Delta S \ge \int \frac{\delta Q}{T}\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+
+      <tr id="thermo-div"><td>
+        <div class="row-title">Gaz parfait (équation d’état)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[pV=nRT\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ===================== 3. STRUCTURE MATIERE ===================== -->
+<section id="matiere">
+  <h3>3. Structure de la matière</h3>
+
+  <section id="matiere-a">
+    <h4>a) Généralités</h4>
+    <p class="subheads">
+      <a href="#matiere-a-atom">Atome</a> ·
+      <a href="#matiere-a-radio">Radioactivité</a> ·
+      <a href="#matiere-a-cine">Théorie cinétique</a> ·
+      <a href="#matiere-a-sol">État solide</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="matiere-a-atom"><td>
+          <div class="row-title">Structure atomique</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet, consectetur.</div>
+          <div class="bloc"><div class="label">Formule</div>\[Z + N = A\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-a-radio"><td>
+          <div class="row-title">Radioactivité (décroissance)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[N(t)=N_0 e^{-\lambda t}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-a-cine"><td>
+          <div class="row-title">Théorie cinétique (rappel)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[pV=nRT\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-a-sol"><td>
+          <div class="row-title">État solide</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\rho=\frac{m}{V}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="matiere-b">
+    <h4>b) Changements d’état, mélanges</h4>
+    <p class="subheads">
+      <a href="#matiere-b-phase">Phases</a> ·
+      <a href="#matiere-b-pur">Corps purs</a> ·
+      <a href="#matiere-b-gaz">Mélanges gazeux</a> ·
+      <a href="#matiere-b-sol">Solutions</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="matiere-b-phase"><td>
+          <div class="row-title">Règle des phases (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[F = C - P + 2\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-b-pur"><td>
+          <div class="row-title">Changement d’état (enthalpie)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[Q = mL\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-b-gaz"><td>
+          <div class="row-title">Mélanges gazeux (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[p = \sum_i p_i\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-b-sol"><td>
+          <div class="row-title">Solutions (concentration)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[C = \frac{n}{V}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="matiere-c">
+    <h4>c) Applications</h4>
+    <p class="subheads">
+      <a href="#matiere-c-ray">Rayonnement</a> ·
+      <a href="#matiere-c-comb">Combustion</a> ·
+      <a href="#matiere-c-mot">Moteurs</a> ·
+      <a href="#matiere-c-frigo">Frigo / PAC</a> ·
+      <a href="#matiere-c-meteo">Météo</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="matiere-c-ray"><td>
+          <div class="row-title">Rayonnement (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\lambda_{\max} T = \text{cste}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-c-comb"><td>
+          <div class="row-title">Combustion (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[Q = m\,\text{PCI}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-c-mot"><td>
+          <div class="row-title">Moteurs (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\eta=\frac{W_{utile}}{Q_{reçue}}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-c-frigo"><td>
+          <div class="row-title">Frigo / PAC (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\text{COP}=\frac{Q_{froid}}{W}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="matiere-c-meteo"><td>
+          <div class="row-title">Météorologie (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[p = \rho RT\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+
+<!-- ===================== 4. ELECTRICITE ===================== -->
+<section id="electricite">
+  <h3>4. Électricité</h3>
+
+  <section id="elec-a">
+    <h4>a) Électrocinétique</h4>
+    <p class="subheads">
+      <a href="#elec-a-ohm">Ohm</a> ·
+      <a href="#elec-a-joule">Joule</a> ·
+      <a href="#elec-a-kir">Kirchhoff</a> ·
+      <a href="#elec-a-thev">Thévenin</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="elec-a-ohm"><td>
+          <div class="row-title">Loi d’Ohm</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[U = RI\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-a-joule"><td>
+          <div class="row-title">Effet Joule</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[P = UI = RI^2\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-a-kir"><td>
+          <div class="row-title">Kirchhoff (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\sum U = 0\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-a-thev"><td>
+          <div class="row-title">Thévenin (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[U = E - rI\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="elec-b">
+    <h4>b) Courants dans les divers milieux</h4>
+    <p class="subheads">
+      <a href="#elec-b-elec">Électrolyse</a> ·
+      <a href="#elec-b-semi">Semi-conducteurs</a> ·
+      <a href="#elec-b-diode">Diode</a> ·
+      <a href="#elec-b-piles">Piles</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="elec-b-elec"><td>
+          <div class="row-title">Électrolyse (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[Q = It\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-b-semi"><td>
+          <div class="row-title">Isolant / conducteur / semi-conducteur</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\sigma = \frac{1}{\rho}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-b-diode"><td>
+          <div class="row-title">Diode (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[I \approx I_0\left(e^{U/U_T}-1\right)\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-b-piles"><td>
+          <div class="row-title">Piles / accumulateurs (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[E = E^\circ - \frac{RT}{nF}\ln Q\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="elec-c">
+    <h4>c) Magnétisme</h4>
+    <p class="subheads">
+      <a href="#elec-c-amp">Ampère</a> ·
+      <a href="#elec-c-ind">Induction</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="elec-c-amp"><td>
+          <div class="row-title">Champ magnétique (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[B=\mu_0 \frac{I}{2\pi r}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-c-ind"><td>
+          <div class="row-title">Induction (Faraday)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\mathcal{E}=-\frac{d\Phi}{dt}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="elec-d">
+    <h4>d) Courants électriques</h4>
+    <p class="subheads">
+      <a href="#elec-d-rlc">RLC</a> ·
+      <a href="#elec-d-transfo">Transfo</a> ·
+      <a href="#elec-d-tri">Triphasé</a> ·
+      <a href="#elec-d-mach">Machines</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="elec-d-rlc"><td>
+          <div class="row-title">RLC (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[Z_R=R,\; Z_L=j\omega L,\; Z_C=\frac{1}{j\omega C}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-d-transfo"><td>
+          <div class="row-title">Transformateur parfait</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\frac{U_1}{U_2}=\frac{N_1}{N_2}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-d-tri"><td>
+          <div class="row-title">Triphasé (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[P=\sqrt{3}UI\cos\varphi\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-d-mach"><td>
+          <div class="row-title">Machines (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[P = C\omega\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="elec-e">
+    <h4>e) Ondes et télécommunications</h4>
+    <p class="subheads">
+      <a href="#elec-e-prop">Propagation</a> ·
+      <a href="#elec-e-mod">Modulation</a> ·
+      <a href="#elec-e-tel">Téléphonie</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="elec-e-prop"><td>
+          <div class="row-title">Propagation (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[c=\lambda f\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-e-mod"><td>
+          <div class="row-title">Modulation (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[s(t)=A\cos(\omega t)\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="elec-e-tel"><td>
+          <div class="row-title">Téléphone (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[R = \rho \frac{L}{S}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+
+<!-- ===================== 5. CHIMIE ===================== -->
+<section id="chimie">
+  <h3>5. Chimie</h3>
+
+  <section id="chim-a">
+    <h4>a) Chimie générale</h4>
+    <p class="subheads">
+      <a href="#chim-a-ph">pH</a> ·
+      <a href="#chim-a-redox">Oxydoréduction</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="chim-a-ph"><td>
+          <div class="row-title">pH (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[pH=-\log_{10}[H^+]\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="chim-a-redox"><td>
+          <div class="row-title">Oxydoréduction (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[\Delta G = -nF\Delta E\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="chim-b">
+    <h4>b) Chimie minérale</h4>
+    <p class="subheads">
+      <a href="#chim-b-gaz">Gaz</a> ·
+      <a href="#chim-b-acides">Acides/bases</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="chim-b-gaz"><td>
+          <div class="row-title">Gaz (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[pV=nRT\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="chim-b-acides"><td>
+          <div class="row-title">Acides/bases (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[K_a=\frac{[A^-][H^+]}{[HA]}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="chim-c">
+    <h4>c) Chimie organique</h4>
+    <p class="subheads">
+      <a href="#chim-c-hc">Hydrocarbures</a> ·
+      <a href="#chim-c-poly">Polymérisation</a>
+    </p>
+
+    <table class="fiche1c">
+      <tbody>
+        <tr id="chim-c-hc"><td>
+          <div class="row-title">Hydrocarbures (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[C_nH_{2n+2}\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+
+        <tr id="chim-c-poly"><td>
+          <div class="row-title">Polymérisation (placeholder)</div>
+          <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+          <div class="bloc"><div class="label">Formule</div>\[n\,CH_2=CH_2 \rightarrow (CH_2-CH_2)_n\]</div>
+          <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+        </td></tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+
+<!-- ===================== 6. MATHS ===================== -->
+<section id="maths">
+  <h3>6. Mathématiques</h3>
+
+  <section id="maths-a">
+    <h4>Trigonométrie</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Identités (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\sin^2x+\cos^2x=1\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-b">
+    <h4>Séries / suites / développements limités</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">DL (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[e^x = 1+x+\frac{x^2}{2}+\cdots\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-c">
+    <h4>Étude de fonctions</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Dérivée (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-d">
+    <h4>Dérivation / intégration</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Primitive (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\int x^n\,dx=\frac{x^{n+1}}{n+1}+C\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-e">
+    <h4>Nombres complexes</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Forme algébrique (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[z=a+ib\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-f">
+    <h4>Calcul vectoriel</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Produit scalaire (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\vec u\cdot \vec v = \|\vec u\|\,\|\vec v\|\cos\theta\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-g">
+    <h4>Équations différentielles</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">EDO (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[y'+ay=b\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-h">
+    <h4>Séries de Fourier</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Développement (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[f(t)\sim \sum_{n=-\infty}^{+\infty} c_n e^{in\omega_0 t}\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-i">
+    <h4>Probabilités</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Variance (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[\mathrm{Var}(X)=\mathbb{E}(X^2)-\mathbb{E}(X)^2\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+
+  <section id="maths-j">
+    <h4>Moindres carrés / régression linéaire</h4>
+    <table class="fiche1c"><tbody>
+      <tr><td>
+        <div class="row-title">Droite de régression (placeholder)</div>
+        <div class="bloc"><div class="label">Théorie</div><br>Lorem ipsum dolor sit amet.</div>
+        <div class="bloc"><div class="label">Formule</div>\[y=ax+b\]</div>
+        <div class="bloc calc"><div class="label">Exercice type</div><br>Lorem ipsum dolor sit amet.</div>
+      </td></tr>
+    </tbody></table>
+  </section>
+</section>
+
+      <br><br>
+      <p><a href="#toc">⬆️</a></p>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>
