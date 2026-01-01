@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Méca -  Mouvements du point et des solides</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title"> Mouvements du point et des solides</h2>
+
+<section id="meca-c">
+
+
+  <p class="subheads">
+    <a href="#meca-c-pfd">Principe fondamental de la dynamique</a> ·
+    <a href="#meca-c-energie">Travail / puissance / énergies</a> ·
+    <a href="#meca-c-rot">Rotations</a> ·
+    <a href="#meca-c-frott">Frottements &amp; chocs</a> ·
+    <a href="#meca-c-perio">Mouvements périodiques</a>
+  </p>
+
+  <div id="meca-c-pfd"></div>
+  <div id="meca-c-energie"></div>
+  <div id="meca-c-rot"></div>
+  <div id="meca-c-frott"></div>
+  <div id="meca-c-perio"></div>
+
+<div class="bloc defs" id="meca-b-defs">
+  <div class="label">Définitions</div>
+<ul>
+  <li><b>Inertie</b> : tendance d’un corps à garder son état de mouvement (repos ou vitesse constante) et à résister à toute variation.</li>
+  <li><b>Centre de gravité</b> : point <span>\(G\)</span> où l’on peut considérer que le poids total de l’objet s’applique.</li>
+  <li><b>Quantité de mouvement</b> : grandeur <span>\(\vec p=m\vec v\)</span> qui mesure l’« élan » d’un corps et sert aux chocs/conservation.</li>
+
+  <li><b>Travail</b> : énergie transférée par une force lors d’un déplacement (positif si la force aide le mouvement, négatif si elle s’y oppose).</li>
+  <li><b>Puissance</b> : travail par unité de temps, <span>\(P=W/\Delta t\)</span>.</li>
+  <li><b>Énergie cinétique</b> : énergie liée à la vitesse, <span>\(E_c=\tfrac12 mv^2\)</span>.</li>
+  <li><b>Énergie potentielle</b> : énergie liée à la position dans un champ (ex : pesanteur <span>\(E_p=mgh\)</span> selon la référence choisie).</li>
+
+  <li><b>Force centrifuge</b> : force fictive en référentiel en rotation, dirigée vers l’extérieur (ordre de grandeur <span>\(\propto m\omega^2R\)</span>).</li>
+  <li><b>Force de Coriolis</b> : force fictive en référentiel en rotation qui dévie un mouvement, <span>\(\vec F_{cor}=2m\,\vec\Omega\times \vec v\)</span>.</li>
+  <li><b>Théorème de Huygens</b> : relation d’axes parallèles, <span>\(I_O=I_G+md^2\)</span>.</li>
+  <li><b>Conservation du moment cinétique</b> : si le couple extérieur résultant est nul, le moment cinétique <span>\(L\)</span> reste constant (en rotation <span>\(L=I\omega\)</span>).</li>
+
+  <li><b>Frottements</b> : forces de contact opposées au mouvement (ou au glissement) qui dissipent de l’énergie (souvent <span>\(F_f=\mu N\)</span>).</li>
+  <li><b>Choc élastique</b> : collision où la quantité de mouvement et l’énergie cinétique totale sont conservées (idéal, sans pertes).</li>
+</ul>
+</div>
+
+  <table class="fiche1c" id="meca-c-fiche">
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td>
+          <div class="row-title">1) PFD + quantité de mouvement</div>
+		  
+
+          <div class="bloc">
+            <div class="label">Théorie</div><br/>
+            \(\sum \vec F\) = somme des forces extérieures (N). \(m\) = masse (kg). \(\vec a\) = accélération (m·s\(^{-2}\)).
+            Quantité de mouvement \(\vec p\) : \(\vec p=m\vec v\) (kg·m·s\(^{-1}\)).
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            \[
+              \sum \vec F = m\vec a
+            \]
+            \[
+              \vec p = m\vec v \qquad;\qquad \Delta \vec p \approx \vec F_{\text{moy}}\Delta t
+            \]
+            (si \(\sum \vec F_{\text{ext}}=\vec 0\) alors \(\vec p\) est constante)
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Un chariot de masse \(m=80\,\mathrm{kg}\) est tiré par \(F=240\,\mathrm{N}\) (frottements négligés).
+            Calculer \(a\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \[
+              a=\frac{F}{m}=\frac{240}{80}=3\,\mathrm{m\,s^{-2}}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td>
+          <div class="row-title">2) Travail, énergie, puissance</div>
+
+          <div class="bloc">
+            <div class="label">Théorie</div><br/>
+            \(W\) = travail (J). \(E_c\) = énergie cinétique (J). \(E_p\) = énergie potentielle de pesanteur (J).
+            \(P\) = puissance (W). \(\theta\) = angle entre force et déplacement.
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            Travail d’une force constante :
+            \[
+              W = F\,d\cos\theta
+            \]
+            Théorème énergie cinétique :
+            \[
+              \Delta E_c = \sum W \qquad;\qquad E_c=\frac12 mv^2
+            \]
+            Pesanteur (variation) :
+            \[
+              \Delta E_p = mg\,\Delta h \qquad (E_p=mgh)
+            \]
+            Sans frottements :
+            \[
+              E_c+E_p=\text{cste}
+            \]
+            Puissance :
+            \[
+              P=\frac{W}{\Delta t}\qquad;\qquad P=Fv \ \text{si force // vitesse}
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Traîneau \(m=60\,\mathrm{kg}\), force \(F=200\,\mathrm{N}\) sur \(d=15\,\mathrm{m}\) (force parallèle),
+            départ au repos, frottements négligés. Trouver \(v\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \[
+              W=Fd=200\times 15=3000\,\mathrm{J}
+            \]
+            \[
+              \Delta E_c=W \Rightarrow \frac12 mv^2=3000
+              \Rightarrow v^2=\frac{6000}{60}=100 \Rightarrow v=10\,\mathrm{m\,s^{-1}}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td>
+          <div class="row-title">3) Rotations : circulaire, moment cinétique, Huygens</div>
+
+          <div class="bloc">
+            <div class="label">Théorie</div><br/>
+            \(R\) = rayon (m). \(v\) = vitesse (m·s\(^{-1}\)). \(\omega\) = pulsation (rad·s\(^{-1}\)).
+            \(a_c\) = accélération centripète (m·s\(^{-2}\)).
+            \(I\) = moment d’inertie (kg·m\(^2\)).
+            \(L\) = moment cinétique (kg·m\(^2\)·s\(^{-1}\)).
+            \(d\) = distance entre axes parallèles (m).
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            Circulaire :
+            \[
+              v=\omega R \qquad;\qquad a_c=\frac{v^2}{R}=\omega^2R
+            \]
+            Moment cinétique (axe fixe) :
+            \[
+              L=I\omega \qquad;\qquad \text{si couple extérieur nul }(\sum M_{\text{ext}}=0)\Rightarrow L=\text{cste}
+            \]
+            Huygens :
+            \[
+              I_O=I_G+md^2
+            \]
+            Énergie de rotation :
+            \[
+              E_{c,\text{rot}}=\frac12 I\omega^2
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Véhicule en virage : \(R=50\,\mathrm{m}\), \(v=54\,\mathrm{km\,h^{-1}}\). Calculer \(a_c\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \(54/3{,}6=15\,\mathrm{m\,s^{-1}}\).
+            \[
+              a_c=\frac{v^2}{R}=\frac{15^2}{50}=\frac{225}{50}=4{,}5\,\mathrm{m\,s^{-2}}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td>
+          <div class="row-title">4) Frottements + choc “collage”</div>
+
+          <div class="bloc">
+            <div class="label">Théorie</div><br/>
+            \(N\) = réaction normale (N). \(\mu\) = coefficient de frottement (sans unité).
+            En choc “collage” : les deux objets repartent ensemble à la vitesse \(v'\).
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            Frottement (glissement) :
+            \[
+              F_f=\mu N
+            \]
+            Choc avec accrochage (1D) :
+            \[
+              v'=\frac{m_1v_1+m_2v_2}{m_1+m_2}
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            \(m_1=2\,\mathrm{kg}\), \(v_1=3\,\mathrm{m\,s^{-1}}\), \(m_2=4\,\mathrm{kg}\), \(v_2=0\).
+            Les chariots s’accrochent. Calculer \(v'\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \[
+              v'=\frac{2\times 3+4\times 0}{2+4}=\frac{6}{6}=1\,\mathrm{m\,s^{-1}}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td>
+          <div class="row-title">5) Périodique : période, fréquence, sinusoïde</div>
+
+          <div class="bloc">
+            <div class="label">Théorie</div><br/>
+            \(T\) = période (s). \(f\) = fréquence (Hz). \(\omega\) = pulsation (rad·s\(^{-1}\)).
+            \(A\) = amplitude (m). \(\varphi\) = phase (rad).
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            \[
+              f=\frac{1}{T}\qquad;\qquad \omega=2\pi f=\frac{2\pi}{T}
+            \]
+            Sinusoïde :
+            \[
+              x(t)=A\cos(\omega t+\varphi)
+            \]
+            Valeurs utiles :
+            \[
+              v_{\max}=A\omega \qquad;\qquad a_{\max}=A\omega^2
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            \(x(t)=0{,}015\cos(50t)\) (SI). Trouver \(T\), \(f\), \(v_{\max}\), \(a_{\max}\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \(A=0{,}015\,\mathrm{m}\), \(\omega=50\,\mathrm{rad\,s^{-1}}\).
+            \[
+              T=\frac{2\pi}{50}=\frac{\pi}{25}\approx 0{,}126\,\mathrm{s}
+            \]
+            \[
+              f=\frac{1}{T}=\frac{50}{2\pi}\approx 8\,\mathrm{Hz}
+            \]
+            \[
+              v_{\max}=A\omega=0{,}015\times 50=0{,}75\,\mathrm{m\,s^{-1}}
+            \]
+            \[
+              a_{\max}=A\omega^2=0{,}015\times 2500=37{,}5\,\mathrm{m\,s^{-2}}
+            \]
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+
+  </div>
+</body>
+</html>

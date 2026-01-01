@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Méca -  Résistance des matériaux</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title">Résistance des matériaux</h2>
+<section id="rdm-e">
+
+  <p class="subheads">
+    <a href="#rdm-e-appuis">Appuis</a> ·
+    <a href="#rdm-e-reduc">Éléments de réduction : \(N\), \(T\), \(M_f\)</a> ·
+    <a href="#rdm-e-elast">Élasticité / plasticité : essais, Hooke</a> ·
+    <a href="#rdm-e-sollic">Sollicitations simples</a> ·
+    <a href="#rdm-e-secu">Coefficient de sécurité</a>
+  </p>
+
+  <!-- ===================== DÉFINITIONS (fiche RDM) ===================== -->
+  <div class="bloc defs" id="rdm-e-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Appui simple</b> : liaison qui bloque une translation ; en 2D on modélise par une seule réaction normale.</li>
+      <li><b>Rotule</b> : liaison qui bloque les translations ; en 2D elle impose deux réactions \(R_x\) et \(R_y\) et laisse la rotation libre.</li>
+      <li><b>Encastrement</b> : liaison qui bloque translations + rotation ; en 2D elle impose \(R_x\), \(R_y\) et un moment d’encastrement \(M\).</li>
+
+      <li><b>Effort normal</b> \(N\) : action interne dans l’axe de la barre/poutre (traction ou compression).</li>
+      <li><b>Effort tranchant</b> \(T\) : action interne perpendiculaire à l’axe (cisaillement).</li>
+      <li><b>Moment fléchissant</b> \(M_f\) : action interne responsable de la flexion (courbure de la poutre).</li>
+
+      <li><b>Contrainte normale</b> \(\sigma\) : intensité des efforts internes de traction/compression par surface.</li>
+      <li><b>Contrainte de cisaillement</b> \(\tau\) : intensité des efforts internes de cisaillement par surface.</li>
+      <li><b>Déformation relative</b> \(\varepsilon\) : allongement relatif \(\varepsilon=\Delta L/L\) (sans unité).</li>
+
+      <li><b>Élasticité</b> : déformation réversible (retour à l’état initial après décharge).</li>
+      <li><b>Plasticité</b> : déformation permanente (reste après décharge).</li>
+      <li><b>Module de Young</b> \(E\) : “raideur” d’un matériau en traction/compression (plus \(E\) est grand, plus c’est rigide).</li>
+
+      <li><b>Traction</b> : sollicitation où \(N\) tend à allonger la pièce.</li>
+      <li><b>Compression</b> : sollicitation où \(N\) tend à raccourcir la pièce.</li>
+      <li><b>Cisaillement</b> : sollicitation dominée par \(T\).</li>
+      <li><b>Flexion simple</b> : sollicitation dominée par \(M_f\) (contraintes différentes selon la position dans la section).</li>
+      <li><b>Flambage</b> : instabilité d’une pièce élancée comprimée (déviation latérale avant d’atteindre une contrainte “élevée”).</li>
+      <li><b>Flexion circulaire</b> : flexion avec courbure imposée (pièce cintrée).</li>
+
+      <li><b>Limite élastique</b> \(\sigma_e\) : contrainte à partir de laquelle apparaît la plasticité.</li>
+      <li><b>Contrainte admissible</b> \(\sigma_{adm}\) : contrainte maximale autorisée en service.</li>
+      <li><b>Coefficient de sécurité</b> \(s\) : marge entre la limite et l’usage, typiquement \(s&gt;1\).</li>
+    </ul>
+  </div>
+
+  <!-- ancres vides -->
+  <div id="rdm-e-appuis"></div>
+  <div id="rdm-e-reduc"></div>
+  <div id="rdm-e-elast"></div>
+  <div id="rdm-e-sollic"></div>
+  <div id="rdm-e-secu"></div>
+
+  <table class="fiche1c" id="rdm-e-fiche">
+    <tbody>
+
+      <!-- 1) APPUIS -->
+      <tr><td>
+        <div class="row-title">1) Appuis : simple, rotule, encastrement</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Un appui impose des contraintes de mouvement et crée des inconnues appelées <b>réactions</b>.
+          En 2D (poutre dans un plan), on retient :
+          <ul>
+            <li><b>Appui simple</b> : une seule réaction, notée souvent \(R\) ou \(R_y\) si l’appui est horizontal.</li>
+            <li><b>Rotule</b> : deux réactions \(R_x\) et \(R_y\) (pas de moment transmis).</li>
+            <li><b>Encastrement</b> : deux réactions \(R_x\), \(R_y\) et un moment \(M\).</li>
+          </ul>
+          Méthode : isoler la poutre, placer les réactions sur le schéma, puis écrire l’équilibre.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Équations</div>
+          Équilibre plan :
+          \[
+            \sum F_x=0,\qquad \sum F_y=0,\qquad \sum M_O=0
+          \]
+          <ul>
+            <li>\(\sum F_x\) : somme des forces projetées sur l’axe \(x\) (N).</li>
+            <li>\(\sum F_y\) : somme des forces projetées sur l’axe \(y\) (N).</li>
+            <li>\(\sum M_O\) : somme des moments des forces par rapport au point \(O\) (N·m).</li>
+          </ul>
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice</div><br/>
+          Une poutre est posée sur une <b>rotule</b> en A et un <b>appui simple</b> en B (appui horizontal).
+          Donner les inconnues de réaction.<br/><br/>
+          <b>Correction :</b><br/>
+          Rotule en A : \(R_{Ax}\) et \(R_{Ay}\). Appui simple en B : \(R_{By}\).
+          Total : 3 inconnues.
+        </div>
+      </td></tr>
+
+      <!-- 2) N / T / Mf -->
+      <tr><td>
+        <div class="row-title">2) Éléments de réduction : \(N\), \(T\), \(M_f\)</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Quand on coupe une poutre en une section, les actions internes se résument à trois grandeurs :
+          <ul>
+            <li>\(N\) : effort normal (dans l’axe de la poutre), en N.</li>
+            <li>\(T\) : effort tranchant (perpendiculaire à l’axe), en N.</li>
+            <li>\(M_f\) : moment fléchissant (effet de flexion), en N·m.</li>
+          </ul>
+          Pour les déterminer : on isole une partie de la poutre et on écrit l’équilibre.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Équations</div>
+          Principe : sur la partie isolée,
+          \[
+            \sum F_x=0,\qquad \sum F_y=0,\qquad \sum M_O=0
+          \]
+          Cas simple d’une barre tirée dans son axe :
+          \[
+            N=F
+          \]
+          <ul>
+            <li>\(F\) : force appliquée (N).</li>
+            <li>\(N\) : effort normal interne (N).</li>
+          </ul>
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice</div><br/>
+          Une barre est tirée par \(F=12\,kN\). Sa section vaut \(S=300\,mm^2\).
+          Calculer la contrainte normale \(\sigma\).<br/><br/>
+          <b>Correction :</b><br/>
+          Conversion : \(F=12\,000\,N\). \(S=300\,mm^2=300\times 10^{-6}=3{,}0\times 10^{-4}\,m^2\).
+          \[
+            \sigma=\frac{F}{S}=\frac{12\,000}{3{,}0\times 10^{-4}}=4{,}0\times 10^7\,Pa=40\,MPa
+          \]
+        </div>
+      </td></tr>
+
+      <!-- 3) HOOKE -->
+      <tr><td>
+        <div class="row-title">3) Élasticité / plasticité : essai de traction et loi de Hooke</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          L’essai de traction relie la contrainte \(\sigma\) à la déformation \(\varepsilon\).
+          <ul>
+            <li>En domaine <b>élastique</b> : la relation est linéaire, la déformation est réversible.</li>
+            <li>Au-delà de \(\sigma_e\) : domaine <b>plastique</b>, la déformation devient permanente.</li>
+          </ul>
+        </div>
+
+        <div class="bloc">
+          <div class="label">Équations</div>
+          \[
+            \sigma=\frac{F}{S}
+          \]
+          \[
+            \varepsilon=\frac{\Delta L}{L}
+          \]
+          \[
+            \sigma=E\varepsilon
+          \]
+          <ul>
+            <li>\(\sigma\) : contrainte normale (Pa ou MPa).</li>
+            <li>\(F\) : force (N).</li>
+            <li>\(S\) : aire de la section (m\(^2\)).</li>
+            <li>\(\varepsilon\) : déformation relative (sans unité).</li>
+            <li>\(L\) : longueur initiale (m).</li>
+            <li>\(\Delta L\) : allongement (m).</li>
+            <li>\(E\) : module de Young (Pa).</li>
+          </ul>
+          Forme directe utile :
+          \[
+            \Delta L=\frac{F\,L}{E\,S}
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice</div><br/>
+          \(L=2{,}0\,m\), \(\Delta L=1{,}0\,mm\), \(\sigma=50\,MPa\). Déterminer \(E\).<br/><br/>
+          <b>Correction :</b><br/>
+          \(\Delta L=10^{-3}\,m\).
+          \[
+            \varepsilon=\frac{\Delta L}{L}=\frac{10^{-3}}{2}=5\times 10^{-4}
+          \]
+          \[
+            E=\frac{\sigma}{\varepsilon}=\frac{50\times 10^6}{5\times 10^{-4}}=10^{11}\,Pa=100\,GPa
+          \]
+        </div>
+      </td></tr>
+
+      <!-- 4) SOLLICITATIONS -->
+      <tr><td>
+        <div class="row-title">4) Sollicitations simples : traction, compression, cisaillement, flexion, flambage</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Dans les exercices de base, on demande souvent :
+          <ul>
+            <li>d’identifier la sollicitation dominante (traction/compression, cisaillement, flexion),</li>
+            <li>de calculer une contrainte,</li>
+            <li>de comparer à une limite ou à une contrainte admissible.</li>
+          </ul>
+          Rappel qualitatif : le flambage concerne surtout une pièce <b>élancée</b> en compression.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Équations</div>
+          Traction / compression :
+          \[
+            \sigma=\frac{F}{S}
+          \]
+          Cisaillement (modèle simple) :
+          \[
+            \tau=\frac{F}{S}
+          \]
+          <ul>
+            <li>\(\tau\) : contrainte de cisaillement (Pa ou MPa).</li>
+            <li>\(F\) : effort de cisaillement (N).</li>
+            <li>\(S\) : surface cisaillée (m\(^2\)).</li>
+          </ul>
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice</div><br/>
+          Un axe subit un effort de cisaillement \(F=6{,}0\,kN\) sur une section \(S=200\,mm^2\).
+          Calculer \(\tau\).<br/><br/>
+          <b>Correction :</b><br/>
+          \(F=6000\,N\). \(S=200\times 10^{-6}=2{,}0\times 10^{-4}\,m^2\).
+          \[
+            \tau=\frac{6000}{2{,}0\times 10^{-4}}=3{,}0\times 10^7\,Pa=30\,MPa
+          \]
+        </div>
+      </td></tr>
+
+      <!-- 5) SÉCURITÉ -->
+      <tr><td>
+        <div class="row-title">5) Coefficient de sécurité : contrainte admissible</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          On n’utilise pas la limite du matériau “au maximum” : on fixe une contrainte admissible plus faible.
+          Cette marge tient compte des incertitudes, défauts, vieillissement, chocs, variations de charge.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Équations</div>
+          \[
+            \sigma_{adm}=\frac{\sigma_{lim}}{s}
+          \]
+          \[
+            \sigma \le \sigma_{adm}
+          \]
+          <ul>
+            <li>\(\sigma_{lim}\) : contrainte limite (souvent \(\sigma_e\) en élastique, ou contrainte de rupture si demandé) en MPa.</li>
+            <li>\(s\) : coefficient de sécurité (sans unité), \(s&gt;1\).</li>
+            <li>\(\sigma_{adm}\) : contrainte admissible en MPa.</li>
+            <li>\(\sigma\) : contrainte calculée dans la pièce en MPa.</li>
+          </ul>
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice</div><br/>
+          Un acier a une limite élastique \(\sigma_e=250\,MPa\). On prend \(s=2{,}5\).
+          Une pièce travaille à \(\sigma=80\,MPa\). Conclure.<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            \sigma_{adm}=\frac{250}{2{,}5}=100\,MPa
+          \]
+          \[
+            80\,MPa \le 100\,MPa \Rightarrow \text{acceptable}
+          \]
+        </div>
+      </td></tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

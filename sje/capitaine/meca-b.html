@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Méca - Statique</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title">Statique</h2>
+
+
+<section id="meca-b">
+
+  <p class="subheads">
+    <a href="#meca-b-forces">Forces (action / réaction, pression)</a> ·
+    <a href="#meca-b-comp">Composition des forces (couples, équilibre, réduction, moment)</a>
+  </p>
+
+  <div id="meca-b-forces"></div>
+	
+	<!-- Bloc définitions générales (à placer au-dessus du tableau) -->
+<div class="bloc defs" id="meca-b-defs">
+  <div class="label">Définitions</div>
+  <ul>
+    <li><b>Force</b> : action mécanique modélisée par un vecteur (direction, sens, intensité, point d’application).</li>
+    <li><b>Pression</b> : force répartie sur une surface, \(p=\dfrac{F}{S}\) (Pa).</li>
+    <li><b>Équilibre</b> : solide immobile/sans accélération : \(\sum \vec F=\vec 0\) et \(\sum M_O=0\).</li>
+    <li><b>Moment en \(O\)</b> : effet de rotation d’une force autour de \(O\), \(M_O=F\,d\) (N·m) avec \(d\) bras de levier.</li>
+    <li><b>Couple</b> : deux forces opposées de même intensité séparées d’une distance \(d\) : résultante nulle, moment non nul \(M=F\,d\).</li>
+    <li><b>Réduction d’un système de forces</b> : remplacer plusieurs forces par une <b>résultante</b> \(R=\sum F_i\) et un <b>moment</b> \(M_O\) équivalents.</li>
+  </ul>
+</div>
+
+
+  <table class="fiche1c" id="meca-b-fiche-resume">
+    <tbody>
+
+      <!-- 1 -->
+      <tr>
+        <td>
+          <div class="row-title">1) Pression</div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            Pression \(p\) : force \(F\) répartie sur une surface \(S\).
+            \[
+              p=\frac{F}{S}\qquad (\mathrm{Pa}=\mathrm{N\,m^{-2}})
+            \]
+            Conversions :
+            \[
+              1\,\mathrm{bar}=10^5\,\mathrm{Pa}\qquad;\qquad 1\,\mathrm{cm^2}=10^{-4}\,\mathrm{m^2}
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Un vérin exerce une force \(F=6\,000\,\mathrm{N}\) sur un piston de section \(S=8\,\mathrm{cm^2}\).
+            Calculer \(p\) en Pa puis en bar.
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \(S=8\,\mathrm{cm^2}=8\cdot 10^{-4}\,\mathrm{m^2}\).
+            \[
+              p=\frac{6000}{8\cdot 10^{-4}}
+              =\left(\frac{6000}{8}\right)\cdot 10^4
+              =750\cdot 10^4
+              =7{,}5\cdot 10^6\,\mathrm{Pa}
+            \]
+            \[
+              p=\frac{7{,}5\cdot 10^6}{10^5}=75\,\mathrm{bar}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 2 -->
+      <tr>
+        <td>
+          <div class="row-title">2) Action / réaction</div>
+
+          <div class="bloc">
+            <div class="label">Formule</div>
+            Si A exerce une force sur B, alors B exerce sur A la force opposée :
+            \[
+              \vec F_{A\to B}=-\vec F_{B\to A}
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Un sac de masse \(m=25\,\mathrm{kg}\) est immobile sur le sol.
+            On prend \(g\simeq 10\,\mathrm{m\,s^{-2}}\).
+            <ul>
+              <li>Calculer le poids \(P\).</li>
+              <li>Donner la réaction du sol sur le sac (valeur et sens).</li>
+              <li>Donner la paire action/réaction sac/sol.</li>
+            </ul>
+
+            <b>Correction :</b><br/>
+            Poids \(P\) (force de la Terre sur le sac) :
+            \[
+              P=mg=25\times 10=250\,\mathrm{N}\quad (\text{vers le bas})
+            \]
+            Sac immobile \(\Rightarrow\) somme des forces sur le sac nulle :
+            réaction du sol \(R\) (force du sol sur le sac) :
+            \[
+              R=P=250\,\mathrm{N}\quad (\text{vers le haut})
+            \]
+            Paire action/réaction sac/sol :
+            \[
+              \vec F_{\text{sol}\to \text{sac}}=\vec R,\qquad
+              \vec F_{\text{sac}\to \text{sol}}=-\vec R
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 3 -->
+      <tr>
+        <td>
+          <div class="row-title">3) Équilibre + moment en O</div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            Équilibre d’un solide en 2D :
+            \[
+              \sum F_x=0,\qquad \sum F_y=0,\qquad \sum M_O=0
+            \]
+            Moment en \(O\) (noté \(M_O\)) d’une force \(F\) :
+            \[
+              M_O=F\,d\quad (\mathrm{N\,m})
+            \]
+            avec \(d\) = distance perpendiculaire (bras de levier) entre \(O\) et la ligne d’action.
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Une force \(F=250\,\mathrm{N}\) agit à une distance perpendiculaire \(d=0{,}40\,\mathrm{m}\) de l’axe en \(O\).
+            Calculer le moment \(M_O\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \[
+              M_O=F\,d=250\times 0{,}40=100\,\mathrm{N\,m}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td>
+          <div class="row-title">4) Couple de forces</div>
+
+          <div class="bloc">
+            <div class="label">Formule</div>
+            Un couple = deux forces opposées de même intensité \(F\), séparées d’une distance \(d\).
+            Résultante nulle, moment non nul :
+            \[
+              M=F\,d
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Deux forces opposées de \(F=120\,\mathrm{N}\) sont séparées de \(d=0{,}18\,\mathrm{m}\).
+            Calculer le moment du couple.
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \[
+              M=F\,d=120\times 0{,}18=21{,}6\,\mathrm{N\,m}\approx 22\,\mathrm{N\,m}
+            \]
+          </div>
+        </td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td>
+          <div class="row-title">5) Réduction : résultante R + position équivalente</div>
+
+          <div class="bloc">
+            <div class="label">Formules</div>
+            Résultante \(R\) (force unique équivalente, même direction ici) :
+            \[
+              R=\sum F_i
+            \]
+            Moment total en \(O\) (noté \(M_O\)) pour des forces verticales appliquées à des abscisses \(x_i\) :
+            \[
+              M_O=\sum (F_i\,x_i)
+            \]
+            Position \(x_R\) de la force équivalente \(R\) :
+            \[
+              M_O=R\,x_R\qquad \Rightarrow\qquad x_R=\frac{M_O}{R}
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type</div><br/>
+            Deux forces vers le bas : \(F_1=200\,\mathrm{N}\) en \(x_1=0{,}20\,\mathrm{m}\),
+            \(F_2=300\,\mathrm{N}\) en \(x_2=1{,}20\,\mathrm{m}\) (origine \(O\) à gauche).
+            Calculer \(R\), \(M_O\) puis \(x_R\).
+            <br/><br/>
+            <b>Correction :</b><br/>
+            \[
+              R=200+300=500\,\mathrm{N}
+            \]
+            \[
+              M_O=200\times 0{,}20+300\times 1{,}20=40+360=400\,\mathrm{N\,m}
+            \]
+            \[
+              x_R=\frac{400}{500}=0{,}80\,\mathrm{m}
+            \]
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div id="meca-b-comp"></div>
+</section>
+
+
+  </div>
+</body>
+</html>

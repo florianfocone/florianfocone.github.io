@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Méca -  Mécanique des fluides — hydrostatique &amp; écoulements</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title"> Mécanique des fluides — hydrostatique &amp; écoulements</h2>
+<!-- ====== FICHE d) MÉCANIQUE DES FLUIDES — version "avec Théorie + Formules + Exos" ====== -->
+<section id="meca-d">
+
+  <!-- ===================== DÉFINITIONS GÉNÉRALES ===================== -->
+  <div class="bloc defs" id="meca-d-defs">
+    <div class="label">Définitions (fiche Fluides)</div>
+    <ul>
+      <li><b>Fluide parfait</b> : modèle sans viscosité (pas de frottements internes) ; en hydrostatique la pression est isotrope.</li>
+      <li><b>Hydrostatique</b> : étude d’un fluide au repos (pression liée à la profondeur).</li>
+      <li><b>Pression</b> : force par unité de surface, \(p=\dfrac{F}{S}\) (Pa).</li>
+      <li><b>Masse volumique</b> : masse par volume, \(\rho=\dfrac{m}{V}\) (kg·m\(^{-3}\)).</li>
+
+      <li><b>Tension superficielle</b> : “force de surface” d’un liquide, notée \(\gamma\), qui tend à réduire la surface (N·m\(^{-1}\)).</li>
+      <li><b>Capillarité</b> : montée/descente d’un liquide dans un tube fin due à la tension superficielle (effet plus fort quand le rayon est petit).</li>
+
+      <li><b>Compressibilité</b> : capacité d’un fluide (surtout un gaz) à voir son volume varier quand la pression change.</li>
+
+      <li><b>Débit volumique</b> : volume écoulé par unité de temps, \(Q=\dfrac{\Delta V}{\Delta t}=S\,v\) (m\(^3\)/s).</li>
+      <li><b>Flux</b> : quantité qui traverse une section ; ici, flux de volume = le débit \(Q\) à travers une section.</li>
+
+      <li><b>Loi de Bernoulli</b> : relation (sans pertes) entre pression, vitesse et altitude le long d’une ligne de courant : \(p+\tfrac12\rho v^2+\rho gz=\text{cste}\).</li>
+      <li><b>Effet Venturi</b> : rétrécissement \(\Rightarrow v\uparrow \Rightarrow p\downarrow\) (continuité + Bernoulli).</li>
+
+      <li><b>Fluide visqueux</b> : fluide réel avec frottements internes ; la viscosité freine l’écoulement.</li>
+      <li><b>Viscosité (dynamique)</b> : mesure des frottements internes, notée \(\mu\) (Pa·s).</li>
+      <li><b>Pertes de charge</b> : chute de pression \(\Delta p\) due aux frottements dans une conduite (longueur, diamètre, rugosité, vitesse).</li>
+      <li><b>Turbulence</b> : régime d’écoulement avec tourbillons/mélanges, généralement associé à des pertes plus fortes.</li>
+
+      <li><b>Pompe</b> : machine qui fournit de l’énergie au fluide pour imposer un débit \(Q\) et augmenter la pression (ou la hauteur).</li>
+      <li><b>Pompe volumétrique</b> : déplacement positif (piston, membrane, engrenages) : fortes pressions, débits plutôt faibles.</li>
+      <li><b>Pompe centrifuge</b> : pompe dynamique : bons débits, pressions modérées, sensible à l’amorçage/cavitation.</li>
+    </ul>
+  </div>
+
+  <!-- ancres (si tu veux les garder pour le scroll) -->
+  <div id="meca-d-hydro"></div>
+  <div id="meca-d-cap"></div>
+  <div id="meca-d-gaz"></div>
+  <div id="meca-d-parfait"></div>
+  <div id="meca-d-visq"></div>
+  <div id="meca-d-pompes"></div>
+
+  <table class="fiche1c" id="meca-d-fiche">
+    <tbody>
+
+      <!-- ===================== 1) HYDROSTATIQUE ===================== -->
+      <tr><td>
+        <div class="row-title">1) Hydrostatique : fluide parfait, pression dans un fluide</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Fluide <b>au repos</b> : la pression dépend seulement de la profondeur.
+          Même niveau \(\Rightarrow\) même pression (dans un même liquide connecté).
+          La force de pression sur une paroi est <b>perpendiculaire</b> à la surface.
+          <br/><br/>
+          À retenir concours : savoir passer de <b>profondeur</b> \(\rightarrow\) \(\Delta p\), puis \(\Delta p\rightarrow F\) si on donne une surface.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formules</div>
+          \[
+            p(h)=p_0+\rho g h \qquad;\qquad \Delta p=\rho g h
+          \]
+          \[
+            F=p\,S
+          \]
+          Conversions utiles :
+          \[
+            1\,\mathrm{bar}=10^5\,\mathrm{Pa}\qquad;\qquad 1\,\mathrm{cm^2}=10^{-4}\,\mathrm{m^2}
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          Dans l’eau : \(\rho=1000\), \(g=10\). À \(h=3\,m\), calcule \(\Delta p\) puis en bar.<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            \Delta p=\rho g h=1000\times 10\times 3=3\times 10^4\,\mathrm{Pa}
+          \]
+          \[
+            \Delta p=\frac{3\times 10^4}{10^5}=0{,}30\,\mathrm{bar}
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 2) ARCHIMÈDE ===================== -->
+      <tr><td>
+        <div class="row-title">2) Hydrostatique : poussée d’Archimède</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Un objet plongé dans un fluide subit une force verticale vers le haut égale au <b>poids du fluide déplacé</b>.
+          En pratique : convertir les litres en m\(^3\), puis appliquer la formule.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formule</div>
+          \[
+            \Pi=\rho_{\text{fluide}}\,g\,V_{\text{déplacé}}
+          \]
+          Rappel conversion :
+          \[
+            1\,L=10^{-3}\,m^3
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          Un objet déplace \(4\,L\) d’eau. Avec \(g=10\), calcule \(\Pi\).<br/><br/>
+          <b>Correction :</b><br/>
+          \(V=4\times 10^{-3}\,m^3\).
+          \[
+            \Pi=1000\times 10\times 4\times 10^{-3}=40\,N
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 3) TENSION / CAPILLARITÉ ===================== -->
+      <tr><td>
+        <div class="row-title">3) Tension superficielle &amp; capillarité</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          À petite échelle, la surface “domine” : la tension superficielle \(\gamma\) explique gouttes, ménisques et capillarité.
+          En exercice, on te donne \(\gamma\) et un rayon \(r\) : tu appliques directement la relation de montée/descente.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formules</div>
+          Force de tension sur une longueur \(L\) :
+          \[
+            F=\gamma L
+          \]
+          Tube capillaire (rayon \(r\)) :
+          \[
+            h=\frac{2\gamma \cos\theta}{\rho g r}
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          Eau : \(\gamma=0{,}072\), \(\rho=1000\), \(g=10\), \(\theta\simeq 0^\circ\).
+          Tube : \(r=0{,}5\,mm\). Estimer \(h\).<br/><br/>
+          <b>Correction :</b><br/>
+          \(r=5\times 10^{-4}\,m\), \(\cos\theta=1\).
+          \[
+            h=\frac{2\times 0{,}072}{1000\times 10\times 5\times 10^{-4}}
+            =\frac{0{,}144}{5}=0{,}0288\,m\approx 2{,}9\,cm
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 4) GAZ / COMPRESSIBILITÉ ===================== -->
+      <tr><td>
+        <div class="row-title">4) Pression dans les gaz : compressibilité (isotherme)</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Un gaz est compressible : si le volume diminue, la pression augmente.
+          Au niveau concours, la relation utile “simple” est l’isotherme : \(pV=\text{cste}\).
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formule</div>
+          \[
+            p_1V_1=p_2V_2 \quad (\text{température constante})
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          Un gaz passe de \(p_1=2\,bar\), \(V_1=10\,L\) à \(V_2=4\,L\) (isotherme). Calcule \(p_2\).<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            p_2=\frac{p_1V_1}{V_2}=\frac{2\times 10}{4}=5\,bar
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 5) DÉBIT / CONTINUITÉ ===================== -->
+      <tr><td>
+        <div class="row-title">5) Dynamique (fluide parfait) : débit, continuité, flux</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Si le fluide est incompressible et l’écoulement permanent : le <b>débit</b> est le même partout.
+          Donc si la section diminue, la vitesse augmente. C’est le réflexe “S×v constant”.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formules</div>
+          \[
+            Q=\frac{\Delta V}{\Delta t}=S\,v
+          \]
+          \[
+            S_1v_1=S_2v_2
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          \(S_1=6\,cm^2\), \(S_2=2\,cm^2\), \(v_1=2\,m/s\). Calcule \(v_2\).<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            v_2=\frac{S_1}{S_2}v_1=\frac{6}{2}\times 2=6\,m/s
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 6) BERNOULLI / VENTURI ===================== -->
+      <tr><td>
+        <div class="row-title">6) Dynamique (fluide parfait) : Bernoulli / Venturi</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Bernoulli relie pression et vitesse quand on néglige les pertes.
+          En conduite horizontale : si \(v\) augmente, \(p\) diminue (effet Venturi).
+          En exo, on combine souvent : <b>continuité</b> pour trouver \(v_2\), puis <b>Bernoulli</b> pour \(p_1-p_2\).
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formules</div>
+          Général :
+          \[
+            p+\frac12\rho v^2+\rho gz=\text{cste}
+          \]
+          Horizontal (\(z_1=z_2\)) :
+          \[
+            p_1-p_2=\frac12\rho\left(v_2^2-v_1^2\right)
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          Eau \(\rho=1000\). \(v_1=2\,m/s\), \(v_2=6\,m/s\). Calcule \(p_1-p_2\).<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            p_1-p_2=\frac12\times 1000\times (36-4)=500\times 32=1{,}6\times 10^4\,Pa
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 7) VISQUEUX / PERTES / TURBULENCE ===================== -->
+      <tr><td>
+        <div class="row-title">7) Dynamique (fluide visqueux) : viscosité, pertes, turbulence</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Si l’énoncé parle de viscosité/pertes : on sait juste que Bernoulli “sans pertes” n’est plus exact.
+          On caractérise souvent le régime par Reynolds : grand \(\Rightarrow\) turbulence probable \(\Rightarrow\) pertes plus fortes.
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formules</div>
+          \[
+            \mathrm{Re}=\frac{\rho v D}{\mu}
+          \]
+          (idée pertes de charge) : \(\Delta p\) augmente si \(L\uparrow\), \(v\uparrow\), rugosité\uparrow, et si \(D\downarrow\).
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          Eau : \(\rho=1000\), \(\mu=10^{-3}\). \(D=0{,}020\,m\), \(v=1{,}5\,m/s\). Calcule \(\mathrm{Re}\).<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            \mathrm{Re}=\frac{1000\times 1{,}5\times 0{,}020}{10^{-3}}=\frac{30}{10^{-3}}=3\times 10^4
+          \]
+        </div>
+      </td></tr>
+
+      <!-- ===================== 8) POMPES ===================== -->
+      <tr><td>
+        <div class="row-title">8) Pompes : types, principe, conditions d’utilisation</div>
+
+        <div class="bloc">
+          <div class="label">Théorie</div><br/>
+          Une pompe sert à fournir une élévation de pression \(\Delta p\) pour obtenir un débit \(Q\).
+          Deux familles :
+          <ul>
+            <li><b>Volumétriques</b> : fortes pressions, débits plus faibles (souvent auto-amorçantes).</li>
+            <li><b>Centrifuges</b> : gros débits, pressions modérées (attention amorçage / cavitation).</li>
+          </ul>
+        </div>
+
+        <div class="bloc">
+          <div class="label">Formules</div>
+          Puissance hydraulique :
+          \[
+            \mathcal{P}_h=\Delta p\,Q
+          \]
+          Puissance absorbée (rendement \(\eta\)) :
+          \[
+            \mathcal{P}_{abs}=\frac{\mathcal{P}_h}{\eta}
+          \]
+        </div>
+
+        <div class="bloc calc">
+          <div class="label">Exercice type</div><br/>
+          \(Q=0{,}020\,m^3/s\), \(\Delta p=3\times 10^5\,Pa\), \(\eta=0{,}70\). Calcule \(\mathcal{P}_h\) puis \(\mathcal{P}_{abs}\).<br/><br/>
+          <b>Correction :</b><br/>
+          \[
+            \mathcal{P}_h=3\times 10^5\times 0{,}020=6\times 10^3\,W=6\,kW
+          \]
+          \[
+            \mathcal{P}_{abs}=\frac{6000}{0{,}70}\approx 8{,}6\,kW
+          \]
+        </div>
+      </td></tr>
+
+    </tbody>
+  </table>
+  
+  <!-- ===================== 9) ANNALE : RÉDUCTEUR DE SECTION ===================== -->
+<tr><td>
+  <div class="row-title">9) Annale — Réducteur de section : progressif vs abrupt (fluide parfait / visqueux)</div>
+
+  <div class="bloc">
+    <div class="label">Schéma</div><br/>
+    <figure style="margin:0;">
+      <img src="exo1.png" alt="Réduction de section (P1,V1,S1 -> P2,V2,S2)"
+           style="max-width:100%; height:auto; border-radius:10px; border:1px solid rgba(255,255,255,0.15);"/>
+      <figcaption style="margin-top:8px; color:rgba(255,255,255,0.70); font-style:italic;">
+        Réduction de section : entrée (P1,V1,S1) → sortie (P2,V2,S2).
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Réponse (à rédiger en 6–8 lignes)</div><br/>
+
+    <ul>
+      <li><b>Dans tous les cas (incompressible)</b> : la continuité impose le même débit
+        \(\;Q=S_1V_1=S_2V_2\Rightarrow V_2=\dfrac{S_1}{S_2}V_1\;\) (même rapport de section ⇒ même rapport de vitesses).</li>
+
+      <li><b>Fluide incompressible parfait (viscosité nulle, pas de pertes)</b> :
+        la <b>forme</b> (progressive/abrupte) ne change (idéalement) pas l’écoulement : on relie juste pression/vitesse par Bernoulli.
+        Pour un tuyau horizontal : \(\;P_1-P_2=\tfrac12\rho\,(V_2^2-V_1^2)\;\).
+        Donc, à rapport \(S_1/S_2\) donné, le résultat dépend de \(S_1,S_2,\rho\) (et des altitudes), pas de la forme.</li>
+
+      <li><b>Fluide incompressible visqueux (fluide réel)</b> :
+        la forme <b>compte</b> car il y a des <b>pertes de charge</b> (dissipation).
+        On doit écrire Bernoulli <b>avec pertes</b> :
+        \[
+          P_1+\frac12\rho V_1^2 = P_2+\frac12\rho V_2^2 + \Delta p_{\text{pertes}}
+        \]
+        où \(\Delta p_{\text{pertes}}>0\) dépend fortement de la géométrie.</li>
+
+      <li><b>Réducteur abrupt</b> : séparation de l’écoulement, “vena contracta”, tourbillons/turbulence ⇒
+        \(\Delta p_{\text{pertes}}\) plus grande ⇒ pour un même \(P_1\to P_2\), le débit réel \(Q\) (donc \(V_2\)) est plus faible
+        que le cas idéal (et bruit/vibrations possibles).</li>
+
+      <li><b>Réducteur progressif</b> : écoulement plus “attaché”, moins de turbulences ⇒
+        pertes plus faibles ⇒ débit plus proche de l’idéal ⇒ vitesse de sortie plus élevée (à pression réseau identique).</li>
+    </ul>
+  </div>
+
+</td></tr>
+
+
+</section>
+
+
+
+
+
+  </div>
+</body>
+</html>

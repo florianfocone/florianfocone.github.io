@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Méca - Généralités</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title">Généralités</h2>
+
+<section id="meca-a">
+
+  <p class="subheads">
+    <a href="#meca-a-intro">Introduction</a> ·
+    <a href="#meca-a-mesures">Mesures (unités, systèmes d’unités, calcul d’erreurs)</a>
+  </p>
+
+  <div id="meca-a-intro"></div>
+  <div id="meca-a-mesures"></div>
+
+<!-- Bloc définitions générales (fiche a) Généralités) -->
+<div class="bloc defs" id="meca-a-defs">
+  <div class="label">Définitions (fiche Généralités)</div>
+  <ul>
+    <li><b>Point (matériel)</b> : modèle d’un objet dont on néglige la taille, décrit uniquement par sa position.</li>
+    <li><b>Masse</b> : mesure de la quantité de matière / inertie d’un corps, notée \(m\) (kg).</li>
+    <li><b>Vitesse</b> : variation de la position par unité de temps, notée \(\vec v\) (m·s\(^{-1}\)).</li>
+    <li><b>Accélération</b> : variation de la vitesse par unité de temps, notée \(\vec a\) (m·s\(^{-2}\)).</li>
+    <li><b>Mouvement périodique</b> : mouvement qui se répète à l’identique après une durée \(T\) appelée période.</li>
+
+    <li><b>Système d’unités</b> : ensemble cohérent d’unités (ex : SI : m, kg, s, A, K, mol, cd) pour exprimer toutes les grandeurs.</li>
+    <li><b>Calcul d’erreurs (incertitudes)</b> : estimation de l’écart possible entre une mesure et la valeur vraie, souvent notée \(\Delta x\) dans \(x=\bar x \pm \Delta x\).</li>
+  </ul>
+</div>
+
+  <table class="fiche1c" id="meca-a-fiche-resume">
+    <tbody>
+
+      <!-- Ligne 1 -->
+      <tr>
+        <td>
+          <div class="row-title">1) Cinématique : point, masse, vitesse, accélération, mouvement périodique</div>
+
+          <div class="bloc">
+            <div class="label">Théorie </div><br/>
+            On modélise souvent un mobile par un <i>point matériel</i> (dimensions négligeables).
+            On choisit un <b>référentiel</b> et un axe (sens + origine), puis on décrit :
+            position \(x(t)\), vitesse \(v(t)\) et accélération \(a(t)\).
+            Un mouvement est <b>périodique</b> s’il se répète après une période \(T\) (fréquence \(f\)). (pulsation \omega\)) : “vitesse angulaire” d’un mouvement périodique (sinusoïdal). 
+            <div class="enrich">
+              <div class="sub">À retenir</div>
+              <ul>
+                <li>Chaîne : \(x(t)\) → dérivée = \(v(t)\) → dérivée = \(a(t)\).</li>
+                <li>Lecture graphique : pente de \(x(t)\) = \(v\) ; pente de \(v(t)\) = \(a\).</li>
+                <li>Unités SI : \(a\) en m·s\(^{-2}\).</li>
+                <li>Périodique : \(f=\dfrac{1}{T}\) (Hz). .</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules à connaître</div>
+            <!-- Cinématique / périodique -->
+\[
+f=\frac{1}{T},\qquad \omega=\frac{2\pi}{T}=2\pi f
+\]
+
+<!-- MUA (accélération constante) -->
+\[
+v=v_0+at
+\]
+\[
+\Delta x = v_0 t + \frac12 a t^2
+\]
+\[
+\Delta x=\frac{v_0+v}{2}\,t
+\]
+
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type (énoncé)</div><br/>
+            Sur un axe, un engin passe de \(v_0=12\,\mathrm{m\,s^{-1}}\) à \(v=18\,\mathrm{m\,s^{-1}}\)
+            en \(t=3\,\mathrm{s}\) (accélération supposée constante).
+            <ul>
+              <li>Calculer \(a\).</li>
+              <li>Calculer la distance parcourue.</li>
+            </ul>
+            <b>Correction :</b><br/>
+            \[
+              a=\frac{v-v_0}{t}=\frac{18-12}{3}=\frac{6}{3}=2\,\mathrm{m\,s^{-2}}
+            \]
+            Distance (MUA) :
+            \[
+              \Delta x=v_0t+\frac12at^2=12\times 3+\frac12\times 2\times 3^2
+              =36+9=45\,\mathrm{m}
+            \]
+          </div>
+		  <div class="bloc calc">
+		  <div class="label">Exercice type (énoncé)</div><br/>
+		  Un gyrophare tourne de façon périodique avec une période \(T=0{,}20\,\mathrm{s}\).
+		  <ul>
+			<li>Calculer la fréquence \(f\).</li>
+			<li>Calculer la pulsation \(\omega\) (réponse exacte en \(\pi\)).</li>
+		  </ul>
+
+		  <b>Correction :</b><br/>
+		  Fréquence :
+		  \[
+			f=\frac{1}{0{,}20}=5\,\mathrm{Hz}
+		  \]
+
+		  Pulsation :
+		  \[
+			\omega=2\pi f=2\pi\times 5=10\pi\,\mathrm{rad\,s^{-1}}
+		  \]
+		</div>
+        </td>
+      </tr>
+
+      <!-- Ligne 2 -->
+      <tr>
+        <td>
+          <div class="row-title">2) Mesures : unités, SI, erreurs (incertitudes)</div>
+
+          <div class="bloc">
+            <div class="label">Théorie (l’essentiel)</div><br/>
+            Une mesure s’écrit \(x=\bar x\pm \Delta x\) (même unité).
+            L’<b>erreur relative</b> \(\varepsilon=\Delta x/x\) donne la précision (souvent en %).
+            En concours, on fait surtout des <b>majorants</b> simples : pour un produit/quotient,
+            les erreurs relatives s’additionnent.
+            <div class="enrich">
+              <div class="sub">À retenir</div>
+              <ul>
+                <li>Tout mettre en <b>SI</b> avant de remplacer dans une formule.</li>
+                <li>\(\varepsilon=\Delta x/x\) (sans unité) ; en % : \(100\varepsilon\).</li>
+                <li>Si \(y=\dfrac{a}{b}\) alors \(\dfrac{\Delta y}{y}\approx\dfrac{\Delta a}{a}+\dfrac{\Delta b}{b}\).</li>
+                <li>Contrôle d’homogénéité : même unité partout (points faciles).</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bloc">
+            <div class="label">Formules à connaître</div>
+            \[
+              \varepsilon=\frac{\Delta x}{x}
+            \]
+            \[
+              y=\frac{a}{b}\Rightarrow \frac{\Delta y}{y}\approx\frac{\Delta a}{a}+\frac{\Delta b}{b}
+            \]
+          </div>
+
+          <div class="bloc calc">
+            <div class="label">Exercice type (énoncé)</div><br/>
+            On mesure \(d=80\pm 1\,\mathrm{m}\) et \(t=10\pm 0{,}5\,\mathrm{s}\).
+            On calcule \(v=\dfrac{d}{t}\).
+            <ul>
+              <li>Calculer \(v\).</li>
+              <li>Estimer \(\Delta v\) (majorant).</li>
+            </ul>
+            <b>Correction :</b><br/>
+            \[
+              v=\frac{80}{10}=8\,\mathrm{m\,s^{-1}}
+            \]
+            \[
+              \frac{\Delta v}{v}\approx\frac{\Delta d}{d}+\frac{\Delta t}{t}
+              =\frac{1}{80}+\frac{0{,}5}{10}=\frac{1}{80}+\frac{1}{20}
+              =\frac{1+4}{80}=\frac{5}{80}=\frac{1}{16}
+            \]
+            Donc :
+            \[
+              \Delta v\approx v\times\frac{1}{16}=8\times\frac{1}{16}=\frac{1}{2}=0{,}5\,\mathrm{m\,s^{-1}}
+            \]
+            Résultat : \(v\approx 8\pm 0{,}5\,\mathrm{m\,s^{-1}}\).
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+    -->
+  </div>
+</body>
+</html>
