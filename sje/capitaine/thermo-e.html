@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Thermo — Principes 1 & 2 + gaz parfait + système divariant</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Thermo — Principes 1 & 2 : U, H, S + gaz parfait + système divariant</h2>
+
+    <section id="thermo-5-6">
+
+      <div class="bloc defs" id="thermo-5-6-defs">
+        <div class="label">Définitions</div>
+        <ul>
+          <li><b>Système</b> : portion de matière étudiée, séparée de l’extérieur par une frontière réelle ou imaginaire.</li>
+          <li><b>Système fermé</b> : système qui n’échange pas de matière avec l’extérieur (mais peut échanger Q et W).</li>
+          <li><b>Énergie interne</b> (<i>U</i>) : énergie stockée dans le système liée aux phénomènes microscopiques (agitation, interactions).</li>
+          <li><b>Chaleur</b> (<i>Q</i>) : énergie échangée à cause d’une différence de température (Q &gt; 0 si le système reçoit).</li>
+          <li><b>Travail</b> (<i>W</i>) : énergie échangée par action mécanique (W &gt; 0 si l’extérieur fournit du travail au système).</li>
+          <li><b>Système isolé</b> : système sans échange de chaleur ni de travail avec l’extérieur (Q=0 et W=0).</li>
+          <li><b>Enthalpie</b> (<i>H</i>) : fonction d’état définie par H = U + pV.</li>
+          <li><b>Entropie</b> (<i>S</i>) : fonction d’état qui quantifie l’évolution possible d’un système (dans un système isolé, elle ne diminue pas).</li>
+          <li><b>Transformation réversible</b> : transformation idéale sans dissipation, inversable en repassant par les mêmes états.</li>
+          <li><b>Transformation irréversible</b> : transformation réelle avec dissipation, non inversable sans modifier l’extérieur.</li>
+          <li><b>Gaz parfait</b> : modèle vérifiant l’équation d’état pV = nRT.</li>
+          <li><b>Système divariant</b> : système dont l’état est fixé par deux variables indépendantes (pour un gaz parfait à n constant : choisir p et T fixe V).</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Théorie (étoffée, sans blabla)</div>
+        <ul>
+          <li><b>Premier principe (système fermé)</b> : la variation d’énergie interne vient des échanges avec l’extérieur :
+            <b>ΔU = Q + W</b> (convention de cette fiche : Q&gt;0 si reçu, W&gt;0 si travail reçu).
+          </li>
+          <li><b>Travail de pression</b> (piston, pression extérieure constante) :
+            <b>W = −p<sub>ext</sub> ΔV</b>.
+            Une compression donne ΔV&lt;0 donc W&gt;0, une détente donne ΔV&gt;0 donc W&lt;0.
+          </li>
+          <li><b>Cas importants</b> :
+            <ul>
+              <li><b>Isochore</b> (V constante) : ΔV=0 ⇒ W=0 ⇒ <b>ΔU = Q</b>.</li>
+              <li><b>Adiabatique</b> : Q=0 ⇒ <b>ΔU = W</b>.</li>
+              <li><b>Isolé</b> : Q=0 et W=0 ⇒ <b>ΔU = 0</b>.</li>
+            </ul>
+          </li>
+          <li><b>Deuxième principe</b> : il existe une fonction d’état S telle que, pour un système isolé :
+            <b>ΔS ≥ 0</b>.
+            L’égalité correspond à une transformation réversible, l’inégalité stricte à une irréversibilité.
+          </li>
+          <li><b>Écriture pratique du second principe</b> :
+            <ul>
+              <li><b>Réversible</b> : <b>dS = δQ<sub>rev</sub> / T</b>.</li>
+              <li><b>Irréversible</b> : <b>ΔS = Q/T + S<sub>créée</sub></b> avec <b>S<sub>créée</sub> &gt; 0</b> (production d’entropie).</li>
+            </ul>
+          </li>
+          <li><b>Gaz parfait, état divariant</b> : pour n constant, p, V, T ne sont pas indépendantes car <b>pV = nRT</b>.
+            Il suffit donc de fixer deux variables (par exemple p et T) pour connaître la troisième (V).
+          </li>
+          <li><b>Transformations usuelles (n constant)</b> :
+            <ul>
+              <li><b>Isotherme</b> (T constante) : <b>pV = constante</b>.</li>
+              <li><b>Isobare</b> (p constante) : <b>V/T = constante</b>.</li>
+              <li><b>Isochore</b> (V constante) : <b>p/T = constante</b>.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Premier principe : <b>ΔU = Q + W</b></li>
+          <li>Travail de pression (p<sub>ext</sub> constante) : <b>W = −p<sub>ext</sub> ΔV</b></li>
+          <li>Deuxième principe (isolé) : <b>ΔS ≥ 0</b></li>
+          <li>Réversible : <b>dS = δQ<sub>rev</sub>/T</b></li>
+          <li>Gaz parfait : <b>pV = nRT</b></li>
+          <li>Transformations usuelles (n constant) : <b>pV = cste</b> (T cste), <b>V/T = cste</b> (p cste), <b>p/T = cste</b> (V cste)</li>
+          <li>Lettres : U (J), H (J), S (J·K⁻¹), Q (J), W (J), p (Pa), p<sub>ext</sub> (Pa), V (m³), ΔV (m³), n (mol), R (J·mol⁻¹·K⁻¹), T (K)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (plus complet et plus dur, appliqué)</div><br/>
+        <b>Contexte pompier :</b> on utilise un volume d’air pour gonfler un coussin de levage.
+        On modélise l’air comme un <b>gaz parfait</b> avec <b>n = 1,0 mol</b>.
+        Le gaz est en contact avec un environnement qui maintient la température constante à <b>T = 300 K</b>.<br/><br/>
+
+        État initial : <b>V₁ = 10 L</b>.<br/>
+        État final : <b>V₂ = 20 L</b> (détente).<br/><br/>
+
+        <b>Données :</b> R = 8,31 J·mol⁻¹·K⁻¹ ; ln(2) ≈ 0,693 ; 1 L = 10⁻³ m³.<br/><br/>
+
+        <b>A) Détente réversible isotherme</b><br/>
+        1) Calculer p₁ et p₂.<br/>
+        2) Montrer que <b>ΔU = 0</b> (gaz parfait isotherme) et en déduire la relation entre Q et W.<br/>
+        3) Calculer le travail reçu par le gaz : <b>W = −nRT ln(V₂/V₁)</b>.<br/>
+        4) Calculer ΔS<sub>système</sub> pour cette transformation : <b>ΔS = nR ln(V₂/V₁)</b>.<br/>
+        5) Conclure sur ΔS<sub>total</sub> (système + environnement) pour une transformation réversible.<br/><br/>
+
+        <b>B) Détente irréversible isotherme (pertes)</b><br/>
+        On suppose que, pour la même variation d’état (mêmes V₁, V₂, T), le gaz ne fournit à l’extérieur qu’un travail de
+        1200 J (donc avec la convention de la fiche : <b>W = −1200 J</b>).<br/>
+        6) Calculer Q puis ΔS<sub>environnement</sub> et ΔS<sub>total</sub>. Interpréter avec le deuxième principe.<br/><br/>
+
+        <b>Correction :</b><br/>
+        <b>A1)</b> p = nRT/V.<br/>
+        V₁ = 10 L = 0,010 m³ ⇒ p₁ = (1,0×8,31×300)/0,010 = 2493/0,010 = <b>2,49×10⁵ Pa</b> ≈ <b>2,49 bar</b>.<br/>
+        V₂ = 20 L = 0,020 m³ ⇒ p₂ = 2493/0,020 = <b>1,25×10⁵ Pa</b> ≈ <b>1,25 bar</b>.<br/><br/>
+
+        <b>A2)</b> Pour un gaz parfait, U dépend de T. Isotherme ⇒ T constante ⇒ <b>ΔU = 0</b>.<br/>
+        Premier principe : ΔU = Q + W ⇒ 0 = Q + W ⇒ <b>Q = −W</b>.<br/><br/>
+
+        <b>A3)</b> W = −nRT ln(V₂/V₁) = −(1,0×8,31×300) ln(2) = −2493 ln(2).<br/>
+        W ≈ −2493×0,693 ≈ <b>−1,73×10³ J</b>.<br/>
+        Donc Q = −W ≈ <b>+1,73×10³ J</b> (le système reçoit cette chaleur pour rester à 300 K).<br/><br/>
+
+        <b>A4)</b> ΔS<sub>système</sub> = nR ln(2) = 8,31 ln(2) ≈ 8,31×0,693 ≈ <b>5,76 J·K⁻¹</b>.<br/><br/>
+
+        <b>A5)</b> En réversible, l’environnement échange exactement Q à la température T :
+        ΔS<sub>env</sub> = −Q/T ≈ −(1,73×10³)/300 ≈ <b>−5,76 J·K⁻¹</b>.<br/>
+        Donc <b>ΔS<sub>total</sub> = 0</b> : signature d’une transformation réversible.<br/><br/>
+
+        <b>B6)</b> On donne W = −1200 J. Premier principe avec ΔU=0 ⇒ Q = −W = <b>+1200 J</b>.<br/>
+        ΔS<sub>système</sub> ne dépend que des états ⇒ <b>ΔS<sub>système</sub> = nR ln2 ≈ 5,76 J·K⁻¹</b>.<br/>
+        ΔS<sub>env</sub> = −Q/T = −1200/300 = <b>−4,00 J·K⁻¹</b>.<br/>
+        ΔS<sub>total</sub> = 5,76 − 4,00 = <b>+1,76 J·K⁻¹</b> &gt; 0 : la détente est <b>irréversible</b> (production d’entropie).<br/><br/>
+
+        <b>Lettres :</b> p (Pa), V (m³), n (mol), R (J·mol⁻¹·K⁻¹), T (K), U (J), ΔU (J), Q (J), W (J), S (J·K⁻¹), ΔS (J·K⁻¹).
+      </div>
+
+    </section>
+  </div>
+</body>
+
+</html>

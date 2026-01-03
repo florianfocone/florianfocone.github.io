@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Thermo — Dilatations : solides, liquides, gaz</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title">Thermo — Dilatations : solides, liquides, gaz</h2>
+
+<section id="thermo-2">
+
+  <div class="bloc defs" id="thermo-2-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Dilatation</b> : variation de dimensions d’un corps quand sa température varie.</li>
+      <li><b>Dilatation linéaire</b> : variation de longueur <i>ΔL</i> d’un solide.</li>
+      <li><b>Dilatation volumique</b> : variation de volume <i>ΔV</i> (liquides et gaz surtout, mais aussi solides).</li>
+      <li><b>Coefficient de dilatation linéaire</b> (<i>α</i>) : constante qui relie <i>ΔL</i> à <i>ΔT</i> pour un solide (K⁻¹).</li>
+      <li><b>Coefficient de dilatation volumique</b> (<i>β</i>) : constante qui relie <i>ΔV</i> à <i>ΔT</i> (K⁻¹).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (court)</div>
+    <ul>
+      <li>Solides : on utilise souvent la longueur (dilatation linéaire).</li>
+      <li>Liquides : volume principalement.</li>
+      <li>Gaz : variation importante ; souvent traité avec loi des gaz parfaits (fiche 6).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li><b>Solide</b> : ΔL = α L₀ ΔT</li>
+      <li><b>Volumique</b> : ΔV = β V₀ ΔT</li>
+      <li>Lettres : L₀ (m), ΔL (m), V₀ (m³), ΔV (m³), ΔT (K), α,β (K⁻¹)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    Une barre de longueur L₀ = 2,0 m, α = 1,2×10⁻⁵ K⁻¹, subit un échauffement de ΔT = 50 K.
+    Calculer ΔL.
+    <br/><br/>
+    <b>Correction :</b><br/>
+    ΔL = α L₀ ΔT = 1,2×10⁻⁵ × 2,0 × 50 = 1,2×10⁻⁵ × 100 = 1,2×10⁻³ m = 1,2 mm.
+  </div>
+  <div class="bloc calc">
+  <div class="label">Exercice type (dilatation volumique)</div><br/>
+  Lors d’un feu, un <b>fût métallique</b> contient V₀ = 200 L d’un liquide.
+  Le liquide a un coefficient de dilatation volumique β = 7,0×10⁻⁴ K⁻¹.
+  La température augmente de T₁ = 20 °C à T₂ = 80 °C.
+  <br/><br/>
+  1) Calculer l’augmentation de volume ΔV du liquide.<br/>
+  2) En déduire le volume final V₂.
+  <br/><br/>
+  <b>Données / conversions :</b><br/>
+  ΔT = T₂ − T₁ (en K, même valeur qu’en °C).<br/>
+  1 L = 1,0×10⁻³ m³.
+  <br/><br/>
+  <b>Correction :</b><br/>
+  ΔT = 80 − 20 = 60 K.<br/>
+  Formule : ΔV = β V₀ ΔT.<br/><br/>
+  Conversion : V₀ = 200 L = 200×10⁻³ m³ = 0,200 m³.<br/><br/>
+  ΔV = 7,0×10⁻⁴ × 0,200 × 60
+      = 7,0×10⁻⁴ × 12
+      = 8,4×10⁻³ m³.<br/><br/>
+  Retour en litres : 8,4×10⁻³ m³ = 8,4 L.<br/><br/>
+  Volume final : V₂ = V₀ + ΔV = 200 L + 8,4 L = 208,4 L.
+</div>
+</section>
+
+  </div>
+</body>
+</html>

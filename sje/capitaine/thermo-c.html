@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Thermo — Thermométrie</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title">Thermo — Thermométrie</h2>
+
+<section id="thermo-3">
+  <h4>Thermo — Thermométrie</h4>
+
+  <div class="bloc defs" id="thermo-3-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Thermométrie</b> : ensemble des méthodes permettant de mesurer la température.</li>
+      <li><b>Thermomètre</b> : dispositif dont une grandeur mesurable varie avec la température (ex : longueur, résistance, tension…).</li>
+      <li><b>Étalonnage</b> : opération consistant à relier la mesure du capteur à une température connue (construction d’une graduation).</li>
+      <li><b>Point fixe</b> : température de référence reproductible (ex : fusion de la glace à 0°C, ébullition de l’eau à 100°C à 1 atm).</li>
+      <li><b>Kelvin</b> : unité SI de température ; 0 K correspond au zéro absolu.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (court)</div>
+    <ul>
+      <li>Mesurer une température = mesurer une grandeur (résistance, dilatation…) puis convertir via étalonnage.</li>
+      <li>On doit préciser les conditions des points fixes (ex : pression pour l’ébullition).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Conversion : T(K) = θ(°C) + 273</li>
+      <li>Lecture : une échelle thermométrique est valide si elle est étalonnée entre points fixes.</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    Un thermomètre est gradué en °C. On lit 25°C. Donner la température en K.
+    <br/><br/>
+    <b>Correction :</b><br/>
+    T = 25 + 273 = 298 K.
+  </div>
+  <div class="bloc calc">
+  <div class="label">Exercice type (étalonnage + conversion + pression)</div><br/>
+  Une équipe incendie utilise un <b>thermomètre à résistance</b> (capteur ohmique) dont la résistance R varie
+  linéairement avec la température θ en °C :<br/>
+  <b>R = a θ + b</b>.<br/><br/>
+
+  <b>Étalonnage sur deux points fixes :</b><br/>
+  - Dans un bain de glace fondante (0 °C), on mesure R₀ = 100,0 Ω.<br/>
+  - Dans l’eau en ébullition à <b>1 atm</b> (100 °C), on mesure R₁₀₀ = 138,5 Ω.<br/><br/>
+
+  <b>Situation intervention :</b><br/>
+  Le capteur est placé dans un local enfumé. On mesure R = 154,0 Ω.<br/>
+  Le chef d’agrès rappelle qu’en toiture, la pression est plus faible : l’eau y bout à <b>95 °C</b> (et non 100 °C).<br/><br/>
+
+  1) Déterminer a et b.<br/>
+  2) Calculer la température θ du local en °C et en K.<br/>
+  3) Le local est-il au-dessus de la température d’ébullition de l’eau à 95 °C ? Conclure sur le risque
+  de brûlure vapeur si de l’eau est projetée sur une surface très chaude.
+  <br/><br/>
+
+  <b>Correction :</b><br/>
+  1) Loi : R = aθ + b.<br/>
+  À 0 °C : R₀ = a·0 + b ⇒ <b>b = 100,0 Ω</b>.<br/>
+  À 100 °C : R₁₀₀ = a·100 + b ⇒ 138,5 = 100a + 100,0 ⇒ 100a = 38,5 ⇒ <b>a = 0,385 Ω·°C⁻¹</b>.<br/><br/>
+
+  2) Pour R = 154,0 Ω :<br/>
+  154,0 = 0,385 θ + 100,0 ⇒ 0,385 θ = 54,0 ⇒ θ = 54,0 / 0,385 ≈ <b>140 °C</b>.<br/><br/>
+  Conversion : T(K) = θ + 273 ⇒ T ≈ 140 + 273 = <b>413 K</b>.<br/><br/>
+
+  3) Comparaison : θ ≈ 140 °C et Téb(pression faible) = 95 °C.<br/>
+  140 > 95 ⇒ <b>oui, le local est largement au-dessus</b> de la température d’ébullition à cette pression.<br/>
+  <b>Conclusion :</b> si de l’eau est projetée sur une surface à ~140 °C, une partie peut se vaporiser
+  brutalement → <b>risque de brûlures par vapeur</b> et de jet de vapeur chaude.
+  <br/><br/>
+
+  <b>Lettres :</b> R (Ω), θ (°C), T (K), a (Ω·°C⁻¹), b (Ω), R₀ (Ω), R₁₀₀ (Ω).
+</div>
+</section>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Thermo — Calorimétrie : échanges, chaleurs spécifiques, chaleur latente, conduction, convection</div>
+  </div>
+
+ <div class="page">
+  <h2 id="fiche-title">Thermo — Calorimétrie : échanges, chaleurs spécifiques, chaleur latente, conduction, convection</h2>
+
+  <section id="thermo-4">
+
+    <div class="bloc defs" id="thermo-4-defs">
+      <div class="label">Définitions</div>
+      <ul>
+        <li><b>Calorimétrie</b> : étude quantitative des échanges de chaleur <i>Q</i> entre des corps ou avec l’extérieur.</li>
+        <li><b>Chaleur</b> (<i>Q</i>) : énergie échangée à cause d’une différence de température (unité : J).</li>
+        <li><b>Masse</b> (<i>m</i>) : quantité de matière d’un corps (unité : kg).</li>
+        <li><b>Chaleur spécifique</b> (<i>c</i>) : énergie à fournir à 1 kg pour augmenter sa température de 1 K (J·kg⁻¹·K⁻¹).</li>
+        <li><b>Capacité thermique</b> (<i>C</i>) : énergie à fournir à un objet entier pour augmenter sa température de 1 K (J·K⁻¹).</li>
+        <li><b>Changement d’état</b> : passage solide ⇄ liquide ⇄ gaz (fusion, solidification, vaporisation, liquéfaction) à pression donnée.</li>
+        <li><b>Chaleur latente</b> (<i>L</i>) : énergie échangée par kg lors d’un changement d’état, à température (presque) constante (J·kg⁻¹).</li>
+        <li><b>Conduction</b> : transfert de chaleur à travers un matériau immobile (ex : une paroi métallique chauffée d’un côté).</li>
+        <li><b>Convection</b> : transfert de chaleur avec mouvement d’un fluide (air/eau qui circule et transporte l’énergie).</li>
+      </ul>
+    </div>
+
+    <div class="bloc">
+      <div class="label">Théorie (court, mais complet)</div>
+      <ul>
+        <li><b>Cas 1 : la température change sans changement d’état</b> (ex : eau liquide de 20°C à 60°C). L’énergie échangée sert à augmenter (ou diminuer) l’agitation thermique : on utilise <b>Q = m c ΔT</b>.</li>
+        <li><b>Cas 2 : changement d’état</b> (ex : eau liquide qui bout et devient vapeur). Pendant le changement d’état, la température reste (à pression donnée) <b>quasi constante</b> : l’énergie échangée sert à modifier l’organisation microscopique (rompre/faire des liaisons) plutôt qu’à chauffer. On utilise <b>Q = m L</b>.</li>
+        <li><b>Pourquoi deux équations ?</b> Parce que <b>c</b> relie énergie ↔ variation de température, alors que lors d’un changement d’état <b>ΔT ≈ 0</b> alors que <b>Q ≠ 0</b> : il faut donc une autre grandeur, <b>L</b>.</li>
+        <li><b>Bilan énergétique (calorimétrie)</b> : on additionne les échanges de chaleur de chaque élément. Si l’ensemble est supposé isolé : <b>ΣQ = 0</b> (chaleur perdue par certains = chaleur gagnée par d’autres).</li>
+      </ul>
+    </div>
+
+    <div class="bloc">
+      <div class="label">Équations pratiques</div>
+      <ul>
+        <li>Chauffage / refroidissement : <b>Q = m c ΔT</b></li>
+        <li>Changement d’état : <b>Q = m L</b></li>
+        <li>Système isolé : <b>ΣQ = 0</b></li>
+        <li>Lettres : Q (J), m (kg), c (J·kg⁻¹·K⁻¹), ΔT (K), L (J·kg⁻¹)</li>
+      </ul>
+    </div>
+
+    <div class="bloc calc">
+      <div class="label">Exercice type (plus complet, niveau BTS/DUT, contexte pompier)</div><br/>
+      Un équipage veut estimer l’énergie minimale à extraire d’un foyer en refroidissant de l’eau projetée.
+      On envoie <b>m = 2,0 kg</b> d’eau initialement à <b>20°C</b>. Une partie se transforme en vapeur.
+      À la fin, on considère que :
+      <ul>
+        <li>toute l’eau restante est à <b>100°C</b>,</li>
+        <li>une masse <b>m<sub>v</sub> = 0,30 kg</b> est devenue vapeur à <b>100°C</b>,</li>
+        <li>on néglige les pertes et on ne traite que l’énergie absorbée par l’eau.</li>
+      </ul>
+
+      <b>Données :</b><br/>
+      c<sub>eau</sub> = 4200 J·kg⁻¹·K⁻¹ ; L<sub>vap</sub> = 2,26×10⁶ J·kg⁻¹.<br/><br/>
+
+      1) Calculer l’énergie <b>Q₁</b> pour chauffer les 2,0 kg d’eau de 20°C à 100°C.<br/>
+      2) Calculer l’énergie <b>Q₂</b> pour vaporiser 0,30 kg d’eau à 100°C.<br/>
+      3) Donner l’énergie totale <b>Q = Q₁ + Q₂</b> absorbée par l’eau.<br/><br/>
+
+      <b>Correction :</b><br/>
+      1) Chauffage sans changement d’état : ΔT = 100 − 20 = 80 K.<br/>
+      Q₁ = m c ΔT = 2,0 × 4200 × 80.<br/>
+      4200 × 80 = 336000 ; donc Q₁ = 2,0 × 336000 = <b>672000 J = 6,72×10⁵ J</b>.<br/><br/>
+
+      2) Vaporisation à température constante : Q₂ = m<sub>v</sub> L<sub>vap</sub> = 0,30 × 2,26×10⁶.<br/>
+      0,30 × 2,26×10⁶ = <b>6,78×10⁵ J</b>.<br/><br/>
+
+      3) Total : Q = Q₁ + Q₂ = 6,72×10⁵ + 6,78×10⁵ = <b>1,35×10⁶ J</b> (environ).<br/><br/>
+
+      <b>Interprétation physique :</b> ici, la vaporisation (Q₂) est du même ordre que le chauffage (Q₁) :
+      changer d’état “coûte” beaucoup d’énergie même sans augmenter la température.
+      <br/><br/>
+
+      <b>Lettres :</b> Q (J), Q₁ (J), Q₂ (J), m (kg), m<sub>v</sub> (kg), c (J·kg⁻¹·K⁻¹), ΔT (K), L<sub>vap</sub> (J·kg⁻¹).
+    </div>
+
+  </section>
+</div>
+
+
+  </div>
+</body>
+</html>

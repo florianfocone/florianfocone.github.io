@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Thermo — Température, chaleur, transformations</div>
+  </div>
+
+  <div class="page">
+    <!-- Mets ici TA fiche -->
+    <h2 id="fiche-title">Thermo — Température, chaleur, transformations</h2>
+
+<section id="thermo-1">
+
+  <div class="bloc defs" id="thermo-1-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Système</b> : portion de matière ou volume d’espace que l’on étudie (le reste = extérieur).</li>
+      <li><b>État thermodynamique</b> : description d’un système par des grandeurs d’état (ex : pression <i>p</i>, volume <i>V</i>, température <i>T</i>).</li>
+      <li><b>Température</b> (<i>T</i>) : grandeur qui caractérise l’état thermique d’un système ; deux systèmes en contact n’échangent plus de chaleur quand leurs températures sont égales. Unité : K (Kelvin).</li>
+      <li><b>Chaleur</b> (<i>Q</i>) : énergie transférée entre système et extérieur <u>à cause d’une différence de température</u>. Ce n’est pas une grandeur “contenue” dans le système = un corps ne contient pas de la chaleur.</li>
+      <li><b>Transformation</b> : passage d’un état initial à un état final (variation de <i>p</i>, <i>V</i>, <i>T</i>…), suivant un chemin.</li>
+      <li><b>Transformation isotherme</b> : température constante (<i>T</i> constante).</li>
+      <li><b>Transformation isobare</b> : pression constante (<i>p</i> constante).</li>
+      <li><b>Transformation isochore</b> : volume constant (<i>V</i> constant).</li>
+      <li><b>Transformation adiabatique</b> : aucun échange de chaleur (<i>Q</i> = 0).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (court)</div>
+    <ul>
+      <li>On repère l’état avec <i>p, V, T</i> (et parfois la quantité de matière <i>n</i>).</li>
+      <li>La chaleur <i>Q</i> est un <b>transfert</b> : elle n’existe que pendant un échange.</li>
+      <li>Les mots “isotherme / isobare / isochore / adiabatique” disent directement quelle grandeur est imposée.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Conversion : <b>T(K) = θ(°C) + 273</b> (suffit au concours).</li>
+      <li>Signes : <b>Q &gt; 0</b> si le système reçoit de la chaleur ; <b>Q &lt; 0</b> s’il en cède.</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    Deux corps A et B sont mis en contact thermique. Au bout d’un moment, leurs températures deviennent identiques.
+    <ul>
+      <li>Que signifie cette température finale ?</li>
+      <li>Pourquoi dit-on que la chaleur n’est pas “contenue” dans un corps ?</li>
+    </ul>
+    <b>Correction :</b>
+    <ul>
+      <li>Température finale : état d’équilibre thermique, donc <b>plus d’échange de chaleur</b> entre A et B.</li>
+      <li>La chaleur <i>Q</i> est <b>une énergie transférée</b> pendant l’échange ; une fois l’échange terminé, on ne parle plus de chaleur mais d’état (température, énergie interne…)</li>
+    </ul>
+  </div>
+</section>
+
+  </div>
+</body>
+</html>
