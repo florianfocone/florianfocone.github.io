@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Structure de la matière — Phases, changements d’état, solutions</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Structure de la matière — Changements d’état & mélanges : phases, équilibres, règle des phases, diagrammes</h2>
+
+    <section id="matiere-5">
+
+      <div class="bloc defs" id="matiere-5-defs">
+        <div class="label">Définitions</div>
+        <ul>
+          <li><b>Phase</b> : partie homogène d’un système (solide, liquide, gaz) avec propriétés uniformes.</li>
+          <li><b>Constituant</b> : espèce chimique présente dans le système (eau, éthanol, sel…).</li>
+          <li><b>Mélange</b> : système contenant plusieurs constituants.</li>
+          <li><b>Équilibre physico-chimique</b> : état stable où les phases et échanges ne varient plus dans le temps.</li>
+          <li><b>Changement d’état</b> : passage solide ⇄ liquide ⇄ gaz à pression donnée.</li>
+          <li><b>Corps pur</b> : système constitué d’un seul constituant.</li>
+          <li><b>Diagramme de phases</b> : représentation des domaines solide/liquide/gaz en fonction de T et p.</li>
+          <li><b>Point triple</b> : point (T,p) où solide, liquide et gaz coexistent à l’équilibre.</li>
+          <li><b>Solutions</b> : mélange homogène où un soluté est dissous dans un solvant.</li>
+          <li><b>Concentration molaire</b> (<i>C</i>) : quantité de matière par volume, C = n/V.</li>
+          <li><b>Règle des phases (Gibbs)</b> : relie constituants et phases au nombre de variables indépendantes.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Théorie (court, mais solide)</div>
+        <ul>
+          <li>À l’équilibre, un système peut avoir <b>une</b> phase (ex : liquide seul) ou <b>plusieurs</b> phases (ex : glace + eau).</li>
+          <li>Pour un <b>corps pur</b>, le changement d’état se fait sur une courbe du diagramme (fusion, vaporisation) ; au <b>point triple</b>, les trois phases coexistent.</li>
+          <li>La <b>règle des phases</b> dit combien de variables on peut choisir librement à l’équilibre.</li>
+          <li>En solution, on caractérise un mélange par une <b>concentration</b> ; cela sert à prévoir des effets (solubilité, préparation, dilution).</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Règle des phases (sans réaction) : <b>F = C - P + 2</b></li>
+          <li>Concentration molaire : <b>C = n/V</b></li>
+          <li>Quantité de matière : <b>n = m/M</b></li>
+          <li>Lettres : F (sans unité), C (nombre de constituants), P (nombre de phases), C (mol·L⁻¹), n (mol), V (L), m (g), M (g·mol⁻¹)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (règle des phases + solution, niveau BTS/DUT)</div><br/>
+        <b>Partie 1 — Règle des phases</b><br/>
+        On étudie un <b>corps pur</b> (un seul constituant) à l’équilibre.<br/>
+        1) Au point triple, trois phases coexistent : solide + liquide + gaz. Calculer F.<br/>
+        2) Sur une courbe d’équilibre liquide-gaz (deux phases), calculer F et dire ce que cela signifie.<br/><br/>
+
+        <b>Partie 2 — Solution</b><br/>
+        On dissout m = <b>5,0 g</b> de NaCl dans V = <b>0,50 L</b> d’eau.<br/>
+        On donne M(NaCl) = <b>58,5 g·mol⁻¹</b> et on accepte 58,5 ≈ <b>60</b> pour estimer sans calculatrice.<br/>
+        3) Estimer n puis la concentration molaire C.<br/><br/>
+
+        <b>Correction :</b><br/>
+        <b>1)</b> Corps pur : nombre de constituants = 1. Donc C = 1, P = 3.<br/>
+        F = C - P + 2 = 1 - 3 + 2 = <b>0</b>.<br/>
+        Interprétation : à l’équilibre, T et p sont imposées, on ne peut pas les choisir librement.<br/><br/>
+
+        <b>2)</b> Sur liquide-gaz : C = 1, P = 2 ⇒ F = 1 - 2 + 2 = <b>1</b>.<br/>
+        Interprétation : on peut choisir une variable (T ou p), l’autre est alors fixée par l’équilibre.<br/><br/>
+
+        <b>3)</b> n = m/M ≈ 5,0/60 ≈ <b>0,083 mol</b>.<br/>
+        C = n/V ≈ 0,083/0,50 ≈ <b>0,17 mol·L⁻¹</b>.<br/><br/>
+
+        <b>Lettres :</b> F, C (constituants), P (phases), m (g), M (g·mol⁻¹), n (mol), V (L), C (mol·L⁻¹).
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>

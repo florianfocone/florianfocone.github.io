@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Applications — Rayonnement, combustion, moteurs, PAC, météo</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Applications — Rayonnement (corps noir/Planck), combustion, moteurs, frigorifique/PAC, météorologie</h2>
+
+    <section id="matiere-6">
+
+      <div class="bloc defs" id="matiere-6-defs">
+        <div class="label">Définitions</div>
+        <ul>
+          <li><b>Rayonnement thermique</b> : transfert d’énergie par ondes électromagnétiques émises par un corps chaud.</li>
+          <li><b>Loi de Planck</b> : loi donnant la répartition spectrale du rayonnement d’un corps noir ; elle explique pourquoi un corps chaud émet surtout à certaines longueurs d’onde.</li>
+          <li><b>Loi de Wien</b> : relation donnant la longueur d’onde au maximum d’émission d’un corps noir.</li>
+          <li><b>Combustion</b> : réaction d’oxydation rapide d’un combustible avec un comburant, libérant de l’énergie.</li>
+          <li><b>Combustible</b> : espèce chimique oxydable (méthane, propane, bois…).</li>
+          <li><b>Comburant</b> : espèce oxydante, en pratique le dioxygène de l’air.</li>
+          <li><b>Réaction stœchiométrique</b> : réaction avec proportions exactes réactifs, sans excès.</li>
+          <li><b>PCI</b> : énergie libérée par kg de combustible sans récupérer la chaleur de condensation de l’eau formée.</li>
+          <li><b>Moteur à allumage commandé</b> : moteur où l’allumage se fait par étincelle (type essence).</li>
+          <li><b>Moteur diesel</b> : moteur où l’allumage se fait par auto-inflammation due à la compression.</li>
+          <li><b>Turbine à gaz</b> : machine où un gaz chaud en écoulement entraîne une turbine.</li>
+          <li><b>Machine frigorifique</b> : dispositif qui extrait de la chaleur d’une source froide grâce à un travail fourni.</li>
+          <li><b>Pompe à chaleur</b> : dispositif qui transfère de la chaleur vers une zone à chauffer grâce à un travail fourni.</li>
+          <li><b>COP</b> : coefficient de performance d’une machine frigorifique ou d’une PAC.</li>
+		  <li><b>Rendement</b> (η) : fraction d’énergie (ou puissance) utile obtenue par rapport à l’énergie (ou puissance) reçue.</li>
+			<li><b>Rendement d’un moteur thermique</b> : part de chaleur reçue qui est convertie en travail mécanique.</li>
+			<li><b>Rendement de Carnot</b> : rendement maximal théorique d’un moteur fonctionnant entre deux températures (en K).</li>
+          <li><b>Météorologie</b> : étude de l’atmosphère (pression, température, humidité, vents, nuages).</li>
+          <li><b>Humidité relative</b> : rapport entre la quantité de vapeur d’eau présente et la quantité maximale possible à la même température.</li>
+          <li><b>Point de rosée</b> : température à laquelle l’air devient saturé en vapeur d’eau et la condensation peut apparaître.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Théorie (synthétique)</div>
+        <ul>
+          <li><b>Rayonnement</b> : plus T est élevée, plus l’émission augmente et le maximum se déplace vers les petites longueurs d’onde.</li>
+          <li><b>Combustion</b> : en stœchiométrie, les coefficients de l’équation donnent les proportions en moles et donc en volumes pour des gaz à même T et p.</li>
+          <li><b>Moteurs</b> : l’énergie chimique du combustible est convertie partiellement en travail mécanique, le reste part en chaleur.</li>
+          <li><b>Frigorifique/PAC</b> : on peut déplacer de la chaleur contre le gradient de température en fournissant un travail.</li>
+          <li><b>Météo</b> : l’humidité et la température déterminent la condensation ; la convection (air chaud qui monte) favorise nuages et évolution rapide.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Planck (forme compacte, spectre) :
+		  <b>B<sub>λ</sub>(T)= (2hc²/λ⁵) / (exp(hc/(λkT)) − 1)</b>
+		</li>
+		<li>Wien : <b>λ<sub>max</sub> T = b</b> avec b ≈ 2,9×10⁻³ m·K</li>
+		<li>Stefan-Boltzmann : <b>P = ε σ A T⁴</b></li>
+		<li>Rendement : <b>η = P<sub>utile</sub> / P<sub>reçue</sub></b> (ou η = E<sub>utile</sub>/E<sub>reçue</sub>)</li>
+		<li>Moteur thermique : <b>η = W / Q<sub>chaud</sub> = 1 − Q<sub>froid</sub>/Q<sub>chaud</sub></b></li>
+		<li>Carnot (max) : <b>η<sub>max</sub> = 1 − T<sub>froid</sub>/T<sub>chaud</sub></b> (T en K)</li>
+		<li>COP frigo : <b>COP = Q<sub>froid</sub> / W</b> ; COP PAC : <b>COP = Q<sub>chaud</sub> / W</b></li>
+		<li>Carnot : <b>COP<sub>frigo,max</sub> = T<sub>froid</sub>/(T<sub>chaud</sub>−T<sub>froid</sub>)</b> ; <b>COP<sub>PAC,max</sub> = T<sub>chaud</sub>/(T<sub>chaud</sub>−T<sub>froid</sub>)</b></li>
+
+          <li>Lettres : λ<sub>max</sub> (m), T (K), b (m·K), P (W), ε (sans unité), σ (W·m⁻²·K⁻⁴), A (m²), Q (J), W (J), COP (sans unité)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (combustion + volumes, niveau BTS/DUT, contexte pompier)</div><br/>
+        Dans un local, une fuite produit un volume V(CH₄) = <b>10 L</b> de méthane (CH₄) mélangé à l’air.
+        On suppose la combustion <b>complète</b> et des gaz aux mêmes conditions de température et pression.<br/><br/>
+
+        Équation de combustion complète :<br/>
+        <b>CH₄ + 2 O₂ → CO₂ + 2 H₂O</b><br/><br/>
+
+        Air : fraction molaire en dioxygène x(O₂) = <b>0,21</b>.<br/><br/>
+
+        1) Quel volume de dioxygène est nécessaire pour brûler 10 L de CH₄ ?<br/>
+        2) Quel volume d’air minimum est nécessaire (stœchiométrie) ?<br/>
+        3) Quels volumes de CO₂ et de vapeur d’eau sont produits ?<br/><br/>
+
+        <b>Correction :</b><br/>
+        À même T et p, les volumes sont proportionnels aux moles, donc aux coefficients stœchiométriques.<br/><br/>
+
+        1) 1 volume de CH₄ consomme 2 volumes de O₂.<br/>
+        Donc pour 10 L de CH₄ : V(O₂) = 2×10 = <b>20 L</b>.<br/><br/>
+
+        2) L’air contient 21% de O₂ : V(O₂) = 0,21 V(air).<br/>
+        Il faut 20 L de O₂ ⇒ V(air) = 20 / 0,21 ≈ 20 / 0,20 = <b>100 L</b> (estimation), plus précisément ≈ 95 L.<br/><br/>
+
+        3) Production : 1 CH₄ → 1 CO₂ et 2 H₂O.<br/>
+        Donc pour 10 L de CH₄ : V(CO₂) = <b>10 L</b> et V(H₂O vapeur) = 2×10 = <b>20 L</b>.<br/><br/>
+
+        <b>Lettres :</b> V (L), x(O₂) (sans unité).
+      </div>
+	  <figure class="bloc">
+  <div class="label">Annale — Effet de serre (corps noir + loi de Wien)</div>
+  <a href="annales/effet-serre-q1.png" target="_blank" rel="noopener">
+    <img src="exo2.png"
+         alt="Annale : effet de serre, loi de Wien, transmission du verre entre 0,3 et 2,5 micromètres"
+         style="width:100%; max-width:980px; display:block; margin:10px auto; border-radius:12px; border:1px solid rgba(255,255,255,0.12);"/>
+  </a>
+  <figcaption style="text-align:center; opacity:0.85; font-size:0.95rem;">
+    Cliquez pour ouvrir l’image en grand.
+  </figcaption>
+</figure>
+
+<div class="bloc calc">
+  <div class="label">Correction (résultat attendu)</div><br/>
+  Soleil : T = 5900°C = 6173 K → λ<sub>max</sub> ≈ 2896/6173 ≈ 0,47 µm (dans la bande transmise).<br/>
+  Terre : T = 20°C = 293 K → λ<sub>max</sub> ≈ 2896/293 ≈ 9,9 µm (hors bande transmise).<br/><br/>
+  <b>Effet de serre :</b> le verre laisse entrer le rayonnement solaire (courtes λ) mais bloque l’infrarouge thermique réémis par la Terre (longues λ) → l’énergie sort mal → échauffement.
+</div>
+
+<div class="bloc calc">
+  <div class="label">Exercice type (rendement / COP, appliqué caserne)</div><br/>
+  Une caserne est chauffée par une <b>pompe à chaleur</b> qui fournit une puissance thermique
+  <b>P<sub>chaud</sub> = 12 kW</b> à l’intérieur, en consommant une puissance électrique
+  <b>P<sub>élec</sub> = 3,0 kW</b>.<br/>
+  Températures : extérieur 0°C, intérieur 20°C.<br/><br/>
+
+  1) Calculer le <b>COP</b> réel de la PAC.<br/>
+  2) Calculer le <b>COP maximal de Carnot</b> entre ces deux températures.<br/>
+  3) Comparer et conclure (réversibilité/irréversibilités).<br/><br/>
+
+  <b>Correction :</b><br/>
+  1) COP = P<sub>chaud</sub>/P<sub>élec</sub> = 12/3,0 = <b>4,0</b>.<br/><br/>
+  2) T<sub>chaud</sub> = 20°C = 293 K ; T<sub>froid</sub> = 0°C = 273 K ; ΔT = 20 K.<br/>
+  COP<sub>PAC,max</sub> = T<sub>chaud</sub>/(T<sub>chaud</sub>−T<sub>froid</sub>) = 293/20 ≈ <b>14,7</b>.<br/><br/>
+  3) COP réel (4,0) &lt; COP Carnot (≈14,7) car une machine réelle a des pertes et des irréversibilités
+  (frottements, échanges avec écarts de température finis, compressions non idéales).<br/><br/>
+
+  <b>Lettres :</b> P (W), COP (sans unité), T (K).
+</div>
+
+
+    </section>
+
+  </div>
+</body>
+</html>

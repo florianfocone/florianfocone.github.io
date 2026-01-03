@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Structure de la matière — Atomique & moléculaire</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Structure de la matière — Atomique & moléculaire : noyau, atome, isotopes, molécules</h2>
+
+    <section id="matiere-1">
+
+      <div class="bloc defs" id="matiere-1-defs">
+        <div class="label">Définitions</div>
+        <ul>
+          <li><b>Noyau</b> : partie centrale de l’atome contenant protons et neutrons.</li>
+          <li><b>Atome</b> : noyau entouré d’électrons ; globalement neutre.</li>
+          <li><b>Proton</b> : particule du noyau portant une charge positive.</li>
+          <li><b>Neutron</b> : particule du noyau sans charge électrique.</li>
+          <li><b>Électron</b> : particule négative autour du noyau.</li>
+          <li><b>Numéro atomique</b> (<i>Z</i>) : nombre de protons du noyau.</li>
+          <li><b>Nombre de masse</b> (<i>A</i>) : nombre total de nucléons, A = Z + N.</li>
+          <li><b>Isotopes</b> : atomes d’un même élément (même Z) avec des nombres de neutrons différents.</li>
+          <li><b>Molécule</b> : assemblage d’atomes liés formant une entité chimique.</li>
+          <li><b>Mole</b> (<i>n</i>) : quantité de matière ; 1 mol contient N<sub>A</sub> entités.</li>
+          <li><b>Constante d’Avogadro</b> (<i>N<sub>A</sub></i>) : nombre d’entités dans 1 mol, ≈ 6,0×10²³ mol⁻¹.</li>
+          <li><b>Masse molaire</b> (<i>M</i>) : masse de 1 mol, en kg·mol⁻¹ ou g·mol⁻¹.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Théorie (court, pour comprendre)</div>
+        <ul>
+          <li>Un élément chimique est identifié par <b>Z</b> (nombre de protons) ; changer <b>N</b> donne des <b>isotopes</b>.</li>
+          <li>En chimie et physique appliquée, on compte les entités avec la <b>mole</b> : masse ↔ quantité de matière ↔ nombre de particules.</li>
+          <li>Liens essentiels : <b>n = m / M</b> puis <b>N = n N<sub>A</sub></b>.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Nucléons : <b>A = Z + N</b></li>
+          <li>Quantité de matière : <b>n = m / M</b></li>
+          <li>Nombre d’entités : <b>N = n N<sub>A</sub></b></li>
+          <li>Lettres : A (sans unité), Z (sans unité), N (sans unité), m (kg ou g), M (kg·mol⁻¹ ou g·mol⁻¹), n (mol), N (entités), N<sub>A</sub> (mol⁻¹)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (complet, niveau TS/BTS)</div><br/>
+        On dispose de <b>22 g</b> de dioxyde de carbone <b>CO₂</b>.<br/>
+        On donne : M(CO₂) = <b>44 g·mol⁻¹</b> et N<sub>A</sub> ≈ <b>6,0×10²³ mol⁻¹</b>.<br/><br/>
+        1) Calculer la quantité de matière <b>n</b> de CO₂.<br/>
+        2) Calculer le nombre de molécules <b>N</b> de CO₂.<br/>
+        3) En déduire le nombre total d’atomes d’oxygène contenus dans l’échantillon.<br/><br/>
+
+        <b>Correction :</b><br/>
+        1) n = m/M = 22/44 = <b>0,50 mol</b>.<br/><br/>
+        2) N = n N<sub>A</sub> = 0,50 × 6,0×10²³ = <b>3,0×10²³ molécules</b>.<br/><br/>
+        3) Une molécule CO₂ contient <b>2 atomes O</b>.<br/>
+        Nombre d’atomes O = 2N = 2 × 3,0×10²³ = <b>6,0×10²³ atomes</b>.<br/><br/>
+
+        <b>Lettres :</b> m (g), M (g·mol⁻¹), n (mol), N (molécules), N<sub>A</sub> (mol⁻¹).
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>

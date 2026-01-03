@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Structure de la matière — État solide & matériaux</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Structure de la matière — État solide : liaisons, métaux/alliages, polymères, céramiques, cristaux/amorphes</h2>
+
+    <section id="matiere-4">
+
+      <div class="bloc defs" id="matiere-4-defs">
+        <div class="label">Définitions</div>
+        <ul>
+		<li><b>Fusion</b> : passage solide → liquide.</li>
+		<li><b>Solidification</b> : passage liquide → solide.</li>
+		<li><b>Vaporisation</b> : passage liquide → gaz (inclut évaporation et ébullition).</li>
+		<li><b>Ébullition</b> : vaporisation dans tout le liquide quand la pression de vapeur atteint la pression extérieure.</li>
+		<li><b>Évaporation</b> : vaporisation à la surface du liquide, possible à toute température.</li>
+		<li><b>Liquéfaction</b> : passage gaz → liquide (par refroidissement et/ou compression).</li>
+		<li><b>Condensation</b> : passage gaz → liquide (synonyme courant de liquéfaction).</li>
+		<li><b>Sublimation</b> : passage solide → gaz sans passer par l’état liquide.</li>
+		<li><b>Condensation solide</b> : passage gaz → solide (inverse de la sublimation).</li>
+          <li><b>Solide cristallin</b> : solide où les atomes sont organisés périodiquement (ordre à longue distance).</li>
+          <li><b>Solide amorphe</b> : solide sans ordre périodique à longue distance.</li>
+          <li><b>Polymorphisme</b> : capacité d’un solide à exister sous plusieurs structures cristallines selon T et p.</li>
+          <li><b>Liaison métallique</b> : liaison où des électrons sont délocalisés, donnant bonne conductivité et ductilité.</li>
+          <li><b>Liaison ionique</b> : attraction entre ions de charges opposées, solide souvent dur et fragile.</li>
+          <li><b>Liaison covalente</b> : partage d’électrons, liaison forte, matériaux souvent rigides.</li>
+          <li><b>Métal</b> : solide conducteur, souvent ductile, lié à la liaison métallique.</li>
+          <li><b>Alliage</b> : mélange solide d’au moins deux éléments, dont au moins un métal.</li>
+          <li><b>Polymère</b> : matériau constitué de longues chaînes moléculaires, souvent isolant et léger.</li>
+          <li><b>Céramique</b> : matériau inorganique non métallique, souvent résistant à haute température, fragile.</li>
+          <li><b>Fraction massique</b> (<i>w</i>) : proportion en masse d’un constituant dans un mélange solide.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Théorie (court, pour trier les cas)</div>
+        <ul>
+          <li>Les propriétés mécaniques et thermiques viennent des <b>liaisons</b> et de l’<b>organisation</b> (cristallin/amorphe).</li>
+          <li>Un <b>métal</b> conduit bien la chaleur et l’électricité ; un <b>polymère</b> est souvent isolant mais se ramollit quand T augmente ; une <b>céramique</b> résiste à la chaleur mais casse plus facilement.</li>
+          <li>Un <b>alliage</b> permet d’ajuster les propriétés (dureté, corrosion, tenue en température).</li>
+          <li>Le <b>polymorphisme</b> explique que certains solides changent de structure selon la température et donc changent de propriétés.</li>
+		  <li>Pour un corps pur à pression fixée, un changement d’état à l’équilibre se fait à température constante : l’énergie échangée sert à changer l’état.</li>
+		<li>Dans un diagramme (p,T), les courbes séparent les domaines (solide/liquide/gaz) : sur une courbe, deux phases coexistent ; au point triple, trois phases coexistent.</li>
+		<figure class="bloc">
+		  <div class="label">Diagramme d’état (H²O)</div>
+		  <img src="etats-matiere.jpeg" alt="Diagramme d’état (phases) : solide, liquide, gaz en fonction de la pression et de la température" style="width:100%; max-width:900px; display:block; margin:10px auto; border-radius:12px; border:1px solid rgba(255,255,255,0.12);"/>
+		  <figcaption style="text-align:center; opacity:0.85; font-size:0.95rem;">
+			Diagramme d’état — eau (p,T).
+		  </figcaption>
+		</figure>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Fraction massique : <b>w<sub>i</sub> = m<sub>i</sub> / m<sub>tot</sub></b></li>
+          <li>Masse d’un constituant : <b>m<sub>i</sub> = w<sub>i</sub> m<sub>tot</sub></b></li>
+          <li>Densité (si besoin) : <b>ρ = m/V</b></li>
+          <li>Lettres : w (sans unité), m (kg), m<sub>tot</sub> (kg), ρ (kg·m⁻³), V (m³)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (appliqué matériaux, plus complet)</div><br/>
+        Une pièce d’équipement est réalisée en <b>alliage cuivre-zinc</b> (type laiton) contenant
+        <b>70%</b> de cuivre et <b>30%</b> de zinc en masse.<br/>
+        La masse totale de la pièce est <b>2,0 kg</b>.<br/><br/>
+
+        1) Calculer les masses de cuivre et de zinc dans la pièce.<br/>
+        2) Un collègue propose de remplacer la pièce par un <b>polymère</b> pour gagner du poids,
+           mais la pièce travaille près d’une source chaude et doit conserver sa rigidité.
+           Donner <b>une raison matérielle</b> simple qui peut rendre ce choix risqué.<br/><br/>
+
+        <b>Correction :</b><br/>
+        1) m(Cu) = 0,70×2,0 = <b>1,4 kg</b>.<br/>
+        m(Zn) = 0,30×2,0 = <b>0,6 kg</b>.<br/><br/>
+
+        2) Un polymère peut <b>ramollir</b> quand la température augmente : sa rigidité diminue fortement,
+        alors qu’un métal ou alliage garde généralement une bonne tenue mécanique sur une plage de température plus large.<br/><br/>
+
+        <b>Lettres :</b> w (sans unité), m (kg), m<sub>tot</sub> (kg).
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>

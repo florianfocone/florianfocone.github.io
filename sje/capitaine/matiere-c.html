@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Structure de la matière — Gaz parfait : cinétique + mélanges</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Structure de la matière — Théorie cinétique des gaz parfaits + mélanges gazeux</h2>
+
+    <section id="matiere-3">
+
+      <div class="bloc defs" id="matiere-3-defs">
+        <div class="label">Définitions</div>
+        <ul>
+          <li><b>Gaz parfait</b> : modèle où les interactions sont négligées, vérifiant pV = nRT.</li>
+          <li><b>Théorie cinétique</b> : modèle microscopique où la pression vient des chocs des molécules sur les parois.</li>
+          <li><b>Température</b> : grandeur liée à l’agitation thermique moyenne des particules.</li>
+          <li><b>Pression</b> (<i>p</i>) : force par unité de surface exercée par le gaz sur les parois. Unité : Pa.</li>
+          <li><b>Quantité de matière</b> (<i>n</i>) : nombre de moles. Unité : mol.</li>
+          <li><b>Masse molaire</b> (<i>M</i>) : masse d’une mole de gaz. Unité : kg·mol⁻¹.</li>
+          <li><b>Vitesse quadratique moyenne</b> (<i>v<sub>rms</sub></i>) : vitesse caractéristique des molécules liée à T.</li>
+          <li><b>Mélange gazeux</b> : gaz constitué de plusieurs espèces (O₂, N₂, CO₂…).</li>
+          <li><b>Pression partielle</b> (<i>p<sub>i</sub></i>) : pression qu’exercerait l’espèce i si elle occupait seule le volume.</li>
+          <li><b>Fraction molaire</b> (<i>x<sub>i</sub></i>) : part de l’espèce i en moles dans le mélange.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Théorie (court, appliqué)</div>
+        <ul>
+          <li>Gaz parfait : <b>pV = nRT</b> relie les variables d’état.</li>
+          <li>Théorie cinétique : à température plus élevée, les molécules vont plus vite et la pression augmente si V est constant.</li>
+          <li>Mélanges : la pression totale est la somme des pressions partielles : <b>p = Σp<sub>i</sub></b>.</li>
+          <li>À même p et T, la quantité de matière est proportionnelle au volume : <b>V ∝ n</b>.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Gaz parfait : <b>pV = nRT</b></li>
+          <li>Pressions partielles (Dalton) : <b>p = Σp<sub>i</sub></b> et <b>p<sub>i</sub> = x<sub>i</sub> p</b></li>
+          <li>Lien cinétique (ordre de grandeur) : <b>v<sub>rms</sub> = √(3RT/M)</b></li>
+          <li>Lettres : p (Pa), V (m³), n (mol), R (J·mol⁻¹·K⁻¹), T (K), p<sub>i</sub> (Pa), x<sub>i</sub> (sans unité), M (kg·mol⁻¹), v<sub>rms</sub> (m·s⁻¹)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (mélange + cinétique, niveau BTS/DUT)</div><br/>
+        Un ARI délivre un mélange respiratoire à p = <b>2,0 bar</b> et T = <b>300 K</b>.
+        On considère : x(O₂) = <b>0,21</b> et x(N₂) = <b>0,79</b>.<br/><br/>
+
+        1) Calculer les pressions partielles p(O₂) et p(N₂).<br/>
+        2) Un volume V = <b>10 L</b> de ce mélange est contenu dans une chambre à p = 2,0 bar et T = 300 K.
+           Estimer la quantité de matière n en utilisant R = <b>0,083</b> L·bar·mol⁻¹·K⁻¹.<br/>
+        3) Estimer v<sub>rms</sub> de l’air à 300 K en prenant M ≈ <b>0,030 kg·mol⁻¹</b> et R = <b>8,3</b> J·mol⁻¹·K⁻¹.<br/><br/>
+
+        <b>Correction :</b><br/>
+        1) p<sub>i</sub> = x<sub>i</sub> p.<br/>
+        p(O₂) = 0,21×2,0 = <b>0,42 bar</b>.<br/>
+        p(N₂) = 0,79×2,0 = <b>1,58 bar</b>.<br/><br/>
+
+        2) pV = nRT ⇒ n = pV/(RT).<br/>
+        n = (2,0×10) / (0,083×300).<br/>
+        0,083×300 ≈ 24,9 ≈ 25 ⇒ n ≈ 20/25 = <b>0,80 mol</b>.<br/><br/>
+
+        3) v<sub>rms</sub> = √(3RT/M).<br/>
+        3RT ≈ 3×8,3×300 ≈ 7470 ≈ 7,5×10³.<br/>
+        (3RT/M) ≈ (7,5×10³)/(3,0×10⁻²) = 2,5×10⁵.<br/>
+        √(2,5×10⁵) ≈ √(25×10⁴) = 5×10² = <b>500 m·s⁻¹</b>.<br/><br/>
+
+        <b>Lettres :</b> p (bar), p<sub>i</sub> (bar), x<sub>i</sub> (sans unité), V (L), n (mol), R, T (K), M (kg·mol⁻¹), v<sub>rms</sub> (m·s⁻¹).
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>

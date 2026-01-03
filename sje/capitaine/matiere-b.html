@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* mini header fixe (sans recherche) */
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    /* zone de contenu */
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }  // légèrement plus petit
+  };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Structure de la matière — Radioactivité</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Structure de la matière — Radioactivité : principes, types, périodes, unités, actions sur la matière</h2>
+
+    <section id="matiere-2">
+
+      <div class="bloc defs" id="matiere-2-defs">
+        <div class="label">Définitions</div>
+        <ul>
+          <li><b>Radioactivité</b> : transformation spontanée de certains noyaux instables avec émission de particules ou de rayonnements.</li>
+          <li><b>Rayonnement α</b> : émission d’un noyau d’hélium (très ionisant, faible pénétration).</li>
+          <li><b>Rayonnement β⁻</b> : émission d’un électron (pénétration moyenne).</li>
+          <li><b>Rayonnement γ</b> : photon très énergétique (forte pénétration).</li>
+		  <li><b>Action sur la matière</b> : effets d’un rayonnement sur un matériau par dépôt d’énergie et ionisation, pouvant modifier ses propriétés physiques et chimiques.</li>
+		<li><b>Ionisation / excitation</b> : arrachage ou élévation d’électrons, créant des ions et des électrons libres.</li>
+		<li><b>Chauffage</b> : l’énergie déposée augmente l’agitation thermique, donc la température locale.</li>
+		<li><b>Radiolyse</b> : cassure de liaisons chimiques par rayonnement, produisant des espèces très réactives.</li>
+		<li><b>Dégradation des polymères</b> : rupture ou réorganisation des chaînes, rendant le matériau plus fragile et moins fiable.</li>
+		<li><b>Défauts dans les solides</b> : création de défauts dans les cristaux ou composants, pouvant dégrader leurs performances.</li>
+		<li><b>Activation</b> : un matériau irradié peut devenir radioactif si ses noyaux sont transformés, surtout en présence de neutrons.</li>
+          <li><b>Période radioactive</b> (<i>T<sub>1/2</sub></i>) : durée au bout de laquelle la moitié des noyaux s’est désintégrée.</li>
+          <li><b>Activité</b> (<i>A</i>) : nombre de désintégrations par seconde. Unité : <b>Bq</b>.</li>
+          <li><b>Constante de désintégration</b> (<i>λ</i>) : probabilité par seconde qu’un noyau se désintègre.</li>
+          <li><b>Dose absorbée</b> (<i>D</i>) : énergie déposée par unité de masse. Unité : <b>Gy</b>.</li>
+          <li><b>Dose équivalente</b> (<i>H</i>) : dose tenant compte du type de rayonnement. Unité : <b>Sv</b>.</li>
+          
+
+        </ul>
+      </div>
+	  <div class="bloc">
+  <div class="label">Lecture terrain (très court)</div>
+  <ul>
+    <li><b>α</b> : très ionisant, très peu pénétrant ; dangereux surtout si inhalé/ingéré ; écran simple type papier suffit.</li>
+    <li><b>β</b> : ionisant, pénétration moyenne ; risque peau et yeux ; écran léger type plastique ou aluminium.</li>
+    <li><b>γ</b> : peu ionisant par unité de trajet mais très pénétrant ; danger à distance ; écran dense type plomb ou béton.</li>
+  </ul>
+</div>
+
+
+      <div class="bloc">
+        <div class="label">Théorie (court, mais clair)</div>
+        <ul>
+          <li>La décroissance est <b>exponentielle</b> : elle dépend du temps, pas de la quantité “restante” de façon linéaire.</li>
+          <li>On raisonne souvent avec la demi-vie : après 1 période, il reste 1/2 ; après 2 périodes, 1/4 ; après 3 périodes, 1/8.</li>
+          <li>L’activité <b>A</b> diminue comme le nombre de noyaux <b>N</b>.</li>
+          <li>Effets : l’ionisation peut chauffer, dégrader des matériaux, et endommager les tissus ; la protection dépend du rayonnement (α, β, γ) et de l’écran.</li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+        <div class="label">Équations pratiques</div>
+        <ul>
+          <li>Décroissance : <b>A(t) = A₀ (1/2)<sup>t/T<sub>1/2</sub></sup></b></li>
+          <li>Lien : <b>A = λN</b></li>
+          <li>Lien demi-vie : <b>λ = ln(2) / T<sub>1/2</sub></b></li>
+          <li>Lettres : A (Bq), A₀ (Bq), t (s), T<sub>1/2</sub> (s), λ (s⁻¹), N (noyaux)</li>
+        </ul>
+      </div>
+
+      <div class="bloc calc">
+        <div class="label">Exercice type (plus dur, sans calculatrice)</div><br/>
+        Un détecteur mesure une source β⁻ de période T<sub>1/2</sub> = <b>2 h</b>.<br/>
+        À t = 0, l’activité vaut A₀ = <b>8000 Bq</b>.<br/>
+        On prendra ln(2) ≈ <b>0,70</b> et 2 h = <b>7200 s</b>.<br/><br/>
+
+        1) Calculer l’activité <b>A</b> après <b>6 h</b>.<br/>
+        2) En déduire le nombre de noyaux <b>N</b> présents à t = 6 h.<br/><br/>
+
+        <b>Correction :</b><br/>
+        1) 6 h = 3 demi-vies ⇒ A = A₀ / 2³ = 8000 / 8 = <b>1000 Bq</b>.<br/><br/>
+        2) λ = ln(2)/T<sub>1/2</sub> ≈ 0,70 / 7200 ≈ 7,0×10⁻¹ / 7,2×10³ ≈ <b>1,0×10⁻⁴ s⁻¹</b> (ordre de grandeur).<br/>
+        A = λN ⇒ N = A/λ ≈ 1000 / (1,0×10⁻⁴) = <b>1,0×10⁷ noyaux</b>.<br/><br/>
+
+        <b>Lettres :</b> A (Bq), A₀ (Bq), T<sub>1/2</sub> (s), t (s), λ (s⁻¹), N (noyaux).
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>
