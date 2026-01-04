@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Électricité — Courants dans les milieux</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Électricité — Courants dans les divers milieux : électrolyse, diode, piles/accus</h2>
+
+<section id="elec-b">
+  <h4>Électricité — Courants dans les divers milieux</h4>
+
+<div class="bloc defs" id="elec-b-defs">
+  <div class="label">Définitions</div>
+  <ul>
+    <li><b>Charge électrique</b> (q) : propriété électrique d’une particule ; les charges se déplacent et forment un courant.</li>
+    <li><b>Courant électrique</b> (I) : débit de charges électriques ; I = Δq/Δt.</li>
+
+    <li><b>Conducteur</b> : matériau où des charges mobiles circulent facilement (ex : électrons dans les métaux).</li>
+    <li><b>Isolant</b> : matériau où les charges sont peu mobiles ; le courant est quasi nul en conditions normales.</li>
+    <li><b>Semi-conducteur</b> : matériau dont la conduction peut être fortement modifiée (température, lumière, dopage).</li>
+
+    <li><b>Dopage</b> : ajout contrôlé d’impuretés dans un semi-conducteur pour augmenter le nombre de porteurs de charge.</li>
+    <li><b>Semi-conducteur de type n</b> : dopage créant surtout des <b>électrons</b> mobiles (porteurs majoritaires).</li>
+    <li><b>Semi-conducteur de type p</b> : dopage créant surtout des <b>trous</b> (absence d’électron qui se comporte comme une charge +).</li>
+    <li><b>Jonction p-n</b> : zone de contact entre un semi-conducteur p et n ; base de la diode.</li>
+
+    <li><b>Diode</b> : composant basé sur une jonction p-n qui laisse passer le courant dans un sens (sens passant) et le bloque dans l’autre (sens bloquant).</li>
+    <li><b>Tension de seuil</b> (U<sub>s</sub>) : tension à partir de laquelle une diode conduit fortement en sens passant (ordre de grandeur : ~0,7 V pour Si).</li>
+
+    <li><b>Électrolyte</b> : liquide contenant des ions mobiles, capable de conduire le courant.</li>
+    <li><b>Électrolyse</b> : transformation chimique provoquée par un courant dans un électrolyte.</li>
+    <li><b>Anode</b> : électrode où se produit une oxydation.</li>
+    <li><b>Cathode</b> : électrode où se produit une réduction.</li>
+
+    <li><b>Pile</b> : générateur électrochimique non rechargeable convertissant une réaction chimique en énergie électrique.</li>
+    <li><b>Accumulateur</b> : générateur électrochimique rechargeable (réaction réversible).</li>
+    <li><b>Capacité</b> (Ah) : quantité de charge que peut fournir une batterie ; 1 Ah = 3600 C.</li>
+  </ul>
+</div>
+
+
+<div class="bloc">
+  <div class="label">Théorie</div>
+  <ul>
+    <li><b>Dans un métal (conducteur)</b> : le courant est transporté par des <b>électrons libres</b>. La résistance vient des collisions dans le matériau → échauffement (Joule).</li>
+
+    <li><b>Dans un électrolyte (liquide)</b> : le courant est transporté par des <b>ions</b> (ions + et ions −). Le passage du courant peut <b>forcer des réactions chimiques</b> : c’est l’électrolyse.</li>
+
+    <li><b>Dans un semi-conducteur</b> : il y a peu de porteurs naturellement. Le <b>dopage</b> sert à “fabriquer” beaucoup de porteurs :
+      <ul>
+        <li>type <b>n</b> : on augmente les <b>électrons</b> disponibles → conduction plus facile.</li>
+        <li>type <b>p</b> : on crée des <b>trous</b> (places vides) qui se déplacent comme des charges positives.</li>
+      </ul>
+    </li>
+
+    <li><b>Pourquoi une diode ne laisse passer que dans un sens</b> :
+      une jonction <b>p-n</b> crée une zone qui s’oppose au passage des charges.
+      <ul>
+        <li>En <b>sens passant</b> (p au +, n au −), la barrière diminue : dès que U dépasse environ <b>U<sub>s</sub></b>, le courant augmente fortement.</li>
+        <li>En <b>sens bloquant</b>, la barrière augmente : le courant reste quasi nul (tant qu’on ne dépasse pas la tension de claquage).</li>
+      </ul>
+    </li>
+	<li><b>Exemple terrain</b> : une diode en série protège un appareil contre une inversion de polarité (elle bloque si on branche à l’envers).</li>
+
+
+    <li><b>Piles / accumulateurs</b> :
+      la tension vient d’une réaction chimique. En pratique, une batterie a une <b>résistance interne</b> :
+      plus on demande de courant, plus la tension aux bornes chute (U = E − rI).</li>
+	  
+  </ul>
+</div>
+
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Charge électrique : <b>Q = I t</b></li>
+      <li>Énergie électrique : <b>W = U I t</b></li>
+      <li>Pile réelle : <b>U = E − r I</b></li>
+      <li>Diode (modèle simple) : conduction si <b>U ≥ U<sub>seuil</sub></b> dans le sens passant</li>
+      <li>Faraday (électrolyse) : <b>Q = n<sub>e</sub> F</b> avec F ≈ 96500 C·mol⁻¹</li>
+      <li>Lettres : Q (C), I (A), t (s), U (V), W (J), E (V), r (Ω), F (C·mol⁻¹)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (électrolyse + batterie, appliqué)</div><br/>
+    Une batterie alimente un montage d’électrolyse avec un courant constant <b>I = 2,0 A</b> pendant <b>15 min</b>.<br/>
+    1) Calculer la charge totale <b>Q</b> passée.<br/>
+    2) Calculer la quantité de “moles d’électrons” n<sub>e</sub> échangée (F = 96500 C·mol⁻¹).<br/>
+    3) La batterie a une capacité nominale <b>3,0 Ah</b>. Quel pourcentage de capacité a été consommé ?<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) t = 15 min = 900 s. Q = I t = 2,0×900 = <b>1800 C</b>.<br/><br/>
+    2) n<sub>e</sub> = Q/F = 1800 / 96500 ≈ <b>1,9×10⁻² mol</b> (≈ 0,019 mol).<br/><br/>
+    3) En A·h : 15 min = 0,25 h. Charge consommée = I×t = 2,0×0,25 = <b>0,50 Ah</b>.<br/>
+    Pourcentage = 0,50 / 3,0 ≈ <b>17%</b>.<br/><br/>
+
+    <b>Lettres :</b> I (A), t (s ou h), Q (C ou A·h), F (C·mol⁻¹).
+  </div>
+  
+  <div class="bloc calc">
+  <div class="label">Exercice type (diode + batterie réelle, appliqué pompier)</div><br/>
+
+  Une lampe de signalisation 12 V est modélisée par une résistance <b>R = 10 Ω</b>.
+  Elle est alimentée par une batterie de f.é.m. <b>E = 12,0 V</b> et de résistance interne <b>r = 0,80 Ω</b>.
+  Pour protéger contre l’inversion de polarité, on place une <b>diode en série</b> (modèle simple : chute de tension
+  constante <b>U<sub>s</sub> = 0,70 V</b> en sens passant).<br/><br/>
+
+  1) Calculer le courant <b>I</b> dans le circuit quand la diode est passante.<br/>
+  2) Calculer la tension <b>U<sub>R</sub></b> aux bornes de la lampe.<br/>
+  3) Calculer la puissance dissipée par la lampe <b>P<sub>lampe</sub></b> et par la diode <b>P<sub>diode</sub></b>.<br/>
+  4) On branche la batterie à l’envers : que devient le courant (modèle diode idéal en sens bloquant) ?<br/><br/>
+
+  <b>Correction :</b><br/>
+  La diode passante impose une chute U<sub>s</sub>. La tension restante alimente (r + R) en série.<br/><br/>
+
+  1) Équation de maille : E = U<sub>s</sub> + I(r + R) ⇒ I = (E − U<sub>s</sub>)/(r + R).<br/>
+  I = (12,0 − 0,70)/(0,80 + 10) = 11,3 / 10,8 ≈ <b>1,05 A</b>.<br/><br/>
+
+  2) U<sub>R</sub> = I R = 1,05 × 10 ≈ <b>10,5 V</b>.<br/><br/>
+
+  3) P<sub>lampe</sub> = U<sub>R</sub> I ≈ 10,5 × 1,05 ≈ <b>11,0 W</b> (≈ R I² = 10×1,05²).<br/>
+  P<sub>diode</sub> = U<sub>s</sub> I = 0,70 × 1,05 ≈ <b>0,74 W</b>.<br/><br/>
+
+  4) Batterie inversée : diode en sens bloquant ⇒ courant ≈ <b>0 A</b> (protection contre inversion).<br/><br/>
+
+  <b>Lettres :</b> E (V), r (Ω), R (Ω), U<sub>s</sub> (V), I (A), U (V), P (W).
+</div>
+
+</section>
+
+  </div>
+</body>
+</html>

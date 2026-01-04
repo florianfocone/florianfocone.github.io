@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Électricité — Électrocinétique</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Électricité — Électrocinétique : Ohm, Joule, Kirchhoff, Thévenin</h2>
+
+<section id="elec-a">
+  <h4>Électricité — Électrocinétique</h4>
+
+  <div class="bloc defs" id="elec-a-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Courant électrique</b> (I) : débit de charges électriques traversant une section par unité de temps.</li>
+      <li><b>Tension</b> (U) : différence de potentiel entre deux points ; “force” qui pousse les charges.</li>
+      <li><b>Générateur</b> : dipôle qui maintient une tension et fournit de l’énergie électrique au circuit.</li>
+      <li><b>Force électromotrice</b> (E) : tension à vide idéale d’un générateur.</li>
+      <li><b>Résistance</b> (R) : dipôle qui s’oppose au passage du courant et dissipe de l’énergie en chaleur.</li>
+      <li><b>Loi d’Ohm</b> : relation d’un conducteur ohmique : U = R I.</li>
+      <li><b>Puissance électrique</b> (P) : énergie transférée par unité de temps : P = U I.</li>
+      <li><b>Effet Joule</b> : échauffement d’un conducteur traversé par un courant : énergie dissipée dans R.</li>
+      <li><b>Lois de Kirchhoff</b> : lois de conservation dans les circuits (nœuds et mailles).</li>
+      <li><b>Loi des nœuds</b> : somme des courants entrants = somme des courants sortants.</li>
+      <li><b>Loi des mailles</b> : somme algébrique des tensions sur une maille fermée = 0.</li>
+      <li><b>Thévenin</b> : tout réseau vu de deux bornes ≡ une source idéale E<sub>th</sub> en série avec R<sub>th</sub>.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (court)</div>
+    <ul>
+      <li>On modélise souvent un générateur réel par : <b>E</b> (f.é.m.) en série avec une <b>résistance interne r</b>.</li>
+      <li>Dans un circuit, on calcule les courants et tensions avec <b>Ohm + Kirchhoff</b>.</li>
+      <li>Pour simplifier un réseau, on remplace “tout ce qui est à gauche” par son <b>équivalent de Thévenin</b> puis on calcule facilement le courant dans la charge.</li>
+      <li>Effet joule = Puissance dissipée dans une résistance * temps = échauffement : point clé en sécurité (câbles, surintensités). P=UI*t</li>
+	  <br>
+	  <img src="joule.png"
+         alt="effet joule"
+         style="width:100%; max-width:980px; display:block; margin:10px auto; border-radius:12px; border:1px solid rgba(255,255,255,0.12);"/>
+		 <br>
+		       <li>Kirchhoff ; diviseur de tension et Thevenin</li>
+
+	  <video controls preload="metadata"
+       style="width:100%; max-width:980px; display:block; margin:12px auto;
+              border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+  <source src="Kirchhoff1.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+		 <br>
+	  <video controls preload="metadata"
+       style="width:100%; max-width:980px; display:block; margin:12px auto;
+              border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+  <source src="Kirchhoff2.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+		 <br>
+	  <video controls preload="metadata"
+       style="width:100%; max-width:980px; display:block; margin:12px auto;
+              border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+  <source src="pontdiviseurtension.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+<br>
+<video controls preload="metadata"
+       style="width:100%; max-width:980px; display:block; margin:12px auto;
+              border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+  <source src="theoremethevenin.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+
+
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Loi d’Ohm : <b>U = R I</b></li>
+      <li>Puissance : <b>P = U I = R I² = U² / R</b></li>
+      <li>Énergie : <b>W = P t</b></li>
+      <li>Générateur réel : <b>U = E − r I</b> (tension aux bornes en charge)</li>
+      <li>Kirchhoff : <b>ΣI = 0</b> au nœud ; <b>ΣU = 0</b> dans une maille</li>
+      <li>Thévenin : réseau ≡ <b>E<sub>th</sub></b> en série avec <b>R<sub>th</sub></b></li>
+      <li>Lettres : I (A), U (V), R (Ω), P (W), W (J), t (s), E (V), r (Ω)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (annale-like, Thévenin + échauffement)</div><br/>
+    Un générateur réel de f.é.m. <b>E = 12 V</b> et de résistance interne <b>r = 1,0 Ω</b> alimente un réseau constitué
+    d’une résistance <b>R1 = 5,0 Ω</b> en série avec une charge <b>R2</b>.<br/>
+    On mesure un courant <b>I = 1,5 A</b> dans le circuit.<br/><br/>
+
+    1) Calculer la tension <b>U</b> aux bornes du générateur (tension délivrée au circuit externe).<br/>
+    2) En déduire la résistance équivalente externe <b>Rext</b> vue par le générateur, puis calculer <b>R2</b>.<br/>
+    3) Calculer la puissance dissipée par effet Joule dans <b>R2</b>.<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) U = E − rI = 12 − 1,0×1,5 = <b>10,5 V</b>.<br/><br/>
+    2) Rext = U/I = 10,5 / 1,5 = <b>7,0 Ω</b>.<br/>
+    Or Rext = R1 + R2 ⇒ R2 = 7,0 − 5,0 = <b>2,0 Ω</b>.<br/><br/>
+    3) P<sub>R2</sub> = R2 I² = 2,0 × (1,5)² = 2,0 × 2,25 = <b>4,5 W</b>.<br/><br/>
+
+    <b>Lettres :</b> E (V), r (Ω), U (V), I (A), R (Ω), P (W).
+  </div>
+  
+  <div class="bloc calc">
+  <div class="label">Exercice type (Thévenin + pont diviseur, appliqué pompier)</div><br/>
+
+  Un éclairage de balisage (charge) est modélisé par une résistance <b>R<sub>L</sub> = 6,0 Ω</b>.
+  Il est alimenté par une batterie <b>E = 12 V</b> avec une résistance interne <b>r = 0,50 Ω</b>.
+  Entre la batterie et la charge, on a un “réseau de protection” (diviseur) :<br/>
+  <b>R1 = 3,0 Ω</b> en série avec le nœud A ; depuis A vers la masse, <b>R2 = 9,0 Ω</b>.<br/>
+  La charge <b>R<sub>L</sub></b> se branche entre A et la masse (en parallèle avec R2).<br/><br/>
+
+  <b>Objectif :</b> remplacer tout ce qui est “à gauche” de la charge par un équivalent de Thévenin vu entre A et la masse,
+  puis calculer le courant et la puissance dans l’éclairage.<br/><br/>
+
+  1) <b>Calculer E<sub>th</sub></b> : tension à vide U<sub>A</sub> quand la charge est débranchée.<br/>
+  2) <b>Calculer R<sub>th</sub></b> : résistance vue depuis A quand on éteint la source (E→court-circuit).<br/>
+  3) <b>Calculer le courant I<sub>L</sub></b> et la tension U<sub>L</sub> dans la charge quand elle est branchée.<br/>
+  4) <b>Calculer la puissance P<sub>L</sub></b> dissipée par l’éclairage et conclure (échauffement / consommation).<br/><br/>
+
+  <b>Correction :</b><br/>
+  <b>Schéma logique :</b> batterie (E,r) → R1 → nœud A, avec R2 vers masse, et R<sub>L</sub> branchée entre A et masse.<br/><br/>
+
+  <u>1) E<sub>th</sub> (charge débranchée)</u><br/>
+  Charge débranchée ⇒ il reste une série <b>r + R1 + R2</b> alimentée par E.<br/>
+  Courant dans la chaîne :<br/>
+  I = E / (r + R1 + R2) = 12 / (0,50 + 3,0 + 9,0) = 12 / 12,5 = <b>0,96 A</b>.<br/>
+  Tension au nœud A (tension sur R2) :<br/>
+  E<sub>th</sub> = U<sub>A</sub> = I·R2 = 0,96 × 9,0 = <b>8,64 V</b>.<br/><br/>
+
+  <u>2) R<sub>th</sub> (source éteinte)</u><br/>
+  Éteindre la source idéale E ⇒ <b>E remplacée par un fil</b>. La résistance interne r reste.<br/>
+  Vu depuis A vers la masse, on a deux chemins en parallèle :<br/>
+  • chemin 1 : <b>R2</b> vers la masse<br/>
+  • chemin 2 : <b>R1 + r</b> vers la masse<br/>
+  Donc : R<sub>th</sub> = R2 ∥ (R1 + r) = 9,0 ∥ (3,0 + 0,50) = 9,0 ∥ 3,50.<br/>
+  R<sub>th</sub> = (9,0×3,50)/(9,0+3,50) = 31,5 / 12,5 = <b>2,52 Ω</b>.<br/><br/>
+
+  <u>3) Courant et tension dans la charge</u><br/>
+  Équivalent de Thévenin vu par R<sub>L</sub> : source E<sub>th</sub> en série avec R<sub>th</sub> alimentant R<sub>L</sub>.<br/>
+  I<sub>L</sub> = E<sub>th</sub> / (R<sub>th</sub> + R<sub>L</sub>) = 8,64 / (2,52 + 6,0) = 8,64 / 8,52 ≈ <b>1,01 A</b>.<br/>
+  U<sub>L</sub> = I<sub>L</sub>·R<sub>L</sub> = 1,01 × 6,0 ≈ <b>6,06 V</b>.<br/><br/>
+
+  <u>4) Puissance dissipée dans l’éclairage</u><br/>
+  P<sub>L</sub> = U<sub>L</sub>·I<sub>L</sub> ≈ 6,06 × 1,01 ≈ <b>6,1 W</b>.<br/>
+  (ou P<sub>L</sub> = R<sub>L</sub>·I<sub>L</sub>² = 6,0×(1,01)² ≈ 6,1 W).<br/><br/>
+
+  <b>Conclusion :</b> le réseau de protection + résistance interne réduit la tension disponible sur l’éclairage
+  (ici ~6 V au lieu de 12 V), ce qui diminue la puissance lumineuse et l’échauffement, mais augmente la durée d’autonomie.<br/><br/>
+
+  <b>Lettres :</b> E (V), r (Ω), R1,R2,R<sub>L</sub> (Ω), E<sub>th</sub> (V), R<sub>th</sub> (Ω), I (A), U (V), P (W).
+</div>
+
+</section>
+
+  </div>
+</body>
+</html>

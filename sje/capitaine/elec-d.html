@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Électricité — Courants alternatifs & machines</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Électricité — AC : RLC, transformateur, distribution, moteurs</h2>
+
+<section id="elec-d">
+  <h4>Électricité — Courants électriques (AC, RLC, transfo, distribution, machines)</h4>
+
+  <div class="bloc defs" id="elec-d-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Courant continu</b> (DC) : courant de sens constant (ex : batterie).</li>
+      <li><b>Courant alternatif</b> (AC) : courant qui change de sens périodiquement (ex : secteur 50 Hz).</li>
+      <li><b>Signal sinusoïdal</b> : tension/courant de forme sinus : u(t)=U<sub>max</sub>sin(2πft).</li>
+      <li><b>Période</b> (T) : durée d’un cycle ; <b>fréquence</b> (f) : nombre de cycles par seconde (Hz), f = 1/T.</li>
+      <li><b>Valeur maximale</b> (U<sub>max</sub>, I<sub>max</sub>) : amplitude du signal.</li>
+      <li><b>Valeur efficace</b> (U<sub>eff</sub>, I<sub>eff</sub>) : valeur équivalente en continu pour l’effet Joule (chauffage).</li>
+      <li><b>Résistance</b> (R) : dipôle qui dissipe l’énergie électrique en chaleur.</li>
+      <li><b>Inductance</b> (L, self)</li> : dipôle qui stocke de l’énergie dans un champ magnétique et s’oppose aux variations de courant.</li>
+      <li><b>Capacité</b> (C) : dipôle qui stocke de l’énergie électrique et s’oppose aux variations de tension.</li>
+      <li><b>Réactance</b> : “opposition en alternatif” d’une self (X<sub>L</sub>) ou d’un condensateur (X<sub>C</sub>).</li>
+      <li><b>Impédance</b> (Z) : opposition globale en alternatif reliant U et I en régime sinusoïdal.</li>
+      <li><b>Déphasage</b> : retard/avance entre tension et courant (important en AC).</li>
+      <li><b>Régime sinusoïdal</b> : régime permanent où u(t) et i(t) sont sinusoïdaux à la même fréquence.</li>
+      <li><b>Résonance</b> (RLC) : fréquence où X<sub>L</sub> = X<sub>C</sub>, l’impédance d’un RLC série devient minimale (≈R).</li>
+      <li><b>Transformateur parfait</b> : transfo sans pertes : la puissance se conserve idéalement.</li>
+      <li><b>Monophasé / triphasé</b> : un signal alternatif / trois signaux décalés de 120°, utile pour transport et moteurs.</li>
+      <li><b>Champ tournant</b> : champ magnétique résultant du triphasé, à l’origine du couple des moteurs AC.</li>
+      <li><b>Alternateur</b> : machine produisant de l’AC par induction (rotation + champ magnétique).</li>
+      <li><b>Moteur asynchrone</b> : moteur AC robuste utilisant le champ tournant (très courant en industrie).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (pour comprendre vite)</div>
+    <ul>
+      <li><b>1) Pourquoi la valeur efficace ?</b> En chauffage (effet Joule), ce qui compte c’est l’énergie dissipée dans R.
+          Le secteur “230 V” signifie <b>230 V efficaces</b>, pas la valeur maximale.</li>
+
+      <li><b>2) R, L, C : comportements</b>
+        <ul>
+          <li><b>R</b> : U et I sont “en phase”, et R dissipe (chauffe).</li>
+          <li><b>L</b> : s’oppose aux variations de courant ; en AC, plus f augmente, plus la self “résiste”.</li>
+          <li><b>C</b> : s’oppose aux variations de tension ; en AC, plus f augmente, plus le condensateur “laisse passer”.</li>
+        </ul>
+      </li>
+
+      <li><b>3) Impédance</b> : en sinusoïdal, on peut calculer un module |Z| pour relier U et I :
+          <b>U<sub>eff</sub> = |Z| I<sub>eff</sub></b>. Ça remplace “U = RI” en AC pour RLC.</li>
+
+      <li><b>4) Résonance (RLC série)</b> : à la fréquence où X<sub>L</sub>=X<sub>C</sub>, ils se compensent :
+          |Z| devient minimal (≈R) → courant maximal. C’est une situation importante (fort courant, risques d’échauffement).</li>
+
+      <li><b>5) Transport d’énergie</b> : pour une puissance donnée, augmenter U diminue I (P≈UI) donc
+          les pertes Joule R I² chutent fortement. C’est la raison des transformateurs et du triphasé.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Sinusoïde : <b>u(t)=U<sub>max</sub>sin(2πft)</b> ; <b>f = 1/T</b></li>
+      <li>Valeur efficace : <b>U<sub>eff</sub>=U<sub>max</sub>/√2</b> ; <b>I<sub>eff</sub>=I<sub>max</sub>/√2</b></li>
+      <li>Réactances : <b>X<sub>L</sub>=2πfL</b> ; <b>X<sub>C</sub>=1/(2πfC)</b></li>
+      <li>RLC série : <b>|Z| = √(R² + (X<sub>L</sub>−X<sub>C</sub>)²)</b></li>
+      <li>Courant en AC (module) : <b>I<sub>eff</sub> = U<sub>eff</sub>/|Z|</b></li>
+      <li>Résonance : <b>f₀ = 1/(2π√(LC))</b></li>
+      <li>Transformateur parfait : <b>U₂/U₁=N₂/N₁</b> et (idéal) <b>U₁I₁=U₂I₂</b></li>
+      <li>Joule : <b>P<sub>J</sub> = R I²</b></li>
+      <li>Lettres : U (V), I (A), f (Hz), T (s), R (Ω), L (H), C (F), X (Ω), Z (Ω), P (W), N (spires)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (RLC + résonance, appliqué)</div><br/>
+    Un équipement de communication embarqué se comporte comme un circuit <b>RLC série</b> alimenté en sinusoïdal.
+    On a : <b>R = 20 Ω</b>, <b>L = 0,20 H</b>, <b>C = 50 µF</b> (50×10⁻⁶ F).
+    La tension d’alimentation vaut <b>U<sub>eff</sub> = 24 V</b>.<br/><br/>
+
+    1) Calculer la fréquence de résonance <b>f₀</b>.<br/>
+    2) À <b>f = f₀</b>, calculer l’impédance |Z| et le courant <b>I<sub>eff</sub></b>.<br/>
+    3) À <b>f = 100 Hz</b>, calculer X<sub>L</sub>, X<sub>C</sub>, |Z| puis I<sub>eff</sub>.<br/>
+    4) Interpréter : à quelle fréquence le courant est le plus grand ? Pourquoi c’est un point de vigilance (échauffement) ?<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) f₀ = 1/(2π√(LC)) avec L=0,20 et C=50×10⁻⁶ ⇒ LC = 0,20×50×10⁻⁶ = 10×10⁻⁶ = 1,0×10⁻⁵.<br/>
+    √(LC) = √(1,0×10⁻⁵) ≈ 3,16×10⁻³.<br/>
+    f₀ ≈ 1/(2π×3,16×10⁻³) ≈ 1/ (1,99×10⁻²) ≈ <b>50 Hz</b> (ordre de grandeur).<br/><br/>
+
+    2) À résonance : X<sub>L</sub>=X<sub>C</sub> ⇒ |Z|≈R = <b>20 Ω</b>.<br/>
+    I<sub>eff</sub> = U<sub>eff</sub>/|Z| = 24/20 = <b>1,2 A</b>.<br/><br/>
+
+    3) À f=100 Hz :<br/>
+    X<sub>L</sub> = 2πfL = 2π×100×0,20 ≈ <b>126 Ω</b>.<br/>
+    X<sub>C</sub> = 1/(2πfC) = 1/(2π×100×50×10⁻⁶) ≈ 1/(3,14×10⁻²) ≈ <b>31,8 Ω</b>.<br/>
+    X<sub>L</sub>−X<sub>C</sub> ≈ 94 Ω.<br/>
+    |Z| = √(R² + (X<sub>L</sub>−X<sub>C</sub>)²) ≈ √(20² + 94²) ≈ √(400 + 8836) ≈ √9236 ≈ <b>96 Ω</b>.<br/>
+    I<sub>eff</sub> ≈ 24/96 = <b>0,25 A</b>.<br/><br/>
+
+    4) Le courant est maximal près de <b>f₀</b> car |Z| est minimal (≈R). Vigilance : courant élevé ⇒ pertes Joule R I² plus fortes ⇒ échauffement possible.<br/><br/>
+
+    <b>Lettres :</b> R (Ω), L (H), C (F), f (Hz), X (Ω), Z (Ω), U<sub>eff</sub> (V), I<sub>eff</sub> (A).
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (transfo + pertes Joule, appliqué)</div><br/>
+    Une ligne alimente un équipement à puissance utile <b>P = 3,0 kW</b> en monophasé.
+    On néglige les pertes de l’équipement et on suppose charge résistive.<br/>
+    La ligne a une résistance totale <b>R<sub>ligne</sub> = 2,0 Ω</b> (aller-retour).<br/><br/>
+    Cas 1 : alimentation à <b>230 V</b>.<br/>
+    Cas 2 : on utilise un transformateur idéal pour alimenter la ligne à <b>2300 V</b>, puis on redescend à 230 V à l’arrivée.<br/><br/>
+
+    1) Calculer le courant dans la ligne dans chaque cas.<br/>
+    2) Calculer les pertes Joule P<sub>J</sub> = R I² dans la ligne dans chaque cas.<br/>
+    3) Conclure sur l’intérêt de la haute tension.<br/><br/>
+
+    <b>Correction :</b><br/>
+    Cas 1 : I = P/U = 3000/230 ≈ <b>13 A</b>.<br/>
+    P<sub>J</sub> = R I² = 2,0 × 13² = 2,0 × 169 = <b>338 W</b>.<br/><br/>
+    Cas 2 : I = 3000/2300 ≈ <b>1,3 A</b>.<br/>
+    P<sub>J</sub> = 2,0 × (1,3)² ≈ 2,0 × 1,69 ≈ <b>3,4 W</b>.<br/><br/>
+    Conclusion : monter la tension divise le courant, donc les pertes Joule (proportionnelles à I²) chutent fortement.<br/><br/>
+
+    <b>Lettres :</b> P (W), U (V), I (A), R (Ω).
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Électricité — Magnétisme</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Électricité — Magnétisme : champ B, Laplace, induction, transformateur</h2>
+
+<section id="elec-c">
+  <h4>Électricité — Magnétisme (champ B, forces, induction, transfo)</h4>
+
+  <div class="bloc defs" id="elec-c-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Champ magnétique</b> (B) : grandeur qui décrit l’action magnétique d’un aimant ou d’un courant ; unité : tesla (T).</li>
+      <li><b>Lignes de champ</b> : représentation de B ; elles indiquent la direction de B en chaque point.</li>
+      <li><b>Aimant</b> : objet qui crée un champ magnétique permanent (sans courant).</li>
+      <li><b>Courant électrique</b> (I) : déplacement de charges ; il crée un champ magnétique autour du conducteur.</li>
+      <li><b>Perméabilité du vide</b> (μ₀) : constante liant champ et courant dans le vide/air (μ₀ = 4π×10⁻⁷ H·m⁻¹).</li>
+      <li><b>Conducteur rectiligne long</b> : fil “très long” devant la distance d’étude ; autour, B est circulaire.</li>
+      <li><b>Solénoïde</b> : bobine longue ; à l’intérieur, B est presque uniforme et parallèle à l’axe.</li>
+      <li><b>Électroaimant</b> : bobine parcourue par un courant, souvent avec un noyau ferromagnétique, créant un champ intense.</li>
+      <li><b>Flux magnétique</b> (Φ) : “quantité de champ” traversant une surface ; unité : weber (Wb).</li>
+      <li><b>Induction</b> : apparition d’une tension quand le flux magnétique varie (variation de B, de surface ou d’orientation).</li>
+      <li><b>Loi de Faraday-Lenz</b> : tension induite e = −N dΦ/dt ; le signe “−” indique que l’effet s’oppose à la variation.</li>
+      <li><b>Force de Laplace</b> : force exercée sur un fil parcouru par un courant dans un champ B (principe des moteurs).</li>
+      <li><b>Transformateur</b> : deux bobines couplées par un flux variable ; permet de changer un niveau de tension en alternatif.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (pour comprendre vite)</div>
+    <ul>
+      <li><b>1) Courant → champ magnétique</b> : un fil parcouru par un courant crée un champ B autour de lui. Plus on est proche du fil et plus I est grand, plus B est grand.</li>
+      <li><b>2) Bobine (solénoïde) → champ “concentré”</b> : en enroulant le fil, on additionne les champs ; on obtient un champ fort à l’intérieur. Avec un noyau ferromagnétique, l’électroaimant devient beaucoup plus efficace.</li>
+      <li><b>3) Champ + courant → force</b> : si un conducteur parcouru par un courant est placé dans un champ B, il subit une force (Laplace). C’est la base des moteurs et des relais électromagnétiques.</li>
+      <li><b>4) Champ variable → tension induite</b> : si le flux Φ qui traverse une bobine change, une tension apparaît (Faraday-Lenz). C’est la base des capteurs, des alternateurs et des transformateurs.</li>
+      <li><b>Astuce concours</b> : on n’utilise pas Biot-Savart “complet” ; on utilise directement les formules usuelles (fil long, solénoïde, induction moyenne).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Constante : <b>μ₀ = 4π×10⁻⁷</b> H·m⁻¹ (≈ 1,26×10⁻⁶).</li>
+      <li>Fil rectiligne long : <b>B = μ₀ I / (2π r)</b></li>
+      <li>Solénoïde long : <b>B = μ₀ n I</b> (n = N/L, spires par mètre)</li>
+      <li>Flux : <b>Φ = B S</b> (si B uniforme et perpendiculaire à la surface)</li>
+      <li>Induction (valeur moyenne) : <b>|e| ≈ N · ΔΦ / Δt</b></li>
+      <li>Laplace (cas simple) : <b>F = B I L</b> (si fil ⟂ à B)</li>
+      <li>Transformateur parfait : <b>U₂/U₁ = N₂/N₁</b> et (idéal) <b>U₁ I₁ = U₂ I₂</b></li>
+      <li>Lettres : B (T), I (A), r (m), μ₀ (H·m⁻¹), n (m⁻¹), N (spires), L (m), S (m²), Φ (Wb), e (V), t (s), U (V), F (N)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (terrain : câble, force, induction)</div><br/>
+    Sur intervention, un câble d’alimentation alimente un outil avec un courant <b>I = 80 A</b>.
+    On modélise le câble comme un <b>fil rectiligne long</b>. On étudie à une distance <b>r = 1,0 cm</b> du câble (0,010 m).<br/><br/>
+
+    1) Calculer le champ magnétique <b>B</b> créé par le câble à cette distance.<br/>
+    2) Un petit conducteur de longueur <b>L = 10 cm</b> (0,10 m) placé perpendiculairement à B est parcouru par un courant <b>I₂ = 20 A</b>.
+       Calculer la force de Laplace <b>F</b>.<br/>
+    3) Une bobine de <b>N = 200</b> spires et de surface <b>S = 10 cm²</b> (1,0×10⁻³ m²) est placée de sorte que B soit perpendiculaire à sa surface.
+       Le champ passe de 0 à la valeur B trouvée en <b>Δt = 0,050 s</b>. Estimer la tension induite moyenne <b>|e|</b>.<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) Fil long : B = μ₀ I /(2πr). Avec μ₀ = 4π×10⁻⁷ :<br/>
+    B = (4π×10⁻⁷ × 80) / (2π × 0,010) = (4×10⁻⁷ × 80) / (0,020) = (3,2×10⁻⁵)/(0,020) = <b>1,6×10⁻³ T</b> (soit 1,6 mT).<br/><br/>
+
+    2) Laplace (fil ⟂ à B) : F = B I₂ L = 1,6×10⁻³ × 20 × 0,10 = <b>3,2×10⁻³ N</b>.<br/>
+    (Force faible : utile pour comparer des ordres de grandeur.)<br/><br/>
+
+    3) Φ = B S. Variation de flux : ΔΦ = (1,6×10⁻³) × (1,0×10⁻³) = <b>1,6×10⁻⁶ Wb</b>.<br/>
+    |e| ≈ N ΔΦ/Δt = 200 × (1,6×10⁻⁶ / 0,050) = 200 × 3,2×10⁻⁵ = <b>6,4×10⁻³ V</b> (6,4 mV).<br/><br/>
+
+    <b>Lettres :</b> μ₀ (H·m⁻¹), I (A), r (m), B (T), I₂ (A), L (m), N (spires), S (m²), Φ (Wb), e (V), t (s).
+  </div>
+  
+  <div class="bloc calc">
+  <div class="label">Exercice type (transformateur + sécurité + intensités)</div><br/>
+  Un fourgon dispose d’un convertisseur/transformateur idéal alimentant un projecteur en <b>12 V</b>.
+  Le transformateur est supposé <b>parfait</b> (pas de pertes).<br/>
+  Le réseau amont est en <b>230 V alternatif</b> (valeur efficace). On veut alimenter un projecteur de puissance
+  <b>P = 120 W</b> sous <b>12 V</b>.<br/>
+  Le transformateur possède <b>N₁ = 920</b> spires au primaire (230 V) et <b>N₂</b> spires au secondaire (12 V).<br/><br/>
+
+  1) Calculer le nombre de spires <b>N₂</b> pour obtenir 12 V au secondaire.<br/>
+  2) Calculer le courant secondaire <b>I₂</b> consommé par le projecteur.<br/>
+  3) En déduire le courant primaire <b>I₁</b> (transfo idéal).<br/>
+  4) On ajoute un câble d’alimentation côté 12 V de résistance totale <b>R<sub>câble</sub> = 0,20 Ω</b>.
+     Calculer la puissance perdue par effet Joule dans le câble et commenter l’intérêt de limiter les longueurs en basse tension.<br/><br/>
+
+  <b>Correction :</b><br/>
+  1) Transformateur parfait : U₂/U₁ = N₂/N₁ ⇒ N₂ = N₁ × U₂/U₁ = 920 × 12/230.<br/>
+  12/230 ≈ 0,0522 ⇒ N₂ ≈ 920×0,0522 ≈ <b>48 spires</b> (arrondi).<br/><br/>
+
+  2) P = U₂ I₂ ⇒ I₂ = P/U₂ = 120/12 = <b>10 A</b>.<br/><br/>
+
+  3) Transfo idéal : U₁ I₁ = U₂ I₂ ⇒ I₁ = (U₂ I₂)/U₁ = (12×10)/230 = 120/230 ≈ <b>0,52 A</b>.<br/><br/>
+
+  4) Pertes Joule dans le câble (côté 12 V) : P<sub>J</sub> = R I₂² = 0,20 × 10² = 0,20 × 100 = <b>20 W</b>.<br/>
+  <b>Commentaire :</b> en basse tension, le courant est élevé pour une même puissance, donc les pertes Joule (∝ I²) peuvent devenir importantes ;
+  d’où l’intérêt de câbles courts et/ou de section suffisante en 12 V.<br/><br/>
+
+  <b>Lettres :</b> U (V), I (A), P (W), N (spires), R (Ω).
+</div>
+
+</section>
+
+
+  </div>
+</body>
+</html>

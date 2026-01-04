@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Électricité — Ondes & télécommunications</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Électricité — Ondes hertziennes, modulation, téléphonie</h2>
+
+<section id="elec-e">
+  <h4>Électricité — Ondes & télécommunications</h4>
+
+  <div class="bloc defs" id="elec-e-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Onde hertzienne</b> : onde électromagnétique se propageant dans l’air/espace (radio).</li>
+      <li><b>Fréquence</b> (f) : nombre d’oscillations par seconde (Hz).</li>
+      <li><b>Longueur d’onde</b> (λ) : distance entre deux maxima ; liée à la fréquence.</li>
+      <li><b>Vitesse de propagation</b> (c) : vitesse de l’onde (dans l’air ≈ 3×10⁸ m·s⁻¹).</li>
+      <li><b>Ionosphère</b> : couche de l’atmosphère ionisée pouvant réfléchir/réfracter certaines ondes radio.</li>
+      <li><b>Ligne de vue</b> : propagation directe sans obstacle majeur entre émetteur et récepteur.</li>
+      <li><b>Diffraction</b> : contournement partiel d’un obstacle quand λ est comparable à sa taille.</li>
+      <li><b>Réflexion</b> : renvoi d’une onde sur une surface (sol, mer, bâtiments, ionosphère selon la bande).</li>
+      <li><b>Réfraction</b> : déviation progressive d’une onde quand le milieu change (atmosphère, ionosphère).</li>
+      <li><b>Absorption</b> : perte d’énergie de l’onde dans le milieu (pluie, végétation, matériaux).</li>
+      <li><b>Multi-trajets</b> : réception par plusieurs chemins (direct + réfléchis), pouvant créer des interférences.</li>
+      <li><b>Modulation</b> : procédé consistant à transporter un signal (info) en faisant varier une porteuse.</li>
+      <li><b>AM</b> : modulation d’amplitude (l’amplitude de la porteuse varie).</li>
+      <li><b>FM</b> : modulation de fréquence (la fréquence de la porteuse varie).</li>
+      <li><b>PM</b> : modulation de phase (la phase de la porteuse varie).</li>
+      <li><b>Bande passante</b> : intervalle de fréquences transmis correctement par un système.</li>
+      <li><b>Téléphone</b> : conversion voix ↔ signal électrique, transmission via un réseau, puis reconversion.</li>
+      <li><b>Réseau commuté</b> : réseau où une connexion est établie entre deux correspondants (circuit dédié).</li>
+      <li><b>Réseau spécialisé</b> : réseau conçu pour un usage donné (services, sécurité, data…).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (court)</div>
+    <ul>
+      <li>Relation clé : <b>λ = c / f</b> : plus la fréquence est grande, plus la longueur d’onde est petite.</li>
+      <li>Propagation : selon la fréquence, les ondes sont plutôt “ligne de vue”, diffractées (basses fréquences), ou renvoyées par l’ionosphère (liaisons longues distances).</li>
+      <li>En ville, les réflexions sur les bâtiments créent des multi-trajets : la réception peut varier fortement selon la position (fading).</li>
+      <li>La modulation permet d’envoyer une information (voix) sur une porteuse adaptée à la propagation et à l’antenne.</li>
+      <li>AM est plus sensible au bruit d’amplitude ; FM est souvent plus robuste au bruit, mais nécessite une bande passante plus large.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Onde : <b>λ = c / f</b></li>
+      <li>Période : <b>T = 1 / f</b></li>
+      <li>Lettres : λ (m), c (m·s⁻¹), f (Hz), T (s)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (propagation + ordres de grandeur)</div><br/>
+    Une radio émet à la fréquence <b>f = 100 MHz</b> (FM). On prend c = <b>3,0×10⁸ m·s⁻¹</b>.<br/><br/>
+    1) Calculer la longueur d’onde λ.<br/>
+    2) Donner un ordre de grandeur de la taille d’une antenne quart d’onde (λ/4).<br/>
+    3) Expliquer en une phrase pourquoi la fréquence influence la propagation (ionosphère / ligne de vue).<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) λ = c/f = 3,0×10⁸ / 1,0×10⁸ = <b>3,0 m</b>.<br/>
+    2) λ/4 ≈ 3,0/4 = <b>0,75 m</b>.<br/>
+    3) La fréquence fixe λ et les interactions avec l’atmosphère et les obstacles : certaines bandes sont renvoyées par l’ionosphère, d’autres se propagent surtout en ligne de vue.<br/><br/>
+
+    <b>Lettres :</b> c (m·s⁻¹), f (Hz), λ (m).
+  </div>
+
+  <figure class="bloc">
+    <div class="label">Annale — Propagation des ondes hertziennes</div>
+    <a href="exo3.png" target="_blank" rel="noopener">
+      <img src="exo3.png"
+           alt="Annale : Question sur les phénomènes de propagation des ondes hertziennes"
+           style="width:100%; max-width:980px; display:block; margin:10px auto; border-radius:12px; border:1px solid rgba(255,255,255,0.12);"/>
+    </a>
+    <figcaption style="text-align:center; opacity:0.85; font-size:0.95rem;">
+      Cliquez pour ouvrir l’image en grand.
+    </figcaption>
+  </figure>
+
+  <div class="bloc calc">
+    <div class="label">Correction attendue (plan court)</div><br/>
+    <b>Phénomènes principaux</b> (avec ce que ça change sur la réception) :<br/>
+    • <b>Propagation directe (ligne de vue)</b> : signal reçu surtout si l’émetteur et le récepteur “se voient”.<br/>
+    • <b>Réflexion</b> (sol/mer/bâtiments) : crée des trajets réfléchis → interférences, zones d’ombre, échos.<br/>
+    • <b>Diffraction</b> (basses fréquences / grandes longueurs d’onde) : contournement d’obstacles → réception derrière un relief/immeuble.<br/>
+    • <b>Réfraction</b> (atmosphère/ionosphère) : courbure du trajet → portée modifiée ; à certaines bandes, retours lointains via ionosphère.<br/>
+    • <b>Absorption/atténuation</b> : pertes dans le milieu (pluie, végétation, murs) → baisse du niveau reçu.<br/>
+    • <b>Diffusion</b> : dispersion sur irrégularités (terrain, pluie, feuillage) → signal affaibli mais parfois recevable hors axe.<br/>
+    • <b>Multi-trajets (multipath)</b> : somme de plusieurs trajets (direct + réfléchis) → variations rapides du signal (fading).<br/><br/>
+    <b>Idée clé</b> : la fréquence (donc λ) détermine quels phénomènes dominent (diffraction à basse f, ligne de vue à haute f, ionosphère selon bandes).<br/>
+  </div>
+</section>
+
+  </div>
+</body>
+</html>
