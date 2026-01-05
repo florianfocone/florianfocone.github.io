@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    img.annale{
+      width:100%;
+      max-width: 900px;
+      display:block;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 9 Probabilités</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 9) Probabilités : Gauss, Bernoulli, Poisson</h2>
+
+
+<section id="math-9">
+  <h4>9 — Probabilités : notions, moyenne/variance, lois (Gauss, Bernoulli, Poisson)</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Variable aléatoire</b> \(X\) : nombre associé au résultat d’une expérience.</li>
+      <li><b>Espérance</b> \(E(X)\) : moyenne théorique de \(X\).</li>
+      <li><b>Variance</b> \(V(X)\) : mesure de dispersion autour de la moyenne.</li>
+      <li><b>Écart-type</b> \(\sigma\) : \(\sigma=\sqrt{V(X)}\), dispersion dans la même unité que \(X\).</li>
+      <li><b>Loi de Bernoulli</b> : \(X\in\{0,1\}\) avec \(P(X=1)=p\).</li>
+      <li><b>Loi binomiale</b> : somme de \(n\) Bernoulli indépendantes (nombre de succès).</li>
+      <li><b>Loi de Poisson</b> : modèle de comptage d’événements rares sur un intervalle (paramètre \(\lambda\)).</li>
+      <li><b>Loi normale (Gauss)</b> : distribution en cloche, notée \(\mathcal{N}(\mu,\sigma^2)\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie</div>
+    <ul>
+      <li>Pour une loi discrète : \(E(X)=\sum x\,P(X=x)\) et \(V(X)=E(X^2)-[E(X)]^2\), avec \(E(X^2)=\sum x^2P(X=x)\).</li>
+      <li>Bernoulli \(B(p)\) : \(E(X)=p\), \(V(X)=p(1-p)\).</li>
+      <li>Binomiale \(\mathcal{B}(n,p)\) : \(E(X)=np\), \(V(X)=np(1-p)\).</li>
+      <li>Poisson \(\mathcal{P}(\lambda)\) : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\), \(E(X)=\lambda\), \(V(X)=\lambda\).</li>
+      <li>Normale \(\mathcal{N}(\mu,\sigma^2)\) : en pratique BTS, on standardise \(Z=\dfrac{X-\mu}{\sigma}\) et on lit des tables (si fournies).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Discret : \(E(X)=\sum xP(X=x)\), \(V(X)=E(X^2)-E(X)^2\)</li>
+      <li>Bernoulli : \(E=p\), \(V=p(1-p)\)</li>
+      <li>Binomiale : \(P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}\)</li>
+      <li>Poisson : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\)</li>
+      <li>Normalisation : \(Z=\dfrac{X-\mu}{\sigma}\)</li>
+      <li>Lettres : \(0\le p\le 1\), \(n\in\mathbb{N}\), \(\lambda&gt;0\), \(\sigma&gt;0\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    Des appels arrivent en moyenne à raison de \(\lambda=2\) par minute (modèle Poisson).<br/>
+    Calculer \(P(X=0)\) et \(P(X=2)\) pour une minute.<br/><br/>
+    <b>Correction :</b><br/>
+    Loi de Poisson : \(P(X=k)=e^{-2}\dfrac{2^k}{k!}\).<br/>
+    \(P(X=0)=e^{-2}\dfrac{2^0}{0!}=e^{-2}\).<br/>
+    \(P(X=2)=e^{-2}\dfrac{2^2}{2!}=e^{-2}\dfrac{4}{2}=2e^{-2}\).<br/>
+    \(\boxed{P(X=0)=e^{-2},\ P(X=2)=2e^{-2}}\).
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

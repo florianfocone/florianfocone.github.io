@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+    code{ color: rgba(255,255,255,0.92); }
+  </style>
+</head>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Chimie — B) Chimie minérale</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Chimie — B) Chimie minérale : corps simples/composés usuels (H₂, O₂, HCl, H₂SO₄…)</h2>
+
+
+<section id="chim-b">
+  <h4>Chimie — B) Chimie minérale (corps simples et composés usuels)</h4>
+
+  <div class="bloc defs" id="chim-b-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Corps simple</b> : substance faite d’un seul élément chimique (ex : O₂, H₂, C, S, Cl₂).</li>
+      <li><b>Corps composé</b> : substance contenant plusieurs éléments (ex : H₂O, HCl, H₂SO₄, NH₃, NaOH).</li>
+      <li><b>Comburant</b> : espèce qui permet/accélère la combustion d’un combustible (ex : O₂).</li>
+      <li><b>Combustible</b> : espèce qui brûle en présence d’un comburant (H₂, hydrocarbures…).</li>
+      <li><b>Corrosif</b> : qui attaque la peau/matériaux (acides forts, bases fortes).</li>
+      <li><b>Oxydant</b> : espèce qui capte des électrons ; souvent favorise réactions violentes.</li>
+      <li><b>Solution aqueuse</b> : mélange dans l’eau (solvant = eau).</li>
+      <li><b>Acide fort</b> : libère presque totalement H⁺ dans l’eau (HCl, H₂SO₄).</li>
+      <li><b>Base forte</b> : libère presque totalement OH⁻ dans l’eau (NaOH).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (ce qu’il faut retenir, “terrain”)</div>
+    <ul>
+      <li><b>H₂ (dihydrogène)</b> : gaz très léger, très inflammable ; brûle avec O₂ → H₂O ; danger mélange explosif.</li>
+      <li><b>O₂ (dioxygène)</b> : <b>comburant</b> ; enrichissement en O₂ rend les feux plus violents ; ne “brûle” pas mais alimente la combustion.</li>
+      <li><b>C (carbone)</b> : en combustion complète → CO₂ ; en manque d’air → CO (toxique) + suies.</li>
+      <li><b>S (soufre)</b> : brûle en donnant SO₂ (irritant) ; peut contribuer à formation d’acides en présence d’eau/oxydation.</li>
+      <li><b>Cl₂ (chlore)</b> : gaz toxique/irritant ; réagit avec l’eau → espèces acides/oxydantes ; danger inhalation.</li>
+      <li><b>F₂ (fluor)</b> : extrêmement réactif/oxydant ; rarement rencontré hors industrie spécialisée ; danger majeur.</li>
+      <li><b>H₂O (eau)</b> : solvant ; participe aux réactions acide/base (formation H₃O⁺/OH⁻) ; influence corrosion.</li>
+
+      <li><b>HCl (acide chlorhydrique)</b> : acide fort, corrosif ; en solution : H⁺ + Cl⁻ ; attaque certains métaux (dégagement possible de H₂).</li>
+      <li><b>H₂SO₄ (acide sulfurique)</b> : acide fort très corrosif ; peut déshydrater ; mélange avec l’eau : <b>échauffement</b> important (toujours verser l’acide dans l’eau, jamais l’inverse).</li>
+      <li><b>NH₃ (ammoniac)</b> : gaz basique irritant ; dans l’eau donne une solution basique (NH₄⁺ et OH⁻) ; odeur caractéristique.</li>
+      <li><b>NaOH (soude)</b> : base forte, très corrosive ; en solution donne Na⁺ et OH⁻ ; attaque graisses (saponification) et tissus.</li>
+
+      <li><b>Classification “express”</b> :
+        <ul>
+          <li><b>Gaz</b> (H₂, O₂, NH₃, Cl₂) : risques inhalation, atmosphère explosive/oxydante.</li>
+          <li><b>Acides forts</b> (HCl, H₂SO₄) : corrosifs, réactions exothermiques, possibles dégagements gazeux.</li>
+          <li><b>Bases fortes</b> (NaOH) : corrosifs, brûlures chimiques.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Combustion H₂ : <b>2 H₂ + O₂ → 2 H₂O</b></li>
+      <li>Combustion C (complète) : <b>C + O₂ → CO₂</b></li>
+      <li>Combustion C (incomplète) : <b>2 C + O₂ → 2 CO</b></li>
+      <li>HCl en solution : <b>HCl → H⁺ + Cl⁻</b></li>
+      <li>H₂SO₄ en solution (simplifié) : <b>H₂SO₄ → 2 H⁺ + SO₄²⁻</b></li>
+      <li>NaOH en solution : <b>NaOH → Na⁺ + OH⁻</b></li>
+      <li>NH₃ dans l’eau : <b>NH₃ + H₂O ⇌ NH₄⁺ + OH⁻</b></li>
+      <li>Lettres : coefficients (sans unité), espèces chimiques (formules)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (acide fort + neutralisation + sécurité)</div><br/>
+    On a une solution de <b>HCl</b> : <b>V = 1,0 L</b> à <b>C = 1,0 mol·L⁻¹</b>.
+    On veut neutraliser avec une solution de soude <b>NaOH</b> à <b>C<sub>b</sub> = 2,0 mol·L⁻¹</b>.<br/><br/>
+    1) Calculer n(H⁺) contenue dans le bidon (acide fort : [H⁺] ≈ C).<br/>
+    2) Calculer le volume de NaOH nécessaire (H⁺ + OH⁻ → H₂O).<br/>
+    3) Donner une phrase “terrain” : pourquoi on verse l’acide dans l’eau et pas l’inverse ?<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) n(H⁺)=C·V = 1,0×1,0 = <b>1,0 mol</b>.<br/><br/>
+    2) Il faut n(OH⁻)=1,0 mol. V<sub>b</sub>=n/C<sub>b</sub>=1,0/2,0=<b>0,50 L</b> (500 mL).<br/><br/>
+    3) Mélange eau/acide est <b>exothermique</b> : verser l’eau dans l’acide peut provoquer ébullition locale et projections ; on verse l’acide dans l’eau pour mieux dissiper la chaleur.<br/>
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

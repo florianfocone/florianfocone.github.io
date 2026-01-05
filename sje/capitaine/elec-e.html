@@ -92,16 +92,33 @@
     </ul>
   </div>
 
-  <div class="bloc">
-    <div class="label">Théorie (court)</div>
-    <ul>
-      <li>Relation clé : <b>λ = c / f</b> : plus la fréquence est grande, plus la longueur d’onde est petite.</li>
-      <li>Propagation : selon la fréquence, les ondes sont plutôt “ligne de vue”, diffractées (basses fréquences), ou renvoyées par l’ionosphère (liaisons longues distances).</li>
-      <li>En ville, les réflexions sur les bâtiments créent des multi-trajets : la réception peut varier fortement selon la position (fading).</li>
-      <li>La modulation permet d’envoyer une information (voix) sur une porteuse adaptée à la propagation et à l’antenne.</li>
-      <li>AM est plus sensible au bruit d’amplitude ; FM est souvent plus robuste au bruit, mais nécessite une bande passante plus large.</li>
-    </ul>
-  </div>
+<div class="bloc">
+  <div class="label">Théorie</div>
+  <ul>
+    <li><b>Relations de base</b> : une onde radio est une onde électromagnétique. Sa longueur d’onde vaut <b>λ = c / f</b>.
+        Donc quand la fréquence augmente, la longueur d’onde diminue.</li>
+
+    <li><b>Conséquence directe sur la propagation</b> :
+      <ul>
+        <li><b>Basses fréquences</b> (λ grande) : meilleure <b>diffraction</b> (contourne mieux les obstacles), meilleure pénétration, portée parfois grande.</li>
+        <li><b>Hautes fréquences</b> (λ petite) : propagation plus “<b>ligne de vue</b>”, plus sensible aux obstacles ; utile pour liaisons directionnelles et débits plus élevés.</li>
+      </ul>
+    </li>
+
+    <li><b>Milieu et obstacles</b> : une onde peut être <b>réfléchie</b> (sol/mer/bâtiments), <b>réfractée</b> (atmosphère/ionosphère),
+        <b>diffractée</b> (contourne partiellement) ou <b>absorbée</b> (pluie, végétation, murs). Ces phénomènes modifient la portée et la qualité de réception.</li>
+
+    <li><b>Multi-trajets (multipath)</b> : en zone urbaine, le récepteur capte plusieurs chemins (direct + réfléchis).
+        Les signaux peuvent s’additionner ou se “casser” partiellement → variations du niveau reçu selon la position (fading) et possibles échos.</li>
+
+    <li><b>Ionosphère</b> : selon la bande de fréquence, elle peut renvoyer (ou réfracter) une partie des ondes,
+        ce qui permet des liaisons à grande distance. Ce comportement dépend de la fréquence et des conditions atmosphériques.</li>
+
+    <li><b>Pourquoi on module</b> : la voix (basse fréquence) ne se rayonne pas efficacement. On la “porte” sur une porteuse radio :
+        <b>AM</b> (amplitude), <b>FM</b> (fréquence), <b>PM</b> (phase). Le choix influence la robustesse au bruit et la bande passante.</li>
+  </ul>
+</div>
+
 
   <div class="bloc">
     <div class="label">Équations pratiques</div>
@@ -139,18 +156,28 @@
     </figcaption>
   </figure>
 
-  <div class="bloc calc">
-    <div class="label">Correction attendue (plan court)</div><br/>
-    <b>Phénomènes principaux</b> (avec ce que ça change sur la réception) :<br/>
-    • <b>Propagation directe (ligne de vue)</b> : signal reçu surtout si l’émetteur et le récepteur “se voient”.<br/>
-    • <b>Réflexion</b> (sol/mer/bâtiments) : crée des trajets réfléchis → interférences, zones d’ombre, échos.<br/>
-    • <b>Diffraction</b> (basses fréquences / grandes longueurs d’onde) : contournement d’obstacles → réception derrière un relief/immeuble.<br/>
-    • <b>Réfraction</b> (atmosphère/ionosphère) : courbure du trajet → portée modifiée ; à certaines bandes, retours lointains via ionosphère.<br/>
-    • <b>Absorption/atténuation</b> : pertes dans le milieu (pluie, végétation, murs) → baisse du niveau reçu.<br/>
-    • <b>Diffusion</b> : dispersion sur irrégularités (terrain, pluie, feuillage) → signal affaibli mais parfois recevable hors axe.<br/>
-    • <b>Multi-trajets (multipath)</b> : somme de plusieurs trajets (direct + réfléchis) → variations rapides du signal (fading).<br/><br/>
-    <b>Idée clé</b> : la fréquence (donc λ) détermine quels phénomènes dominent (diffraction à basse f, ligne de vue à haute f, ionosphère selon bandes).<br/>
-  </div>
+<div class="bloc calc">
+  <div class="label">Annale — Réponse rédigée (format concours, concis)</div><br/>
+
+  La propagation des ondes hertziennes dépend de la fréquence (donc de la longueur d’onde λ) et de l’environnement.
+  On distingue d’abord la <b>propagation directe</b> : le signal est bien reçu si l’émetteur et le récepteur sont en <b>ligne de vue</b>,
+  ce qui est typique des fréquences élevées.<br/><br/>
+
+  Les ondes peuvent ensuite subir une <b>réflexion</b> sur le sol, la mer ou les bâtiments.
+  Ces trajets réfléchis s’ajoutent au trajet direct : on obtient des <b>multi-trajets</b> qui peuvent renforcer ou affaiblir le signal
+  selon la position (interférences, fading).<br/><br/>
+
+  Lorsque la longueur d’onde est grande devant les obstacles, la <b>diffraction</b> permet un contournement partiel :
+  on peut encore recevoir derrière un relief ou un bâtiment, surtout à plus basse fréquence.
+  L’atmosphère peut aussi dévier l’onde par <b>réfraction</b>, et l’ionosphère peut, selon la bande de fréquences et les conditions,
+  renvoyer ou guider certaines ondes, ce qui augmente la portée.<br/><br/>
+
+  Enfin, le signal peut être atténué par <b>absorption</b> (pluie, végétation, murs) et par diffusion sur des irrégularités du milieu,
+  ce qui réduit le niveau reçu. En pratique, la fréquence choisie fixe le compromis entre portée, sensibilité aux obstacles,
+  stabilité de réception en milieu urbain et capacité de transmission (débit).<br/><br/>
+  En résumé, la propagation dépend principalement de la fréquence (donc de λ) et de l’environnement : ligne de vue, réflexions/multi-trajets, diffraction, réfraction/ionosphère et absorption déterminent la portée et la qualité de réception.
+</div>
+
 </section>
 
   </div>

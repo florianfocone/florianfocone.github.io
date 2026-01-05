@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    img.annale{
+      width:100%;
+      max-width: 900px;
+      display:block;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 5 Complexes</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 5) Nombres complexes : représentation, applications</h2>
+
+
+<section id="math-5">
+  <h4>5 — Nombres complexes : intro, représentation, applications</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Complexe</b> : \(z=a+ib\) avec \(a,b\in\mathbb{R}\) et \(i^2=-1\).</li>
+      <li><b>Conjugué</b> : \(\overline{z}=a-ib\).</li>
+      <li><b>Module</b> : \(|z|=\sqrt{a^2+b^2}\).</li>
+      <li><b>Argument</b> : angle \(\theta\) tel que \(z=|z|(\cos\theta+i\sin\theta)\) (mod \(2\pi\)).</li>
+      <li><b>Affixe</b> : le complexe \(z\) qui représente un point \(M(a,b)\) du plan.</li>
+      <li><b>Rotation</b> : multiplication par \(\cos\alpha+i\sin\alpha\) (conserve le module, ajoute \(\alpha\) à l’argument).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie</div>
+    <ul>
+      <li>Géométrie : \(z=a+ib\) correspond au point \(M(a,b)\). Le module est une distance et l’argument est un angle.</li>
+      <li>Le conjugué sert à calculer des quotients : on multiplie par \(\overline{z}\) pour obtenir un dénominateur réel.</li>
+      <li>En forme trigonométrique, les produits sont simples : modules se multiplient, arguments s’additionnent.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>\(z\overline{z}=|z|^2=a^2+b^2\)</li>
+      <li>\(\dfrac{1}{a+ib}=\dfrac{a-ib}{a^2+b^2}\) si \(a^2+b^2\neq 0\)</li>
+      <li>Forme trig : \(z=r(\cos\theta+i\sin\theta)\)</li>
+      <li>Produit : \(r_1(\cos\theta_1+i\sin\theta_1)\,r_2(\cos\theta_2+i\sin\theta_2)=r_1r_2(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2))\)</li>
+      <li>Lettres : \(a,b,r\in\mathbb{R}\), \(r\ge 0\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    Soit \(z=1-i\). 1) Calculer \(|z|\) et \(\overline{z}\). 2) Calculer \(\dfrac{1}{z}\).<br/><br/>
+    <b>Correction :</b><br/>
+    \(|z|=\sqrt{1^2+(-1)^2}=\sqrt{2}\). \(\overline{z}=1+i\).<br/>
+    \(\dfrac{1}{1-i}=\dfrac{1+i}{(1-i)(1+i)}=\dfrac{1+i}{1-(-1)}=\dfrac{1+i}{2}=\dfrac12+\dfrac{i}{2}\).<br/>
+    \(\boxed{\dfrac{1}{z}=\dfrac12+\dfrac{i}{2}}\).
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

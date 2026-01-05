@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    img.annale{
+      width:100%;
+      max-width: 900px;
+      display:block;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 6 Calcul vectoriel</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 6) Calcul vectoriel : somme, produit scalaire</h2>
+
+
+<section id="math-6">
+  <h4>6 — Calcul vectoriel : somme, produits, applications</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Vecteur</b> \(\vec{u}\) : objet défini par une direction, un sens et une norme.</li>
+      <li><b>Norme</b> : longueur \(\|\vec{u}\|\), toujours \(\ge 0\).</li>
+      <li><b>Somme</b> : \(\vec{u}+\vec{v}\) (règle du parallélogramme).</li>
+      <li><b>Produit scalaire</b> : \(\vec{u}\cdot\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta\) (donne une information d’alignement).</li>
+      <li><b>Projection</b> : composante d’un vecteur sur une direction.</li>
+      <li><b>Travail d’une force</b> : \(W=\vec{F}\cdot\vec{d}\) (en mécanique), même idée mathématique que produit scalaire.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie</div>
+    <ul>
+      <li>En coordonnées : si \(\vec{u}=(u_x,u_y)\) et \(\vec{v}=(v_x,v_y)\), alors \(\vec{u}\cdot\vec{v}=u_xv_x+u_yv_y\).</li>
+      <li>Test d’orthogonalité : \(\vec{u}\perp \vec{v}\iff \vec{u}\cdot\vec{v}=0\).</li>
+      <li>La projection permet de “prendre la partie utile” d’un vecteur dans une direction (souvent ce qu’on utilise en application).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Norme : si \(\vec{u}=(u_x,u_y)\), \(\|\vec{u}\|=\sqrt{u_x^2+u_y^2}\)</li>
+      <li>Produit scalaire (coordonnées) : \(\vec{u}\cdot\vec{v}=u_xv_x+u_yv_y\)</li>
+      <li>Produit scalaire (géométrique) : \(\vec{u}\cdot\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta\)</li>
+      <li>Projection de \(\vec{u}\) sur \(\vec{v}\) (si \(\vec{v}\neq \vec{0}\)) : \(\mathrm{proj}_{\vec{v}}(\vec{u})=\dfrac{\vec{u}\cdot\vec{v}}{\|\vec{v}\|^2}\vec{v}\)</li>
+      <li>Lettres : \(\theta\) angle, \(\vec{u},\vec{v}\) vecteurs.</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    On considère \(\vec{u}=(3,4)\) et \(\vec{v}=(2,-1)\).<br/>
+    1) Calculer \(\|\vec{u}\|\). 2) Calculer \(\vec{u}\cdot\vec{v}\). 3) Dire si \(\vec{u}\) et \(\vec{v}\) sont orthogonaux.<br/><br/>
+    <b>Correction :</b><br/>
+    1) \(\|\vec{u}\|=\sqrt{3^2+4^2}=\sqrt{9+16}=\sqrt{25}=5\).<br/>
+    2) \(\vec{u}\cdot\vec{v}=3\times 2 + 4\times(-1)=6-4=2\).<br/>
+    3) Orthogonalité ⇔ produit scalaire nul. Ici \(2\neq 0\), donc \(\boxed{\vec{u}\ \text{et}\ \vec{v}\ \text{ne sont pas orthogonaux}}\).
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

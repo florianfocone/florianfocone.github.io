@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    img.annale{
+      width:100%;
+      max-width: 900px;
+      display:block;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 1 Trigonométrie</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 1) Trigonométrie : fonctions, relations</h2>
+
+
+
+<section id="math-1">
+  <h4>1 — Trigonométrie : c’est quoi, à quoi ça sert, relations à connaître</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Trigonométrie</b> : ensemble d’outils qui relient des <b>angles</b> et des <b>longueurs</b> dans les triangles et sur le cercle.</li>
+      <li><b>Triangle rectangle</b> : triangle avec un angle droit (90°).</li>
+      <li><b>Hypoténuse</b> : côté <b>opposé</b> à l’angle droit, c’est le plus long côté du triangle rectangle.</li>
+      <li><b>Côté opposé</b> : côté en face de l’angle étudié.</li>
+      <li><b>Côté adjacent</b> : côté à côté de l’angle étudié, différent de l’hypoténuse.</li>
+      <li><b>Sinus</b> (\(\sin\theta\)) : rapport “opposé / hypoténuse” dans un triangle rectangle.</li>
+      <li><b>Cosinus</b> (\(\cos\theta\)) : rapport “adjacent / hypoténuse” dans un triangle rectangle.</li>
+      <li><b>Tangente</b> (\(\tan\theta\)) : rapport “opposé / adjacent” dans un triangle rectangle.</li>
+      <li><b>Radian</b> : unité d’angle ; \(2\pi\) rad \(=360^\circ\).</li>
+      <li><b>Cercle trigonométrique</b> : cercle de rayon 1 où \(\cos x\) et \(\sin x\) sont les coordonnées d’un point.</li>
+      <li><b>Périodicité</b> : \(\sin\) et \(\cos\) ont une période \(2\pi\), \(\tan\) a une période \(\pi\).</li>
+      <li><b>Théorème de Pythagore</b> : dans un triangle rectangle, \(c^2=a^2+b^2\) (c = hypoténuse).</li>
+      <li><b>Théorème de Thalès</b> : si deux droites sont parallèles, les longueurs correspondantes sur des triangles semblables sont proportionnelles.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (pour comprendre vite)</div>
+    <ul>
+      <li>La trigonométrie sert à <b>calculer une hauteur, une distance ou une pente</b> à partir d’un angle, sans tout mesurer (échelle, toit, distance, topographie).</li>
+      <li>Dans un triangle rectangle, dès qu’on connaît <b>un angle</b> et <b>un côté</b>, on peut retrouver les autres côtés avec \(\sin\), \(\cos\), \(\tan\).</li>
+      <li>Sur le cercle trigonométrique, \(\cos x\) et \(\sin x\) décrivent un point : cela sert à résoudre des équations et à modéliser des phénomènes périodiques (ondes, courant sinusoïdal).</li>
+      <li>En géométrie, <b>Thalès</b> sert quand il y a des <b>parallèles</b> (triangles semblables), alors que <b>Pythagore</b> sert quand il y a un <b>angle droit</b>.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Relations à connaître par cœur (triangle rectangle)</div>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Nom</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Formule</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Mémo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Sinus</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sin\theta=\dfrac{\text{opposé}}{\text{hypoténuse}}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">SOH</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Cosinus</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cos\theta=\dfrac{\text{adjacent}}{\text{hypoténuse}}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">CAH</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Tangente</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\tan\theta=\dfrac{\text{opposé}}{\text{adjacent}}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">TOA</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Pythagore</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(c^2=a^2+b^2\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">c = hypoténuse</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Lien \(\tan\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\tan\theta=\dfrac{\sin\theta}{\cos\theta}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cos\theta\neq 0\)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Valeurs à connaître (angles remarquables)</div>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Angle</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">\(\sin\)</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">\(\cos\)</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">\(\tan\)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(0^\circ\) (\(0\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">0</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">1</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">0</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(30^\circ\) (\(\frac{\pi}{6}\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{1}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{\sqrt{3}}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{1}{\sqrt{3}}\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(45^\circ\) (\(\frac{\pi}{4}\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{\sqrt{2}}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{\sqrt{2}}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">1</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(60^\circ\) (\(\frac{\pi}{3}\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{\sqrt{3}}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\frac{1}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sqrt{3}\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(90^\circ\) (\(\frac{\pi}{2}\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">1</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">0</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">non définie</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Relations utiles (cercle trigonométrique)</div>
+    <ul>
+      <li>Identité : \(\sin^2x+\cos^2x=1\).</li>
+      <li>Parité : \(\sin(-x)=-\sin x\), \(\cos(-x)=\cos x\).</li>
+      <li>Périodicité : \(\sin(x+2\pi)=\sin x\), \(\cos(x+2\pi)=\cos x\), \(\tan(x+\pi)=\tan x\).</li>
+      <li>Angles associés : \(\sin(\pi-x)=\sin x\), \(\cos(\pi-x)=-\cos x\).</li>
+      <li>Lettres : \(x\in\mathbb{R}\), \(\theta\) angle d’un triangle rectangle.</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercices types</div><br/>
+
+    <b>Exo 1 — Échelle (triangle rectangle)</b><br/>
+    Une échelle de longueur \(L=10\) m est posée contre un mur. L’angle avec le sol est \(60^\circ\).<br/>
+    1) Calculer la hauteur \(h\) atteinte sur le mur. 2) Calculer la distance \(d\) entre le pied de l’échelle et le mur.<br/><br/>
+
+    <b>Correction :</b><br/>
+    Triangle rectangle, hypoténuse \(=L\).<br/>
+    Hauteur : \(h=L\sin 60^\circ=10\times \frac{\sqrt{3}}{2}=5\sqrt{3}\) m.<br/>
+    Distance : \(d=L\cos 60^\circ=10\times \frac12=5\) m.<br/>
+    \(\boxed{h=5\sqrt{3}\ \text{m},\ d=5\ \text{m}}\).<br/><br/>
+
+    <b>Exo 2 — Thalès (triangles semblables)</b><br/>
+    Dans un triangle \(ABC\), \(D\) est sur \([AB]\) et \(E\) est sur \([AC]\) avec \((DE)\parallel(BC)\).<br/>
+    On donne \(AD=3\), \(AB=9\), \(AE=4\). Calculer \(AC\).<br/><br/>
+
+    <b>Correction :</b><br/>
+    Par Thalès : \(\dfrac{AD}{AB}=\dfrac{AE}{AC}\). Donc \(\dfrac{3}{9}=\dfrac{4}{AC}\).<br/>
+    \(\dfrac{1}{3}=\dfrac{4}{AC}\Rightarrow AC=12\).<br/>
+    \(\boxed{AC=12}\).
+  </div>
+</section>
+
+</div>
+</body>
+</html>

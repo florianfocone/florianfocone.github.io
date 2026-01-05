@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 2 Séries</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 2) Séries : DL, suites, séries (détaillé)</h2>
+
+
+<section id="math-2">
+  <h4>2 — Séries : définitions et propriétés des DL, suites, séries</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Suite</b> \((u_n)\) : famille de nombres réels indexée par \(n\in\mathbb{N}\), définie par une formule explicite ou une relation de récurrence.</li>
+      <li><b>Suite arithmétique</b> : \(u_{n+1}=u_n+r\) (raison \(r\)).</li>
+      <li><b>Suite géométrique</b> : \(u_{n+1}=q\,u_n\) (raison \(q\)).</li>
+      <li><b>Limite d’une suite</b> : nombre \(\ell\) tel que \(u_n\) se rapproche de \(\ell\) quand \(n\to\infty\).</li>
+      <li><b>Série</b> \(\sum u_n\) : on étudie la suite des sommes partielles \(S_N=\sum_{n=0}^{N}u_n\).</li>
+      <li><b>Convergence d’une série</b> : la série converge si \(S_N\) admet une limite finie quand \(N\to\infty\).</li>
+      <li><b>Développement limité (DL) en \(a\)</b> : écriture locale
+        \[
+          f(x)=\sum_{k=0}^{n} c_k(x-a)^k + o\!\big((x-a)^n\big)\quad (x\to a).
+        \]
+      </li>
+      <li><b>Terme négligeable</b> : \(g(x)=o(h(x))\) si \(\dfrac{g(x)}{h(x)}\to 0\) dans la limite considérée.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (ce qu’il faut comprendre)</div>
+    <ul>
+      <li><b>DL</b> : sert à remplacer une fonction par un polynôme <b>près d’un point</b> (souvent 0) pour calculer une limite ou faire une approximation.</li>
+      <li><b>Suites</b> : servent à décrire une évolution “pas à pas” ; on cherche typiquement une formule de \(u_n\) et sa limite.</li>
+      <li><b>Séries</b> : ce sont des sommes “jusqu’à l’infini” ; en pratique on utilise surtout les séries géométriques et les séries télescopiques, et on vérifie la condition \(u_n\to 0\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Développements limités : propriétés + formules (et quand les utiliser)</div>
+    <ul>
+      <li><b>Unicité</b> : à un ordre donné, le DL est unique.</li>
+      <li><b>Somme</b> : DL de \(g+h\) = somme des DL (même point et même ordre).</li>
+      <li><b>Produit</b> : on multiplie les DL et on <b>coupe</b> au bon ordre.</li>
+      <li><b>Choix de l’ordre</b> : on garde assez de termes pour que le premier terme non nul de la limite apparaisse.</li>
+    </ul>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">DL près de 0</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">À connaître</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Quand l’utiliser</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\mathrm{e}^x\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\mathrm{e}^x=1+x+\dfrac{x^2}{2}+o(x^2)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Limites avec \(\mathrm{e}^x-1\) ou \(\mathrm{e}^x\) au numérateur.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(1+x)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(1+x)=x-\dfrac{x^2}{2}+o(x^2)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Limites de type \(\ln(1+x)-x\), approximation pour \(x\) petit.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sin x\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sin x=x-\dfrac{x^3}{6}+o(x^3)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Petits angles, limites trigonométriques.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cos x\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cos x=1-\dfrac{x^2}{2}+o(x^2)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Limites avec \(1-\cos x\) ou \(\cos x-1\).</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{1}{1-x}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{1}{1-x}=1+x+x^2+o(x^2)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Fractions proches de 1, mise sous la forme \(\frac{1}{1-x}\).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Suites : propriétés + formules (et quand les utiliser)</div>
+    <ul>
+      <li><b>Suite arithmétique</b> : \(\boxed{u_n=u_0+nr}\). À utiliser quand on ajoute toujours la même quantité.</li>
+      <li><b>Suite géométrique</b> : \(\boxed{u_n=u_0q^n}\). À utiliser quand on multiplie toujours par le même facteur.</li>
+      <li><b>Suite affine</b> : \(u_{n+1}=au_n+b\) (avec \(|a|&lt;1\)) :
+        <ul>
+          <li>Point fixe : \(\boxed{\ell=\dfrac{b}{1-a}}\) (valeur d’équilibre).</li>
+          <li>Poser \(v_n=u_n-\ell\) → \(v_{n+1}=av_n\) (devient géométrique) → \(\boxed{u_n=\ell+(u_0-\ell)a^n}\).</li>
+          <li>À utiliser quand l’évolution combine “une part de l’ancien” + “un ajout constant”.</li>
+        </ul>
+      </li>
+      <li><b>Théorème</b> : une suite monotone et bornée est convergente (utile pour prouver l’existence d’une limite).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Séries : propriétés + formules (et quand les utiliser)</div>
+    <ul>
+      <li><b>Condition nécessaire</b> : si \(\sum u_n\) converge, alors \(\boxed{u_n\to 0}\). À utiliser pour éliminer vite une convergence impossible.</li>
+      <li><b>Série géométrique</b> : \(\sum_{n=0}^{\infty} q^n\) converge si \(|q|&lt;1\) et vaut \(\boxed{\dfrac{1}{1-q}}\). À utiliser dès qu’un terme est une puissance \(q^n\).</li>
+      <li><b>Somme partielle géométrique</b> :
+        \[
+          \sum_{k=0}^{N} q^k=\frac{1-q^{N+1}}{1-q}\quad (q\neq 1).
+        \]
+        À utiliser pour une somme finie, ou pour passer à la limite si \(|q|&lt;1\).</li>
+      <li><b>Série télescopique</b> : si \(u_n=v_n-v_{n+1}\) alors
+        \[
+          \sum_{n=0}^{N}u_n=v_0-v_{N+1}.
+        \]
+        À utiliser quand tu vois une différence “terme \(n\) − terme \(n+1\)”.</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercices types (1 par thème)</div><br/>
+
+    <b>Exo DL</b><br/>
+    Calculer \(\displaystyle \lim_{x\to 0}\frac{\mathrm{e}^x-1-x}{x^2}\).<br/><br/>
+    <b>Correction :</b><br/>
+    DL : \(\mathrm{e}^x=1+x+\dfrac{x^2}{2}+o(x^2)\). Donc \(\mathrm{e}^x-1-x=\dfrac{x^2}{2}+o(x^2)\).<br/>
+    \(\frac{\mathrm{e}^x-1-x}{x^2}=\dfrac12+o(1)\Rightarrow \boxed{\frac12}\).<br/><br/>
+
+    <b>Exo suite</b><br/>
+    On modélise une régulation par \(u_{n+1}=0{,}8u_n+6\) avec \(u_0=0\). Donner \(u_n\) puis \(\lim u_n\).<br/><br/>
+    <b>Correction :</b><br/>
+    Point fixe : \(\ell=\dfrac{6}{1-0{,}8}=30\). Posons \(v_n=u_n-30\). Alors \(v_{n+1}=0{,}8v_n\) donc \(v_n=v_0(0{,}8)^n\).<br/>
+    \(v_0=-30\) donc \(u_n=30-30(0{,}8)^n\). Comme \((0{,}8)^n\to 0\), \(\boxed{\lim u_n=30}\).<br/><br/>
+
+    <b>Exo série</b><br/>
+    Étudier la convergence et calculer la somme de \(\displaystyle \sum_{n=0}^{\infty} 5\left(\frac{1}{3}\right)^n\).<br/><br/>
+    <b>Correction :</b><br/>
+    Série géométrique de raison \(q=\frac13\) avec \(|q|&lt;1\) donc convergence.<br/>
+    Somme : \(5\cdot \dfrac{1}{1-\frac13}=5\cdot \dfrac{3}{2}=\boxed{\frac{15}{2}}\).
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+    code{ color: rgba(255,255,255,0.92); }
+  </style>
+</head>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Chimie — A) Chimie générale</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Chimie — A) Chimie générale : liaisons, réactions, pH, oxydoréduction</h2>
+
+
+<section id="chim-a">
+  <h4>Chimie — A) Chimie générale (bases indispensables)</h4>
+
+  <div class="bloc defs" id="chim-a-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Atome</b> : particule constituée d’un noyau (protons + neutrons) et d’électrons autour ; il définit un élément (H, O, Cl…).</li>
+      <li><b>Molécule</b> : assemblage neutre d’atomes liés (ex : H₂O, CO₂).</li>
+      <li><b>Ion</b> : atome ou groupe d’atomes chargé (cation + / anion −) après perte/gain d’électrons (ex : Na⁺, Cl⁻, SO₄²⁻).</li>
+      <li><b>Électron</b> : particule chargée négativement ; les transferts d’électrons expliquent l’oxydoréduction.</li>
+
+      <li><b>Liaison covalente</b> : liaison due au <b>partage</b> d’électrons entre atomes (molécules organiques, eau…).</li>
+      <li><b>Liaison ionique</b> : liaison due à l’<b>attraction</b> entre ions + et − (sels : NaCl…).</li>
+      <li><b>Polarité</b> : répartition inégale des charges dans une liaison/molécule (ex : H₂O est polaire) ; influence solubilité et réactivité.</li>
+
+      <li><b>Réaction chimique</b> : transformation où des réactifs deviennent des produits ; les atomes sont conservés.</li>
+      <li><b>Équation-bilan</b> : écriture de la réaction ; on ajuste des <b>coefficients</b> pour conserver chaque élément.</li>
+      <li><b>Quantité de matière</b> (n) : “nombre de moles” ; 1 mol = 6,02×10²³ entités.</li>
+      <li><b>Concentration molaire</b> (C) : quantité de matière par volume de solution : C = n/V.</li>
+      <li><b>Réactif limitant</b> : réactif consommé en premier ; il fixe la quantité maximale de produits.</li>
+
+      <li><b>Réaction réversible</b> : réaction pouvant se faire dans les deux sens (→ et ←).</li>
+      <li><b>Équilibre chimique</b> : état d’une réaction réversible où les vitesses directe et inverse sont égales (les quantités deviennent stables).</li>
+
+      <li><b>Acide (Brønsted)</b> : espèce qui <b>donne</b> un proton H⁺ (ex : HCl, H₂SO₄).</li>
+      <li><b>Base (Brønsted)</b> : espèce qui <b>capte</b> un proton H⁺ (ex : NH₃, OH⁻).</li>
+      <li><b>Couple acide/base</b> : deux espèces ne différant que d’un proton (ex : NH₄⁺/NH₃).</li>
+      <li><b>Neutralisation</b> : réaction acide + base donnant souvent eau + sel (au moins : H⁺ + OH⁻ → H₂O).</li>
+
+      <li><b>pH</b> : nombre qui mesure l’acidité : pH = −log₁₀([H₃O⁺]).</li>
+      <li><b>Solution acide</b> : pH &lt; 7 ; <b>solution neutre</b> : pH ≈ 7 ; <b>solution basique</b> : pH &gt; 7 (à 25°C, ordre de grandeur).</li>
+
+      <li><b>Oxydation</b> : perte d’électrons (ou augmentation du nombre d’oxydation).</li>
+      <li><b>Réduction</b> : gain d’électrons (ou diminution du nombre d’oxydation).</li>
+      <li><b>Oxydant</b> : espèce qui <b>capte</b> des électrons (elle se réduit).</li>
+      <li><b>Réducteur</b> : espèce qui <b>donne</b> des électrons (il s’oxyde).</li>
+      <li><b>Oxydoréduction</b> : réaction avec transfert d’électrons entre oxydant et réducteur (corrosion, combustion…).</li>
+
+      <li><b>Fonction alcool</b> : groupe <b>−OH</b> porté par un carbone (ex : éthanol C₂H₅OH).</li>
+      <li><b>Fonction aldéhyde</b> : groupe <b>−CHO</b> (carbone terminal) (ex : éthanal).</li>
+      <li><b>Fonction cétone</b> : groupe <b>&gt;C=O</b> au milieu de chaîne (ex : acétone).</li>
+      <li><b>Sel</b> : composé ionique (souvent issu acide/base) constitué de cations et d’anions (ex : NaCl, NH₄Cl).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (zéro base → compréhension rapide)</div>
+    <ul>
+      <li><b>1) Pourquoi les atomes se lient ?</b> Les atomes “cherchent” une configuration électronique stable. Ils s’assemblent :
+        <ul>
+          <li>soit en <b>partageant</b> des électrons → liaison covalente (molécules : eau, hydrocarbures) ;</li>
+          <li>soit en <b>transférant</b> des électrons → ions + et − → liaison ionique (sels : NaCl).</li>
+        </ul>
+      </li>
+
+      <li><b>2) Équations et coefficients</b> : dans une réaction chimique, les atomes sont conservés.
+        On ajuste les coefficients pour que chaque élément apparaisse en même nombre dans réactifs et produits.</li>
+
+      <li><b>3) Calculs “moles” (ce qui tombe souvent)</b> :
+        <ul>
+          <li>On passe masse → moles avec <b>n = m/M</b> (M = masse molaire).</li>
+          <li>En solution, on utilise <b>n = C·V</b> (V en litres).</li>
+          <li>Le <b>réactif limitant</b> fixe la quantité maximale de produit : c’est celui qui s’épuise en premier quand on suit les proportions de l’équation.</li>
+        </ul>
+      </li>
+
+      <li><b>4) Acides, bases et pH</b> :
+        <ul>
+          <li>Dans l’eau, un acide augmente la concentration en H₃O⁺ (souvent noté H⁺ en simplifié).</li>
+          <li>Une base augmente la concentration en OH⁻ (ou capte des H⁺).</li>
+          <li><b>pH</b> est une échelle logarithmique : passer de pH 2 à pH 1 signifie “10 fois plus acide” (10× plus de H₃O⁺).</li>
+          <li>Neutralisation : les ions H⁺ et OH⁻ s’annulent en formant de l’eau ; s’il reste un excès d’acide ou de base, le pH final n’est pas 7.</li>
+        </ul>
+      </li>
+
+      <li><b>5) Équilibre chimique (Le Chatelier, version concours)</b> :
+        <ul>
+          <li>À l’équilibre, la réaction ne “s’arrête” pas : elle continue dans les deux sens, mais les quantités deviennent stables.</li>
+          <li>Si on perturbe (ajout d’un réactif, retrait d’un produit, changement de température), le système évolue dans le sens qui <b>réduit</b> la perturbation.</li>
+        </ul>
+      </li>
+
+      <li><b>6) Oxydoréduction (idée simple)</b> :
+        <ul>
+          <li>Les électrons vont du <b>réducteur</b> vers l’<b>oxydant</b>.</li>
+          <li>Exemples terrain : corrosion (oxydation des métaux), combustions (transferts d’électrons vers O₂).</li>
+        </ul>
+      </li>
+
+      <li><b>7) Fonctions organiques (pour repérer)</b> :
+        <ul>
+          <li>Alcool : présence de <b>−OH</b> (souvent solvants/combustibles).</li>
+          <li>Aldéhyde / cétone : présence de <b>C=O</b> (solvants, odeurs caractéristiques, réactivité spécifique).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques (celles qui servent vraiment)</div>
+    <ul>
+      <li>Quantité de matière : <b>n = m/M</b></li>
+      <li>En solution : <b>n = C·V</b> (V en L)</li>
+      <li>Concentration : <b>C = n/V</b></li>
+      <li>pH : <b>pH = −log₁₀([H₃O⁺])</b></li>
+      <li>Neutralisation (simplifiée) : <b>H⁺ + OH⁻ → H₂O</b></li>
+      <li>Rappel “log” utile : si [H₃O⁺] = 10⁻ᵃ alors pH = a</li>
+      <li>Lettres : n (mol), m (g), M (g·mol⁻¹), C (mol·L⁻¹), V (L), pH (sans unité), [H₃O⁺] (mol·L⁻¹)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (acide/base + réactif limitant + pH final)</div><br/>
+    Sur intervention, on mélange pour neutraliser :<br/>
+    • <b>V<sub>a</sub> = 200 mL</b> d’acide fort (type HCl) à <b>C<sub>a</sub> = 0,50 mol·L⁻¹</b>.<br/>
+    • <b>V<sub>b</sub> = 300 mL</b> de base forte (type NaOH) à <b>C<sub>b</sub> = 0,20 mol·L⁻¹</b>.<br/>
+    On suppose mélange idéal. Réaction : <b>H⁺ + OH⁻ → H₂O</b>.<br/><br/>
+
+    1) Calculer n(H⁺) et n(OH⁻). Identifier le réactif limitant.<br/>
+    2) Calculer la quantité de matière de réactif en excès après réaction.<br/>
+    3) En déduire la concentration finale en H₃O⁺, puis le pH final (ordre de grandeur).<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) V en L : V<sub>a</sub>=0,200 L ; V<sub>b</sub>=0,300 L.<br/>
+    n(H⁺)=C<sub>a</sub>V<sub>a</sub>=0,50×0,200=<b>0,100 mol</b>.<br/>
+    n(OH⁻)=C<sub>b</sub>V<sub>b</sub>=0,20×0,300=<b>0,060 mol</b>.<br/>
+    La réaction est 1:1 → OH⁻ est limitant (0,060 &lt; 0,100).<br/><br/>
+
+    2) Excès d’acide : n(H⁺)<sub>exc</sub> = 0,100 − 0,060 = <b>0,040 mol</b>.<br/><br/>
+
+    3) Volume total V<sub>tot</sub> = 0,200 + 0,300 = <b>0,500 L</b>.<br/>
+    [H₃O⁺] ≈ n(H⁺)<sub>exc</sub>/V<sub>tot</sub> = 0,040/0,500 = <b>0,080 mol·L⁻¹</b> = 8×10⁻².<br/>
+    pH = −log(8×10⁻²) = 2 − log 8 ≈ 2 − 0,90 ≈ <b>1,1</b>.<br/><br/>
+
+    <b>Lettres :</b> C (mol·L⁻¹), V (L), n (mol), pH.
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

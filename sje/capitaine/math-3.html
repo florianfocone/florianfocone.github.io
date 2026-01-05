@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    img.annale{
+      width:100%;
+      max-width: 900px;
+      display:block;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 3 Études de fonctions</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 3) Études des fonctions (dont hyperboliques) + Annale</h2>
+
+
+<section id="math-3">
+  <h4>3 — Études des fonctions : polynomiales, exponentielles, logarithmiques, hyperboliques</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Domaine</b> (\(D_f\)) : ensemble des \(x\) pour lesquels \(f(x)\) est définie.</li>
+      <li><b>Limite</b> : comportement de \(f(x)\) quand \(x\) tend vers une borne (finie ou \(\pm\infty\)).</li>
+      <li><b>Asymptote</b> : droite approchée par la courbe (verticale, horizontale, oblique).</li>
+      <li><b>Branche infinie</b> : partie de courbe qui “s’aligne” sur une asymptote.</li>
+      <li><b>Fonctions hyperboliques</b> : \(\sinh x\), \(\cosh x\), \(\tanh x\) (analogue trigonométrique en exponentielles).</li>
+      <li><b>Position relative</b> : courbe au-dessus / au-dessous d’une droite via le signe de la différence.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie</div>
+    <ul>
+      <li>Étude complète classique : <b>domaine</b> → <b>limites</b> → <b>dérivée</b> (variations) → <b>asymptotes</b> → (si demandé) position relative.</li>
+      <li>Comportements à connaître :
+        <ul>
+          <li>\(\mathrm{e}^x\to+\infty\) quand \(x\to+\infty\) et \(\mathrm{e}^x\to 0\) quand \(x\to-\infty\).</li>
+          <li>\(\ln x\) n’existe que pour \(x&gt;0\), et \(\ln x\to -\infty\) quand \(x\to 0^+\).</li>
+          <li>Polynôme : le terme de plus haut degré domine à l’infini.</li>
+        </ul>
+      </li>
+      <li>Hyperboliques : \(\cosh x\ge 1\) ; \(\tanh x\) est bornée entre \(-1\) et \(1\), avec \(\tanh x\to \pm 1\) quand \(x\to\pm\infty\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Asymptote oblique : \(y=ax+b\) si \(f(x)-(ax+b)\to 0\) quand \(x\to\pm\infty\)</li>
+      <li>Exponentielle/log : \(\ln(\mathrm{e}^x)=x\), \(\mathrm{e}^{\ln x}=x\) (si \(x&gt;0\))</li>
+      <li>Hyperboliques : \(\cosh x=\dfrac{\mathrm{e}^x+\mathrm{e}^{-x}}{2}\), \(\sinh x=\dfrac{\mathrm{e}^x-\mathrm{e}^{-x}}{2}\), \(\tanh x=\dfrac{\sinh x}{\cosh x}\)</li>
+      <li>Identité : \(\cosh^2x-\sinh^2x=1\)</li>
+      <li>Lettres : \(a,b\in\mathbb{R}\), \(x\in D_f\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    <img class="annale" src="exo4.png" alt="Annale — étude de fonction"/>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Correction (concise, en phrases)</div><br/>
+    On étudie \(f(x)=x-1+\dfrac{3}{\mathrm{e}^x+1}\).<br/><br/>
+
+    <b>1) Domaine et limites</b><br/>
+    \(\mathrm{e}^x&gt;0\Rightarrow \mathrm{e}^x+1&gt;0\) pour tout \(x\), donc \(\boxed{D_f=\mathbb{R}}\).<br/>
+    \(x\to +\infty\) : \(\dfrac{3}{\mathrm{e}^x+1}\to 0\), donc \(f(x)\sim x-1\) et \(\boxed{f(x)\to +\infty}\).<br/>
+    \(x\to -\infty\) : \(\mathrm{e}^x\to 0\), donc \(\dfrac{3}{\mathrm{e}^x+1}\to 3\), ainsi \(f(x)\sim x+2\) et \(\boxed{f(x)\to -\infty}\).<br/><br/>
+
+    <b>2) Variations</b><br/>
+    \(f'(x)=1-\dfrac{3\mathrm{e}^x}{(\mathrm{e}^x+1)^2}\).<br/>
+    On écrit \((\mathrm{e}^x+1)^2-3\mathrm{e}^x=\mathrm{e}^{2x}-\mathrm{e}^x+1=(\mathrm{e}^x-\tfrac12)^2+\tfrac34&gt;0\).<br/>
+    Donc \(f'(x)=\dfrac{(\mathrm{e}^x+1)^2-3\mathrm{e}^x}{(\mathrm{e}^x+1)^2}&gt;0\) pour tout \(x\) : \(\boxed{f\ \text{est strictement croissante}}\).<br/><br/>
+
+    <b>3) Réécriture</b><br/>
+    \(\dfrac{3}{\mathrm{e}^x+1}=3-\dfrac{3\mathrm{e}^x}{\mathrm{e}^x+1}\) donc \(\boxed{f(x)=x+2-\dfrac{3\mathrm{e}^x}{\mathrm{e}^x+1}}\).<br/><br/>
+
+    <b>4) Asymptotes et position relative</b><br/>
+    À droite : \(f(x)-(x-1)=\dfrac{3}{\mathrm{e}^x+1}\to 0\), donc asymptote \(\boxed{y=x-1}\) quand \(x\to+\infty\). Le terme est \(&gt;0\), donc la courbe est au-dessus.<br/>
+    À gauche : \(f(x)-(x+2)=-\dfrac{3\mathrm{e}^x}{\mathrm{e}^x+1}\to 0\), donc asymptote \(\boxed{y=x+2}\) quand \(x\to-\infty\). Le terme est \(&lt;0\), donc la courbe est au-dessous.<br/>
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

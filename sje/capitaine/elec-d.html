@@ -93,7 +93,7 @@
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie (pour comprendre vite)</div>
+    <div class="label">Théorie</div>
     <ul>
       <li><b>1) Pourquoi la valeur efficace ?</b> En chauffage (effet Joule), ce qui compte c’est l’énergie dissipée dans R.
           Le secteur “230 V” signifie <b>230 V efficaces</b>, pas la valeur maximale.</li>
@@ -184,6 +184,45 @@
 
     <b>Lettres :</b> P (W), U (V), I (A), R (Ω).
   </div>
+  
+  <div class="bloc calc">
+  <div class="label">Exercice type (distribution : triphasé, pertes Joule, appliqué)</div><br/>
+  Un poste de commandement doit alimenter un équipement électrique de puissance utile <b>P = 9,0 kW</b>.
+  La liaison se fait par un câble dont la résistance aller-retour par phase est <b>R = 0,40 Ω</b> (on assimile chaque phase à une résistance de ligne R).<br/>
+  On compare deux solutions :<br/>
+  • <b>Solution A</b> : alimentation en <b>monophasé 230 V</b> (charge résistive).<br/>
+  • <b>Solution B</b> : alimentation en <b>triphasé 400 V</b> (tension entre phases), charge équilibrée et résistive.<br/><br/>
+
+  <b>Données utiles :</b><br/>
+  • Monophasé (charge résistive) : <b>P = U I</b><br/>
+  • Triphasé équilibré : <b>P = √3 · U<sub>LL</sub> · I</b> (U<sub>LL</sub> = tension entre phases)<br/>
+  • Pertes Joule sur une ligne : <b>P<sub>J</sub> = R I²</b> (par conducteur)<br/>
+  • En triphasé, les pertes totales valent <b>P<sub>J,tot</sub> = 3 R I²</b> (3 phases, même courant I).<br/><br/>
+
+  1) Calculer le courant dans la liaison en solution A (monophasé).<br/>
+  2) Calculer les pertes Joule dans le câble en solution A.<br/>
+  3) Calculer le courant de ligne en solution B (triphasé).<br/>
+  4) Calculer les pertes Joule totales dans le câble en solution B.<br/>
+  5) Conclure : intérêt du triphasé pour le transport de puissance (échauffement / pertes).<br/><br/>
+
+  <b>Correction :</b><br/>
+  1) Monophasé : I = P/U = 9000 / 230 ≈ <b>39 A</b>.<br/><br/>
+
+  2) Pertes Joule (monophasé) : on prend la résistance aller-retour globale R = 0,40 Ω.<br/>
+  P<sub>J</sub> = R I² = 0,40 × 39² = 0,40 × 1521 ≈ <b>608 W</b>.<br/><br/>
+
+  3) Triphasé : P = √3 · U<sub>LL</sub> · I ⇒ I = P / (√3 · U<sub>LL</sub>).<br/>
+  I = 9000 / (1,732 × 400) = 9000 / 692,8 ≈ <b>13 A</b>.<br/><br/>
+
+  4) Pertes Joule totales (3 phases) : P<sub>J,tot</sub> = 3 R I² = 3 × 0,40 × 13².<br/>
+  13² = 169 ⇒ P<sub>J,tot</sub> = 1,20 × 169 ≈ <b>203 W</b>.<br/><br/>
+
+  5) Conclusion : en triphasé, pour une même puissance, le courant est plus faible → pertes Joule plus faibles
+  (proportionnelles à I²) et donc moins d’échauffement des câbles. C’est une des raisons majeures du transport en alternatif triphasé.<br/><br/>
+
+  <b>Lettres :</b> P (W), U (V), U<sub>LL</sub> (V), I (A), R (Ω), P<sub>J</sub> (W).
+</div>
+
 </section>
 
   </div>

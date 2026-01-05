@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    img.annale{
+      width:100%;
+      max-width: 900px;
+      display:block;
+      margin: 10px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<script>
+   window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — 10 Moindres carrés</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — 10) Moindres carrés : régression linéaire</h2>
+
+
+<section id="math-10">
+  <h4>10 — Moindres carrés : introduction, régression linéaire</h4>
+
+  <div class="bloc defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Nuage de points</b> : ensemble de points \((x_i,y_i)\) issus de mesures.</li>
+      <li><b>Régression linéaire</b> : approximation de \(y\) par une droite \(y=ax+b\).</li>
+      <li><b>Résidu</b> : écart \(r_i=y_i-(ax_i+b)\) entre mesure et modèle.</li>
+      <li><b>Méthode des moindres carrés</b> : choix de \(a,b\) qui minimise \(\sum r_i^2\).</li>
+      <li><b>Covariance</b> : mesure du lien linéaire entre \(x\) et \(y\).</li>
+      <li><b>Corrélation</b> : covariance normalisée (entre -1 et 1), indique la force du lien linéaire.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie</div>
+    <ul>
+      <li>Sans calculatrice, on traite des jeux de données simples (petits entiers) pour obtenir une droite “propre”.</li>
+      <li>La droite de régression \(y=ax+b\) se calcule avec :
+        \[
+          a=\frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2},\quad b=\bar{y}-a\bar{x}.
+        \]
+        où \(\bar{x}\) et \(\bar{y}\) sont les moyennes.</li>
+      <li>Interprétation : \(a\) mesure “combien \(y\) change quand \(x\) augmente de 1”.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Moyennes : \(\bar{x}=\dfrac{1}{n}\sum x_i\), \(\bar{y}=\dfrac{1}{n}\sum y_i\)</li>
+      <li>Pente : \(a=\dfrac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2}\)</li>
+      <li>Ordonnée : \(b=\bar{y}-a\bar{x}\)</li>
+      <li>Lettres : \(n\) nombre de points, \(a,b\in\mathbb{R}\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type</div><br/>
+    On mesure \((x_i,y_i)\) : \((1,2)\), \((2,3)\), \((3,5)\). Trouver la droite de régression \(y=ax+b\).<br/><br/>
+    <b>Correction :</b><br/>
+    \(n=3\). \(\bar{x}=\dfrac{1+2+3}{3}=\dfrac{6}{3}=2\).<br/>
+    \(\bar{y}=\dfrac{2+3+5}{3}=\dfrac{10}{3}\).<br/><br/>
+    Calculons \(\sum (x_i-\bar{x})(y_i-\bar{y})\) :<br/>
+    Pour \(i=1\) : \((1-2)\left(2-\frac{10}{3}\right)=(-1)\left(\frac{6}{3}-\frac{10}{3}\right)=(-1)\left(-\frac{4}{3}\right)=\frac{4}{3}\).<br/>
+    Pour \(i=2\) : \((2-2)\left(3-\frac{10}{3}\right)=0\).<br/>
+    Pour \(i=3\) : \((3-2)\left(5-\frac{10}{3}\right)=(1)\left(\frac{15}{3}-\frac{10}{3}\right)=\frac{5}{3}\).<br/>
+    Somme : \(\frac{4}{3}+0+\frac{5}{3}=3\).<br/><br/>
+    Calculons \(\sum (x_i-\bar{x})^2\) : \((1-2)^2+(2-2)^2+(3-2)^2=1+0+1=2\).<br/>
+    Donc \(a=\dfrac{3}{2}\).<br/>
+    \(b=\bar{y}-a\bar{x}=\frac{10}{3}-\frac{3}{2}\times 2=\frac{10}{3}-3=\frac{10}{3}-\frac{9}{3}=\frac{1}{3}\).<br/>
+    \(\boxed{y=\frac{3}{2}x+\frac{1}{3}}\).
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+    code{ color: rgba(255,255,255,0.92); }
+  </style>
+</head>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Chimie — C) Chimie organique</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Chimie — C) Chimie organique : hydrocarbures, polymérisation, nomenclature</h2>
+
+
+<section id="chim-c">
+  <h4>Chimie — C) Chimie organique (hydrocarbures, familles, polymérisation)</h4>
+
+  <div class="bloc defs" id="chim-c-defs">
+    <div class="label">Définitions</div>
+    <ul>
+      <li><b>Chimie organique</b> : chimie des composés du carbone (souvent avec H, O, N, halogènes…).</li>
+      <li><b>Hydrocarbure</b> : composé contenant seulement C et H (ex : CH₄, C₂H₆).</li>
+
+      <li><b>Alcane</b> : hydrocarbure <b>saturé</b> (liaisons simples C–C) ; formule C<sub>n</sub>H<sub>2n+2</sub>.</li>
+      <li><b>Alcène</b> : hydrocarbure <b>insaturé</b> avec au moins une double liaison C=C ; formule C<sub>n</sub>H<sub>2n</sub>.</li>
+      <li><b>Alcyne</b> : hydrocarbure insaturé avec au moins une triple liaison C≡C ; formule C<sub>n</sub>H<sub>2n−2</sub>.</li>
+      <li><b>Aromatique</b> : famille à cycle stable avec électrons délocalisés (ex : benzène C₆H₆).</li>
+
+      <li><b>Saturé / insaturé</b> : saturé = liaisons simples ; insaturé = présence de double/triple liaison (plus réactif).</li>
+      <li><b>Isomères</b> : même formule brute, organisation différente (propriétés parfois très différentes).</li>
+
+      <li><b>Polymérisation</b> : réaction où des <b>monomères</b> s’assemblent en longues chaînes (polymères).</li>
+      <li><b>Monomère</b> : petite molécule répétée (ex : éthylène C₂H₄).</li>
+      <li><b>Polymère</b> : macromolécule (ex : polyéthylène (C₂H₄)<sub>n</sub>).</li>
+
+      <li><b>CH₄</b> : méthane (alcane), gaz naturel, très inflammable.</li>
+      <li><b>C₂H₆</b> : éthane (alcane), combustible.</li>
+      <li><b>C₃H₈</b> : propane (alcane), GPL, combustible.</li>
+      <li><b>C₂H₄</b> : éthylène/éthène (alcène), monomère du polyéthylène.</li>
+      <li><b>C₂H₂</b> : acétylène/éthyne (alcyne), très inflammable.</li>
+      <li><b>C₆H₆</b> : benzène (aromatique), inflammable et <b>toxique</b>.</li>
+
+      <li><b>Combustion complète</b> : formation CO₂ + H₂O (si assez de O₂).</li>
+      <li><b>Combustion incomplète</b> : manque de O₂ → CO (toxique) + suies.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Théorie (zéro base → ce qu’il faut comprendre)</div>
+    <ul>
+      <li><b>1) Hydrocarbures = énergie</b> : ces molécules contiennent beaucoup de liaisons C–H et C–C.
+        Leur oxydation par O₂ libère beaucoup d’énergie → combustibles.</li>
+
+      <li><b>2) Saturé vs insaturé</b> :
+        <ul>
+          <li><b>Alcanes</b> (CH₄, C₂H₆, C₃H₈) : liaisons simples, plus “stables”, combustibles usuels.</li>
+          <li><b>Alcènes / alcynes</b> (C₂H₄, C₂H₂) : double/triple liaison → plus réactifs ; base de la polymérisation.</li>
+          <li><b>Aromatiques</b> (benzène) : cycle stable ; propriétés toxiques à retenir ; inflammable.</li>
+        </ul>
+      </li>
+
+      <li><b>3) Nomenclature ultra-rapide</b> : méth- (1 C), éth- (2 C), prop- (3 C) ; suffixes : -ane, -ène, -yne.</li>
+
+      <li><b>4) Polymérisation (exemple clé)</b> :
+        <ul>
+          <li>Éthylène C₂H₄ → polyéthylène : \(n\,C_2H_4 ightarrow (C_2H_4)_n\).</li>
+          <li>Terrain : les plastiques brûlent ; selon le polymère, fumées et gaz toxiques possibles (CO, HCl si PVC…).</li>
+        </ul>
+      </li>
+
+      <li><b>5) Pourquoi la combustion incomplète est dangereuse ?</b> Si l’air manque (local confiné), le carbone n’est pas totalement oxydé :
+        formation de <b>CO</b> (gaz très toxique, incolore) + fumées.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques</div>
+    <ul>
+      <li>Combustion CH₄ : <b>CH₄ + 2 O₂ → CO₂ + 2 H₂O</b></li>
+      <li>Combustion C₃H₈ : <b>C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O</b></li>
+      <li>Polymérisation : <b>n C₂H₄ → (C₂H₄)<sub>n</sub></b></li>
+      <li>Formules générales : alcane C<sub>n</sub>H<sub>2n+2</sub>, alcène C<sub>n</sub>H<sub>2n</sub>, alcyne C<sub>n</sub>H<sub>2n−2</sub></li>
+      <li>Lettres : n (sans unité), m (g), M (g·mol⁻¹), n(mol)</li>
+    </ul>
+  </div>
+
+  <div class="bloc calc">
+    <div class="label">Exercice type (quantité d’O₂, appliqué)</div><br/>
+    Combustion complète du propane : <b>C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O</b>.<br/>
+    On brûle <b>m = 22 g</b> de propane (M(C₃H₈)=44 g·mol⁻¹).<br/><br/>
+    1) Calculer n(C₃H₈).<br/>
+    2) Calculer n(O₂) consommée.<br/>
+    3) Phrase terrain : pourquoi un manque d’O₂ augmente la toxicité ?<br/><br/>
+
+    <b>Correction :</b><br/>
+    1) n = m/M = 22/44 = <b>0,50 mol</b>.<br/>
+    2) n(O₂)=5×0,50=<b>2,5 mol</b>.<br/>
+    3) Manque d’O₂ → combustion incomplète → formation de <b>CO</b> toxique + fumées.<br/>
+  </div>
+</section>
+
+  </div>
+</body>
+</html>
