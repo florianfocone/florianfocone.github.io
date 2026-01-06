@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Capitaine — Fiche</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --topbar-h: 56px; }
+    .topbar{
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding: 10px 14px;
+      display: flex; gap: 10px; align-items: center;
+      min-height: var(--topbar-h);
+    }
+    body{ padding-top: var(--topbar-h); }
+    .topbar a{
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .topbar .title{
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      margin-left: 6px;
+      opacity: 0.95;
+    }
+    .page{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      color: rgba(255,255,255,0.92);
+    }
+  </style>
+</head>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']] },
+    chtml: { scale: 0.98 }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Sommaire</a>
+    <div class="title">Maths — Boîte à outils (simplifications)</div>
+  </div>
+
+  <div class="page">
+    <h2 id="fiche-title">Maths — Boîte à outils : simplifications & réflexes concours</h2>
+
+<section id="math-0">
+  <h4>Maths — Boîte à outils concours (simplifications & réflexes)</h4>
+
+  <div class="bloc defs">
+    <div class="label">But</div>
+    <ul>
+      <li>Regroupe les <b>transformations rapides</b> qui font gagner du temps (limites, séries, dériv/intégr, complexes, vecteurs...).</li>
+      <li>Chaque ligne = <b>réflexe</b> + <b>formule</b> + <b>exemple</b>.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Tableau des simplifications</div>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Outil</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Formule / réflexe</th>
+            <th style="text-align:left; border-bottom:1px solid rgba(255,255,255,0.18); padding:8px;">Exemple (direct)</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- ALGÈBRE / FRACTIONS -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Factoriser</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(a^2-b^2=(a-b)(a+b)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(x^2-9=(x-3)(x+3)\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Développer</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\((a\pm b)^2=a^2\pm 2ab+b^2\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\((x-2)^2=x^2-4x+4\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Même dénominateur</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+bc}{bd}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{1}{x}+\dfrac{1}{x+1}=\dfrac{2x+1}{x(x+1)}\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Rationaliser</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sqrt{A}-\sqrt{B}=\dfrac{A-B}{\sqrt{A}+\sqrt{B}}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sqrt{x+1}-1=\dfrac{x}{\sqrt{x+1}+1}\)</td>
+          </tr>
+
+          <!-- PUISSANCES -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Puissances</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{a^n}{b^n}=\left(\dfrac{a}{b}\right)^n\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{2^n}{5^n}=\left(\dfrac25\right)^n\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Puissances</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(a^{n+k}=a^n a^k\), \(a^{n-k}=\dfrac{a^n}{a^k}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(3^{n+2}=9\cdot 3^n\)</td>
+          </tr>
+
+          <!-- ÉQUIVALENTS (DL/LIMITES) -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Équivalent</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\sin x\sim x\) (quand \(x\to 0\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{\sin x}{x}\to 1\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Équivalent</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(1+x)\sim x\) (quand \(x\to 0\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{\ln(1+x)}{x}\to 1\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Équivalent</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\mathrm{e}^x-1\sim x\) (quand \(x\to 0\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{\mathrm{e}^x-1}{x}\to 1\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Équivalent</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(1-\cos x\sim \dfrac{x^2}{2}\) (quand \(x\to 0\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{1-\cos x}{x^2}\to \dfrac12\)</td>
+          </tr>
+
+          <!-- DOMINANT -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Dominant (limites)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Sortir la plus grande puissance / facteur dominant</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{3n^2+1}{n^2-5}=\dfrac{3+1/n^2}{1-5/n^2}\to 3\)</td>
+          </tr>
+
+          <!-- LOG / EXP -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Log</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(ab)=\ln a+\ln b\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(2x)=\ln2+\ln x\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Log</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(\frac{a}{b})=\ln a-\ln b\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(\frac{x}{3})=\ln x-\ln3\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Log</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(a^k)=k\ln(a)\) (\(a>0\))</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\ln(x^3)=3\ln x\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Exp</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\mathrm{e}^{a+b}=\mathrm{e}^a\mathrm{e}^b\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\mathrm{e}^{x+2}=\mathrm{e}^x\mathrm{e}^2\)</td>
+          </tr>
+
+          <!-- TRIGO -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Trigo</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\tan x=\dfrac{\sin x}{\cos x}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{\sin x}{\cos x}=\tan x\)</td>
+          </tr>
+
+          <!-- HYPERBOLIQUES -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Hyperboliques</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cosh x=\frac{\mathrm{e}^x+\mathrm{e}^{-x}}{2}\), \(\sinh x=\frac{\mathrm{e}^x-\mathrm{e}^{-x}}{2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cosh 0=1\), \(\sinh 0=0\)</td>
+          </tr>
+
+          <!-- DÉRIV / INTÉGR -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Dérivée</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\((uv)'=u'v+uv'\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\((x\mathrm{e}^x)'=\mathrm{e}^x+x\mathrm{e}^x\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Dérivée</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\((f\circ g)'=(f'\circ g)\,g'\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\((\ln(1+x))'=\dfrac{1}{1+x}\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Intégrale (IPP)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\int u\,v' = uv-\int u'v\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\int x\mathrm{e}^x dx = x\mathrm{e}^x-\int \mathrm{e}^x dx\)</td>
+          </tr>
+
+          <!-- COMPLEXES -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Complexes</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{1}{a+ib}=\dfrac{a-ib}{a^2+b^2}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\dfrac{1}{1+i}=\dfrac{1-i}{2}\)</td>
+          </tr>
+
+          <!-- VECTEURS -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Vecteurs</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\cos\theta=\dfrac{\vec u\cdot\vec v}{\|\vec u\|\|\vec v\|}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\vec u\cdot\vec v=0\Rightarrow \theta=90^\circ\)</td>
+          </tr>
+
+          <!-- ÉQUATIONS DIFF -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">É.D.</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(y'=ky \Rightarrow y=C\mathrm{e}^{kx}\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Si \(y'=2y\) → \(y=C\mathrm{e}^{2x}\)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">É.D.</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(y''+\omega^2y=0 \Rightarrow y=A\cos(\omega x)+B\sin(\omega x)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Si \(y''+9y=0\) → \(\omega=3\)</td>
+          </tr>
+
+          <!-- FOURIER -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Fourier</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Parité : paire → cos ; impaire → sin</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">f impaire → \(a_n=0\)</td>
+          </tr>
+
+          <!-- PROBAS -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Probas</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(P(A^c)=1-P(A)\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">P(au moins 1)=1−P(0)</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Probas</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(\mathrm{Var}(X)=\mathrm{E}(X^2)-[\mathrm{E}(X)]^2\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Calculer \(E(X)\) et \(E(X^2)\) puis combiner</td>
+          </tr>
+
+          <!-- MOINDRES CARRÉS -->
+          <tr>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Moindres carrés</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">\(b=\bar y-a\bar x\)</td>
+            <td style="padding:8px; border-bottom:1px solid rgba(255,255,255,0.08);">Après \(a\), \(b\) tombe direct</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  </div>
+</body>
+</html>

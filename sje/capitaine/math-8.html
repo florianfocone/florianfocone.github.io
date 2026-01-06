@@ -74,62 +74,124 @@
 
 
 <section id="math-8">
-  <h4>8 — Séries de Fourier : définition, développement, spectre</h4>
+  <h4>8 — Séries de Fourier : comprendre les termes, lire une série, faire le spectre</h4>
 
   <div class="bloc defs">
-    <div class="label">Définitions</div>
+    <div class="label">Définitions (1 phrase par terme, mais vraiment claires)</div>
     <ul>
-      <li><b>Signal périodique</b> : fonction \(f(t)\) telle que \(f(t+T)=f(t)\) (période \(T\)).</li>
-      <li><b>Fréquence</b> : \(f_0=\dfrac{1}{T}\) ; pulsation \(\omega_0=2\pi f_0\).</li>
-      <li><b>Harmonique</b> : composante sinusoïdale de fréquence multiple de \(f_0\) (ex : \(2f_0,3f_0\)).</li>
-      <li><b>Série de Fourier</b> : écriture d’un signal périodique comme somme de sinusoïdes (cos et sin).</li>
-      <li><b>Spectre</b> : représentation des amplitudes des harmoniques (et parfois des phases).</li>
-      <li><b>Valeur moyenne</b> : composante continue (DC), notée souvent \(a_0/2\).</li>
+      <li><b>Signal périodique</b> : fonction \(f(t)\) qui se répète identiquement après un temps \(T\), donc \(f(t+T)=f(t)\).</li>
+      <li><b>Période</b> \(T\) : durée d’un “tour complet” du signal (en secondes).</li>
+      <li><b>Fréquence fondamentale</b> \(f_0\) : nombre de cycles par seconde, \(f_0=\dfrac{1}{T}\) (en Hz).</li>
+      <li><b>Pulsation fondamentale</b> \(\omega_0\) : version “en radians”, \(\omega_0=2\pi f_0=\dfrac{2\pi}{T}\) (en rad·s\(^{-1}\)).</li>
+      <li><b>Harmonique \(n\)</b> : sinusoïde de fréquence \(n f_0\) (ou pulsation \(n\omega_0\)).</li>
+      <li><b>Composante continue</b> (moyenne) : partie constante du signal, c’est le niveau “autour duquel ça oscille”.</li>
+      <li><b>Série de Fourier</b> : écriture d’un signal périodique comme somme d’une constante + des sinusoïdes (harmoniques).</li>
+      <li><b>Coefficients</b> \(a_n\), \(b_n\) : nombres qui donnent “combien de cos” et “combien de sin” il y a à l’harmonique \(n\).</li>
+      <li><b>Amplitude</b> \(A_n\) : taille de l’harmonique \(n\), calculée à partir de \(a_n\) et \(b_n\).</li>
+      <li><b>Spectre</b> : tableau “harmonique \(n\) → amplitude \(A_n\)” (et parfois phase), qui résume les composantes du signal.</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie</div>
+    <div class="label">Reconnaître le cas (réflexe concours)</div>
     <ul>
-      <li>Pour un signal périodique de période \(T\), on peut écrire (si conditions classiques) :
-        \[
-        f(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}\left(a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\right).
-        \]
-      </li>
-      <li>Symétries utiles :
-        <ul>
-          <li>Si \(f\) est paire, alors tous les \(b_n\) sont nuls (pas de sinus).</li>
-          <li>Si \(f\) est impaire, alors tous les \(a_n\) sont nuls (pas de cosinus, ni moyenne).</li>
-        </ul>
-      </li>
-      <li>En exercice niveau BTS, on te donne souvent directement une série (ou quelques harmoniques) et on te demande d’identifier la fréquence fondamentale, la valeur moyenne, et l’amplitude d’un harmonique.</li>
+      <li>Si l’énoncé donne déjà une somme de \(\cos(n\omega_0 t)\) et \(\sin(n\omega_0 t)\) → tu ne recalcules pas des intégrales : tu <b>lis</b> la moyenne, \(f_0\), \(\omega_0\), et les harmoniques présentes.</li>
+      <li>Une constante \(+c\) → c’est la <b>moyenne</b> (composante continue).</li>
+      <li>\(\cos(3\omega_0 t)\) ou \(\sin(3\omega_0 t)\) → c’est l’<b>harmonique 3</b>.</li>
+      <li>Si tu vois \(a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\) → amplitude \(A_n=\sqrt{a_n^2+b_n^2}\) (toujours \(\ge 0\)).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Équations pratiques</div>
+    <div class="label">Méthode pas à pas (comment faire vite et juste)</div>
+    <ol style="margin:0; padding-left: 18px;">
+      <li><b>Identifier la période \(T\)</b> (si elle est donnée) puis calculer \(f_0=\dfrac{1}{T}\) et \(\omega_0=\dfrac{2\pi}{T}\).</li>
+      <li><b>Repérer la moyenne</b> : c’est le terme constant (ex : \(+1\)).</li>
+      <li><b>Faire la liste des harmoniques</b> : chaque terme \(\cos(n\omega_0 t)\) ou \(\sin(n\omega_0 t)\) correspond à une harmonique \(n\).</li>
+      <li><b>Lire \(a_n\) et \(b_n\)</b> : coefficient devant \(\cos\) = \(a_n\), devant \(\sin\) = \(b_n\) (s’il n’y a pas de terme, le coefficient vaut 0).</li>
+      <li><b>Calculer l’amplitude</b> : \(A_n=\sqrt{a_n^2+b_n^2}\).</li>
+      <li><b>Tracer/écrire le spectre</b> : pour chaque \(n\) présent, tu notes une “barre” d’amplitude \(A_n\) (et rien pour les autres).</li>
+    </ol>
+    <div style="margin-top:10px; line-height:1.45;">
+      <b>Repère mental :</b> “moyenne = niveau”, “harmoniques = oscillations”, “spectre = la recette des oscillations”.
+    </div>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Ce que je dois savoir faire</div>
     <ul>
-      <li>\(\omega_0=\dfrac{2\pi}{T}\), \(f_0=\dfrac{1}{T}\)</li>
-      <li>Série : \(f(t)=\dfrac{a_0}{2}+\sum_{n\ge 1}\big(a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\big)\)</li>
-      <li>Amplitude harmonique \(n\) : \(A_n=\sqrt{a_n^2+b_n^2}\)</li>
-      <li>Lettres : \(T\) (s), \(f_0\) (Hz), \(\omega_0\) (rad·s\(^{-1}\)).</li>
+      <li>Passer de \(T\) à \(f_0\) puis à \(\omega_0\).</li>
+      <li>Identifier la moyenne et les harmoniques présentes.</li>
+      <li>Calculer \(A_n\) à partir de \(a_n\) et \(b_n\).</li>
+      <li>Décrire un spectre en une phrase : “harmoniques présentes + amplitudes”.</li>
     </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques (l’essentiel)</div>
+    <ul>
+      <li>\(f_0=\dfrac{1}{T}\), \(\omega_0=\dfrac{2\pi}{T}=2\pi f_0\).</li>
+      <li>\(\displaystyle f(t)=\frac{a_0}{2}+\sum_{n\ge 1}\left(a_n\cos(n\omega_0 t)+b_n\sin(n\omega_0 t)\right)\).</li>
+      <li><b>Moyenne</b> : c’est \(\dfrac{a_0}{2}\) (ou le terme constant si la série est déjà développée).</li>
+      <li>\(\displaystyle A_n=\sqrt{a_n^2+b_n^2}\).</li>
+      <li>Notations : \(T\) (s), \(f_0\) (Hz), \(\omega_0\) (rad·s\(^{-1}\)), \(n\ge 1\) entier.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    On donne :
+    \[
+      f(t)=1+2\cos(\omega_0 t)+4\sin(2\omega_0 t)-2\cos(3\omega_0 t).
+    \]
+    1) Donner la valeur moyenne du signal.<br/>
+    2) Lister les harmoniques présentes (1, 2, 3, …).<br/>
+    3) Donner les amplitudes \(A_1\), \(A_2\), \(A_3\).<br/>
+    4) Écrire le spectre d’amplitude sous la forme “\(n \to A_n\)”.<br/>
+    5) Si \(T=40\,\text{ms}\), calculer \(f_0\) et \(\omega_0\).
   </div>
 
   <div class="bloc calc">
-    <div class="label">Exercice type</div><br/>
-    On donne un signal périodique :
+    <div class="label">Correction expliquée pas à pas</div><br/>
+
+    <b>1) Valeur moyenne</b><br/>
+    La moyenne est le terme constant : \(\boxed{1}\).
+
+    <br/><br/>
+    <b>2) Harmoniques présentes</b><br/>
+    \(\cos(\omega_0 t)\) → harmonique 1 ; \(\sin(2\omega_0 t)\) → harmonique 2 ; \(\cos(3\omega_0 t)\) → harmonique 3.<br/>
     \[
-      f(t)=2+3\cos(\omega_0 t)-4\sin(2\omega_0 t).
+      \boxed{\text{Harmoniques présentes : }1,\ 2,\ 3.}
     \]
-    1) Donner la valeur moyenne. 2) Donner l’amplitude de l’harmonique 1 et de l’harmonique 2. 3) Si \(T=20\ \text{ms}\), calculer \(f_0\) et \(\omega_0\).<br/><br/>
-    <b>Correction :</b><br/>
-    1) La valeur moyenne est la partie constante : \(\boxed{2}\).<br/>
-    2) Harmonique 1 : \(a_1=3\), \(b_1=0\) donc \(A_1=\sqrt{3^2+0^2}=3\).<br/>
-    Harmonique 2 : \(a_2=0\), \(b_2=-4\) donc \(A_2=\sqrt{0^2+(-4)^2}=4\).<br/>
-    3) \(T=20\ \text{ms}=0{,}020\ \text{s}\). Donc \(f_0=\dfrac{1}{0{,}020}=50\ \text{Hz}\).<br/>
-    \(\omega_0=2\pi f_0=2\pi\times 50=100\pi\ \text{rad·s}^{-1}\).<br/>
-    \(\boxed{f_0=50\ \text{Hz},\ \omega_0=100\pi\ \text{rad·s}^{-1}}\).
+
+    <br/><br/>
+    <b>3) Amplitudes</b><br/>
+    Harmonique 1 : \(a_1=2\), \(b_1=0\) donc \(A_1=\sqrt{2^2+0^2}=2\).<br/>
+    Harmonique 2 : \(a_2=0\), \(b_2=4\) donc \(A_2=\sqrt{0^2+4^2}=4\).<br/>
+    Harmonique 3 : \(a_3=-2\), \(b_3=0\) donc \(A_3=\sqrt{(-2)^2+0^2}=2\).<br/>
+    \[
+      \boxed{A_1=2,\quad A_2=4,\quad A_3=2.}
+    \]
+
+    <br/><br/>
+    <b>4) Spectre d’amplitude</b><br/>
+    On ne garde que les harmoniques présentes :
+    \[
+      \boxed{1\to 2,\quad 2\to 4,\quad 3\to 2\quad (\text{et } A_n=0 \text{ pour les autres } n).}
+    \]
+
+    <br/><br/>
+    <b>5) Calcul de \(f_0\) et \(\omega_0\)</b><br/>
+    \(T=40\,\text{ms}=0{,}040\,\text{s}\).<br/>
+    \[
+      f_0=\frac{1}{T}=\frac{1}{0{,}040}=25\ \text{Hz}.
+    \]
+    \[
+      \omega_0=2\pi f_0=2\pi\times 25=50\pi\ \text{rad·s}^{-1}.
+    \]
+    \[
+      \boxed{f_0=25\ \text{Hz},\quad \omega_0=50\pi\ \text{rad·s}^{-1}.}
+    \]
   </div>
 </section>
 

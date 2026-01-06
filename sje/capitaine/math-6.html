@@ -74,48 +74,99 @@
 
 
 <section id="math-6">
-  <h4>6 — Calcul vectoriel : somme, produits, applications</h4>
+  <h4>6 — Calcul vectoriel : norme, produit scalaire, angle, travail</h4>
 
   <div class="bloc defs">
-    <div class="label">Définitions</div>
+    <div class="label">Définitions (prêtes concours)</div>
     <ul>
-      <li><b>Vecteur</b> \(\vec{u}\) : objet défini par une direction, un sens et une norme.</li>
-      <li><b>Norme</b> : longueur \(\|\vec{u}\|\), toujours \(\ge 0\).</li>
-      <li><b>Somme</b> : \(\vec{u}+\vec{v}\) (règle du parallélogramme).</li>
-      <li><b>Produit scalaire</b> : \(\vec{u}\cdot\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta\) (donne une information d’alignement).</li>
-      <li><b>Projection</b> : composante d’un vecteur sur une direction.</li>
-      <li><b>Travail d’une force</b> : \(W=\vec{F}\cdot\vec{d}\) (en mécanique), même idée mathématique que produit scalaire.</li>
+      <li><b>Vecteur</b> \(\vec{u}\) : direction + sens + longueur (norme).</li>
+      <li><b>Coordonnées</b> : en 2D, \(\vec{u}=(u_x,u_y)\) donne ses composantes.</li>
+      <li><b>Norme</b> \(\|\vec{u}\|\) : longueur du vecteur, \(\|\vec{u}\|\ge 0\).</li>
+      <li><b>Produit scalaire</b> \(\vec{u}\cdot\vec{v}\) : mesure “combien \(\vec{u}\) va dans le sens de \(\vec{v}\)”.</li>
+      <li><b>Orthogonalité</b> : \(\vec{u}\perp\vec{v}\) si \(\vec{u}\cdot\vec{v}=0\).</li>
+      <li><b>Travail</b> \(W\) : pour une force \(\vec{F}\) et un déplacement \(\vec{d}\), \(W=\vec{F}\cdot\vec{d}\).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie</div>
+    <div class="label">Reconnaître le cas (réflexe concours)</div>
     <ul>
-      <li>En coordonnées : si \(\vec{u}=(u_x,u_y)\) et \(\vec{v}=(v_x,v_y)\), alors \(\vec{u}\cdot\vec{v}=u_xv_x+u_yv_y\).</li>
-      <li>Test d’orthogonalité : \(\vec{u}\perp \vec{v}\iff \vec{u}\cdot\vec{v}=0\).</li>
-      <li>La projection permet de “prendre la partie utile” d’un vecteur dans une direction (souvent ce qu’on utilise en application).</li>
+      <li>On te demande une <b>distance</b> → norme d’un vecteur.</li>
+      <li>On te demande “rectangle / orthogonal” → produit scalaire nul.</li>
+      <li>On te parle d’<b>angle</b> entre deux directions → formule avec \(\cos\theta\).</li>
+      <li>On te parle d’<b>énergie / travail</b> → \(W=\vec{F}\cdot\vec{d}\).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Équations pratiques</div>
+    <div class="label">Ce que je dois savoir faire</div>
     <ul>
-      <li>Norme : si \(\vec{u}=(u_x,u_y)\), \(\|\vec{u}\|=\sqrt{u_x^2+u_y^2}\)</li>
-      <li>Produit scalaire (coordonnées) : \(\vec{u}\cdot\vec{v}=u_xv_x+u_yv_y\)</li>
-      <li>Produit scalaire (géométrique) : \(\vec{u}\cdot\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta\)</li>
-      <li>Projection de \(\vec{u}\) sur \(\vec{v}\) (si \(\vec{v}\neq \vec{0}\)) : \(\mathrm{proj}_{\vec{v}}(\vec{u})=\dfrac{\vec{u}\cdot\vec{v}}{\|\vec{v}\|^2}\vec{v}\)</li>
-      <li>Lettres : \(\theta\) angle, \(\vec{u},\vec{v}\) vecteurs.</li>
+      <li>Former \(\vec{AB}\) à partir de deux points \(A,B\).</li>
+      <li>Calculer norme et produit scalaire en coordonnées.</li>
+      <li>Tester l’orthogonalité avec \(\vec{u}\cdot\vec{v}=0\).</li>
+      <li>Calculer \(\cos\theta\) avec \(\vec{u}\cdot\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta\).</li>
     </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques (l’essentiel)</div>
+    <ul>
+      <li>Si \(A(x_A,y_A)\), \(B(x_B,y_B)\), alors \(\vec{AB}=(x_B-x_A,\ y_B-y_A)\).</li>
+      <li>Si \(\vec{u}=(u_x,u_y)\), \(\|\vec{u}\|=\sqrt{u_x^2+u_y^2}\).</li>
+      <li>\(\vec{u}\cdot\vec{v}=u_xv_x+u_yv_y\).</li>
+      <li>\(\vec{u}\cdot\vec{v}=\|\vec{u}\|\|\vec{v}\|\cos\theta\).</li>
+      <li>Notations : \(\theta\) angle, \(\vec{0}\) vecteur nul, \(\|\cdot\|\) norme.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    Dans le plan, \(A(0,0)\), \(B(3,4)\) et \(C(4,-3)\).<br/>
+    1) Calculer \(\vec{AB}\) et \(\vec{AC}\).<br/>
+    2) Calculer \(\|\vec{AB}\|\) et \(\|\vec{AC}\|\).<br/>
+    3) Calculer \(\vec{AB}\cdot\vec{AC}\) puis montrer que \(ABC\) est rectangle en \(A\).<br/>
+    4) En déduire \(\cos(\widehat{BAC})\).<br/>
+    5) Une force \(\vec{F}=(2,1)\) agit sur un déplacement \(\vec{d}=\vec{AB}\). Calculer \(W=\vec{F}\cdot\vec{d}\).
   </div>
 
   <div class="bloc calc">
-    <div class="label">Exercice type</div><br/>
-    On considère \(\vec{u}=(3,4)\) et \(\vec{v}=(2,-1)\).<br/>
-    1) Calculer \(\|\vec{u}\|\). 2) Calculer \(\vec{u}\cdot\vec{v}\). 3) Dire si \(\vec{u}\) et \(\vec{v}\) sont orthogonaux.<br/><br/>
-    <b>Correction :</b><br/>
-    1) \(\|\vec{u}\|=\sqrt{3^2+4^2}=\sqrt{9+16}=\sqrt{25}=5\).<br/>
-    2) \(\vec{u}\cdot\vec{v}=3\times 2 + 4\times(-1)=6-4=2\).<br/>
-    3) Orthogonalité ⇔ produit scalaire nul. Ici \(2\neq 0\), donc \(\boxed{\vec{u}\ \text{et}\ \vec{v}\ \text{ne sont pas orthogonaux}}\).
+    <div class="label">Correction expliquée pas à pas</div><br/>
+
+    <b>1) Vecteurs</b><br/>
+    \[
+      \vec{AB}=(3,4),\qquad \vec{AC}=(4,-3).
+    \]
+
+    <br/><br/>
+    <b>2) Normes</b><br/>
+    \[
+      \|\vec{AB}\|=\sqrt{3^2+4^2}=5,\qquad \|\vec{AC}\|=\sqrt{4^2+(-3)^2}=5.
+    \]
+
+    <br/><br/>
+    <b>3) Produit scalaire</b><br/>
+    \[
+      \vec{AB}\cdot\vec{AC}=3\cdot 4 + 4\cdot(-3)=12-12=0.
+    \]
+    Donc \(\vec{AB}\perp\vec{AC}\) :
+    \[
+      \boxed{\text{Le triangle }ABC\text{ est rectangle en }A.}
+    \]
+
+    <br/><br/>
+    <b>4) Cosinus</b><br/>
+    \[
+      0=\|\vec{AB}\|\|\vec{AC}\|\cos(\widehat{BAC})=5\cdot 5\cos(\widehat{BAC})\Rightarrow \boxed{\cos(\widehat{BAC})=0.}
+    \]
+
+    <br/><br/>
+    <b>5) Travail</b><br/>
+    \[
+      W=\vec{F}\cdot\vec{d}=(2,1)\cdot(3,4)=2\cdot 3 + 1\cdot 4=10.
+    \]
+    \[
+      \boxed{W=10.}
+    \]
   </div>
 </section>
 

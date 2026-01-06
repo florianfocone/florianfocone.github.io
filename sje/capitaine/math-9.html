@@ -74,54 +74,157 @@
 
 
 <section id="math-9">
-  <h4>9 — Probabilités : notions, moyenne/variance, lois (Gauss, Bernoulli, Poisson)</h4>
+  <h4>9 — Probabilités : reconnaître la loi, calculer sans calculatrice, interpréter</h4>
 
   <div class="bloc defs">
-    <div class="label">Définitions</div>
+    <div class="label">Définitions (1 phrase par terme, vraiment compréhensible)</div>
     <ul>
-      <li><b>Variable aléatoire</b> \(X\) : nombre associé au résultat d’une expérience.</li>
-      <li><b>Espérance</b> \(E(X)\) : moyenne théorique de \(X\).</li>
-      <li><b>Variance</b> \(V(X)\) : mesure de dispersion autour de la moyenne.</li>
+      <li><b>Expérience aléatoire</b> : situation dont le résultat dépend du hasard (on ne peut pas prévoir à l’avance).</li>
+      <li><b>Événement</b> : résultat (ou ensemble de résultats) qu’on veut étudier, noté \(A\).</li>
+      <li><b>Probabilité</b> \(P(A)\) : nombre entre 0 et 1 qui mesure la “chance” que \(A\) arrive.</li>
+      <li><b>Variable aléatoire</b> \(X\) : nombre qui dépend du hasard (ex : “nombre de réussites”).</li>
+      <li><b>Loi de \(X\)</b> : règle qui donne \(P(X=k)\) pour chaque valeur possible \(k\).</li>
+      <li><b>Espérance</b> \(\mu=E(X)\) : moyenne théorique de \(X\) (valeur “typique” sur le long terme).</li>
+      <li><b>Variance</b> \(V(X)\) : mesure de la dispersion autour de la moyenne.</li>
       <li><b>Écart-type</b> \(\sigma\) : \(\sigma=\sqrt{V(X)}\), dispersion dans la même unité que \(X\).</li>
-      <li><b>Loi de Bernoulli</b> : \(X\in\{0,1\}\) avec \(P(X=1)=p\).</li>
-      <li><b>Loi binomiale</b> : somme de \(n\) Bernoulli indépendantes (nombre de succès).</li>
-      <li><b>Loi de Poisson</b> : modèle de comptage d’événements rares sur un intervalle (paramètre \(\lambda\)).</li>
-      <li><b>Loi normale (Gauss)</b> : distribution en cloche, notée \(\mathcal{N}(\mu,\sigma^2)\).</li>
+      <li><b>Succès</b> : l’événement qu’on décide de compter (ex : “le test est réussi”).</li>
+      <li><b>Indépendance</b> : un essai n’influence pas le suivant (proba inchangée).</li>
+      <li><b>Paramètre</b> : nombre qui caractérise la loi (ex : \(p\), \(n\), \(\lambda\)).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie</div>
+    <div class="label">Reconnaître la loi (réflexes concours)</div>
     <ul>
-      <li>Pour une loi discrète : \(E(X)=\sum x\,P(X=x)\) et \(V(X)=E(X^2)-[E(X)]^2\), avec \(E(X^2)=\sum x^2P(X=x)\).</li>
-      <li>Bernoulli \(B(p)\) : \(E(X)=p\), \(V(X)=p(1-p)\).</li>
-      <li>Binomiale \(\mathcal{B}(n,p)\) : \(E(X)=np\), \(V(X)=np(1-p)\).</li>
-      <li>Poisson \(\mathcal{P}(\lambda)\) : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\), \(E(X)=\lambda\), \(V(X)=\lambda\).</li>
-      <li>Normale \(\mathcal{N}(\mu,\sigma^2)\) : en pratique BTS, on standardise \(Z=\dfrac{X-\mu}{\sigma}\) et on lit des tables (si fournies).</li>
+      <li><b>Bernoulli</b> : un seul essai “oui/non” → \(X\in\{0,1\}\), \(P(X=1)=p\).</li>
+      <li><b>Binomiale</b> : <b>\(n\) essais indépendants</b> identiques + proba de succès \(p\) + on compte les succès → \(X\sim\mathcal{B}(n,p)\).</li>
+      <li><b>Poisson</b> : on compte des événements sur une durée/zone, “en moyenne \(\lambda\)” → \(X\sim\mathcal{P}(\lambda)\).</li>
+      <li><b>Normale</b> : grandeurs mesurées (temps, tailles, erreurs) → souvent \(X\sim\mathcal{N}(\mu,\sigma^2)\) (avec standardisation si tables).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Équations pratiques</div>
+    <div class="label">Méthode pas à pas (comment faire vite et juste)</div>
+    <ol style="margin:0; padding-left: 18px;">
+      <li><b>Identifier “ce qu’on compte”</b> : c’est ta variable \(X\) (succès, appels, pannes…).</li>
+      <li><b>Choisir la loi</b> avec les mots-clés : \(n\) essais → binomiale ; “événements par minute” → Poisson.</li>
+      <li><b>Écrire le bon paramètre</b> :
+        <ul>
+          <li>Binomiale : \(n\) = nombre d’essais, \(p\) = proba de succès.</li>
+          <li>Poisson : \(\lambda\) = moyenne sur l’intervalle étudié (proportionnelle au temps).</li>
+        </ul>
+      </li>
+      <li><b>Calculer la probabilité demandée</b> :
+        <ul>
+          <li>Binomiale : \(P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}\).</li>
+          <li>Poisson : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\).</li>
+          <li>“Au plus” = somme : \(P(X\le 1)=P(0)+P(1)\), etc.</li>
+        </ul>
+      </li>
+      <li><b>Donner \(E(X)\), \(V(X)\), \(\sigma\)</b> avec les formules directes (souvent demandé au concours).</li>
+    </ol>
+    <div style="margin-top:10px; line-height:1.45;">
+      <b>Repère mental :</b> \(E(X)\) = “moyenne”, \(\sigma\) = “écart typique” (plus \(\sigma\) est grand, plus ça varie).
+    </div>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Ce que je dois savoir faire</div>
     <ul>
-      <li>Discret : \(E(X)=\sum xP(X=x)\), \(V(X)=E(X^2)-E(X)^2\)</li>
-      <li>Bernoulli : \(E=p\), \(V=p(1-p)\)</li>
-      <li>Binomiale : \(P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}\)</li>
-      <li>Poisson : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\)</li>
-      <li>Normalisation : \(Z=\dfrac{X-\mu}{\sigma}\)</li>
-      <li>Lettres : \(0\le p\le 1\), \(n\in\mathbb{N}\), \(\lambda&gt;0\), \(\sigma&gt;0\).</li>
+      <li>Reconnaître la bonne loi et écrire ses paramètres.</li>
+      <li>Calculer une probabilité simple (exacte, sans décimales inutiles).</li>
+      <li>Calculer \(\mu\), \(V\), \(\sigma\) et interpréter “ça varie beaucoup / peu”.</li>
+      <li>Pour Poisson : adapter \(\lambda\) à une durée différente (proportionnalité).</li>
     </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques (uniquement l’essentiel)</div>
+    <ul>
+      <li><b>Bernoulli</b> \(B(p)\) : \(P(X=1)=p\), \(E(X)=p\), \(V(X)=p(1-p)\).</li>
+      <li><b>Binomiale</b> \(\mathcal{B}(n,p)\) : \(P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}\), \(E(X)=np\), \(V(X)=np(1-p)\).</li>
+      <li><b>Poisson</b> \(\mathcal{P}(\lambda)\) : \(P(X=k)=e^{-\lambda}\dfrac{\lambda^k}{k!}\), \(E(X)=\lambda\), \(V(X)=\lambda\).</li>
+      <li><b>Normale</b> : \(X\sim\mathcal{N}(\mu,\sigma^2)\), \(Z=\dfrac{X-\mu}{\sigma}\sim\mathcal{N}(0,1)\) (si tables).</li>
+      <li>Notations : \(n\) entier \(\ge 1\), \(0\le p\le 1\), \(\lambda&gt;0\), \(\mu\) moyenne, \(\sigma&gt;0\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    <b>A — Binomiale</b><br/>
+    Un équipement fonctionne correctement à chaque test avec probabilité \(p=0{,}9\). Les tests sont indépendants.<br/>
+    On effectue \(n=5\) tests et on note \(X\) le nombre de tests réussis.<br/>
+    1) Donner la loi de \(X\).<br/>
+    2) Calculer \(P(X=5)\).<br/>
+    3) Calculer \(E(X)\), \(V(X)\) et \(\sigma\).<br/><br/>
+
+    <b>B — Poisson</b><br/>
+    Des appels arrivent en moyenne à raison de \(2\) par minute. On modélise par une loi de Poisson.<br/>
+    On observe une durée de \(30\) secondes et on note \(Y\) le nombre d’appels.<br/>
+    4) Donner le paramètre \(\lambda\) sur \(30\) secondes.<br/>
+    5) Calculer la probabilité d’avoir <b>au plus un appel</b> pendant ces \(30\) secondes.
   </div>
 
   <div class="bloc calc">
-    <div class="label">Exercice type</div><br/>
-    Des appels arrivent en moyenne à raison de \(\lambda=2\) par minute (modèle Poisson).<br/>
-    Calculer \(P(X=0)\) et \(P(X=2)\) pour une minute.<br/><br/>
-    <b>Correction :</b><br/>
-    Loi de Poisson : \(P(X=k)=e^{-2}\dfrac{2^k}{k!}\).<br/>
-    \(P(X=0)=e^{-2}\dfrac{2^0}{0!}=e^{-2}\).<br/>
-    \(P(X=2)=e^{-2}\dfrac{2^2}{2!}=e^{-2}\dfrac{4}{2}=2e^{-2}\).<br/>
-    \(\boxed{P(X=0)=e^{-2},\ P(X=2)=2e^{-2}}\).
+    <div class="label">Correction expliquée pas à pas</div><br/>
+
+    <b>A — Binomiale</b><br/>
+    <b>1) Loi</b><br/>
+    On a \(n=5\) essais indépendants, probabilité de succès \(p=0{,}9\), et on compte les succès :
+    \[
+      \boxed{X\sim\mathcal{B}(5,0{,}9).}
+    \]
+
+    <br/>
+    <b>2) \(P(X=5)\)</b><br/>
+    “5 réussites sur 5” :
+    \[
+      P(X=5)=\binom{5}{5}0{,}9^5(0{,}1)^0=0{,}9^5.
+    \]
+    \[
+      \boxed{P(X=5)=0{,}9^5.}
+    \]
+
+    <br/>
+    <b>3) \(\mu\), \(V\), \(\sigma\)</b><br/>
+    \[
+      \mu=E(X)=np=5\times 0{,}9=4{,}5.
+    \]
+    \[
+      V(X)=np(1-p)=5\times 0{,}9\times 0{,}1=0{,}45.
+    \]
+    \[
+      \sigma=\sqrt{V(X)}=\sqrt{0{,}45}.
+    \]
+    \[
+      \boxed{E(X)=4{,}5,\quad V(X)=0{,}45,\quad \sigma=\sqrt{0{,}45}.}
+    \]
+    <b>Interprétation :</b> en moyenne on réussit environ \(4\) à \(5\) tests, et ça varie d’environ \(\sigma\) autour de cette moyenne.
+
+    <br/><br/>
+    <b>B — Poisson</b><br/>
+    <b>4) Paramètre sur 30 s</b><br/>
+    “2 par minute” = “2 par 60 s”. Sur 30 s (la moitié) :
+    \[
+      \boxed{\lambda=2\times\frac{30}{60}=1.}
+    \]
+
+    <br/>
+    <b>5) Probabilité d’avoir au plus un appel</b><br/>
+    Si \(Y\sim\mathcal{P}(1)\) :
+    \[
+      P(Y\le 1)=P(Y=0)+P(Y=1).
+    \]
+    \[
+      P(Y=0)=e^{-1}\frac{1^0}{0!}=e^{-1},\qquad
+      P(Y=1)=e^{-1}\frac{1^1}{1!}=e^{-1}.
+    \]
+    \[
+      P(Y\le 1)=2e^{-1}.
+    \]
+    \[
+      \boxed{P(\text{au plus 1 appel})=2e^{-1}.}
+    \]
   </div>
 </section>
 

@@ -74,47 +74,129 @@
 
 
 <section id="math-5">
-  <h4>5 — Nombres complexes : intro, représentation, applications</h4>
+  <h4>5 — Nombres complexes : calculs utiles & lecture géométrique</h4>
 
   <div class="bloc defs">
-    <div class="label">Définitions</div>
+    <div class="label">Définitions (une phrase, utile)</div>
     <ul>
-      <li><b>Complexe</b> : \(z=a+ib\) avec \(a,b\in\mathbb{R}\) et \(i^2=-1\).</li>
-      <li><b>Conjugué</b> : \(\overline{z}=a-ib\).</li>
-      <li><b>Module</b> : \(|z|=\sqrt{a^2+b^2}\).</li>
-      <li><b>Argument</b> : angle \(\theta\) tel que \(z=|z|(\cos\theta+i\sin\theta)\) (mod \(2\pi\)).</li>
-      <li><b>Affixe</b> : le complexe \(z\) qui représente un point \(M(a,b)\) du plan.</li>
-      <li><b>Rotation</b> : multiplication par \(\cos\alpha+i\sin\alpha\) (conserve le module, ajoute \(\alpha\) à l’argument).</li>
+      <li><b>Nombre complexe</b> \(z=a+ib\) : nombre avec \(a\) (réel), \(b\) (imaginaire), et \(i^2=-1\).</li>
+      <li><b>Partie réelle</b> \(\Re(z)=a\) et <b>partie imaginaire</b> \(\Im(z)=b\).</li>
+      <li><b>Conjugué</b> \(\overline{z}=a-ib\) : “même réel, imaginaire opposée”.</li>
+      <li><b>Module</b> \(|z|\) : distance à l’origine dans le plan, \(|z|=\sqrt{a^2+b^2}\).</li>
+      <li><b>Argument</b> \(\arg(z)\) : angle du vecteur \((a,b)\), défini modulo \(2\pi\).</li>
+      <li><b>Forme trigonométrique</b> : \(z=r(\cos\theta+i\sin\theta)\) avec \(r=|z|\).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie</div>
+    <div class="label">Reconnaître le cas (réflexe concours)</div>
     <ul>
-      <li>Géométrie : \(z=a+ib\) correspond au point \(M(a,b)\). Le module est une distance et l’argument est un angle.</li>
-      <li>Le conjugué sert à calculer des quotients : on multiplie par \(\overline{z}\) pour obtenir un dénominateur réel.</li>
-      <li>En forme trigonométrique, les produits sont simples : modules se multiplient, arguments s’additionnent.</li>
+      <li>Tu vois \(\dfrac{1}{a+ib}\) ou \(\dfrac{z_1}{z_2}\) → multiplie par le <b>conjugué</b> du dénominateur.</li>
+      <li>On te demande \(|z|\) → \(|z|=\sqrt{a^2+b^2}\) et \(|z_1z_2|=|z_1||z_2|\).</li>
+      <li>Interprétation “rotation/zoom” → regarde <b>argument</b> (rotation) et <b>module</b> (zoom).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Équations pratiques</div>
+    <div class="label">Ce que je dois savoir faire</div>
     <ul>
-      <li>\(z\overline{z}=|z|^2=a^2+b^2\)</li>
-      <li>\(\dfrac{1}{a+ib}=\dfrac{a-ib}{a^2+b^2}\) si \(a^2+b^2\neq 0\)</li>
-      <li>Forme trig : \(z=r(\cos\theta+i\sin\theta)\)</li>
-      <li>Produit : \(r_1(\cos\theta_1+i\sin\theta_1)\,r_2(\cos\theta_2+i\sin\theta_2)=r_1r_2(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2))\)</li>
-      <li>Lettres : \(a,b,r\in\mathbb{R}\), \(r\ge 0\).</li>
+      <li>Calculer conjugué et module.</li>
+      <li>Diviser des complexes en rendant le dénominateur réel.</li>
+      <li>Donner un argument “propre” (\(\pm\pi/2\), \(\pi/4\), etc.) quand c’est possible.</li>
+      <li>Résoudre \(zw=u\) par \(w=\dfrac{u}{z}\) si \(z\neq 0\).</li>
     </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Rappels utiles</div>
+    <ul>
+      <li>\(z\overline{z}=a^2+b^2=|z|^2\).</li>
+      <li>\(\dfrac{1}{a+ib}=\dfrac{a-ib}{a^2+b^2}\) si \(a^2+b^2\neq 0\).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+      <div class="bloc">
+    <div class="label">Représentation mentale (pour vraiment comprendre)</div>
+    <ul>
+      <li>On place un repère : <b>axe horizontal</b> = partie réelle, <b>axe vertical</b> = partie imaginaire.</li>
+      <li>Si \(z=a+ib\), alors \(z\) correspond au point \((a,b)\) dans le plan.</li>
+      <li>\(\Re(z)=a\) : “coordonnée \(x\)” ; \(\Im(z)=b\) : “coordonnée \(y\)”.</li>
+      <li>\(|z|=\sqrt{a^2+b^2}\) : distance du point \((a,b)\) à l’origine \((0,0)\).</li>
+      <li>\(\arg(z)\) : angle entre l’axe réel et le vecteur allant de l’origine vers \((a,b)\) (direction).</li>
+      <li>Multiplier par un complexe, c’est en général : <b>zoom</b> (par le module) + <b>rotation</b> (par l’argument).</li>
+    </ul>
+    <div style="margin-top:10px; line-height:1.45;">
+      <b>Exemple clé :</b> \(1+i\) correspond au point \((1,1)\).<br/>
+      Son module vaut \(|1+i|=\sqrt{1^2+1^2}=\sqrt{2}\) (donc “zoom” \(\sqrt{2}\)).<br/>
+      Son argument vaut \(\arg(1+i)=\pi/4\) (soit \(45^\circ\), direction diagonale).
+    </div>
+  </div>
+
+  <div class="label">Équations pratiques (l’essentiel)</div>
+    <ul>
+      <li>Si \(z=a+ib\), alors \(\overline{z}=a-ib\) et \(|z|=\sqrt{a^2+b^2}\).</li>
+      <li>\(\displaystyle \frac{z_1}{z_2}=\frac{z_1\overline{z_2}}{|z_2|^2}\) si \(z_2\neq 0\).</li>
+      <li>Forme trig : \(z=r(\cos\theta+i\sin\theta)\) avec \(r\ge 0\).</li>
+      <li>Notations : \(a,b,r\) réels, \(\theta\) angle (rad).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    On donne \(z_1=1-i\) et \(z_2=1+i\).<br/>
+    1) Calculer \(\overline{z_1}\), \(\overline{z_2}\), puis \(|z_1|\) et \(|z_2|\).<br/>
+    2) Calculer \(\displaystyle z=\frac{z_1}{z_2}\) sous la forme \(a+ib\).<br/>
+    3) Donner \(|z|\) et un argument de \(z\).<br/>
+    4) Résoudre l’équation \(z\,w=1+i\) (inconnue \(w\) complexe).<br/>
+    5) Interpréter la multiplication par \(z\) (rotation ? agrandissement ?).
   </div>
 
   <div class="bloc calc">
-    <div class="label">Exercice type</div><br/>
-    Soit \(z=1-i\). 1) Calculer \(|z|\) et \(\overline{z}\). 2) Calculer \(\dfrac{1}{z}\).<br/><br/>
-    <b>Correction :</b><br/>
-    \(|z|=\sqrt{1^2+(-1)^2}=\sqrt{2}\). \(\overline{z}=1+i\).<br/>
-    \(\dfrac{1}{1-i}=\dfrac{1+i}{(1-i)(1+i)}=\dfrac{1+i}{1-(-1)}=\dfrac{1+i}{2}=\dfrac12+\dfrac{i}{2}\).<br/>
-    \(\boxed{\dfrac{1}{z}=\dfrac12+\dfrac{i}{2}}\).
+    <div class="label">Correction expliquée pas à pas</div><br/>
+
+    <b>1) Conjugués et modules</b><br/>
+    \[
+      \overline{z_1}=1+i,\qquad \overline{z_2}=1-i.
+    \]
+    \[
+      |z_1|=\sqrt{1^2+(-1)^2}=\sqrt{2},\qquad |z_2|=\sqrt{1^2+1^2}=\sqrt{2}.
+    \]
+
+    <br/><br/>
+    <b>2) Calculer \(z=\dfrac{z_1}{z_2}\)</b><br/>
+    Réflexe : conjugué du dénominateur.
+    \[
+      z=\frac{1-i}{1+i}\cdot\frac{1-i}{1-i}=\frac{(1-i)^2}{(1+i)(1-i)}.
+    \]
+    \[
+      (1+i)(1-i)=1-i^2=2,\qquad (1-i)^2=1-2i+i^2=-2i.
+    \]
+    \[
+      \boxed{z=-i.}
+    \]
+
+    <br/><br/>
+    <b>3) Module et argument</b><br/>
+    \[
+      |z|=1,\qquad \boxed{\arg(z)=-\frac{\pi}{2}\ (\text{ou } 3\pi/2).}
+    \]
+
+    <br/><br/>
+    <b>4) Résoudre \(z\,w=1+i\)</b><br/>
+    \[
+      w=\frac{1+i}{-i}\cdot\frac{i}{i}=\frac{i+i^2}{-i^2}=i-1.
+    \]
+    \[
+      \boxed{w=-1+i.}
+    \]
+
+    <br/><br/>
+    <b>5) Interprétation</b><br/>
+    \(|z|=1\) → pas de zoom ; \(\arg(z)=-\pi/2\) → rotation de \(90^\circ\) dans le sens horaire.
+    \[
+      \boxed{\text{Multiplication par } -i : \text{rotation de } -\pi/2,\ \text{sans changement d’échelle}.}
+    \]
   </div>
 </section>
 

@@ -74,58 +74,163 @@
 
 
 <section id="math-10">
-  <h4>10 — Moindres carrés : introduction, régression linéaire</h4>
+  <h4>10 — Moindres carrés : régression linéaire (droite \(y=ax+b\)) sans calculatrice</h4>
 
   <div class="bloc defs">
-    <div class="label">Définitions</div>
+    <div class="label">Définitions (1 phrase par terme, utiles concours)</div>
     <ul>
-      <li><b>Nuage de points</b> : ensemble de points \((x_i,y_i)\) issus de mesures.</li>
-      <li><b>Régression linéaire</b> : approximation de \(y\) par une droite \(y=ax+b\).</li>
-      <li><b>Résidu</b> : écart \(r_i=y_i-(ax_i+b)\) entre mesure et modèle.</li>
-      <li><b>Méthode des moindres carrés</b> : choix de \(a,b\) qui minimise \(\sum r_i^2\).</li>
-      <li><b>Covariance</b> : mesure du lien linéaire entre \(x\) et \(y\).</li>
-      <li><b>Corrélation</b> : covariance normalisée (entre -1 et 1), indique la force du lien linéaire.</li>
+      <li><b>Nuage de points</b> : ensemble de mesures \((x_i,y_i)\) (un point = une observation).</li>
+      <li><b>Modèle linéaire</b> : on suppose que \(y\) dépend (à peu près) de \(x\) via une droite \(y=ax+b\).</li>
+      <li><b>Régression linéaire</b> : la “meilleure” droite \(y=ax+b\) qui explique \(y\) en fonction de \(x\) au sens des moindres carrés.</li>
+      <li><b>Résidu</b> \(r_i\) : erreur verticale au point \(i\), \(r_i=y_i-(ax_i+b)\).</li>
+      <li><b>Moindres carrés</b> : on choisit \(a,b\) pour rendre \(\sum r_i^2\) (somme des carrés des erreurs) la plus petite possible.</li>
+      <li><b>Moyenne</b> \(\bar{x}\), \(\bar{y}\) : centres du nuage en \(x\) et en \(y\).</li>
+      <li><b>Pente</b> \(a\) : variation moyenne de \(y\) quand \(x\) augmente de 1 (signe = sens de la tendance).</li>
+      <li><b>Ordonnée à l’origine</b> \(b\) : valeur prédite de \(y\) quand \(x=0\) (si ça a du sens dans le contexte).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie</div>
+    <div class="label">Reconnaître le cas (réflexes concours)</div>
     <ul>
-      <li>Sans calculatrice, on traite des jeux de données simples (petits entiers) pour obtenir une droite “propre”.</li>
-      <li>La droite de régression \(y=ax+b\) se calcule avec :
+      <li>Mots-clés : “<b>ajustement</b>”, “<b>régression</b>”, “<b>droite des moindres carrés</b>”, “modèle \(y=ax+b\)” → c’est cette fiche.</li>
+      <li>Sans calculatrice : l’énoncé donne souvent <b>peu de points</b> et des valeurs qui “tombent bien” en fraction.</li>
+      <li>Repère clé : la droite de régression passe toujours par \(\boxed{(\bar{x},\bar{y})}\).</li>
+      <li>Interprétation rapide : \(a&gt;0\) tendance croissante ; \(a&lt;0\) tendance décroissante ; \(|a|\) grand = pente forte.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Méthode pas à pas (comment faire vite et propre)</div>
+    <ol style="margin:0; padding-left: 18px;">
+      <li><b>Écrire les données</b> : liste des \((x_i,y_i)\) et le nombre de points \(n\).</li>
+      <li><b>Calculer les moyennes</b> :
         \[
-          a=\frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2},\quad b=\bar{y}-a\bar{x}.
+          \bar{x}=\frac{1}{n}\sum x_i,\qquad \bar{y}=\frac{1}{n}\sum y_i.
         \]
-        où \(\bar{x}\) et \(\bar{y}\) sont les moyennes.</li>
-      <li>Interprétation : \(a\) mesure “combien \(y\) change quand \(x\) augmente de 1”.</li>
+      </li>
+      <li><b>Faire une petite table d’écarts</b> : pour chaque point, calcule \(x_i-\bar{x}\) et \(y_i-\bar{y}\).</li>
+      <li><b>Calculer deux sommes</b> :
+        \[
+          S_{xy}=\sum (x_i-\bar{x})(y_i-\bar{y}),\qquad S_{xx}=\sum (x_i-\bar{x})^2.
+        \]
+      </li>
+      <li><b>En déduire la pente</b> :
+        \[
+          \boxed{a=\frac{S_{xy}}{S_{xx}}}\quad (\text{si } S_{xx}\neq 0).
+        \]
+      </li>
+      <li><b>Trouver \(b\) avec le point moyen</b> :
+        \[
+          \boxed{b=\bar{y}-a\bar{x}}.
+        \]
+      </li>
+      <li><b>Écrire la droite</b> : \(\boxed{y=ax+b}\) puis faire les estimations demandées (ex : \(x=4\)).</li>
+    </ol>
+    <div style="margin-top:10px; line-height:1.45;">
+      <b>Repère mental :</b> \(a\) vient du “lien” entre écarts en \(x\) et écarts en \(y\) (si souvent mêmes signes → \(a&gt;0\)).
+    </div>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Ce que je dois savoir faire</div>
+    <ul>
+      <li>Calculer \(\bar{x}\) et \(\bar{y}\).</li>
+      <li>Calculer \(S_{xy}\) et \(S_{xx}\) (avec une table d’écarts).</li>
+      <li>Obtenir \(a\) et \(b\) puis écrire la droite.</li>
+      <li>Faire une estimation et interpréter la pente \(a\).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Équations pratiques</div>
+    <div class="label">Équations pratiques (uniquement l’essentiel)</div>
     <ul>
-      <li>Moyennes : \(\bar{x}=\dfrac{1}{n}\sum x_i\), \(\bar{y}=\dfrac{1}{n}\sum y_i\)</li>
-      <li>Pente : \(a=\dfrac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2}\)</li>
-      <li>Ordonnée : \(b=\bar{y}-a\bar{x}\)</li>
-      <li>Lettres : \(n\) nombre de points, \(a,b\in\mathbb{R}\).</li>
+      <li>\(\displaystyle \bar{x}=\frac{1}{n}\sum x_i,\quad \bar{y}=\frac{1}{n}\sum y_i\).</li>
+      <li>\(\displaystyle a=\frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2}\).</li>
+      <li>\(\displaystyle b=\bar{y}-a\bar{x}\).</li>
+      <li>Notations : \(n\) nb de points, \(a,b\) réels, \((x_i,y_i)\) données, \(\bar{x},\bar{y}\) moyennes.</li>
     </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    On mesure :
+    \[
+      (0,1),\ (1,2),\ (2,2),\ (3,4).
+    \]
+    On cherche la droite de régression \(y=ax+b\).<br/>
+    1) Calculer \(\bar{x}\) et \(\bar{y}\).<br/>
+    2) Calculer \(S_{xy}\) et \(S_{xx}\), puis en déduire \(a\).<br/>
+    3) Calculer \(b\) et donner l’équation de la droite.<br/>
+    4) Estimer \(y\) pour \(x=4\).<br/>
+    5) Interpréter \(a\) en une phrase.
   </div>
 
   <div class="bloc calc">
-    <div class="label">Exercice type</div><br/>
-    On mesure \((x_i,y_i)\) : \((1,2)\), \((2,3)\), \((3,5)\). Trouver la droite de régression \(y=ax+b\).<br/><br/>
-    <b>Correction :</b><br/>
-    \(n=3\). \(\bar{x}=\dfrac{1+2+3}{3}=\dfrac{6}{3}=2\).<br/>
-    \(\bar{y}=\dfrac{2+3+5}{3}=\dfrac{10}{3}\).<br/><br/>
-    Calculons \(\sum (x_i-\bar{x})(y_i-\bar{y})\) :<br/>
-    Pour \(i=1\) : \((1-2)\left(2-\frac{10}{3}\right)=(-1)\left(\frac{6}{3}-\frac{10}{3}\right)=(-1)\left(-\frac{4}{3}\right)=\frac{4}{3}\).<br/>
-    Pour \(i=2\) : \((2-2)\left(3-\frac{10}{3}\right)=0\).<br/>
-    Pour \(i=3\) : \((3-2)\left(5-\frac{10}{3}\right)=(1)\left(\frac{15}{3}-\frac{10}{3}\right)=\frac{5}{3}\).<br/>
-    Somme : \(\frac{4}{3}+0+\frac{5}{3}=3\).<br/><br/>
-    Calculons \(\sum (x_i-\bar{x})^2\) : \((1-2)^2+(2-2)^2+(3-2)^2=1+0+1=2\).<br/>
-    Donc \(a=\dfrac{3}{2}\).<br/>
-    \(b=\bar{y}-a\bar{x}=\frac{10}{3}-\frac{3}{2}\times 2=\frac{10}{3}-3=\frac{10}{3}-\frac{9}{3}=\frac{1}{3}\).<br/>
-    \(\boxed{y=\frac{3}{2}x+\frac{1}{3}}\).
+    <div class="label">Correction expliquée pas à pas</div><br/>
+
+    <b>1) Moyennes</b><br/>
+    \(n=4\).<br/>
+    \[
+      \bar{x}=\frac{0+1+2+3}{4}=\frac{6}{4}=\frac{3}{2},\qquad
+      \bar{y}=\frac{1+2+2+4}{4}=\frac{9}{4}.
+    \]
+    \[
+      \boxed{\bar{x}=\frac{3}{2},\quad \bar{y}=\frac{9}{4}.}
+    \]
+
+    <br/><br/>
+    <b>2) Table d’écarts puis \(S_{xy}\) et \(S_{xx}\)</b><br/>
+    On calcule les écarts à la moyenne :
+    \[
+      x_i-\bar{x}\in\left\{-\frac{3}{2},\ -\frac{1}{2},\ \frac{1}{2},\ \frac{3}{2}\right\},
+      \quad
+      y_i-\bar{y}\in\left\{-\frac{5}{4},\ -\frac{1}{4},\ -\frac{1}{4},\ \frac{7}{4}\right\}.
+    \]
+    Produits :
+    \[
+      (x_i-\bar{x})(y_i-\bar{y})=\left\{\frac{15}{8},\ \frac{1}{8},\ -\frac{1}{8},\ \frac{21}{8}\right\}.
+    \]
+    Donc :
+    \[
+      S_{xy}=\frac{15}{8}+\frac{1}{8}-\frac{1}{8}+\frac{21}{8}=\frac{36}{8}=\frac{9}{2}.
+    \]
+    Et :
+    \[
+      S_{xx}=\left(\frac{3}{2}\right)^2+\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^2+\left(\frac{3}{2}\right)^2
+      =\frac{9}{4}+\frac{1}{4}+\frac{1}{4}+\frac{9}{4}=5.
+    \]
+
+    <br/><br/>
+    <b>3) \(a\) puis \(b\)</b><br/>
+    \[
+      a=\frac{S_{xy}}{S_{xx}}=\frac{\frac{9}{2}}{5}=\frac{9}{10}\qquad\Rightarrow\qquad \boxed{a=\frac{9}{10}.}
+    \]
+    \[
+      b=\bar{y}-a\bar{x}=\frac{9}{4}-\frac{9}{10}\cdot\frac{3}{2}
+      =\frac{9}{4}-\frac{27}{20}=\frac{9}{10}.
+    \]
+    \[
+      \boxed{b=\frac{9}{10}.}
+    \]
+    \[
+      \boxed{y=\frac{9}{10}x+\frac{9}{10}.}
+    \]
+
+    <br/><br/>
+    <b>4) Estimation pour \(x=4\)</b><br/>
+    \[
+      y(4)=\frac{9}{10}\cdot 4+\frac{9}{10}=\frac{36}{10}+\frac{9}{10}=\frac{45}{10}=\frac{9}{2}.
+    \]
+    \[
+      \boxed{y(4)=\frac{9}{2}.}
+    \]
+
+    <br/><br/>
+    <b>5) Interpréter \(a\)</b><br/>
+    \[
+      \boxed{a=\frac{9}{10}\ \text{signifie : quand } x \text{ augmente de } 1,\ y \text{ augmente en moyenne de } \frac{9}{10}.}
+    \]
   </div>
 </section>
 

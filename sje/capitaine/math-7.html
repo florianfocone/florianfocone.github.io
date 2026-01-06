@@ -74,51 +74,133 @@
 
 
 <section id="math-7">
-  <h4>7 — Équations différentielles : premier et second ordre</h4>
+  <h4>7 — Équations différentielles : ordre 1 et ordre 2 (coefficients constants)</h4>
 
   <div class="bloc defs">
-    <div class="label">Définitions</div>
+    <div class="label">Définitions (prêtes concours)</div>
     <ul>
-      <li><b>Équation différentielle</b> : relation qui lie une fonction \(y(x)\) et ses dérivées (\(y',y''\), etc.).</li>
-      <li><b>Solution</b> : fonction \(y\) qui vérifie l’équation sur un intervalle.</li>
-      <li><b>Condition initiale</b> : valeur imposée (ex : \(y(0)=y_0\)) qui permet de fixer la solution.</li>
-      <li><b>Équation linéaire</b> : forme \(y'+ay=b(x)\) (ordre 1) ou \(y''+ay'+by=g(x)\) (ordre 2).</li>
-      <li><b>Régime libre / forcé</b> : partie homogène (libre) + solution particulière (forcée).</li>
+      <li><b>Équation différentielle</b> : relation entre une inconnue \(y(x)\) et ses dérivées \(y',y''\).</li>
+      <li><b>Solution</b> : fonction \(y\) qui vérifie l’équation.</li>
+      <li><b>Ordre</b> : plus haut niveau de dérivée présent (ordre 1 si \(y'\), ordre 2 si \(y''\)).</li>
+      <li><b>Homogène</b> : second membre nul (ex : \(y'+ay=0\)).</li>
+      <li><b>Condition initiale</b> : valeur imposée comme \(y(0)=y_0\) (et parfois \(y'(0)=v_0\)).</li>
+      <li><b>Équation caractéristique</b> : équation en \(r\) obtenue en posant \(y=e^{rx}\) pour l’ordre 2.</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Théorie</div>
+    <div class="label">Reconnaître le cas (réflexe concours)</div>
     <ul>
-      <li>Ordre 1 homogène : \(y'=ay\) ⇒ solutions \(y(x)=Ce^{ax}\).</li>
-      <li>Ordre 1 linéaire : \(y'+ay=b\) (avec \(a,b\) constants) ⇒ solution générale
-        \(y(x)=Ce^{-ax}+\dfrac{b}{a}\) si \(a\neq 0\).
-        On vérifie en dérivant et en remplaçant.</li>
-      <li>Ordre 2 à coefficients constants (homogène) : \(y''+ay'+by=0\). On cherche \(y=e^{rx}\), ce qui donne l’équation caractéristique \(r^2+ar+b=0\).</li>
-      <li>Les conditions initiales fixent la constante \(C\) (ordre 1) ou les deux constantes (ordre 2).</li>
+      <li>\(y'=ay\) → \(\boxed{y=Ce^{ax}}\).</li>
+      <li>\(y'+ay=b\) (constantes) → \(\boxed{y=Ce^{-ax}+\dfrac{b}{a}}\) (si \(a\neq 0\)).</li>
+      <li>\(y''+ay'+by=0\) → on pose \(y=e^{rx}\), on résout \(r^2+ar+b=0\).</li>
+      <li>Conditions initiales → servent à trouver les constantes \(C\), puis \(C_1,C_2\).</li>
     </ul>
   </div>
 
   <div class="bloc">
-    <div class="label">Équations pratiques</div>
+    <div class="label">Méthode pas à pas (comment résoudre, sans te perdre)</div>
     <ul>
-      <li>\(y'=ay \Rightarrow y=Ce^{ax}\)</li>
-      <li>\(y'+ay=b \Rightarrow y=Ce^{-ax}+\dfrac{b}{a}\) (si \(a\neq 0\))</li>
-      <li>Ordre 2 : \(y''+ay'+by=0\) → \(r^2+ar+b=0\)</li>
-      <li>Si \(\Delta=a^2-4b&gt;0\) : \(r_1,r_2\) réels ⇒ \(y=C_1e^{r_1x}+C_2e^{r_2x}\)</li>
-      <li>Si \(\Delta=0\) : \(r\) double ⇒ \(y=(C_1+C_2x)e^{rx}\)</li>
-      <li>Si \(\Delta&lt;0\) : \(r=\alpha\pm i\beta\) ⇒ \(y=e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)\)</li>
-      <li>Lettres : \(a,b,C,C_1,C_2\in\mathbb{R}\).</li>
+      <li><b>Étape 0 — Identifier</b> : repère si c’est ordre 1 (\(y'\)) ou ordre 2 (\(y''\)).</li>
+      <li><b>Ordre 1 — Cas A :</b> \(y'=ay\) (proportionnel à \(y\)) :
+        <ul>
+          <li>1) Mettre sous forme \(\dfrac{y'}{y}=a\) (si \(y\neq 0\)).</li>
+          <li>2) Intégrer : \(\int \dfrac{y'}{y}\,dx=\int a\,dx\Rightarrow \ln|y|=ax+C\).</li>
+          <li>3) Exponentier : \(|y|=e^{ax+C}=Ke^{ax}\Rightarrow \boxed{y=Ce^{ax}}\).</li>
+          <li>4) Utiliser la condition initiale pour trouver \(C\).</li>
+        </ul>
+      </li>
+      <li><b>Ordre 1 — Cas B :</b> \(y'+ay=b\) (constantes) :
+        <ul>
+          <li>1) Trouver une solution constante (régime permanent) : si \(y\) est constante alors \(y'=0\), donc \(ay=b\Rightarrow y_p=\dfrac{b}{a}\) (si \(a\neq 0\)).</li>
+          <li>2) Ajouter la partie transitoire : \(\boxed{y=y_p+Ce^{-ax}}\).</li>
+          <li>3) Condition initiale → calcul de \(C\).</li>
+          <li><i>Astuce</i> : \(e^{-ax}\to 0\) si \(a&gt;0\) donc \(y\) tend vers \(y_p\) quand \(x\to+\infty\).</li>
+        </ul>
+      </li>
+      <li><b>Ordre 2 — Coefficients constants :</b> \(y''+ay'+by=0\) :
+        <ul>
+          <li>1) Tester \(y=e^{rx}\) → obtenir l’équation \(r^2+ar+b=0\).</li>
+          <li>2) Résoudre en \(r\) (deux racines, racine double, ou complexes).</li>
+          <li>3) Écrire la forme de \(y\) selon le type de racines.</li>
+          <li>4) Utiliser \(y(0)\) et \(y'(0)\) pour trouver \(C_1,C_2\).</li>
+        </ul>
+      </li>
     </ul>
+    <div style="margin-top:10px; line-height:1.45;">
+      <b>Repère mental :</b> ordre 1 = 1 constante à trouver ; ordre 2 = 2 constantes à trouver.
+    </div>
+  </div>
+
+
+  <div class="bloc">
+    <div class="label">Ce que je dois savoir faire</div>
+    <ul>
+      <li>Écrire la solution générale du bon type.</li>
+      <li>Calculer \(C\), ou \(C_1,C_2\), avec les conditions.</li>
+      <li>Lire le comportement quand \(x\to+\infty\) (régime permanent / explosion).</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Équations pratiques (l’essentiel)</div>
+    <ul>
+      <li>Ordre 1 homogène : \(y'=ay \Rightarrow y=Ce^{ax}\).</li>
+      <li>Ordre 1 linéaire : \(y'+ay=b \Rightarrow y=Ce^{-ax}+\dfrac{b}{a}\) (si \(a\neq 0\)).</li>
+      <li>Ordre 2 : \(y''+ay'+by=0\) → \(r^2+ar+b=0\).</li>
+      <li>Si \(r_1\neq r_2\) : \(y=C_1e^{r_1x}+C_2e^{r_2x}\).</li>
+      <li>Si racine double \(r\) : \(y=(C_1+C_2x)e^{rx}\).</li>
+      <li>Si \(r=\alpha\pm i\beta\) : \(y=e^{\alpha x}(C_1\cos \beta x + C_2\sin \beta x)\).</li>
+      <li>Notations : \(a,b\) constants, \(C,C_1,C_2\) constants, \(x\) variable.</li>
+    </ul>
+  </div>
+
+  <div class="bloc">
+    <div class="label">Annale (énoncé)</div>
+    <b>A — Ordre 1</b><br/>
+    Résoudre \(y'+2y=6\) avec \(y(0)=1\).<br/>
+    1) Donner \(y(x)\).<br/>
+    2) Donner \(\lim_{x\to+\infty}y(x)\).<br/><br/>
+
+    <b>B — Ordre 2</b><br/>
+    Résoudre \(y''-3y'+2y=0\) avec \(y(0)=0\) et \(y'(0)=1\).
   </div>
 
   <div class="bloc calc">
-    <div class="label">Exercice type</div><br/>
-    Résoudre \(y'+2y=6\) avec \(y(0)=1\).<br/><br/>
-    <b>Correction :</b><br/>
-    Ici \(a=2\), \(b=6\). Solution générale : \(y(x)=Ce^{-2x}+\dfrac{6}{2}=Ce^{-2x}+3\).<br/>
-    Condition \(y(0)=1\) : \(1=C\cdot 1 +3\Rightarrow C=-2\).<br/>
-    Donc \(\boxed{y(x)=3-2e^{-2x}}\). Vérif : \(y' = (-2)(-2)e^{-2x}=4e^{-2x}\) ; \(y'+2y=4e^{-2x}+2(3-2e^{-2x})=4e^{-2x}+6-4e^{-2x}=6\).
+    <div class="label">Correction expliquée pas à pas</div><br/>
+
+    <b>A — \(y'+2y=6\)</b><br/>
+    Type : \(y'+ay=b\) avec \(a=2\), \(b=6\).<br/>
+    <b>Méthode rapide :</b> solution = régime permanent \(\frac{b}{a}\) + transitoire \(Ce^{-ax}\). Donc :
+    \[
+      y(x)=Ce^{-2x}+\frac{6}{2}=Ce^{-2x}+3.
+    \]
+    Condition \(y(0)=1\) :
+    \[
+      1=C+3\Rightarrow C=-2.
+    \]
+    \[
+      \boxed{y(x)=3-2e^{-2x}.}
+    \]
+    Comme \(e^{-2x}\to 0\), \(\boxed{\lim_{x\to+\infty}y(x)=3.}\)
+
+    <br/><br/>
+    <b>B — \(y''-3y'+2y=0\)</b><br/>
+    On pose \(y=e^{rx}\) :
+    \[
+      r^2-3r+2=0\iff (r-1)(r-2)=0 \Rightarrow r_1=1,\ r_2=2.
+    \]
+    \[
+      y(x)=C_1e^{x}+C_2e^{2x}.
+    \]
+    Condition \(y(0)=0\) : \(C_1+C_2=0\Rightarrow C_1=-C_2\).<br/>
+    Dérivée \(y'(x)=C_1e^{x}+2C_2e^{2x}\). Condition \(y'(0)=1\) :
+    \[
+      C_1+2C_2=1,\quad C_1=-C_2 \Rightarrow -C_2+2C_2=1 \Rightarrow C_2=1,\ C_1=-1.
+    \]
+    \[
+      \boxed{y(x)=-e^{x}+e^{2x}.}
+    \]
   </div>
 </section>
 
